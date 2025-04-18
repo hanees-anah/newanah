@@ -1,4 +1,4 @@
-import Index from "../component";
+import Index from "../component/Index";
 import Brands_focous from "../component/Brands_focous";
 import Consultation from "../component/Consultation";
 import ContactSection from "../component/ContactSection";
