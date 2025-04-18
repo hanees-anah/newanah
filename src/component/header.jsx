@@ -54,17 +54,17 @@ function Header() {
                                             Free Consultation <span><i className="fa-solid fa-arrow-right"></i></span>
                                         </a>
                                     </div>
-                                    <div className="header-search-form-wrapper">
+                                    {/* <div className="header-search-form-wrapper">
                                         <div className="tx-search-close tx-close"><i className="fa-solid fa-xmark"></i></div>
-                                        <div className="header-search-container">
-                                            <form role="search" className="search-form">
+                                        <div className="header-search-container"> */}
+                                            {/* <form role="search" className="search-form">
                                                 <input type="search" className="search-field" placeholder="Search …" name="s" />
                                                 <button type="submit" className="search-submit">
                                                     <img src="https://seoc-html-v2.vercel.app/assets/img/icons/search-icons1.svg" alt="Search" />
                                                 </button>
-                                            </form>
-                                        </div>
-                                    </div>
+                                            </form> */}
+                                        {/* </div>
+                                    </div> */}
                                     <div className="body-overlay"></div>
                                 </div>
                             </div>

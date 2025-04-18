@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from 'react';
 import Header from "./component/Header";  
-
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import MetaAds from "./Pages/MetaAds";
