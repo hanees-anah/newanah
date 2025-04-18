@@ -15,9 +15,9 @@ import Seo from "../assets/images/seo.png"
 import Website from "../assets/images/Website-Development.png"
 import bg1 from "../assets/images/pages-bg1.png"
 import Mobile_App_Development from "../assets/images/Mobile-App-Development.png"
-import Service from "./Service"
-import Header from "./Header"
-import Index from "./index"
+// import Service from "./Service"
+// import Header from "./Header"
+// import Index from "./Index"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
