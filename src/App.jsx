@@ -1,27 +1,27 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from 'react';
-import Header from "./component/Header.jsx";  
+import Header from "./component/Header";  
 
-import About from "./Pages/About.jsx";
-import Home from "./Pages/Home.jsx";
-import MetaAds from "./Pages/MetaAds.jsx";
-import Google from "./Pages/Googleads.jsx";
-import EmailMarketing from "./Pages/EmailMarketing.jsx";
-import WhatsappMarketing from "./Pages/Whatsappmarketing.jsx";
-import SearchEngineOptimisation from "./Pages/Search_Engine_Optimisation.jsx";
-import Websitedevelopment from "./Pages/Websitedevelopment.jsx";
-import MobileDevelopment from "./Pages/Mobiledevelopment.jsx";
-import ShopifyDevelopment from "./Pages/Shopfiydevelopment.jsx";
-import Blog from "./Pages/Blog.jsx";
-import Portfolio from "./Pages/Portfolio.jsx";
-import ContactUS from "./Pages/ContactUs.jsx";
-import Terms_Conditions from "./Pages/Terms_Conditions.jsx";
-import Privacy_Policy from "./Pages/Privacy_Policy.jsx";
-import View_more from "./Pages/View_more.jsx";
-import Read_more from "./Pages/Read_more.jsx";
-import Keywoed_reserach_reacd_more from "./Pages/Keywoed_reserach_reacd_more.jsx";
-import InstagramReadMore from "./component/Instagram_readmore.jsx";
-import Organic_search from "./Pages/Organic_search.jsx";
+import About from "./Pages/About";
+import Home from "./Pages/Home";
+import MetaAds from "./Pages/MetaAds";
+import Google from "./Pages/Googleads";
+import EmailMarketing from "./Pages/EmailMarketing";
+import WhatsappMarketing from "./Pages/Whatsappmarketing";
+import SearchEngineOptimisation from "./Pages/Search_Engine_Optimisation";
+import Websitedevelopment from "./Pages/Websitedevelopment";
+import MobileDevelopment from "./Pages/Mobiledevelopment";
+import ShopifyDevelopment from "./Pages/Shopfiydevelopment";
+import Blog from "./Pages/Blog";
+import Portfolio from "./Pages/Portfolio";
+import ContactUS from "./Pages/ContactUs";
+import Terms_Conditions from "./Pages/Terms_Conditions";
+import Privacy_Policy from "./Pages/Privacy_Policy";
+import View_more from "./Pages/View_more";
+import Read_more from "./Pages/Read_more";
+import Keywoed_reserach_reacd_more from "./Pages/Keywoed_reserach_reacd_more";
+import InstagramReadMore from "./component/Instagram_readmore"
+import Organic_search from "./Pages/Organic_search";
 
 
 function App() {
