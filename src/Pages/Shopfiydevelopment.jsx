@@ -13,8 +13,8 @@ import star1_img from "../assets/images/star2.png";
 
 import Shopify_img4 from "../assets/images/Shopify-img4.png";
 import Consultation from "../component/Consultation";
-import Footer from "../component/footer";
-import About_Partner from "../component/about_partner";
+import Footer from "../component/Footer";
+import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
 import  { useEffect ,useState} from "react";
 import preloader from "../assets/images/preloader-img.png";

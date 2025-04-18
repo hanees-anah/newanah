@@ -4,7 +4,7 @@ import instagram from "../assets/images/instagram_business.jpg"
 import keyword from "../assets/images/keyword-research-img.jpg"
 import seo from "../assets/images/seo-checklis-img.jpg"
 import Consultation from "../component/Consultation";
-import Footer from "../component/footer";
+import Footer from "../component/Footer";
 import inner_header from "../assets/images/inner-header.png";
 import React, { useEffect, useState } from "react";
 import preloader from "../assets/images/preloader-img.png";

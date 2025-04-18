@@ -1,7 +1,7 @@
 import star2 from "../assets/images/star2.png";
 import inner_header from "../assets/images/inner-header.png";
 import Consultation from "../component/Consultation";
-import Footer from "../component/footer";
+import Footer from "../component/Footer";
 import  { useEffect,useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
 

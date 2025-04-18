@@ -5,9 +5,9 @@ import mobile_app_development2 from "../assets/images/mobile-app-development2.pn
 import star2 from "../assets/images/star2.png";
 import mobile_app_development4 from "../assets/images/mobile-app-development4.png";
 import Consultation from "../component/Consultation";
-import Footer from "../component/footer";
+import Footer from "../component/Footer";
 import innerHeader from "../assets/images/inner-header.png";
-import About_Partner from "../component/about_partner";
+import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
 import  { useEffect,useState } from "react";
 import preloader from "../assets/images/preloader-img.png";

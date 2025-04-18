@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from 'react';
-import Header from "./component/header.jsx";  
+import Header from "./component/Header.jsx";  
 
 import About from "./Pages/About.jsx";
 import Home from "./Pages/Home.jsx";
@@ -21,7 +21,7 @@ import View_more from "./Pages/View_more.jsx";
 import Read_more from "./Pages/Read_more.jsx";
 import Keywoed_reserach_reacd_more from "./Pages/Keywoed_reserach_reacd_more.jsx";
 import InstagramReadMore from "./component/Instagram_readmore.jsx";
-import Organic_search from "./Pages/organic_search.jsx";
+import Organic_search from "./Pages/Organic_search.jsx";
 
 
 function App() {

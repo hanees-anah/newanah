@@ -1,6 +1,6 @@
 import React from 'react';
 import Consultation from './Consultation';
-import Footer from './footer';
+import Footer from './Footer';
 import inner_header from "../assets/images/inner-header.png";
 
 

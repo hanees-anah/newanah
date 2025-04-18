@@ -9,8 +9,8 @@ import elements6 from "../assets/images/elements6.png";
 import innerHeader from "../assets/images/inner-header.png";
 import metaAdsImg1 from "../assets/images/meta-ads1.png";  // Ensure these exist
 import Consultation from "../component/Consultation";
-import Footer from "../component/footer";
-import About_Partner from "../component/about_partner";
+import Footer from "../component/Footer";
+import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
 import  { useEffect,useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
