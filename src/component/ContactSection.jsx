@@ -23,7 +23,7 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/send-email", formData);
+      await axios.post("https://anahmarketing.com/send-email", formData);
       setShowModal(true); // Show popup on success
       setFormData({
         first_name: "",
