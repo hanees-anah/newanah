@@ -14,6 +14,7 @@ import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
 import  { useEffect,useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
 
 
 function MetaAds() {
@@ -38,6 +39,14 @@ function MetaAds() {
 
     return (
         <>
+        <Helmet>
+                <title>Meta Ads | Anah Marketing</title>
+                <meta
+                    name="description"
+                    content="Grow your online presence with Anah Marketing's Meta ads! Partner with a top social media agency for effective, results-driven campaigns and real growth."
+                />
+            </Helmet>
+            
              {isLoading && (
             <div className="preloader">
                 <div className="loading-container">
