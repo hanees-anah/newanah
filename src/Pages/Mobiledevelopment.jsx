@@ -9,12 +9,14 @@ import Footer from "../component/Footer";
 import innerHeader from "../assets/images/inner-header.png";
 import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
-import  { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
+
 
 function MobileDevelopment() {
     const [isLoading, setIsLoading] = useState(true);
-  
+
     useEffect(() => {
         // Simulate load or wait for all images/resources to load
         const handleLoad = () => {
@@ -34,15 +36,22 @@ function MobileDevelopment() {
 
     return (
         <>
+            <Helmet>
+                <title>Best Web Design & Development Company in India</title>
+                <meta
+                    name="description"
+                    content="Build Android & iOS apps with Anah Marketing, a top app development company in India—custom app design & development for secure, scalable solutions."
+                />
+            </Helmet>
 
-{isLoading && (
-            <div className="preloader">
-                <div className="loading-container">
-                    <div className="loading"></div>
-                    <div id="loading-icon"><img src={preloader} alt="" /></div>
+            {isLoading && (
+                <div className="preloader">
+                    <div className="loading-container">
+                        <div className="loading"></div>
+                        <div id="loading-icon"><img src={preloader} alt="" /></div>
+                    </div>
                 </div>
-            </div>
-        )}
+            )}
             {/* Header Section */}
             <div
                 className="about-header-area"
@@ -97,8 +106,8 @@ function MobileDevelopment() {
                                 <h2 className="text-anime-style-2">Innovative Mobile App Development Solutions</h2>
                                 <p className="mb-4">Embrace your business with innovative mobile applications. Our team specializes in designing and developing high-performance apps that enhance user engagement and drive business growth. From concept to launch, we ensure your app stands out in the competitive digital landscape.</p>
                                 <a href="/contact" className="header-btn1">
-                    Contact Now<span><i className="fa-solid fa-arrow-right"></i></span>
-                  </a>
+                                    Contact Now<span><i className="fa-solid fa-arrow-right"></i></span>
+                                </a>
                             </div>
                         </div>
                         <div class="col-lg-3">

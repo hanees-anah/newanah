@@ -13,6 +13,8 @@ import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
 import  { useEffect ,useState} from "react";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
+
 
 
 
@@ -38,6 +40,14 @@ function WhatsappMarketing() {
 
     return (
         <>
+         <Helmet>
+                <title>WhatsApp Marketing Services | Top WhatsApp Marketing Agency</title>
+                <meta
+                    name="description"
+                    content="Skyrocket engagement with Anah Marketing’s WhatsApp services! Reach customers instantly with powerful, personalized campaigns that drive real results."
+                    />
+            </Helmet>
+
              {isLoading && (
             <div className="preloader">
                 <div className="loading-container">

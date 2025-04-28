@@ -18,6 +18,8 @@ import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
 import  { useEffect,useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
+
 
 
 function EmailMarketing() {
@@ -43,6 +45,14 @@ function EmailMarketing() {
 
     return (
         <>
+           <Helmet>
+                <title>Email Marketing Services | No. 1 Email Marketing Agency</title>
+                <meta
+                    name="description"
+                    content="Boost your ROI with our Email Marketing Services. Work with the No. 1 email marketing agency for tailored, high-converting email campaigns."
+                    />
+            </Helmet>
+
         {isLoading && (
             <div className="preloader">
                 <div className="loading-container">

@@ -25,7 +25,7 @@ function Result(){
                  <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="800">
                     <div class="works-author-boxarea">
                        <a href="#">Meta Ads</a>
-                       <p>We achieved a 10.5x ROAS for a premium ethnic wear brand through smart targeting and data-driven strategies. Our multi-channel marketing approach boosted conversions, expanded reach, and delivered scalable, cost-effective results.</p>
+                       <p>We achieved a 8x ROAS for a premium ethnic wear brand through smart targeting and data-driven strategies. Our multi-channel marketing approach boosted conversions, expanded reach, and delivered scalable, cost-effective results.</p>
                        <div class="space24"></div>
                        <div class="img1">
                           <img src={meta} alt=""/>
@@ -38,7 +38,7 @@ function Result(){
                  <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="works-author-boxarea">
                        <a href="#">Google Ads</a>
-                       <p>By leveraging Google Ads, an ethnic fashion brand achieved an 8.5x ROAS. With precise targeting of high-intent audiences, they boosted conversions and enhanced their digital presence, driving higher sales for their elegant and unstitched ethnic fashions.</p>
+                       <p>By leveraging Google Ads, an ethnic fashion brand achieved an 4.5x ROAS. With precise targeting of high-intent audiences, they boosted conversions and enhanced their digital presence, driving higher sales for their elegant and unstitched ethnic fashions.</p>
                        <div class="space24"></div>
                        <div class="img1">
                           <img src={google_img} alt=""/>

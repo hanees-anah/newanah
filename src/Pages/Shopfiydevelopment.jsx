@@ -16,40 +16,51 @@ import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
 import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
-import  { useEffect ,useState} from "react";
+import { useEffect, useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
+
 
 function ShopifyDevelopment() {
   const [isLoading, setIsLoading] = useState(true);
-  
+
   useEffect(() => {
-      // Simulate load or wait for all images/resources to load
-      const handleLoad = () => {
-          setTimeout(() => {
-              setIsLoading(false);
-          }, 1000); // Optional delay for smooth transition
-      };
+    // Simulate load or wait for all images/resources to load
+    const handleLoad = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000); // Optional delay for smooth transition
+    };
 
-      if (document.readyState === "complete") {
-          handleLoad();
-      } else {
-          window.addEventListener("load", handleLoad);
-      }
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
 
-      return () => window.removeEventListener("load", handleLoad);
+    return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   return (
     <>
-         {isLoading && (
-            <div className="preloader">
-                <div className="loading-container">
-                    <div className="loading"></div>
-                    <div id="loading-icon"><img src={preloader} alt="" /></div>
-                </div>
-            </div>
-        )}
-        
+
+      <Helmet>
+        <title>Shopify Development Services | Top Web Development Company</title>
+        <meta
+          name="description"
+          content="Are you looking for Shopify Development Services? Anah Marketing delivers custom, high-converting stores that help your business grow online with expert web development."
+        />
+      </Helmet>
+
+      {isLoading && (
+        <div className="preloader">
+          <div className="loading-container">
+            <div className="loading"></div>
+            <div id="loading-icon"><img src={preloader} alt="" /></div>
+          </div>
+        </div>
+      )}
+
       <div
         className="about-header-area"
         style={{
@@ -81,24 +92,24 @@ function ShopifyDevelopment() {
           <div className="row align-items-center">
             <div className="col-lg-4">
               <div className="about-images">
-              <motion.figure
-                                    initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
-                                    animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
-                                    transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
-                                    className="image-anime"
-                                >
-                                
-                                    <img
-                                        src={Shopify_img4}
-                                        alt=""
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                    />
-                                      </motion.figure>
-              
-              
+                <motion.figure
+                  initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
+                  animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
+                  transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
+                  className="image-anime"
+                >
+
+                  <img
+                    src={Shopify_img4}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                  />
+                </motion.figure>
+
+
                 <img src={star1} alt="" className="star1 keyframe5" />
               </div>
             </div>
@@ -113,7 +124,7 @@ function ShopifyDevelopment() {
                   high-performing Shopify stores that don’t just look good but
                   sell like crazy!
                 </p>
-                <br/>
+                <br />
                 <p>
                   From sleek designs to seamless shopping experiences, we help
                   brands launch, scale, and thrive in the Ecommerce space.
@@ -140,21 +151,21 @@ function ShopifyDevelopment() {
               <div className="about-auhtor-images">
                 <img src={elements6} alt="" className="elements5 keyframe5" />
                 <motion.figure
-                                    initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
-                                    animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
-                                    transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
-                                    className="image-anime"
-                                >
-                                
-                                    <img
-                                        src={Shopify_img3}
-                                        alt=""
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                    />
-                                      </motion.figure>
+                  initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
+                  animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
+                  transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
+                  className="image-anime"
+                >
+
+                  <img
+                    src={Shopify_img3}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                  />
+                </motion.figure>
               </div>
             </div>
           </div>
@@ -169,24 +180,24 @@ function ShopifyDevelopment() {
           <div className="row align-items-center">
             <div className="col-lg-4">
               <div className="about-all-images-area">
-              <img src={star1_img} alt="" class="elements12 keyframe5"/>
-              <img src={star2_img} alt="" class="elements13 keyframe5"/>
-              <div class="row">
-                      <div class="col-lg-12">
-                        <div class="img1 ">
-                            <div class="space100"></div>
-                            <img src={Shopify_img1} alt="" />
-                          <div class="space100"></div>
-                        </div>
-                      </div>
+                <img src={star1_img} alt="" class="elements12 keyframe5" />
+                <img src={star2_img} alt="" class="elements13 keyframe5" />
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="img1 ">
+                      <div class="space100"></div>
+                      <img src={Shopify_img1} alt="" />
+                      <div class="space100"></div>
                     </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-lg-8">
               <div className="works-header-area heading2 specing2">
                 <h2>Shopify, Built Your Way</h2>
                 <p>
-                At Anah Marketing, we create high-performing Shopify stores designed to stand out and sell. From custom designs to conversion-optimized layouts, we ensure a seamless shopping experience. Our expertise in payment integrations, mobile-first designs, and SEO helps you rank higher and drive organic traffic. Plus, with hassle-free Shopify migration, switching platforms is smooth and downtime-free. Your brand deserves more than just a store—it deserves a Shopify powerhouse!
+                  At Anah Marketing, we create high-performing Shopify stores designed to stand out and sell. From custom designs to conversion-optimized layouts, we ensure a seamless shopping experience. Our expertise in payment integrations, mobile-first designs, and SEO helps you rank higher and drive organic traffic. Plus, with hassle-free Shopify migration, switching platforms is smooth and downtime-free. Your brand deserves more than just a store—it deserves a Shopify powerhouse!
                 </p>
               </div>
             </div>
@@ -196,30 +207,30 @@ function ShopifyDevelopment() {
               <div className="works-header-area heading2">
                 <h2>Shopify Design & Performance Optimization</h2>
                 <p>
-                A high-performing Shopify store is more than just good design—it’s about speed, usability and seamless shopping experiences. We optimize every element, from fast-loading pages to intuitive navigation, ensuring your store keeps visitors engaged and drives conversions. With SEO best practices, mobile responsiveness and smooth integrations, we help your Shopify store rank higher, attract more customers and maximize sales.
+                  A high-performing Shopify store is more than just good design—it’s about speed, usability and seamless shopping experiences. We optimize every element, from fast-loading pages to intuitive navigation, ensuring your store keeps visitors engaged and drives conversions. With SEO best practices, mobile responsiveness and smooth integrations, we help your Shopify store rank higher, attract more customers and maximize sales.
                 </p>
               </div>
             </div>
             <div className="col-lg-4">
               <div className="about-all-images-area">
-              <img src={star1_img} alt="" class="elements12 keyframe5"/>
-              <img src={star2_img} alt="" class="elements13 keyframe5"/>
-              <div class="row">
-                      <div class="col-lg-12">
-                        <div class="img1 ">
-                            <div class="space100"></div>
-                            <img src={Shopify_img2} alt="" />
-                          <div class="space100"></div>
-                        </div>
-                      </div>
+                <img src={star1_img} alt="" class="elements12 keyframe5" />
+                <img src={star2_img} alt="" class="elements13 keyframe5" />
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="img1 ">
+                      <div class="space100"></div>
+                      <img src={Shopify_img2} alt="" />
+                      <div class="space100"></div>
                     </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Consultation/>
-      <Footer/>
+      <Consultation />
+      <Footer />
     </>
   );
 }

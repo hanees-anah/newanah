@@ -5,11 +5,20 @@ import idea from "../assets/images/idea.png"
 import promotion from "../assets/images/promotion.png"
 import network from "../assets/images/network.png"
 import header from "../assets/images/header-bg1.png"
+import { Helmet } from "react-helmet";
 
 
 function Index() {
     return (
         <>
+
+            <Helmet>
+                <title>Best Digital Marketing Agency | SEO, PPC & Social Media Services</title>
+                <meta
+                    name="description"
+                    content="Anah Marketing offers ROI-focused SEO, PPC, Meta Ads & Web Design services. Boost your growth—book a free digital marketing consultation today!"
+                />
+            </Helmet>
             <div className="hero1-section-area" style={{
                 backgroundImage: `url(${header})`,
             }}>

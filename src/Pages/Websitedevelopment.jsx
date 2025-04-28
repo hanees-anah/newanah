@@ -11,41 +11,51 @@ import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
 import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
-import  { useEffect ,useState} from "react";
+import { useEffect, useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
+
 
 
 function Websitedevelopment() {
   const [isLoading, setIsLoading] = useState(true);
-  
+
   useEffect(() => {
-      // Simulate load or wait for all images/resources to load
-      const handleLoad = () => {
-          setTimeout(() => {
-              setIsLoading(false);
-          }, 1000); // Optional delay for smooth transition
-      };
+    // Simulate load or wait for all images/resources to load
+    const handleLoad = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000); // Optional delay for smooth transition
+    };
 
-      if (document.readyState === "complete") {
-          handleLoad();
-      } else {
-          window.addEventListener("load", handleLoad);
-      }
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
 
-      return () => window.removeEventListener("load", handleLoad);
+    return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   return (
     <>
-         {isLoading && (
-            <div className="preloader">
-                <div className="loading-container">
-                    <div className="loading"></div>
-                    <div id="loading-icon"><img src={preloader} alt="" /></div>
-                </div>
-            </div>
-        )}
-        
+      <Helmet>
+        <title>Best Web Design & Development Company in India</title>
+        <meta
+          name="description"
+          content="Need a website that stands out? Let Anah Marketing, the best web design and development company in India, create a site that’s beautiful, easy to use, and converts!"
+        />
+      </Helmet>
+
+      {isLoading && (
+        <div className="preloader">
+          <div className="loading-container">
+            <div className="loading"></div>
+            <div id="loading-icon"><img src={preloader} alt="" /></div>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <div
         className="about-header-area"
@@ -78,22 +88,22 @@ function Websitedevelopment() {
           <div className="row align-items-center">
             <div className="col-lg-4">
               <div className="about-images">
-              <motion.figure
-                                    initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
-                                    animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
-                                    transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
-                                    className="image-anime"
-                                >
-                                
-                                    <img
-                                        src={websiteDev1}
-                                        alt=""
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                    />
-                                      </motion.figure>
+                <motion.figure
+                  initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
+                  animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
+                  transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
+                  className="image-anime"
+                >
+
+                  <img
+                    src={websiteDev1}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                  />
+                </motion.figure>
                 <img src={star1} alt="" className="star1 keyframe5" />
               </div>
             </div>
@@ -115,25 +125,25 @@ function Websitedevelopment() {
               </div>
             </div>
             <div className="col-lg-3">
-            <div class="about-auhtor-images">
-              <img src={elements6} alt="" className="elements5 keyframe5" />
-              <motion.figure
-                                    initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
-                                    animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
-                                    transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
-                                    className="image-anime"
-                                >
-                                
-                                    <img
-                                        src={websiteDev2}
-                                        alt=""
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                    />
-                                      </motion.figure>
-            </div>
+              <div class="about-auhtor-images">
+                <img src={elements6} alt="" className="elements5 keyframe5" />
+                <motion.figure
+                  initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
+                  animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
+                  transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
+                  className="image-anime"
+                >
+
+                  <img
+                    src={websiteDev2}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                  />
+                </motion.figure>
+              </div>
             </div>
           </div>
         </div>
@@ -142,32 +152,32 @@ function Websitedevelopment() {
 
       <About_Partner />
 
-   
+
 
       {/* Work Section */}
       <div className="works-inner-section-area services-page">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-4">
-            <div class="about-all-images-area">
-            <img src={star2} alt="" class="elements12 keyframe5"/>
-            <img src={star1} alt="" class="elements13 keyframe5"/>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="img1 ">
-                            <div class="space100"></div>
-                            <img src={websiteDev3} alt=""/>
-                          <div class="space100"></div>
-                        </div>
-                      </div>
+              <div class="about-all-images-area">
+                <img src={star2} alt="" class="elements12 keyframe5" />
+                <img src={star1} alt="" class="elements13 keyframe5" />
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="img1 ">
+                      <div class="space100"></div>
+                      <img src={websiteDev3} alt="" />
+                      <div class="space100"></div>
                     </div>
                   </div>
+                </div>
+              </div>
             </div>
             <div className="col-lg-8">
               <div className="works-header-area heading2 specing2">
                 <h2>Custom Web Design & Development</h2>
                 <p>
-                Your brand is unique, and your website should be too. We create custom websites tailored to your business goals, combining creativity with functionality. From intuitive navigation to responsive design, every element is carefully crafted to enhance user experience and maximize engagement. Whether it’s an eCommerce store or a commercial website, we build scalable solutions that grow with your business.
+                  Your brand is unique, and your website should be too. We create custom websites tailored to your business goals, combining creativity with functionality. From intuitive navigation to responsive design, every element is carefully crafted to enhance user experience and maximize engagement. Whether it’s an eCommerce store or a commercial website, we build scalable solutions that grow with your business.
                 </p>
               </div>
             </div>
@@ -178,33 +188,33 @@ function Websitedevelopment() {
               <div className="works-header-area heading2">
                 <h2>Performance-Optimized & Mobile-First Approach</h2>
                 <p>
-                Speed, responsiveness and seamless functionality—these are the pillars of a high-performing website. We build mobile-friendly, lightning-fast websites that deliver an exceptional experience across all devices. With proper code, structured layouts and cutting-edge technology, we ensure your website not only looks great but also performs flawlessly, keeping users engaged and driving meaningful actions
+                  Speed, responsiveness and seamless functionality—these are the pillars of a high-performing website. We build mobile-friendly, lightning-fast websites that deliver an exceptional experience across all devices. With proper code, structured layouts and cutting-edge technology, we ensure your website not only looks great but also performs flawlessly, keeping users engaged and driving meaningful actions
                 </p>
               </div>
             </div>
 
             <div class="col-lg-4">
-                <div class="about-all-images-area">
-                <img src={star2} alt="" class="elements12 keyframe5"/>
-                <img src={star1} alt="" class="elements13 keyframe5"/>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="img1 ">
-                            <div class="space100"></div>
-                         <img src={websiteDev4} alt=""/>
-                          <div class="space100"></div>
-                        </div>
-                      </div>
+              <div class="about-all-images-area">
+                <img src={star2} alt="" class="elements12 keyframe5" />
+                <img src={star1} alt="" class="elements13 keyframe5" />
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="img1 ">
+                      <div class="space100"></div>
+                      <img src={websiteDev4} alt="" />
+                      <div class="space100"></div>
                     </div>
                   </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      
-      <Consultation/>
-            <Footer/>
+
+      <Consultation />
+      <Footer />
     </>
   );
 }

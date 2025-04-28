@@ -18,6 +18,8 @@ import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
 import  { useEffect ,useState} from "react";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
+
 
 
 function SearchEngineOptimisation() {
@@ -42,6 +44,14 @@ function SearchEngineOptimisation() {
 
   return (
     <>
+        <Helmet>
+                <title>Top SEO Company in India | Best SEO Agency for Organic Growth</title>
+                <meta
+                    name="description"
+                    content="Looking for the best SEO company in India? Anah Marketing offers expert SEO services to help your business rank higher and grow online."
+                    />
+            </Helmet>
+
       {/* HERO AREA */}
       {isLoading && (
             <div className="preloader">

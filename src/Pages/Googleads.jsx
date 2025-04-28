@@ -14,10 +14,7 @@ import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
 import  { useEffect,useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
-
-
-
-
+import { Helmet } from "react-helmet";
 
 
 
@@ -43,6 +40,13 @@ function Google() {
 
     return (
         <>
+           <Helmet>
+                <title>Google Ads Services | Best PPC Marketing Agency</title>
+                <meta
+                    name="description"
+                    content="Unlock your business’s potential with Anah Marketing’s Google Ads Services! Work with the best PPC agency for high-impact, conversion-focused campaigns."
+                />
+            </Helmet>
             {/* Header Section */}
 
                  {isLoading && (
