@@ -121,7 +121,7 @@ function SearchEngineOptimisation() {
                 At Anah Marketing & Innovation, we go beyond basic SEO—we build comprehensive digital marketing strategies that drive measurable growth. With our expertise, we ensure your brand ranks higher, attract quality traffic and converts more efficiently. Our approach blends data-driven insights with innovative techniques to maximize online visibility and business impact. From advanced SEO strategies to performance-driven marketing, we create tailored solutions that align with your business objectives, helping you stay ahead in the digital landscape.
                 </p>
                 <div className="btn-area" data-aos="fade-left" data-aos-duration="1200">
-                  <a href="/contact" className="header-btn1">
+                  <a href="/contact-us" className="header-btn1">
                     Contact Now<span><i className="fa-solid fa-arrow-right"></i></span>
                   </a>
                 </div>

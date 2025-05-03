@@ -2,7 +2,7 @@ import  star2 from"../assets/images/star2.png"
 import  our_value_img from"../assets/images/our-value-img.jpg"
 
 import  Shopify_img from"../assets/images/Shopify-img.png"
-import black_arrow from"../assets/images/black-arrow.svg"
+import black_arrow from"../assets/images/arrow-icon-new.png"
 import bg1 from "../assets/images/pages-bg1.png"
 
 

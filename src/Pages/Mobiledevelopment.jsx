@@ -105,7 +105,7 @@ function MobileDevelopment() {
                             <div className="about-content-area heading2">
                                 <h2 className="text-anime-style-2">Innovative Mobile App Development Solutions</h2>
                                 <p className="mb-4">Embrace your business with innovative mobile applications. Our team specializes in designing and developing high-performance apps that enhance user engagement and drive business growth. From concept to launch, we ensure your app stands out in the competitive digital landscape.</p>
-                                <a href="/contact" className="header-btn1">
+                                <a href="/contact-us" className="header-btn1">
                                     Contact Now<span><i className="fa-solid fa-arrow-right"></i></span>
                                 </a>
                             </div>

@@ -113,7 +113,7 @@ function WhatsappMarketing() {
                                 <h2 className="text-anime-style-3">Instant Engagement, Maximum Impact</h2>
                                 <p>In a world where attention spans are shrinking, WhatsApp marketing ensures your message gets delivered, seen, and acted upon—instantly. We craft high-converting WhatsApp campaigns that drive real-time engagement, spark conversations, and boost conversions like never before.</p>
                                 <div className="btn-area">
-                                    <a href="/contact" className="header-btn1">
+                                    <a href="/contact-us" className="header-btn1">
                                         Contact Now<span><i className="fa-solid fa-arrow-right"></i></span>
                                     </a>
                                 </div>

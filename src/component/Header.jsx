@@ -34,24 +34,24 @@ function Header() {
                                             <li>
                                                 <a href="#">Services <i className="fa-solid fa-angle-down"></i></a>
                                                 <ul className="dropdown-padding">
-                                                    <li><a href="/metaads">Meta Ads</a></li>
-                                                    <li><a href="/googleads">Google Ads</a></li>
-                                                    <li><a href="/emailmarketing">Email-Marketing</a></li>
-                                                    <li><a href="/whatappmarketing">WhatsApp-Marketing</a></li>
-                                                    <li><a href="/Search_Engine_Optimisation">Search Engine Optimisation </a></li>
-                                                    <li><a href="/Websitedevelopment">Website Development</a></li>
-                                                    <li><a href="/mobiledevelopmet">Mobile App Development</a></li>
-                                                    <li><a href="/shopfiydevelopmet">Shopify Development</a></li>
+                                                    <li><a href="/social-media-marketing-services">Meta Ads</a></li>
+                                                    <li><a href="/google-ads-services">Google Ads</a></li>
+                                                    <li><a href="/email-marketing-services">Email-Marketing</a></li>
+                                                    <li><a href="/whatsapp-marketing-services">WhatsApp-Marketing</a></li>
+                                                    <li><a href="/seo-company-in-india">Search Engine Optimisation </a></li>
+                                                    <li><a href="/website-development-company">Website Development</a></li>
+                                                    <li><a href="/mobile-app-development-company">Mobile App Development</a></li>
+                                                    <li><a href="/shopify-development-services">Shopify Development</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="/Blog">Blogs</a></li>
                                             <li><a href="/Portfolio">Portfolio</a></li>
-                                            <li><a href="/contact">Contact Us</a></li>
+                                            <li><a href="/contact-us">Contact Us</a></li>
                                         </ul>
                                     </div>
                                     <div className="btn-area">
-                                        <a href="/contact" className="header-btn1">
-                                            Free Consultation <span><i className="fa-solid fa-arrow-right"></i></span>
+                                        <a href="/contact-us" className="header-btn1">
+                                            Let's Talk <span><i className="fa-solid fa-arrow-right"></i></span>
                                         </a>
                                     </div>
                                     {/* <div className="header-search-form-wrapper">
@@ -110,21 +110,21 @@ function Header() {
                         <li>
                             <a href="#">Services <i className="fa-solid fa-angle-down"></i></a>
                             <ul className="dropdown-padding" style={{ display: "none" }}>
-                                <li><a href="/metaads">Meta Ads</a></li>
-                                <li><a href="/googleads">Google Ads</a></li>
-                                <li><a href="/whatappmarketing">WhatsApp Marketing</a></li>
-                                <li><a href="/Search_Engine_Optimisation">SEO</a></li>
-                                <li><a href="/Websitedevelopment">Website Development</a></li>
-                                <li><a href="/mobiledevelopmet">Mobile App Development</a></li>
-                                <li><a href="/shopfiydevelopmet">Shopify Development</a></li>
+                                <li><a href="/social-media-marketing-services">Meta Ads</a></li>
+                                <li><a href="/google-ads-services">Google Ads</a></li>
+                                <li><a href="/whatsapp-marketing-services">WhatsApp Marketing</a></li>
+                                <li><a href="/seo-company-in-india">SEO</a></li>
+                                <li><a href="/website-development-company">Website Development</a></li>
+                                <li><a href="/mobile-app-development-company">Mobile App Development</a></li>
+                                <li><a href="/shopify-development-services">Shopify Development</a></li>
                             </ul>
                         </li>
                         <li><a href="/blog">Blogs</a></li>
                         <li><a href="/portfolio">Portfolio</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
+                        <li><a href="/contact-us">Contact Us</a></li>
                     </ul>
                     <div class="allmobilesection">
-               <a href="/contact"  class="header-btn1">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a>
+               <a href="/contact-us"  class="header-btn1">Get Started <span><i class="fa-solid fa-arrow-right"></i></span></a>
                <div class="single-footer">
                   <h3>Contact Info</h3>
                   <div class="footer1-contact-info">

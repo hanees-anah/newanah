@@ -116,7 +116,7 @@ function Websitedevelopment() {
                   A website is more than just an online presence—it’s the foundation of your brand’s digital success. We design and develop high-performing websites that are not only visually stunning but also strategically built to drive conversions. With user-centric design, seamless functionality and optimized performance, we ensure your website engages visitors and turns them into loyal customers. Elevate your brand with a website that works as hard as you do
                 </p>
                 <div class="btn-area" data-aos="fade-left" data-aos-duration="1200">
-                  <a href="/contact" className="header-btn1">
+                  <a href="/contact-us" className="header-btn1">
                     Contact Now<span>
                       <i className="fa-solid fa-arrow-right"></i>
                     </span>

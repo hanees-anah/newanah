@@ -105,7 +105,7 @@ function About() {
                                             With expertise in meta-ads, google ads, Social Media Marketing and Web Development, we help brands increase visibility, engage their audience and maximize revenue.
                                         </p>
                                         <div className="btn-area" data-aos="fade-left" data-aos-duration="1200">
-                                            <a href="/contact" className="header-btn1">
+                                            <a href="/contact-us" className="header-btn1">
                                                 Contact Now<span><i className="fa-solid fa-arrow-right"></i></span>
                                             </a>
                                         </div>

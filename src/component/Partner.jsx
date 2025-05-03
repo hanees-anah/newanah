@@ -49,43 +49,43 @@ function Partner() {
   const services = [
     {
       img: Meta,
-      link: "/metaads",
+      link: "/social-media-marketing-services",
       title: "Meta Ads: Capture & Convert",
       desc: "Unlock the power of Meta’s ecosystem to drive engagement, generate leads and accelerate sales with high-converting campaigns.",
     },
     {
       img: Google,
-      link: "/googleads",
+      link: "/google-ads-services",
       title: "Google Ads: Clicks to Conversions",
       desc: "Capture high-intent audience with optimized Google Ads. Our search, display and shopping campaigns boost visibility, attract qualified traffic and maximize ROI with strategic bidding and precise targeting.",
     },
     {
       img: Email,
-      link: "/emailmarketing",
+      link: "/email-marketing-services",
       title: "Email Marketing: Engage, Nurture, Convert",
       desc: "Turn emails into powerful connections. We create personalized email campaigns that engage your audience, encourage action and build lasting loyalty.",
     },
     {
       img: WhatsApp,
-      link: "/whatappmarketing",
+      link: "/whatsapp-marketing-services",
       title: "WhatsApp Marketing: Instant Engagement",
       desc: "Engage customers where they’re most active. Use WhatsApp to build relationships, send offers and drive conversions in real time.",
     },
     {
       img: Seo,
-      link: "/Search_Engine_Optimisation",
+      link: "/seo-company-in-india",
       title: "Search Engine Optimization",
       desc: "Outrank the competition and attract right people with strategic SEO that improves rankings, increases traffic and drives long-term growth.",
     },
     {
       img: Website,
-      link: "/Websitedevelopment",
+      link: "/website-development-company",
       title: "Website Development",
       desc: "Empower your brand with a cutting-edge website that meets user expectations and strengthens your digital presence.",
     },
     {
       img: Mobile_App_Development,
-      link: "/mobiledevelopmet",
+      link: "/mobile-app-development-company",
       title: "Mobile App Development",
       desc: "Expand your reach and boost revenue with high-performance mobile apps designed to add value and enhance user experience.",
     },
@@ -174,8 +174,7 @@ function Partner() {
                   At Anah Marketing & Innovations, we don’t just market brands—we create data-driven growth strategies that drive measurable success.
                 </p>
                 <p data-aos="fade-left" data-aos-duration="1000">
-                  With expertise in meta-ads, google ads, Social Media Marketing and Web Development, we help brands increased visibility, engage their audience and maximize revenue...
-                </p>
+                With expertise in Meta Ads, Google Ads, social media marketing, and web development, we help brands to increase visibility, engage their audience, and maximize revenue.                </p>
                 <div className="btn-area" data-aos="fade-left" data-aos-duration="1200">
                   <a href="/about" className="header-btn1">
                     View More <span><i className="fa-solid fa-arrow-right"></i></span>

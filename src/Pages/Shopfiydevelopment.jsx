@@ -138,7 +138,7 @@ function ShopifyDevelopment() {
                   </strong>
                 </p>
                 <div className="btn-area">
-                  <a href="/contact" className="header-btn1">
+                  <a href="/contact-us" className="header-btn1">
                     Contact Now
                     <span>
                       <i className="fa-solid fa-arrow-right"></i>

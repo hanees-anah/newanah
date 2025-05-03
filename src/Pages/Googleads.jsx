@@ -124,7 +124,7 @@ function Google() {
                                     tracking, we ensure your ad spend delivers maximum ROI, fueling measurable business growth.
                                 </p>
                                 <div className="btn-area" data-aos="fade-left" data-aos-duration="1200">
-                                    <a href="/contact" className="header-btn1">
+                                    <a href="/contact-us" className="header-btn1">
                                         Contact Now<span><i className="fa-solid fa-arrow-right"></i></span>
                                     </a>
                                 </div>

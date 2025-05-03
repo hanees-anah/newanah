@@ -22,10 +22,10 @@ function Footer() {
                   From digital marketing to creative branding, we ensure measurable success and maximum impact for your business.
                 </p>
                 <ul>
-                  <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="#"><i className="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="https://www.facebook.com/people/Anah-marketing/61575241095643/"><i className="fa-brands fa-facebook-f"></i></a></li>
+                  {/* <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li> */}
+                  <li><a href="https://www.instagram.com/ami_performance/"><i className="fa-brands fa-instagram"></i></a></li>
+                  {/* <li><a href="#"><i className="fa-brands fa-linkedin-in"></i></a></li> */}
                 </ul>
               </div>
             </div>
@@ -38,7 +38,7 @@ function Footer() {
                   <li><a href="/about">About Us</a></li>
                   <li><a href="/Portfolio">Portfolio</a></li>
                   <li><a href="/Blog">Our Blog</a></li>
-                  <li><a href="/contact">Contact Us</a></li>
+                  <li><a href="/contact-us">Contact Us</a></li>
                 </ul>
               </div>
             </div>
@@ -93,7 +93,7 @@ function Footer() {
                   <p>ⓒ Copyright 2024 Anah Marketing & Innovations. All rights reserved.</p>
                 </div>
                 <ul>
-                  <li><a href="/terms_condition">Terms & Conditions</a></li>
+                  <li><a href="/terms-condition">Terms & Conditions</a></li>
                   <li><a href="/Privacy_Policy" className="m-0">Privacy Policy</a></li>
                 </ul>
               </div>

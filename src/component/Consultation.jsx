@@ -15,7 +15,7 @@ function Consultation(){
           <h2 class="text-anime-style-3">Ready to Scale Your Brand<br class="d-md-block d-none"/>with Performance Marketing?</h2>
           <p data-aos="fade-up" data-aos-duration="1000">From Meta Ads, Google Ads to website development,<br class="d-md-block d-none"/> we do exactly what a top-tier company does—but smarter, faster and ROI-focused.</p>
           <div class="btn-area text-center" data-aos="fade-up" data-aos-duration="1200">
-            <a href="/contact" class="header-btn1">Free Consultation <span><i class="fa-solid fa-arrow-right"></i></span></a>
+            <a href="/contact-us" class="header-btn1">Free Consultation <span><i class="fa-solid fa-arrow-right"></i></span></a>
           </div>
         </div>
       </div>
