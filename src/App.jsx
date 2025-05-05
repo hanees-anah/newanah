@@ -12,7 +12,7 @@ import Websitedevelopment from "./Pages/Websitedevelopment";
 import MobileDevelopment from "./Pages/Mobiledevelopment";
 import ShopifyDevelopment from "./Pages/Shopfiydevelopment";
 import Blog from "./Pages/Blog";
-import Portfolio from "./Pages/portfolio";
+import Portfolio from "./Pages/Portfolio";
 import ContactUS from "./Pages/ContactUs";
 import Terms_Conditions from "./Pages/Terms_Conditions";
 import Privacy_Policy from "./Pages/Privacy_Policy";
