@@ -12,7 +12,7 @@ import Websitedevelopment from "./Pages/Websitedevelopment";
 import MobileDevelopment from "./Pages/Mobiledevelopment";
 import ShopifyDevelopment from "./Pages/Shopfiydevelopment";
 import Blog from "./Pages/Blog";
-import Portfolio from "./Pages/Portfolio";
+import Portfolio from "./Pages/portfolio";
 import ContactUS from "./Pages/ContactUs";
 import Terms_Conditions from "./Pages/Terms_Conditions";
 import Privacy_Policy from "./Pages/Privacy_Policy";
@@ -40,13 +40,14 @@ function AppWrapper() {
     "/Blog", 
     "/Portfolio", 
     "/contact-us", 
-    "/termscondition", 
+    "/terms-condition", 
     "/Privacy_Policy", 
     "/view_more", 
     "/read_more", 
     "/keyword_read_more", 
     "/instagram_readmore", 
-    "/organic_search"
+    "/organic_search",
+  
   ].includes(location.pathname);
 
   return (
@@ -63,10 +64,10 @@ function AppWrapper() {
         <Route path="/website-development-company" element={<Websitedevelopment />} />
         <Route path="/mobile-app-development-company" element={<MobileDevelopment />} />
         <Route path="/shopify-development-services" element={<ShopifyDevelopment />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/Portfolio" element={<Portfolio />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact-us" element={<ContactUS />} />
-        <Route path="/termscondition" element={<Terms_Conditions />} />
+        <Route path="/terms-condition" element={<Terms_Conditions />} />
         <Route path="/Privacy_Policy" element={<Privacy_Policy />} />
         <Route path="/view_more" element={<View_more />} />
         <Route path="/read_more" element={<Read_more />} />

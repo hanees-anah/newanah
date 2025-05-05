@@ -15,6 +15,7 @@ import our_value_img from "../assets/images/our-value-img.jpg";
 import Shopify_img from "../assets/images/Shopify-img.png";
 import { motion } from "framer-motion";
 import preloader from "../assets/images/preloader-img.png";
+import black_arrow from"../assets/images/arrow-icon-new.png"
 
 function About() {
     const [isLoading, setIsLoading] = useState(true);
@@ -218,7 +219,7 @@ function About() {
                                         <ul>
                                             <li>
                                                 <div className="shopify-content-part">
-                                                    <div className="left-arrow"><img src="assets/images/black-arrow.svg" /></div>
+                                                    <div className="left-arrow"><img src={black_arrow} /></div>
                                                     <div className="text-item">
                                                         <h3>Custom Shopify Design & Development</h3>
                                                         <p>Tailor-made Shopify stores to convert visitors into customers.</p>
@@ -227,7 +228,7 @@ function About() {
                                             </li>
                                             <li>
                                                 <div className="shopify-content-part">
-                                                    <div className="left-arrow"><img src="assets/images/black-arrow.svg" /></div>
+                                                    <div className="left-arrow"><img src={black_arrow} /></div>
                                                     <div className="text-item">
                                                         <h3>Shopify Store Migration</h3>
                                                         <p>Seamless migration of your current store to Shopify with expert support.</p>
@@ -236,7 +237,7 @@ function About() {
                                             </li>
                                             <li>
                                                 <div className="shopify-content-part">
-                                                    <div className="left-arrow"><img src="assets/images/black-arrow.svg" /></div>
+                                                    <div className="left-arrow"><img src={black_arrow} /></div>
                                                     <div className="text-item">
                                                         <h3>Shopify Integration Services</h3>
                                                         <p>Integrate your store with 3rd-party apps for enhanced functionality.</p>

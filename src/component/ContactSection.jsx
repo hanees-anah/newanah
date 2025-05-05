@@ -12,6 +12,7 @@ const ContactSection = () => {
     phone: "",
     company: "",
     message: "",
+    city:""
   });
 
   const [showModal, setShowModal] = useState(false); // For success popup
@@ -32,6 +33,7 @@ const ContactSection = () => {
         phone: "",
         company: "",
         message: "",
+        city:""
       });
     } catch (error) {
       alert("Failed to send message. Please try again.");
@@ -189,6 +191,18 @@ const ContactSection = () => {
                           required
                           onChange={handleChange}
                           value={formData.company}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="input-area">
+                        <input
+                          type="text"
+                          name="city"
+                          placeholder="City"
+                          required
+                          onChange={handleChange}
+                          value={formData.city}
                         />
                       </div>
                     </div>

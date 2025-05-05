@@ -34,6 +34,8 @@ function ContactUS() {
     email: "",
     phone: "",
     message: "",
+    city: "",
+    companyname: ""
   });
 
   const handleChange = (e) => {
@@ -41,9 +43,10 @@ function ContactUS() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault("formDataformData", formData);
+    console.log("formDataformData",formData)
     try {
-      const response = await axios.post("https://anahmarketing.com/send-email", formData);
+      const response = await axios.post("http://localhost:5000/send-email", formData);
       setShowPopup(true);
 
       setFormData({
@@ -52,6 +55,9 @@ function ContactUS() {
         email: "",
         phone: "",
         message: "",
+        city: "",
+        company: "",
+
       });
 
       setTimeout(() => {
@@ -212,6 +218,31 @@ function ContactUS() {
                         />
                       </div>
                     </div>
+                    <div className="col-lg-12">
+                      <div className="input-area">
+                        <input
+                          type="text"
+                          name="city"
+                          placeholder="City"
+                          value={formData.city}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-12">
+                      <div className="input-area">
+                        <input
+                          type="text"
+                          name="company"
+                          placeholder="Company name"
+                          value={formData.company}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+
 
                     <div className="col-lg-12">
                       <div className="input-area">

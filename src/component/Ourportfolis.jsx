@@ -28,6 +28,7 @@ import ruchira_logo from "../assets/images/ruchira.png";
 import holythread_logo from "../assets/images/holythread_logo.png";
 import leheriya_logo from "../assets/images/leheriya_logo.png";
 import bg1 from "../assets/images/pages-bg1.png";
+import ethnicity from "../assets/images/ethnicity-logo.png";
 
 // Image Array
 const portfolioImages = [
@@ -52,6 +53,7 @@ const portfolioImages = [
   ruchira_logo,
   holythread_logo,
   leheriya_logo,
+  ethnicity
 ];
 
 function OurPortfolis() {

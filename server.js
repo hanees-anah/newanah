@@ -17,24 +17,25 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', (req, res) => {
-  const { first_name, last_name, email, phone, message, company } = req.body;
+  // console.log("56312ss")
+  const { first_name, last_name, email, phone, message, company,city } = req.body;
 
-// console.log("56312ss",req.body)
+//  console.log("56312ss",req.body)
 
 
 // console.log("pes",req.body.email)
   // Create an array of field data that is present
   const fields = [
-    { label: 'First Name', value: first_name },
-    { label: 'Last Name', value: last_name },
+    { label: 'Full Name', value: `${first_name || ''} ${last_name || ''}`.trim() },
     { label: 'Email', value: email },
     { label: 'Phone', value: phone },
     { label: 'Company', value: company },
     { label: 'Message', value: message },
+    { label: 'city', value: city },
   ];
 
 
-  // console.log("6532",fields)
+   console.log("6532",fields)
   // Generate email body only with non-empty fields
   const formattedFields = fields
     .filter(field => field.value) // Only include fields with data
@@ -55,7 +56,7 @@ app.post('/send-email', (req, res) => {
   const mailOptions = {
     from: "harsh.iglobe@gmail.com",
     to: "admin@anahmarketing.com",
-     cc: ["marketing@anahmarketing.com"],
+    cc: ["marketing@anahmarketing.com"],
     subject: "New Contact Form Submission",
     html: htmlBody,
   };

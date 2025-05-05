@@ -32178,3 +32178,11 @@ body{
   margin-bottom: 15px;
   text-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
 }
+
+.portfolio_bottom_part .tab-pane .accordion-collapse {
+  display: block;
+}
+
+.portfolio_bottom_part ul.nav-tabs {
+  gap: 6px;
+}

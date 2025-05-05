@@ -119,8 +119,8 @@ function Header() {
                                 <li><a href="/shopify-development-services">Shopify Development</a></li>
                             </ul>
                         </li>
-                        <li><a href="/blog">Blogs</a></li>
-                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/Blog">Blogs</a></li>
+                        <li><a href="/Portfolio">Portfolio</a></li>
                         <li><a href="/contact-us">Contact Us</a></li>
                     </ul>
                     <div class="allmobilesection">

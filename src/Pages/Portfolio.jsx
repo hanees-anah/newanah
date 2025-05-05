@@ -45,6 +45,7 @@ import holythread_logo from "../assets/images/holythread_logo.png";
 import leheriya_logo from "../assets/images/leheriya_logo.png";
 import fashiondwar_logo from "../assets/images/fashiondwar-logo.png";
 import lavanya_logo from "../assets/images/lavanya-logo.png";
+import Divi_logo from"../assets/images/divi-logo.png"
 
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
@@ -103,7 +104,7 @@ function Portfolio() {
             <p data-aos="fade-up" data-aos-duration="1000">Our portfolio reflects a journey of creativity and innovation. Every project is a testament to scaling brands through cutting-edge marketing solutions.</p>
           </div>
           <div className="portfolio_bottom_part">
-            <ul className="nav nav-tabs d-none d-lg-flex" id="myTab" role="tablist">
+            <ul className="nav nav-tabs  d-lg-flex" id="myTab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
                   All
@@ -261,6 +262,11 @@ function Portfolio() {
                           <img src={jagoIndiaJagoLogo} alt="Jago India Jago" />
                         </div>
                       </div>
+                      <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={Divi_logo} alt="Styleunion" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -393,6 +399,11 @@ function Portfolio() {
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={styleunion_logo} alt="Styleunion" />
+                        </div>
+                      </div>
+                      <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={Divi_logo} alt="Styleunion" />
                         </div>
                       </div>
                       <div className="col-md-3 col-sm-4">
