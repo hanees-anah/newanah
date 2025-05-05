@@ -1,4 +1,6 @@
 import React from 'react';
+import teakwood_logo from "../assets/images/logo-img.png";
+
 
 const NotFound = () => {
   const styles = {
@@ -7,116 +9,33 @@ const NotFound = () => {
       color: '#bbb',
       textAlign: 'center',
       paddingBottom: '50px',
+      marginTop: '100px',
     },
     h1: {
-      margin: '30px 15px',
+      margin: '40px 15px',
     },
-    zoomArea: {
-      maxWidth: '490px',
-      margin: '30px auto',
-      fontSize: '19px',
-    },
-    errorContainer: {
-      fontSize: '106px',
-      fontFamily: "'Catamaran', sans-serif",
-      fontWeight: 800,
-      margin: '70px 15px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '10px',
-    },
-    four: {
-      position: 'relative',
-      width: '136px',
-      height: '43px',
-      borderRadius: '999px',
-      background: 'linear-gradient(to right, #d89ca4, #e27b7e)',
-    },
-    fourBefore: {
-      content: "''",
-      position: 'absolute',
-      width: '43px',
-      height: '156px',
-      left: '60px',
-      bottom: '-43px',
-      borderRadius: '999px',
-      background: 'linear-gradient(to top, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F)',
-    },
-    fourAfter: {
-      content: "''",
-      position: 'absolute',
-      width: '137px',
-      height: '43px',
-      transform: 'rotate(-49.5deg)',
-      left: '-18px',
-      bottom: '36px',
-      borderRadius: '999px',
-      background: 'linear-gradient(to right, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F)',
-    },
-    zero: {
-      position: 'relative',
-      width: '156px',
-      height: '156px',
-      borderRadius: '999px',
-      background: 'linear-gradient(to top right, #99749D, #99749D, #B895AB, #CC9AA6, #D7969E, #ED8687, #ED8687)',
-      display: 'inline-block',
-    },
-    zeroAfter: {
-      content: "''",
-      position: 'absolute',
-      width: '70px',
-      height: '70px',
-      left: '43px',
-      bottom: '43px',
-      backgroundColor: '#FDFAF5',
-      borderRadius: '999px',
-      boxShadow: '-2px 2px 2px 0px rgba(0, 0, 0, 0.1)',
-    },
-    linkContainer: {
-      marginTop: '50px',
-    },
-    moreLink: {
-      textTransform: 'uppercase',
-      fontSize: '13px',
-      backgroundColor: '#de7e85',
-      padding: '10px 15px',
-      color: '#fff',
-      display: 'inline-block',
-      marginBottom: '5px',
-      textDecoration: 'none',
-      letterSpacing: '1px',
+    image: {
+      width: '500px',
+      maxWidth: '90%',
+      margin: '0 auto 30px',
+      marginTop: '20px',
     },
   };
 
   return (
     <div style={styles.container}>
       <h1 style={styles.h1}>404 Error Page</h1>
-    
-      <section style={styles.errorContainer}>
-        <span style={{ ...styles.four }}>
-          <span style={styles.fourBefore}></span>
-          <span style={styles.fourAfter}></span>
-          <span className="screen-reader-text">4</span>
-        </span>
-        <span style={styles.zero}>
-          <span style={styles.zeroAfter}></span>
-          <span className="screen-reader-text">0</span>
-        </span>
-        <span style={{ ...styles.four }}>
-          <span style={styles.fourBefore}></span>
-          <span style={styles.fourAfter}></span>
-          <span className="screen-reader-text">4</span>
-        </span>
-      </section>
-      <div style={styles.linkContainer}>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://anahmarketing.com/"
-          style={styles.moreLink}
-        >
-          Visit home page
+
+      {/* Replace the src with your own image path or URL */}
+      <img
+        src={teakwood_logo}
+        alt="Page not found"
+        style={styles.image}
+      />
+
+      <div className="flex items-center justify-center h-screen mt-5">
+        <a href="https://anahmarketing.com/" className="header-btn1">
+          Go to Home <span><i className="fa-solid fa-arrow-right"></i></span>
         </a>
       </div>
     </div>

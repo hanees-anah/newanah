@@ -167,7 +167,7 @@ function ContactUS() {
                 <h4>Get In Touch</h4>
                 <form onSubmit={handleSubmit}>
                   <div className="row">
-                    <div className="col-lg-12">
+                    <div className="col-lg-6">
                       <div className="input-area">
                         <input
                           type="text"
@@ -180,7 +180,7 @@ function ContactUS() {
                       </div>
                     </div>
 
-                    <div className="col-lg-12">
+                    <div className="col-lg-6">
                       <div className="input-area">
                         <input
                           type="text"
@@ -193,7 +193,7 @@ function ContactUS() {
                       </div>
                     </div>
 
-                    <div className="col-lg-12">
+                    <div className="col-lg-6">
                       <div className="input-area">
                         <input
                           type="email"
@@ -206,7 +206,7 @@ function ContactUS() {
                       </div>
                     </div>
 
-                    <div className="col-lg-12">
+                    <div className="col-lg-6">
                       <div className="input-area">
                         <input
                           type="tel"
@@ -218,25 +218,25 @@ function ContactUS() {
                         />
                       </div>
                     </div>
-                    <div className="col-lg-12">
-                      <div className="input-area">
-                        <input
-                          type="text"
-                          name="city"
-                          placeholder="City"
-                          value={formData.city}
-                          onChange={handleChange}
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
+                    <div className="col-lg-6">
                       <div className="input-area">
                         <input
                           type="text"
                           name="company"
                           placeholder="Company name"
                           value={formData.company}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="input-area">
+                        <input
+                          type="text"
+                          name="city"
+                          placeholder="City"
+                          value={formData.city}
                           onChange={handleChange}
                           required
                         />
