@@ -768,9 +768,9 @@ Location:
     font-size: var(--ztc-font-size-font-s32);
     line-height: var(--ztc-font-size-font-s40);
   }
-}
-.blog-top-area .blog-top-boxarea {
-  padding: 20px;
+  .blog-top-area .blog-top-boxarea {
+    padding: 20px;
+  }
 }
 .heading3 p {
   font-family: var(--ztc-family-font1);

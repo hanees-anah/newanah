@@ -64,7 +64,7 @@ function Result(){
                  <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1200">
                     <div class="works-author-boxarea">
                        <a href="#">WhatsApp Marketing</a>
-                       <p>By tapping into the power of direct messaging, a plus-size fashion brand achieved a 19.33x ROAS through WhatsApp marketing, using smart targeting and personalized outreach to boost conversions and maximize ROI with a cost-effective, scalable approach.</p>
+                       <p>By tapping into the power of direct messaging, a plus-size fashion brand achieved a 8.04x ROAS through WhatsApp marketing, using smart targeting and personalized outreach to boost conversions and maximize ROI with a cost-effective, scalable approach.</p>
                        <div class="space24"></div>
                        <div class="img1">
                           <img src={wp_img} alt=""/>

@@ -3,6 +3,7 @@ import star1 from "../assets/images/star1.png";
 import elemenrts6 from "../assets/images/elements6.png";
 import mobile_app_development2 from "../assets/images/mobile-app-development2.png";
 import star2 from "../assets/images/star2.png";
+import mobile_app_development3 from "../assets/images/mobile-app-development3.png";
 import mobile_app_development4 from "../assets/images/mobile-app-development4.png";
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
@@ -144,8 +145,16 @@ function MobileDevelopment() {
             <div className="works-inner-section-area services-page">
                 <div className="container">
                     {[
-                        { title: "Custom Strategy & Planning", img: "mobile-app-development3.png", text: "We craft tailored mobile app strategies based on in-depth market research and user behavior analysis. Our approach ensures that your app aligns with your business goals, delivering a seamless user experience and maximizing performance." },
-                        { title: "Performance Optimization & Security", img: "mobile-app-development4.png", text: "We fine-tune your app to deliver exceptional speed, responsiveness and security. Our experts optimize code, improve backend efficiency and enhance security protocols to ensure a smooth, secure and scalable application." }
+                        {
+                            title: "Custom Strategy & Planning",
+                            img: mobile_app_development3,
+                            text: "We craft tailored mobile app strategies based on in-depth market research and user behavior analysis. Our approach ensures that your app aligns with your business goals, delivering a seamless user experience and maximizing performance."
+                        },
+                        {
+                            title: "Performance Optimization & Security",
+                            img: mobile_app_development4,
+                            text: "We fine-tune your app to deliver exceptional speed, responsiveness and security. Our experts optimize code, improve backend efficiency and enhance security protocols to ensure a smooth, secure and scalable application."
+                        }
                     ].map((section, index) => (
                         <div key={index} className="row align-items-center">
                             <div className={`col-lg-8 ${index % 2 === 1 ? "order-lg-2" : ""}`}>
@@ -154,23 +163,20 @@ function MobileDevelopment() {
                                     <p>{section.text}</p>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="about-all-images-area">
-                                    <img src={star2} alt="" class="elements12 keyframe5" />
-                                    <img src={star1} alt="" class="elements13 keyframe5" />
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="img1 ">
-                                                <div class="space100"></div>
-                                                <img src={mobile_app_development4} alt="" />
-                                                <div class="space100"></div>
-                                            </div>
-                                        </div>
+                            <div className="col-lg-4">
+                                <div className="about-all-images-area">
+                                    <img src={star2} alt="" className="elements12 keyframe5" />
+                                    <img src={star1} alt="" className="elements13 keyframe5" />
+                                    <div className="img1">
+                                        <div className="space100"></div>
+                                        <img src={section.img} alt={section.title} />
+                                        <div className="space100"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ))}
+
                 </div>
             </div>
 
