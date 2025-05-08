@@ -3,27 +3,15 @@ name: Deploy on Self-Hosted Runner
 on:
   push:
     branches:
-      - main  # or the branch you want to trigger on
+      - main  # or your target branch
 
 jobs:
   deploy:
-    name: Run Git Pull and Build
-    runs-on: self-hosted  # Use your runner label
+    runs-on: self-hosted
 
     steps:
-     
-      - name: Change to project directory
-        run: cd /var/www/html/pritam/anah
-
-      - name: Print
-        run: pwd
-
-      - name: print
-        run: whereis git
-      
-      - name: Git Pull
-        run: sudo git pull
-
-      - name: Build Project
-        run: npm run build
-        working-directory: /var/www/html/pritam/anah
+      - name: Git Pull and Build
+        run: |
+          cd /var/www/html/pritam/anah
+          sudo git pull
+          npm run build
