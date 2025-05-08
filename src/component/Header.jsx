@@ -30,7 +30,7 @@ function Header() {
                                     <div className="main-menu">
                                         <ul>
                                             <li><a href="/">Home</a></li>
-                                            <li><a href="/about">About Us</a></li>
+                                            <li><a href="/about-us">About Us</a></li>
                                             <li>
                                                 <a href="#">Services <i className="fa-solid fa-angle-down"></i></a>
                                                 <ul className="dropdown-padding">
@@ -38,14 +38,14 @@ function Header() {
                                                     <li><a href="/google-ads-services">Google Ads</a></li>
                                                     <li><a href="/email-marketing-services">Email-Marketing</a></li>
                                                     <li><a href="/whatsapp-marketing-services">WhatsApp-Marketing</a></li>
-                                                    <li><a href="/seo-company-in-india">Search Engine Optimisation </a></li>
+                                                    <li><a href="/seo-company">Search Engine Optimisation </a></li>
                                                     <li><a href="/website-development-company">Website Development</a></li>
                                                     <li><a href="/mobile-app-development-company">Mobile App Development</a></li>
                                                     <li><a href="/shopify-development-services">Shopify Development</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="/Blog">Blogs</a></li>
-                                            <li><a href="/Portfolio">Portfolio</a></li>
+                                            <li><a href="/blog">Blogs</a></li>
+                                            <li><a href="/portfolio">Portfolio</a></li>
                                             <li><a href="/contact-us">Contact Us</a></li>
                                         </ul>
                                     </div>
@@ -106,21 +106,21 @@ function Header() {
                 <div className="mobile-nav mobile-nav1">
                     <ul className="mobile-nav-list nav-list1">
                         <li><a href="/">Home</a></li>
-                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/about-us">About Us</a></li>
                         <li>
                             <a href="#">Services <i className="fa-solid fa-angle-down"></i></a>
                             <ul className="dropdown-padding" style={{ display: "none" }}>
                                 <li><a href="/social-media-marketing-services">Meta Ads</a></li>
                                 <li><a href="/google-ads-services">Google Ads</a></li>
                                 <li><a href="/whatsapp-marketing-services">WhatsApp Marketing</a></li>
-                                <li><a href="/seo-company-in-india">SEO</a></li>
+                                <li><a href="/seo-company">SEO</a></li>
                                 <li><a href="/website-development-company">Website Development</a></li>
                                 <li><a href="/mobile-app-development-company">Mobile App Development</a></li>
                                 <li><a href="/shopify-development-services">Shopify Development</a></li>
                             </ul>
                         </li>
-                        <li><a href="/Blog">Blogs</a></li>
-                        <li><a href="/Portfolio">Portfolio</a></li>
+                        <li><a href="/blog">Blogs</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
                         <li><a href="/contact-us">Contact Us</a></li>
                     </ul>
                     <div class="allmobilesection">

@@ -73,7 +73,7 @@ function Partner() {
     },
     {
       img: Seo,
-      link: "/seo-company-in-india",
+      link: "/seo-company",
       title: "Search Engine Optimization",
       desc: "Outrank the competition and attract right people with strategic SEO that improves rankings, increases traffic and drives long-term growth.",
     },
@@ -176,7 +176,7 @@ function Partner() {
                 <p data-aos="fade-left" data-aos-duration="1000">
                 With expertise in Meta Ads, Google Ads, social media marketing, and web development, we help brands to increase visibility, engage their audience, and maximize revenue.                </p>
                 <div className="btn-area" data-aos="fade-left" data-aos-duration="1200">
-                  <a href="/about" className="header-btn1">
+                  <a href="/about-us" className="header-btn1">
                     View More <span><i className="fa-solid fa-arrow-right"></i></span>
                   </a>
                 </div>
@@ -233,7 +233,7 @@ function Partner() {
                   delay: 0,
                   disableOnInteraction: false,
                 }}
-                speed={2500}
+                speed={4000}
                 freeMode={true}
               >
                 {services.map((service, index) => (

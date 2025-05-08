@@ -35,15 +35,15 @@ return(
                         </div>
                         <div class="content-area">
                            <h5>Our Value</h5>
-                           <a href="/about" class="text text-anime-style-2">Turn Clicks into Conversions with Strategic Marketing</a>
+                           <a href="/about-us" class="text text-anime-style-2">Turn Clicks into Conversions with Strategic Marketing</a>
                            <p data-aos="fade-up" data-aos-duration="1000" class="text-white">Scaling a brand isn’t just about ads—it’s about structured content, audience insights and constant optimization. We build sustainable growth strategies that drive measurable results. </p>
                            <div class="btn-area" data-aos="fade-up" data-aos-duration="1200">
-                              <a href="/about" class="header-btn1">View More <span><i class="fa-solid fa-arrow-right"></i></span>
+                              <a href="/about-us" class="header-btn1">View More <span><i class="fa-solid fa-arrow-right"></i></span>
                               </a>
                            </div>
                         </div>
                         <div class="arrow-area">
-                           <a href="/about"><i class="fa-solid fa-arrow-right"></i></a>
+                           <a href="/about-us"><i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                      </div>
                   </div>
@@ -53,11 +53,11 @@ return(
                            <div class="col-lg-12 col-md-6">
                               <div class="service2-auhtor-boxarea" data-aos="zoom-out" data-aos-duration="1000">
                                  <div class="arrow">
-                                    <a href="/about"><i class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="/about-us"><i class="fa-solid fa-arrow-right"></i></a>
                                  </div>
                                  <div class="content-area">
                                     <h5>Our Mission</h5>
-                                    <a href="/about">We’re more than marketers—we’re your growth partners</a>
+                                    <a href="/about-us">We’re more than marketers—we’re your growth partners</a>
                                     <p>No shortcuts, no guesswork. Just performance marketing that delivers tangible ROI. We help brands cut through the noise and scale with confidence.</p>
                                  </div>
                               </div>
@@ -65,11 +65,11 @@ return(
                            <div class="col-lg-12 col-md-6">
                               <div class="service2-auhtor2-boxarea" data-aos="zoom-out" data-aos-duration="1200">
                                  <div class="arrow">
-                                    <a href="/about"><i class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="/about-us"><i class="fa-solid fa-arrow-right"></i></a>
                                  </div>
                                  <div class="content-area">
                                     <h5>Our Vision</h5>
-                                    <a href="/about">Empowering brands to dominate the digital space</a>
+                                    <a href="/about-us">Empowering brands to dominate the digital space</a>
                                     <p>We envision a future where every brand, big or small, has the tools and strategies to thrive online. Our mission is to make high-performance marketing accessible, scalable and results driven.</p>
                                  </div>
                               </div>

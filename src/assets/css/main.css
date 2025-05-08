@@ -2773,6 +2773,9 @@ Location:
 .bg3 {
   background: #F6F8FA !important;
 }
+.cta-section-area .cta-header-area.text-center.sp4.heading2 {
+  background: none;
+}
 
 /*============= COMMON CSS AREA ENDS===============*/
 .sp1 {

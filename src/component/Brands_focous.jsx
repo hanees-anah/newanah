@@ -28,14 +28,14 @@ function Brands_focous() {
                     <div className="col-md-6">
                         <div className="news-card row align-items-center">
                             <div className="news-media col-md-6">
-                                <a href="/organic_search">
+                                <a href="/organic-search">
                                     <img alt="" src={organic_img} className="full-img" />
                                 </a>
                             </div>
                             <div className="content-info col-md-6">
                                 <div className="post-date">Feb 28, 2023</div>
                                 <h4 className="dlab-title">
-                                    <a href="/organic_search">
+                                    <a href="/organic-search">
                                         Organic Search vs Paid Search: What’s the D...
                                     </a>
                                 </h4>
@@ -43,7 +43,7 @@ function Brands_focous() {
                                     Every business knows the value of search and every business has its own point of view on organic
                                     search and paid search.
                                 </p>
-                                <a href="/organic_search" className="news-btn">
+                                <a href="/organic-search" className="news-btn">
                                     Read More
                                 </a>
                             </div>
@@ -52,14 +52,14 @@ function Brands_focous() {
                     <div className="col-md-6">
                         <div className="news-card row align-items-center">
                             <div className="news-media col-md-6">
-                                <a href="/instagram_readmore">
+                                <a href="/instagram-readmore">
                                     <img alt="" src={instagram__img} className="full-img" />
                                 </a>
                             </div>
                             <div className="content-info col-md-6">
                                 <div className="post-date">Jan 24, 2023</div>
                                 <h4 className="dlab-title">
-                                    <a href="/instagram_readmore">
+                                    <a href="/instagram-readmore">
                                         What's New on Instagram in 2023: How to Use T...
                                     </a>
                                 </h4>
@@ -67,7 +67,7 @@ function Brands_focous() {
                                     In today’s era, almost everyone is looking for a platform where they can show up their goods and
                                     services to the interested audience.
                                 </p>
-                                <a href="/instagram_readmore" className="news-btn">
+                                <a href="/instagram-readmore" className="news-btn">
                                     Read More
                                 </a>
                             </div>
@@ -76,21 +76,21 @@ function Brands_focous() {
                     <div className="col-md-6">
                         <div className="news-card row align-items-center">
                             <div className="news-media col-md-6">
-                                <a href="/keyword_read_more">
+                                <a href="/keyword-read-more">
                                     <img alt="" src={keyword__img} className="full-img" />
                                 </a>
                             </div>
                             <div className="content-info col-md-6">
                                 <div className="post-date">Dec 26, 2022</div>
                                 <h4 className="dlab-title">
-                                    <a href="/keyword_read_more">
+                                    <a href="/keyword-read-more">
                                         Keyword Research and its Related Factors...
                                     </a>
                                 </h4>
                                 <p className="m-b20">
                                     The process of finding and analyzing search teams that most people use to type in search engines is keyword research.
                                 </p>
-                                <a href="/keyword_read_more" className="news-btn">
+                                <a href="/keyword-read-more" className="news-btn">
                                     Read More
                                 </a>
                             </div>
@@ -99,21 +99,21 @@ function Brands_focous() {
                     <div className="col-md-6">
                         <div className="news-card row align-items-center">
                             <div className="news-media col-md-6">
-                                <a href="/read_more">
+                                <a href="/read-more">
                                     <img alt="" src={seo__img} className="full-img" />
                                 </a>
                             </div>
                             <div className="content-info col-md-6">
                                 <div className="post-date">Nov 21, 2022</div>
                                 <h4 className="dlab-title">
-                                    <a href="/read_more">
+                                    <a href="/read-more">
                                         The Only SEO Checklist that Gives your eComme...
                                     </a>
                                 </h4>
                                 <p className="m-b20">
                                     Search Engine Optimization (SEO) is a process used to optimize the main content of your website. With optimization,
                                 </p>
-                                <a href="/read_more" className="news-btn">
+                                <a href="/read-more" className="news-btn">
                                     Read More
                                 </a>
                             </div>

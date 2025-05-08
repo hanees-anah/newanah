@@ -82,7 +82,7 @@ function Blog() {
                                             <h2>Organic Search vs Paid Search: What’s the Difference?</h2>
                                             <div className="space8"></div>
                                             <div className="btn-area">
-                                                <a href="/view_more" className="header-btn1">
+                                                <a href="/view-more" className="header-btn1">
                                                     View More <span><i className="fa-solid fa-arrow-right"></i></span>
                                                 </a>
                                             </div>
@@ -109,44 +109,44 @@ function Blog() {
                             <div class="col-md-4">
                                 <div class="news-card align-items-center">
                                     <div class="news-media">
-                                        <a href="/instagram_readmore"><img alt="" src={instagram} class="full-img" /></a>
+                                        <a href="/instagram-readmore"><img alt="" src={instagram} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
                                         <div class="post-date">Jan 24, 2023</div>
-                                        <h4 class="dlab-title"><a href="/instagram_readmore">What's New on Instagram in 2023: How to Use T...</a></h4>
+                                        <h4 class="dlab-title"><a href="/instagram-readmore">What's New on Instagram in 2023: How to Use T...</a></h4>
                                         <p class="m-b20">In today’s era, almost everyone is looking for a platform where they can show up their goods and services to the interested audience,</p>
-                                        <a href="/instagram_readmore" class="news-btn">Read More</a>
+                                        <a href="/instagram-readmore" class="news-btn">Read More</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="news-card align-items-center">
                                     <div class="news-media">
-                                        <a href="/keyword_read_more"><img alt="" src={keyword} class="full-img" /></a>
+                                        <a href="/keyword-read-more"><img alt="" src={keyword} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
                                         <div class="post-date">Dec 26, 2022</div>
-                                        <h4 class="dlab-title"><a href="/keyword_read_more">Keyword Research and its Related Factors...</a></h4>
+                                        <h4 class="dlab-title"><a href="/keyword-read-more">Keyword Research and its Related Factors...</a></h4>
                                         <p class="m-b20">The process of finding and analyzing search teams that most people use to type in search engines is keyword research.</p>
-                                        <a href="/keyword_read_more" class="news-btn">Read More</a>
+                                        <a href="/keyword-read-more" class="news-btn">Read More</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="news-card align-items-center">
                                     <div class="news-media">
-                                        <a href="/Read_more"><img alt="" src={seo} class="full-img" /></a>
+                                        <a href="/read-more"><img alt="" src={seo} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
                                         <div class="post-date">Nov 21, 2022</div>
-                                        <h4 class="dlab-title"><a href="/Read_more">The Only SEO Checklist that Gives your eComme...</a></h4>
+                                        <h4 class="dlab-title"><a href="/read-more">The Only SEO Checklist that Gives your eComme...</a></h4>
                                         <p class="m-b20">Search Engine Optimization (SEO) is a process used to optimize the main content of your website. With optimization,</p>
-                                        <a href="/Read_more" class="news-btn">Read More</a>
+                                        <a href="/read-more" class="news-btn">Read More</a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-12">
+                            {/* <div class="col-lg-12">
                                 <div class="pagination-area">
                                     <nav aria-label="Page navigation example">
                                         <ul class="pagination justify-content-center">
@@ -162,7 +162,7 @@ function Blog() {
                                         </ul>
                                     </nav>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

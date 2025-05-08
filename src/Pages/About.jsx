@@ -159,18 +159,18 @@ function About() {
                                         </div>
                                         <div className="content-area">
                                             <h5>Our Value</h5>
-                                            <a href="/about" className="text text-anime-style-2">Turn Clicks into Conversions with Strategic Marketing</a>
+                                            <a href="/about-us" className="text text-anime-style-2">Turn Clicks into Conversions with Strategic Marketing</a>
                                             <p data-aos="fade-up" data-aos-duration="1000" className="text-white">
                                                 Scaling a brand isn’t just about ads—it’s about structured content, audience insights and constant optimization.
                                             </p>
                                             <div className="btn-area" data-aos="fade-up" data-aos-duration="1200">
-                                                <a href="/about" className="header-btn1">
+                                                <a href="/about-us" className="header-btn1">
                                                     View More <span><i className="fa-solid fa-arrow-right"></i></span>
                                                 </a>
                                             </div>
                                         </div>
                                         <div className="arrow-area">
-                                            <a href="/about"><i className="fa-solid fa-arrow-right"></i></a>
+                                            <a href="/about-us"><i className="fa-solid fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -180,11 +180,11 @@ function About() {
                                             <div className="col-lg-12 col-md-6">
                                                 <div className="service2-auhtor-boxarea" data-aos="zoom-out" data-aos-duration="1000">
                                                     <div className="arrow">
-                                                        <a href="/about"><i className="fa-solid fa-arrow-right"></i></a>
+                                                        <a href="/about-us"><i className="fa-solid fa-arrow-right"></i></a>
                                                     </div>
                                                     <div className="content-area">
                                                         <h5>Our Mission</h5>
-                                                        <a href="/about">We’re more than marketers—we’re your growth partners</a>
+                                                        <a href="/about-us">We’re more than marketers—we’re your growth partners</a>
                                                         <p>No shortcuts, no guesswork. Just performance marketing that delivers tangible ROI.</p>
                                                     </div>
                                                 </div>
@@ -192,11 +192,11 @@ function About() {
                                             <div className="col-lg-12 col-md-6">
                                                 <div className="service2-auhtor2-boxarea" data-aos="zoom-out" data-aos-duration="1200">
                                                     <div className="arrow">
-                                                        <a href="/about"><i className="fa-solid fa-arrow-right"></i></a>
+                                                        <a href="/about-us"><i className="fa-solid fa-arrow-right"></i></a>
                                                     </div>
                                                     <div className="content-area">
                                                         <h5>Our Vision</h5>
-                                                        <a href="/about">Empowering brands to dominate the digital space</a>
+                                                        <a href="/about-us">Empowering brands to dominate the digital space</a>
                                                         <p>We envision a future where every brand has the tools and strategies to thrive online.</p>
                                                     </div>
                                                 </div>

@@ -35,9 +35,9 @@ function Footer() {
                 <h3>About Link</h3>
                 <ul>
                   <li><a href="/">Home</a></li>
-                  <li><a href="/about">About Us</a></li>
-                  <li><a href="/Portfolio">Portfolio</a></li>
-                  <li><a href="/Blog">Our Blog</a></li>
+                  <li><a href="/about-us">About Us</a></li>
+                  <li><a href="/portfolio">Portfolio</a></li>
+                  <li><a href="/blog">Our Blog</a></li>
                   <li><a href="/contact-us">Contact Us</a></li>
                 </ul>
               </div>
@@ -94,7 +94,7 @@ function Footer() {
                 </div>
                 <ul>
                   <li><a href="/terms-condition">Terms & Conditions</a></li>
-                  <li><a href="/Privacy_Policy" className="m-0">Privacy Policy</a></li>
+                  <li><a href="/privacy-policy" className="m-0">Privacy Policy</a></li>
                 </ul>
               </div>
             </div>

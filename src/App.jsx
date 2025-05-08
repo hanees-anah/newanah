@@ -28,25 +28,25 @@ function AppWrapper() {
   const location = useLocation();
   const hideHeaderFooter = [
     "/", 
-    "/about", 
+    "/about-us", 
     "/social-media-marketing-services", 
     "/google-ads-services", 
     "/email-marketing-services", 
     "/whatsapp-marketing-services", 
-    "/seo-company-in-india", 
+    "/seo-company", 
     "/website-development-company", 
     "/mobile-app-development-company", 
     "/shopify-development-services", 
-    "/Blog", 
-    "/Portfolio", 
+    "/blog", 
+    "/portfolio", 
     "/contact-us", 
     "/terms-condition", 
-    "/Privacy_Policy", 
-    "/view_more", 
-    "/read_more", 
-    "/keyword_read_more", 
-    "/instagram_readmore", 
-    "/organic_search",
+    "/privacy-policy", 
+    "/view-more", 
+    "/read-more", 
+    "/keyword-read-more", 
+    "/instagram-readmore", 
+    "/organic-search",
   
   ].includes(location.pathname);
 
@@ -55,12 +55,12 @@ function AppWrapper() {
       {hideHeaderFooter && <Header />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about-us" element={<About />} />
         <Route path="/social-media-marketing-services" element={<MetaAds />} />
         <Route path="/google-ads-services" element={<Google />} />
         <Route path="/email-marketing-services" element={<EmailMarketing />} />
         <Route path="/whatsapp-marketing-services" element={<WhatsappMarketing />} />
-        <Route path="/seo-company-in-india" element={<SearchEngineOptimisation />} />
+        <Route path="/seo-company" element={<SearchEngineOptimisation />} />
         <Route path="/website-development-company" element={<Websitedevelopment />} />
         <Route path="/mobile-app-development-company" element={<MobileDevelopment />} />
         <Route path="/shopify-development-services" element={<ShopifyDevelopment />} />
@@ -68,12 +68,12 @@ function AppWrapper() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact-us" element={<ContactUS />} />
         <Route path="/terms-condition" element={<Terms_Conditions />} />
-        <Route path="/Privacy_Policy" element={<Privacy_Policy />} />
-        <Route path="/view_more" element={<View_more />} />
-        <Route path="/read_more" element={<Read_more />} />
-        <Route path="/keyword_read_more" element={<Keywoed_reserach_reacd_more />} />
-        <Route path="/instagram_readmore" element={<InstagramReadMore />} />
-        <Route path="/organic_search" element={<Organic_search />} />
+        <Route path="/privacy-policy" element={<Privacy_Policy />} />
+        <Route path="/view-more" element={<View_more />} />
+        <Route path="/read-more" element={<Read_more />} />
+        <Route path="/keyword-read-more" element={<Keywoed_reserach_reacd_more />} />
+        <Route path="/instagram-readmore" element={<InstagramReadMore />} />
+        <Route path="/organic-search" element={<Organic_search />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

@@ -76,7 +76,7 @@ function Keywoed_reserach_reacd_more(){
          <h3><strong>What is keyword density? </strong></h3>
          <p>Keyword density is the number of times a keyword seems on a given webpage or in a particular content as a percentage of the total word count. This is also known as keyword frequency. The right keyword density for SEO doesn’t have a clear rule. Although there are a few things to keep in mind to ensure the optimization of the content and increase visibility and improve the overall experience of the audience.&nbsp;</p>
          <h3><strong>Competition Matters</strong></h3>
-         <p>The competition is good when it comes to <a href="/seo-company-in-india"><strong>SEO</strong></a>, and <a href="/email-marketing-services"><strong>SMO </strong></a>ranking. Who’s outranking who is a piece of important information to keep a note of. The best way to find out who is ranking your keyword is by google search. This gives a basic idea of your online competition. There are some tools that help in analysing the competition and ranking up in the keywords game.</p>
+         <p>The competition is good when it comes to <a href="/seo-company"><strong>SEO</strong></a>, and <a href="/email-marketing-services"><strong>SMO </strong></a>ranking. Who’s outranking who is a piece of important information to keep a note of. The best way to find out who is ranking your keyword is by google search. This gives a basic idea of your online competition. There are some tools that help in analysing the competition and ranking up in the keywords game.</p>
          <h3><strong>Tips to help you find the best keywords</strong></h3>
          <p>There are a few tips to conduct the best keyword research.&nbsp;</p>
          <ol>
