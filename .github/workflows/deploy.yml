@@ -15,6 +15,12 @@ jobs:
       - name: Change to project directory
         run: cd /var/www/html/pritam/anah
 
+      - name: Print
+        run: pwd
+
+      - name: print
+        run: whereis git
+      
       - name: Git Pull
         run: sudo git pull
 
