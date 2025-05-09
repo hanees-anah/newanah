@@ -1,6 +1,6 @@
 import React from 'react';
 
-import  organic_img from"../assets/images/organic-search-img.jpg"
+import  organic_img from"../assets/images/anah-2025.jpeg"
 import  instagram__img from"../assets/images/instagram_business.jpg"
 import  keyword__img from"../assets/images/keyword-research-img.jpg"
 import  seo__img from"../assets/images/seo-checklis-img.jpg"
@@ -28,22 +28,21 @@ function Brands_focous() {
                     <div className="col-md-6">
                         <div className="news-card row align-items-center">
                             <div className="news-media col-md-6">
-                                <a href="/organic-search">
+                                <a href="/blog/performance-marketing-trends">
                                     <img alt="" src={organic_img} className="full-img" />
                                 </a>
                             </div>
                             <div className="content-info col-md-6">
-                                <div className="post-date">Feb 28, 2023</div>
+                                <div className="post-date">May 09, 2025</div>
                                 <h4 className="dlab-title">
-                                    <a href="/organic-search">
-                                        Organic Search vs Paid Search: What’s the D...
+                                    <a href="/blog/performance-marketing-trends">
+                                    Performance Marketing in 2025: Top Channels to Watch and Leverage 
                                     </a>
                                 </h4>
                                 <p className="m-b20">
-                                    Every business knows the value of search and every business has its own point of view on organic
-                                    search and paid search.
+                                Have you ever spotted an ad while scrolling Instagram reels and thought, “This is exactly what I needed”?
                                 </p>
-                                <a href="/organic-search" className="news-btn">
+                                <a href="/blog/performance-marketing-trends" className="news-btn">
                                     Read More
                                 </a>
                             </div>

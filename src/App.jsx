@@ -46,7 +46,7 @@ function AppWrapper() {
     "/read-more", 
     "/keyword-read-more", 
     "/instagram-readmore", 
-    "/organic-search",
+    "/blog/performance-marketing-trends",
   
   ].includes(location.pathname);
 
@@ -73,7 +73,7 @@ function AppWrapper() {
         <Route path="/read-more" element={<Read_more />} />
         <Route path="/keyword-read-more" element={<Keywoed_reserach_reacd_more />} />
         <Route path="/instagram-readmore" element={<InstagramReadMore />} />
-        <Route path="/organic-search" element={<Organic_search />} />
+        <Route path="/blog/performance-marketing-trends" element={<Organic_search />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
