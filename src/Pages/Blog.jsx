@@ -102,7 +102,7 @@ function Blog() {
             </div>
 
             {/* News Section */}
-            {/* <section class="news-sec">
+            <section class="news-sec">
                 <div class="blog1-scetion-area sp2 bg2">
                     <div class="container">
                         <div class="row">
@@ -162,12 +162,11 @@ function Blog() {
                                         </ul>
                                     </nav>
                                 </div>
-                            </div> 
+                            </div> */}
                         </div>
                     </div>
                 </div>
-            </section> */}
-
+            </section>
             <Consultation />
             <Footer />
         </>
