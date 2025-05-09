@@ -1,0 +1,17 @@
+name: Deploy on Self-Hosted Runner
+
+on:
+  push:
+    branches:
+      - main  # or your target branch
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Git Pull and Build
+        run: |
+          cd /var/www/html/pritam/anah
+          sudo git pull
+          npm run build
