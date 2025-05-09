@@ -1,5 +1,5 @@
 import Index from "../component/Index";
-import Brands_focous from "../component/Brands_focous";
+// import Brands_focous from "../component/Brands_focous";
 import Consultation from "../component/Consultation";
 import ContactSection from "../component/ContactSection";
 import Footer from "../component/Footer";
@@ -48,7 +48,7 @@ function Home() {
             <Service />
              <OurPortfolis />
             <Result /> 
-            <Brands_focous /> 
+            {/* <Brands_focous />  */}
              <ContactSection /> 
             <Consultation />  
             <Footer /> 
