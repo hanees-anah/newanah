@@ -13,5 +13,4 @@ jobs:
       - name: Git Pull and Build
         run: |
           cd /var/www/html/pritam/anah
-          sudo git pull
-          npm run build
+          whoami
