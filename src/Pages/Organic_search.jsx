@@ -53,8 +53,6 @@ function Organic_search() {
         }}
       >
 
-
-
         <div className="container">
           <div className="row">
             <div className="col-lg-8 m-auto">
@@ -112,7 +110,7 @@ function Organic_search() {
 
               <h3><strong>Email Marketing</strong></h3>
               <p>
-                Email marketing is still one of the best ways to get results. With improved segmentation, automation, and personalization, emails now convert more than ever.
+              <strong>Email marketing</strong> is still one of the best ways to get results. With improved segmentation, automation, and personalization, emails now convert more than ever.
               </p>
               <p>
                 You can send personalized emails like welcome messages, cart reminders, and promotions. Email works well with other channels, keeping your brand in front of people.
@@ -131,7 +129,7 @@ function Organic_search() {
                 Instagram remains an excellent visual channel, especially for lifestyle, fashion, beauty, and food brands. With features like Reels, Stories, and Live, brands can interact with users in real-time.
               </p>
               <p>
-                In 2025, Instagram works best when it feels real. Product demos, tutorials, behind-the-scenes content, and customer reviews get good results.
+                In 2025, <strong>Instagram</strong> works best when it feels real. Product demos, tutorials, behind-the-scenes content, and customer reviews get good results.
               </p>
 
               <h3><strong>Digital Marketing Trends 2025: What's Shaping Performance Marketing?</strong></h3>
@@ -155,6 +153,7 @@ function Organic_search() {
               </p>
 
               <h3><strong>How to Succeed with Performance Marketing in 2025</strong></h3>
+              <p>Success doesn’t come from using every platform. It comes from using the right ones, the right way. Here’s how: </p>
               <ul>
                 <li><strong>Start with clear goals:</strong> Do you need more app installs, sales, or leads? Set clear goals before you start.</li>
                 <li><strong>Focus on your audience:</strong> Understand what your audience needs, what they do, and where they spend their time online.</li>
@@ -168,7 +167,7 @@ function Organic_search() {
                 Performance marketing in 2025 is faster, smarter, and more effective if you know how to use it. By using the right platforms and strategies, businesses can target the right audience, measure success, and grow results.
               </p>
               <p>
-                At Anah Marketing and Innovations, we specialize in helping brands grow using smart and data-driven marketing strategies. Whether you're using Google Ads, Instagram marketing, or email marketing campaigns, we're here to lead the way.
+                At <strong>Anah Marketing and Innovations</strong>, we specialize in helping brands grow using smart and data-driven marketing strategies. Whether you're using <strong>Google Ads</strong>, Instagram marketing, or <strong>email marketing</strong> campaigns, we're here to lead the way.
               </p>
               <p>
                 This year, make your marketing count. Follow the data and perform with purpose!
