@@ -1,6 +1,6 @@
 
 import orginic from "../assets/images/organic-search-img.jpg"
-import instagram from "../assets/images/instagram_business.jpg"
+import  instagram from"../assets/images/anah-2025.jpeg"
 import keyword from "../assets/images/keyword-research-img.jpg"
 import seo from "../assets/images/seo-checklis-img.jpg"
 import Consultation from "../component/Consultation";
@@ -112,10 +112,10 @@ function Blog() {
                                         <a href="/instagram-readmore"><img alt="" src={instagram} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
-                                        <div class="post-date">Jan 24, 2023</div>
-                                        <h4 class="dlab-title"><a href="/instagram-readmore">What's New on Instagram in 2023: How to Use T...</a></h4>
-                                        <p class="m-b20">In today’s era, almost everyone is looking for a platform where they can show up their goods and services to the interested audience,</p>
-                                        <a href="/instagram-readmore" class="news-btn">Read More</a>
+                                        <div class="post-date">May 09, 2025</div>
+                                        <h4 class="dlab-title"><a href="/blog/performance-marketing-trends">Performance Marketing in 2025: Top Channels to Watch and Leverage</a></h4>
+                                        <p class="m-b20">Have you ever spotted an ad while scrolling Instagram reels and thought, “This is exactly what I needed”?</p>
+                                        <a href="/blog/performance-marketing-trends" class="news-btn">Read More</a>
                                     </div>
                                 </div>
                             </div>

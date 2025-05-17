@@ -18,7 +18,9 @@ function Index() {
                     name="description"
                     content="Anah Marketing offers ROI-focused SEO, PPC, Meta Ads & Web Design services. Boost your growth—book a free digital marketing consultation today!"
                 />
+                <link rel="canonical" href="https://anahmarketing.com/" />
             </Helmet>
+
             <div className="hero1-section-area" style={{
                 backgroundImage: `url(${header})`,
             }}>

@@ -81,7 +81,7 @@ function Organic_search() {
               <p>Online marketing is changing very quickly, which means businesses need to make a smarter strategy to show their products and services. From attractive short videos on social media to pop-up ads when you are searching for something are helping businesses to get maximum customers. But to stay updated, it’s important to know which platforms are working best right now. </p>
               <p className="mb-2">At <strong>Anah Marketing and Innovations</strong>, we know that using the right ideas and tools can turn small tests into big successes. In this blog, we’ll explore the top <strong>performance marketing channels</strong> in 2025 and how you can make your marketing efforts count. </p>
 
-              <h3><strong>Why Performance Marketing Matters More in 2025 </strong></h3>
+              <h2>Why Performance Marketing Matters More in 2025</h2>
               <p>
                 The old days of guessing in ad campaigns are gone. Today, every click, view, and conversion can be tracked. That’s the power of performance marketing. It’s all about getting results, not just showing your ads.
               </p>
@@ -92,8 +92,8 @@ function Organic_search() {
                 This change is part of bigger <strong>digital marketing trends in 2025</strong>, as there is a demand for improved targeting, real-time updates, and increased control over the budget.
               </p>
 
-              <h3><strong>Top Performance Marketing Channels to Leverage in 2025</strong></h3>
-              <h4 className="mb-1">Google Ads</h4>
+              <h2>Top Performance Marketing Channels to Leverage in 2025</h2>
+              <h3 className="mb-1"><strong>Google Ads</strong></h3>
               <p className="mb-2">
                 Google Ads is still one of the best <strong>channels for performance marketing</strong>. Through AI and smart bidding features, it's easier to connect with ready-to-convert users.
               </p>
@@ -132,14 +132,14 @@ function Organic_search() {
                 In 2025, <strong>Instagram</strong> works best when it feels real. Product demos, tutorials, behind-the-scenes content, and customer reviews get good results.
               </p>
 
-              <h3><strong>Digital Marketing Trends 2025: What's Shaping Performance Marketing?</strong></h3>
+              <h2>Digital Marketing Trends 2025: What's Shaping Performance Marketing?</h2>
 
-              <h4>Data-Driven Marketing</h4>
+              <h3><strong>Data-Driven Marketing</strong></h3>
               <p>
                 Data is the secret to smart marketing. By looking at data from CRM tools, analytics, and ads, brands can know exactly what their audience wants and give it to them at the right time. In 2025, it's not optional anymore. It's the standard.
               </p>
 
-              <h4>Cross-Channel Integration</h4>
+              <h3><strong>Cross-Channel Integration</strong></h3>
               <p>
                 Successful marketers are using more than one platform. They use Google, Meta, email, and SEO to reach people at every stage of the buying process.
               </p>
@@ -147,12 +147,12 @@ function Organic_search() {
                 A lead may find your brand through Google Search, follow you on Instagram, and convert through an email promotion. Connecting channels creates the best results in 2025.
               </p>
 
-              <h4>AI and Automation</h4>
+              <h3><strong>AI and Automation</strong></h3>
               <p>
                 Smart automation tools make it easier to launch and manage campaigns. From creating Google Ads rules to setting up email automations, AI is making performance marketing faster and better. AI helps brands reach the right people with fewer guesses.
               </p>
 
-              <h3><strong>How to Succeed with Performance Marketing in 2025</strong></h3>
+              <h2>How to Succeed with Performance Marketing in 2025</h2>
               <p>Success doesn’t come from using every platform. It comes from using the right ones, the right way. Here’s how: </p>
               <ul>
                 <li><strong>Start with clear goals:</strong> Do you need more app installs, sales, or leads? Set clear goals before you start.</li>
@@ -162,7 +162,7 @@ function Organic_search() {
                 <li><strong>Stay consistent:</strong> Performance marketing is not a one-time thing. It’s an ongoing process that needs constant improvement.</li>
               </ul>
 
-              <h3><strong>Final Thoughts</strong></h3>
+              <h2>Final Thoughts</h2>
               <p>
                 Performance marketing in 2025 is faster, smarter, and more effective if you know how to use it. By using the right platforms and strategies, businesses can target the right audience, measure success, and grow results.
               </p>
