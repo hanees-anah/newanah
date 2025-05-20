@@ -22,6 +22,8 @@ import Keywoed_reserach_reacd_more from "./Pages/Keywoed_reserach_reacd_more";
 import InstagramReadMore from "./component/Instagram_readmore";
 import Organic_search from "./Pages/Organic_search";
 import NotFound from "./Pages/Not_found";
+import Shopify from "./Pages/Shopify";
+
 
 // Moved logic to a wrapper inside Router
 function AppWrapper() {
@@ -47,6 +49,7 @@ function AppWrapper() {
     "/keyword-read-more", 
     "/instagram-readmore", 
     "/blog/performance-marketing-trends",
+     "/shopify",
   
   ].includes(location.pathname);
 
@@ -74,6 +77,7 @@ function AppWrapper() {
         <Route path="/keyword-read-more" element={<Keywoed_reserach_reacd_more />} />
         <Route path="/instagram-readmore" element={<InstagramReadMore />} />
         <Route path="/blog/performance-marketing-trends" element={<Organic_search />} />
+        <Route path="/shopify" element={<Shopify/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

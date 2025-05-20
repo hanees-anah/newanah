@@ -21,6 +21,7 @@
     "express": "^5.1.0",
     "framer-motion": "^12.7.3",
     "nodemailer": "^6.10.0",
+    "lucide-react": "^0.510.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
