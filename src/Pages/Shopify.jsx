@@ -513,7 +513,7 @@ const Shopify = () => {
             <div className="col-md-4">
               <div className="boxs-card">
                 <div class="icons mb-3">
-                  <img alt="" class="img-fluid" src="/assets/images/website-redesign-icon.png" />
+                  <img alt="" class="img-fluid" src="/assets/website-redesign-icon.png" />
                 </div>
                 <h3>Website Redesign & Enhancements</h3>
                 <p>We analyze your current design and user flow, then create a refreshed, more intuitive layout that keeps users engaged and encourages action.</p>
@@ -522,7 +522,7 @@ const Shopify = () => {
             <div className="col-md-4">
               <div className="boxs-card">
                 <div class="icons mb-3">
-                  <img alt="" class="img-fluid" src="/assets/images/user-experience-icon.png" />
+                  <img alt="" class="img-fluid" src="/assets/user-experience-icon.png" />
                 </div>
                 <h3>Improved User Experience (UX)</h3>
                 <p>We enhance navigation, mobile responsiveness, and loading speed, giving your visitors a smoother and more satisfying experience</p>
@@ -531,7 +531,7 @@ const Shopify = () => {
             <div className="col-md-4">
               <div className="boxs-card">
                 <div class="icons mb-3">
-                  <img alt="" class="img-fluid" src="/assets/images/content-icon.png" />
+                  <img alt="" class="img-fluid" src="/assets/content-icon.png" />
                 </div>
                 <h3>Content & Visual Strategy</h3>
                 <p>From impactful visuals to persuasive messaging, we upgrade the way your brand communicates to build trust and drive conversions.</p>
