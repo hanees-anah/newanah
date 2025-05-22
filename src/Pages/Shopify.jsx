@@ -5,7 +5,7 @@ import new1 from "../assets/images/new1.webp";
 import { ArrowRight } from "lucide-react";
 import bg1 from "../assets/images/pages-bg1.png"
 // import bg2 from "../assets/images/shopify-banner.jpg"
-import Shopify_Logo from "../assets/images/Shopify_Logo.png"
+import Shopify_Logo from "../assets/images/Shopify_Logo-pages.png"
 import pragma_logo from "../assets/images/pragma_logo.png"
 import razorpay from "../assets/images/razorpay-img.png"
 import Whatmore from "../assets/images/Whatmore-img.png"
@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-
+import "../App.css"
 import Footer from "../component/Footer";
 // import OurPortfolis from "../component/Ourportfolis";
 
@@ -130,15 +130,20 @@ const Shopify = () => {
       zIndex: 10,
       width: "50%",
     },
-    heroHeading1: {
-      fontSize: "7.25rem",
-      fontWeight: "900",
+    // heroHeading1: {
+    //   fontSize: " 7.25rem",
+    //   fontWeight: 800,
+    //   fontStyle: "italic",
+    //   marginBottom: "2rem"
+
+    // },
+    Shopify: {
+
     },
+
     heroHeading2: {
-      fontSize: "4rem",
-      fontWeight: "900",
-      lineHeight: 1,
-      marginTop: "1rem",
+      fontSize: "3rem",
+      fontWeight: "700",
     },
     heroParagraph: {
       maxWidth: "60ch",
@@ -160,6 +165,7 @@ const Shopify = () => {
       background: `url(${bg1})`,
       padding: '60px 140px',
       textAlign: 'center',
+      backgroundSize: "cover",
     },
     container: {
       maxWidth: '100%',
@@ -174,7 +180,7 @@ const Shopify = () => {
     },
     item: {
       width: '220px',
-      flex: '0 0 auto',
+      flex: '0 1 calc(33.333% - 20px)',
       padding: '20px',
       background: 'rgba(255,255,255,0.05)',
       borderRadius: '10px',
@@ -232,134 +238,148 @@ const Shopify = () => {
     },
     {
 
+      icon: '📈',
+      title: 'Conversion-Driven Strategy & UX',
+      description:
+        'Every element of your site is designed with user experience and business goals in mind—guiding visitors toward action, increasing engagement, and maximizing conversions.',
+    },
+    {
+
       icon: '🛠️',
       title: 'Ongoing Maintenance & Support ',
       description:
         'After launch, we provide proactive updates, performance monitoring, and technical support to keep your site fast, secure, and effective',
     },
+
   ];
 
 
   return (
     <>
 
-      <div class="shopify-top-banner" style={styles.container}>
-        <div style={styles.backgroundCircle1} />
-        <div style={styles.backgroundCircle2} />
 
-        <div style={styles.heroContent}>
-          <h1 style={styles.heroHeading1}>SHOPIFY</h1>
-          <h1 style={styles.heroHeading2}>
-            From Idea to Online Store, We Make Shopify Simple
-          </h1>
-          <p style={styles.heroParagraph}>
-            Unlock the full potential of your DTC brand with a Shopify store
-            designed to convert your audience into loyal customers, even when you
-            sleep.
-          </p>
-        </div>
+      <section className="shopify-top-banner-sec">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <div className="contant-part">
+                <div>
+                  <img style={styles.Shopify} src={Shopify_Logo} alt="Marketing" />
 
-        <div style={styles.contactFormContainer}>
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <div className="contact-form-area bg-light rounded-4 p-4 shadow-sm">
-                <h4 className="text-center mb-4 text-black">Get In Touch</h4>
-                <form>
-                  <div className="row g-3">
-                    <div className="col-lg-6">
-                      <input
-                        type="text"
-                        name="first_name"
-                        placeholder="First Name"
-                        required
-                        className="form-control"
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <input
-                        type="text"
-                        name="last_name"
-                        placeholder="Last Name"
-                        required
-                        className="form-control"
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                        required
-                        className="form-control"
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Phone Number"
-                        required
-                        className="form-control"
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <input
-                        type="text"
-                        name="company"
-                        placeholder="Company Name"
-                        required
-                        className="form-control"
-                      />
-                    </div>
-                    <div className="col-lg-6">
-                      <input
-                        type="text"
-                        name="city"
-                        placeholder="City"
-                        required
-                        className="form-control"
-                      />
-                    </div>
-                    <div className="col-lg-12 text-center">
-                      <select
-                        name="category"
-                        required
-                        className="form-control w-100"
-                        defaultValue=""
-                      >
-                        <option value="" disabled>
-                          Select Category
-                        </option>
-                        <option value="speed-optimize">Speed Optimize</option>
-                        <option value="redesign">Redesign</option>
-                        <option value="app-development">App Development</option>
-                      </select>
-                    </div>
+                  {/* <h1 style={styles.heroHeading1}>Shopify</h1> */}
+                  <h1>
+                    From Idea to Online Store, We Make Shopify Simple
+                  </h1>
+                  <p>
+                    Unlock the full potential of your D2C brand with a Shopify store designed to convert your audience into loyal customers, even when you sleep
+                  </p>
+                </div>
+              </div>
+            </div>
 
-                    <div className="col-lg-12">
-                      <textarea
-                        name="message"
-                        placeholder="Your Message"
-                        required
-                        className="form-control"
-                        rows={4}
-                      ></textarea>
+
+            <div className="col-md-6">
+              <div className="form-part">
+                <div className="contact-form-area">
+                  <h4 className="text-center mb-4 text-black">Get In Touch</h4>
+                  <form>
+                    <div className="row g-3">
+                      <div className="col-lg-6">
+                        <input
+                          type="text"
+                          name="first_name"
+                          placeholder="First Name"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="col-lg-6">
+                        <input
+                          type="text"
+                          name="last_name"
+                          placeholder="Last Name"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="col-lg-6">
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Email Address"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="col-lg-6">
+                        <input
+                          type="tel"
+                          name="phone"
+                          placeholder="Phone Number"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="col-lg-6">
+                        <input
+                          type="text"
+                          name="company"
+                          placeholder="Company Name"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="col-lg-6">
+                        <input
+                          type="text"
+                          name="city"
+                          placeholder="City"
+                          required
+                          className="form-control"
+                        />
+                      </div>
+                      <div className="col-lg-12 text-center">
+                        <select
+                          name="category"
+                          required
+                          className="form-control w-100"
+                          defaultValue=""
+                        >
+                          <option value="" disabled>
+                            Select Category
+                          </option>
+                          <option value="speed-optimize">Speed Optimize</option>
+                          <option value="redesign">Redesign</option>
+                          <option value="app-development">App Development</option>
+                        </select>
+                      </div>
+
+                      <div className="col-lg-12">
+                        <textarea
+                          name="message"
+                          placeholder="Your Message"
+                          required
+                          className="form-control"
+                          rows={4}
+                        ></textarea>
+                      </div>
+                      <div className="col-lg-12 text-center">
+                        <button type="submit" className="lnk header-btn1">
+                          Submit{" "}
+                          <span>
+                            <i className="fa-solid fa-arrow-right"></i>
+                          </span>
+                        </button>
+                      </div>
                     </div>
-                    <div className="col-lg-12 text-center">
-                      <button type="submit" className="lnk header-btn1">
-                        Submit{" "}
-                        <span>
-                          <i className="fa-solid fa-arrow-right"></i>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
 
       {/* slider---- */}
 
@@ -418,13 +438,12 @@ const Shopify = () => {
       <div className="works-inner-section-area services-page">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-4">
+            <div className="col-lg-6">
               <div className="about-all-images-area">
                 <div className="row">
                   <div className="col-lg-12">
                     <div className="img1">
                       <img src={product2} alt="Marketing" />
-                      <div className="space100"></div>
                     </div>
                   </div>
                 </div>
@@ -432,13 +451,12 @@ const Shopify = () => {
             </div>
             <div className="col-lg-6">
               <div className="works-header-area heading2 specing2">
-                <h2>Shopify is more than just an eCommerce platform</h2>
+                <h2>Our Expertise in Shopify Development</h2>
                 <p>
-                  •	Enhanced Functionality: Unlock new features and customize your store with a wide range of apps.<br />
-                  •	User-Friendly Interface: Manage your store effortlessly, even without technical expertise.<br />
-                  •	Robust Security: Ensure your customer data is protected with top-tier security features.<br />
-                  •	Scalability: Grow your business with a platform that adapts to your needs.<br />
-
+                  At Anah Marketing, we know what it takes to build a Shopify store that doesn’t just look good, it performs.
+                  From setting up your store the right way to customizing themes that reflect your brand, we make sure everything works smoothly from the front end to the backend.
+                  Whether it’s improving speed, making your site mobile-friendly, or adding the right apps to boost sales,
+                  our team is focused on helping your D2C brand grow and succeed online.
                 </p>
               </div>
             </div>
@@ -447,17 +465,16 @@ const Shopify = () => {
           <div className="row align-items-center order-2">
             <div className="col-lg-6">
               <div className="works-header-area heading2">
-                <h2>Get your online store up and running the right way</h2>
+                <h2>Don’t Have a Website Yet? We’ll Build It Right from the Beginning</h2>
                 <p>
-                  •	Full Shopify store setup from start to finish<br />
-                  •	Homepage, product pages, cart, and checkout customization<br />
-                  •	SEO-friendly structure for better search visibility<br />
-                  •	Clean, scalable, and conversion-optimized build<br />
+                  Starting from scratch can feel overwhelming, but that’s where we come in.
+                  At Anah Marketing, we guide you through the entire process of creating a powerful,
+                  high-performing website that aligns with your brand and business goals.
 
                 </p>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-6">
               <div className="about-all-images-area">
                 <div className="row">
                   <div className="col-lg-12">
@@ -473,106 +490,66 @@ const Shopify = () => {
       </div>
 
 
-
-
-      {/* Final Section - Card Grid */}
-      <section
-        style={{
-          backgroundColor: "black",
-          color: "white",
-          padding: "5rem 11rem",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "3.5rem",
-            fontWeight: "bold",
-            marginBottom: "4rem",
-            paddingLeft: "1rem",
-            paddingRight: "1rem",
-            textAlign: "center",
-          }}
-        >
-          Shopify Optimization, Analytics & Tracking
-        </h2>
-
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "1.5rem",
-            justifyContent: "space-between",
-          }}
-        >
-          {/* Card 1 */}
-          <div
-            style={{
-              flex: "1 1 30%",
-              backgroundColor: "#171717",
-              padding: "2.5rem",
-              borderRadius: "1rem",
-              border: "1px solid #3f3f3f",
-              minWidth: "280px",
-              boxSizing: "border-box",
-            }}
-          >
-            <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem" }}>
-              Data & <br /> Technology
-            </h3>
-            <p style={{ color: "#a3a3a3", fontSize: "0.875rem", marginBottom: "1.5rem" }}>
-              •	Site speed optimization for better user experience
-            </p>
-            <ArrowRight color="#ef4444" />
+      <section className="even-better-section cta-section-area">
+        <img alt="" class="cta-bg1 aniamtion-key-2" src="/src/assets/images/cta-bg1.png" />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src="/src/assets/images/cta-bg2.png" />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src="assets/img/bg/cta-bg2.png" />
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <div className="content-part">
+                <h2 class="text-anime-style-2">Welcome to Anah Marketing &amp; Innovations</h2>
+                <p>If you have a website but it’s not delivering the results you expect, we’ll help you reimagine and restore it to become more engaging, impactful, and conversion-driven.</p>
+                <p>Here’s How We Help Improve and Elevate Your Site:</p>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="img-part">
+                <img alt="" src="/src/assets/images/online-shopping.png"></img>
+              </div>
+            </div>
           </div>
-
-          {/* Card 2 */}
-          <div
-            style={{
-              flex: "1 1 30%",
-              backgroundColor: "#171717",
-              padding: "1.5rem",
-              borderRadius: "1rem",
-              border: "1px solid #3f3f3f",
-              minWidth: "280px",
-              boxSizing: "border-box",
-            }}
-          >
-            <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem" }}>
-              Strategy & <br /> Implementation
-            </h3>
-            <p style={{ color: "#a3a3a3", fontSize: "0.875rem", marginBottom: "1.5rem" }}>
-              •	Conversion Rate Optimization (CRO) strategies.
-            </p>
-            <ArrowRight color="#ef4444" />
-          </div>
-
-          {/* Card 3 */}
-          <div
-            style={{
-              flex: "1 1 30%",
-              backgroundColor: "#171717",
-              padding: "1.5rem",
-              borderRadius: "1rem",
-              border: "1px solid #3f3f3f",
-              minWidth: "280px",
-              boxSizing: "border-box",
-            }}
-          >
-            <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem" }}>
-              Design & <br /> Development
-            </h3>
-            <p style={{ color: "#a3a3a3", fontSize: "0.875rem", marginBottom: "1.5rem" }}>
-              •	Analytics setup and reporting (GA4, Shopify Reports, Pixels)
-            </p>
-            <ArrowRight color="#ef4444" />
+          <div className="row">
+            <div className="col-md-4">
+              <div className="boxs-card">
+                <div class="icons mb-3">
+                  <img alt="" class="img-fluid" src="/src/assets/images/website-redesign-icon.png" />
+                </div>
+                <h3>Website Redesign & Enhancements</h3>
+                <p>We analyze your current design and user flow, then create a refreshed, more intuitive layout that keeps users engaged and encourages action.</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="boxs-card">
+                <div class="icons mb-3">
+                  <img alt="" class="img-fluid" src="/src/assets/images/user-experience-icon.png" />
+                </div>
+                <h3>Improved User Experience (UX)</h3>
+                <p>We enhance navigation, mobile responsiveness, and loading speed, giving your visitors a smoother and more satisfying experience</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="boxs-card">
+                <div class="icons mb-3">
+                  <img alt="" class="img-fluid" src="/src/assets/images/content-icon.png" />
+                </div>
+                <h3>Content & Visual Strategy</h3>
+                <p>From impactful visuals to persuasive messaging, we upgrade the way your brand communicates to build trust and drive conversions.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
 
+
+
+      {/* Final Section - Card Grid */}
+
+
       {/* new--------------- */}
 
-      <section style={styless.section}>
+      {/* <section style={styless.section}>
         <div>
           <h2 style={styless.introTitle}>Here’s What We Do for You</h2>
         </div>
@@ -586,7 +563,65 @@ const Shopify = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
+
+      <section class="here-section">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12 m-auto">
+            <div class="service2-header heading2 text-center">
+               <img alt="" class="star2 keyframe5" src="/src/assets/images/star2.png"/>
+               <img alt="" class="star3 keyframe5" src="/src/assets/images/star2.png"/>
+               <h2 class="text-anime-style-3">Here’s What We Do for You</h2>  
+            </div>
+         </div>
+      </div>
+      <div className="row">
+        <div className="col-md-4">
+          <div className="box-card">
+            <div className="icon">💼</div>
+            <h3>Complete Website Setup & Launch</h3>
+            <p>From initial concept to a live website, we handle everything, including design, development, and deployment.</p>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <div className="box-card">
+            <div className="icon">💡</div>
+            <h3>Custom Design Tailored to Your Brand</h3>
+            <p>We don’t use cookie-cutter templates. Your website will reflect your brand’s personality, values, and voice; clean, modern, and conversion-focused..</p>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <div className="box-card">
+            <div className="icon">🖥️</div>
+            <h3>Mobile-Responsive & SEO-Friendly</h3>
+            <p>We build sites that look great on all devices and are structured to rank well in search engines from day one.</p>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <div className="box-card">
+            <div className="icon">⚛️</div>
+            <h3>Optimized for Growth</h3>
+            <p>We integrate tools and systems that support marketing, sales, analytics, and future scalability, ensuring your website evolves with your busines</p>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <div className="box-card">
+            <div className="icon">📈</div>
+            <h3>Conversion-Driven Strategy & UX</h3>
+            <p>Every element of your site is designed with user experience and business goals in mind—guiding visitors toward action, increasing engagement, and maximizing conversions.</p>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <div className="box-card">
+            <div className="icon">🛠️</div>
+            <h3>Ongoing Maintenance & Support</h3>
+            <p>After launch, we provide proactive updates, performance monitoring, and technical support to keep your site fast, secure, and effective</p>
+          </div>
+        </div>
+      </div>
+   </div>
+</section>
 
 
 
@@ -595,7 +630,8 @@ const Shopify = () => {
 
           <div class="row align-items-center">
             <div class="col-md-8">
-              <h1 className="mb-5">Simplify the Experience, Beautify your Online Store and Multiply your Business using Shopify.</h1>
+              <h1 className="mb-4">Benefits of Choosing Anah Marketing</h1>
+              <h4 className="mb-5">Working with us is more than just launching a Shopify store – it’s about helping your brand succeed long-term:</h4>
 
               <div class="shopify-list">
                 <ul>
@@ -603,8 +639,8 @@ const Shopify = () => {
                     <div class="shopify-content-part">
                       <div class="left-arrow"><img src={black_arrow} /></div>
                       <div class="text-item">
-                        <h3>Custom Shopify Design &amp; Development</h3>
-                        <p>Custom-Tailored Solutions: We take time to understand your business and create strategies that fit your unique needs and goals.</p>
+                        <h3>Custom-Tailored Solutions</h3>
+                        <p>We take time to understand your business and create strategies that fit your unique needs and goals.</p>
                       </div>
                     </div>
                   </li>
@@ -612,8 +648,8 @@ const Shopify = () => {
                     <div class="shopify-content-part">
                       <div class="left-arrow"><img src={black_arrow} /></div>
                       <div class="text-item">
-                        <h3>Shopify Store Migration</h3>
-                        <p>Proven Expertise: Our experience working with DTC brands helps us deliver results that work.</p>
+                        <h3>Proven Expertise</h3>
+                        <p>Our experience working with D2C brands helps us deliver results that work.</p>
                       </div>
                     </div>
                   </li>
@@ -621,8 +657,8 @@ const Shopify = () => {
                     <div class="shopify-content-part">
                       <div class="left-arrow"><img src={black_arrow} /></div>
                       <div class="text-item">
-                        <h3>Shopify Integration Services</h3>
-                        <p>Ongoing Support: From the initial setup to ongoing optimization, we’re here to help you grow and succeed at every stage</p>
+                        <h3>Ongoing Support</h3>
+                        <p>From the initial setup to ongoing optimization, we’re here to help you grow and succeed at every stage.</p>
                       </div>
                     </div>
                   </li>
@@ -636,6 +672,8 @@ const Shopify = () => {
           </div>
         </div>
       </section>
+
+
 
 
       <section className="portfolio-section-page portfolio-sec">
@@ -807,6 +845,24 @@ const Shopify = () => {
       </section>
 
 
+<div class="cta-section-area Amazing-section">
+   <img alt="" class="cta-bg1 aniamtion-key-2" src="/src/assets/images/cta-bg1.png"/>
+   <img alt="" class="cta-bg2 aniamtion-key-1" src="/src/assets/images/cta-bg2.png"/>
+   <img alt="" class="cta-bg2 aniamtion-key-1" src="assets/img/bg/cta-bg2.png"/>
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-12 m-auto">
+            <div class="cta-header-area text-center sp4 heading2">
+               <h2 class="text-anime-style-3">Let’s Build Something Amazing Together</h2>
+               <p>Whether you need a brand-new website or a major upgrade to your existing one, Anah Marketing and Innovations is ready to help you stand out, convert more visitors, and grow with confidence.</p>
+               <p>Let’s talk about how we can elevate your digital presence today and into the future.</p>
+               <div class="btn-area text-center"><a href="#" class="header-btn1">Let's Talk <span><i class="fa-solid fa-arrow-right"></i></span></a></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
 
       {/* slider----- */}
 
@@ -865,13 +921,6 @@ const Shopify = () => {
           </div>
         </div>
       </div> */}
-
-
-
-
-
-
-
 
 
 

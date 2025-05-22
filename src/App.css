@@ -1,0 +1,13 @@
+/* span.current */
+
+.nice-select.form-control.w-100 span.current{
+    color: #6c757d;
+    margin-left: 10px;
+}
+.nice-select{
+    padding: 0;
+}
+
+.nice-select.open .list {
+    width: 100%;
+}
