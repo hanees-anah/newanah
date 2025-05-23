@@ -729,11 +729,11 @@ const Shopify = () => {
                           <img src={juniperLogo} alt="Juniper" />
                         </div>
                       </div>
-                      {/* <div className="col-md-3 col-sm-4">
+                      <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={elLogo} alt="EL" />
                         </div>
-                      </div> */}
+                      </div>
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={autumnlaneLogo} alt="Autumn Lane" />
@@ -789,11 +789,11 @@ const Shopify = () => {
                           <img src={fashiondwarLogo} alt="Fashion Dwar" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
+                      {/* <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={lavanyaLogo} alt="Lavanya" />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={parenteyeLogo} alt="Parent Eye" />
