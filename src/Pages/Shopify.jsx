@@ -144,34 +144,49 @@ const Shopify = () => {
       width: "50%",
 
     },
+    shopifyForm: {
+      boxShadow: 'none',
+      outline: 'none',
+      borderColor: '#E6E6E6',
+      padding: "12px"
+    }
   };
 
   const [formData, setFormData] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
-    phone: "",
-    message: "",
-    city: "",
-    company: "",
-    category: ""
-  });
+  first_name: '',
+  last_name: '',
+  email: '',
+  phone: '',
+  company: '',
+  city: '',
+  category: '',  // 👈 Yeh hona chahiye
+  message: ''
+});
   const [showPopup, setShowPopup] = useState(false);
+  // const handleChange = (e) => {
+
+
+  //   const { name, value, type } = e.target;
+
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // };
+
   const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData((prevData) => ({
+    ...prevData,
+    [name]: value,
+  }));
+};
 
-
-    const {name, value, type} = e.target;
-    
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault("formDataformData", formData);
-    // console.log("formDataformData", formData)
+    console.log("formDataformData", formData)
     try {
       const response = await axios.post("https://anahmarketing.com/send-email", formData);
       setShowPopup(true);
-      
+
       setTimeout(() => {
         setShowPopup(false);
       }, 3000);
@@ -214,7 +229,7 @@ const Shopify = () => {
 
             <div className="col-md-6">
               <div className="form-part">
-                <div className="contact-form-area">
+                <div className="contact-form-area shadow-none" style={{padding:"25px"}}>
                   <h4 className="text-center mb-4 text-black">Get In Touch</h4>
 
                   <form onSubmit={handleSubmit}>
@@ -222,92 +237,102 @@ const Shopify = () => {
                       <div className="col-lg-6">
                         <input
                           type="text"
+                          style={styles.shopifyForm}
                           name="first_name"
                           placeholder="First Name"
                           value={formData.first_name}
                           onChange={handleChange}
-                          className="form-control"
+                          className="form-control  "
                           required
                         />
                       </div>
                       <div className="col-lg-6">
                         <input
+                          style={styles.shopifyForm}
+
                           type="text"
                           name="last_name"
                           placeholder="Last Name"
                           value={formData.last_name}
                           onChange={handleChange}
-                          className="form-control"
+                          className="form-control  "
                           required
                         />
                       </div>
                       <div className="col-lg-6">
                         <input
+                          style={styles.shopifyForm}
+
                           type="email"
                           name="email"
                           placeholder="Email Address"
                           value={formData.email}
                           onChange={handleChange}
-                          className="form-control"
+                          className="form-control  "
                           required
                         />
                       </div>
                       <div className="col-lg-6">
                         <input
+                          style={styles.shopifyForm}
+
                           type="tel"
                           name="phone"
                           placeholder="Phone Number"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="form-control"
+                          className="form-control  "
                           required
                         />
                       </div>
                       <div className="col-lg-6">
                         <input
+                          style={styles.shopifyForm}
+
                           type="text"
                           name="company"
                           placeholder="Company Name"
                           value={formData.company}
                           onChange={handleChange}
-                          className="form-control"
+                          className="form-control  "
                           required
                         />
                       </div>
                       <div className="col-lg-6">
                         <input
+                          style={styles.shopifyForm}
+
                           type="text"
                           name="city"
                           placeholder="City"
                           value={formData.city}
                           onChange={handleChange}
-                          className="form-control"
+                          className="form-control  "
                           required
                         />
                       </div>
-                      <div className="col-lg-12 text-center">
-
-                        <select
-                        id="category"
-                        type="text"
-                        name="category"
-                          value={formData.category}
-                          onChange={handleChange}
-                          className="form-control w-100"
-                        >
-                          <option value="" >
-                            Select Category
-                          </option>
-                          <option value="speed-optimize">Website Development</option>
-                          <option value="website-redesign">Website Redesign</option>
-                          <option value="shopify-development">Shopify App Development</option>
-                          <option value="speed-optimization">Speed Optimization</option>
-                          <option value="website-migratio">Website Migratio</option>
-                          <option value="website-maintenance">Website Maintenance & Support</option>
-                        </select>
-                      </div>
+                    <div className="col-lg-12 text-center">
+  <select
+    id="category"
+    name="category"
+    value={formData.category}
+    onChange={handleChange}
+    className="form-control w-100 shadow-none border border-[#E6E6E6] py-2"
+    required
+  >
+    <option value="">Select Category</option>
+    <option value="speed-optimize">Website Development</option>
+    <option value="website-redesign">Website Redesign</option>
+    <option value="shopify-development">Shopify App Development</option>
+    <option value="speed-optimization">Speed Optimization</option>
+    <option value="website-migration">Website Migration</option> {/* Typo fix */}
+    <option value="website-maintenance">Website Maintenance & Support</option>
+  </select>
+</div>
                       <div className="col-lg-12">
                         <textarea
+                          style={styles.shopifyForm}
+
                           name="message"
                           placeholder="Your Message"
                           required
@@ -332,7 +357,7 @@ const Shopify = () => {
         </div>
       </section>
 
- {showPopup && (
+      {showPopup && (
         <motion.div
           className="modal-backdrop-custom"
           initial={{ opacity: 0 }}

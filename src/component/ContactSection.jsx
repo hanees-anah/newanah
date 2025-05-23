@@ -131,7 +131,7 @@ const ContactSection = () => {
               data-aos-duration="1200"
             >
               <div className="contact-boxarea">
-                <h3>Get In Touch</h3>
+                <h3 className="text-center">Get In Touch</h3>
                 <form onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-lg-6">
@@ -218,7 +218,7 @@ const ContactSection = () => {
                       </div>
                     </div>
                     <div className="col-lg-12">
-                      <div className="input-area">
+                      <div className="input-area text-center" >
                         <button type="submit" className="lnk header-btn1">
                           Submit{" "}
                           <span>

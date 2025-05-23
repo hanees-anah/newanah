@@ -6,6 +6,8 @@
 }
 .nice-select{
     padding: 0;
+        height: 55px;
+        font-size: 1rem;
 }
 
 .nice-select.open .list {
