@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import product1 from "../assets/images/product1.jpg";
 import product2 from "../assets/images/product2.jpg";
 import new1 from "../assets/images/new1.webp";
@@ -34,7 +34,7 @@ import magiaLogo from '../assets/images/magia_logo.png';
 import womanCartLogo from '../assets/images/woman-cart-logo.png';
 import teakwoodLogo from '../assets/images/teakwood-logo-img.png';
 import juniperLogo from '../assets/images/juniper-logo.png';
-import elLogo from '../assets/images/el-logo.png';
+import elLogo from '../assets/images/el-logoo.png';
 import autumnlaneLogo from '../assets/images/autumnlane_logo.png';
 import spatikaclothingLogo from '../assets/images/spatikaclothing_logo.png';
 import dishapublicationLogo from '../assets/images/dishapublication_logo.png';
@@ -47,15 +47,20 @@ import holythreadLogo from '../assets/images/holythread_logo.png';
 import leheriyaLogo from '../assets/images/leheriya_logo.png';
 import fashiondwarLogo from '../assets/images/fashiondwar-logo.png';
 import lavanyaLogo from '../assets/images/lavanya-logo.png';
-import parenteyeLogo from '../assets/images/parenteye-logo.png';
+import parenteyeLogo from '../assets/images/parenteye-logoo.png';
 import jagoIndiaJagoLogo from '../assets/images/jago-india-jago-logo.png';
-import Divi_logo from "../assets/images/divi-logo.png"
+import Divi_logo from "../assets/images/divi-logoo.png"
 import ethnicity from "../assets/images/ethnicity-logo.png";
 import black_arrow from "../assets/images/arrow-icon-new.png"
-
-
+import website_redesign_icon from "../assets/images/website-redesign-icon.png";
+import user_experience from "../assets/images/user-experience-icon.png"
+import content_icon from "../assets/images/content-icon.png"
+import online_shoppings from "../assets/images/online-shopping.png"
+import cta_bg1 from "../assets/images/cta-bg1.png"
+import cta_bg2 from "../assets/images/cta-bg2.png"
+import axios from "axios";
+import { motion } from "framer-motion";
 // -------------------------------------
-
 
 
 
@@ -72,8 +77,6 @@ const images = [
   engati,
 ];
 
-
-
 const Shopify = () => {
   const styles = {
     container: {
@@ -81,20 +84,13 @@ const Shopify = () => {
       minHeight: "100vh",
       overflow: "hidden",
       backgroundImage: `url(${bg1})`,
-      // backgroundPosition: "center",
       backgroundSize: "cover",
-      backgroundRepeat: "no-repeat", // optional, but often needed
+      backgroundRepeat: "no-repeat",
       color: "black",
       paddingBottom: "4rem",
       display: "flex",
       flexDirection: "row",
     },
-
-
-    // .homepage1-body .header-area.homepage1
-    //  {
-    //     position: unset;
-    // }
 
     backgroundCircle1: {
       position: "absolute",
@@ -130,16 +126,6 @@ const Shopify = () => {
       zIndex: 10,
       width: "50%",
     },
-    // heroHeading1: {
-    //   fontSize: " 7.25rem",
-    //   fontWeight: 800,
-    //   fontStyle: "italic",
-    //   marginBottom: "2rem"
-
-    // },
-    Shopify: {
-
-    },
 
     heroHeading2: {
       fontSize: "3rem",
@@ -160,103 +146,53 @@ const Shopify = () => {
     },
   };
 
-  const styless = {
-    section: {
-      background: `url(${bg1})`,
-      padding: '60px 140px',
-      textAlign: 'center',
-      backgroundSize: "cover",
-    },
-    container: {
-      maxWidth: '100%',
-      margin: '0 auto',
-      display: 'flex',
-      justifyContent: 'space-between',
-      gap: '20px',
-      flexWrap: 'wrap',
-      overflowX: 'auto',
-      padding: '0 60px', // 👈 adds space on both sides
-      boxSizing: 'border-box',
-    },
-    item: {
-      width: '220px',
-      flex: '0 1 calc(33.333% - 20px)',
-      padding: '20px',
-      background: 'rgba(255,255,255,0.05)',
-      borderRadius: '10px',
-    },
-    icon: {
-      fontSize: '40px',
-      color: '#f44336',
-      marginBottom: '20px',
-    },
-    title: {
-      fontSize: '16px',
-      fontWeight: 'bold',
-      textTransform: 'uppercase',
-      marginBottom: '10px',
-    },
-    description: {
-      fontSize: '14px',
-      color: '#666',
-      lineHeight: '1.5',
-    },
-    introTitle: {
-      fontSize: '44px',
-      fontWeight: 'bold',
-      marginBottom: '40px',
-    },
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    message: "",
+    city: "",
+    company: "",
+    category: ""
+  });
+  const [showPopup, setShowPopup] = useState(false);
+  const handleChange = (e) => {
+
+
+    const {name, value, type} = e.target;
+    
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault("formDataformData", formData);
+    // console.log("formDataformData", formData)
+    try {
+      const response = await axios.post("https://anahmarketing.com/send-email", formData);
+      setShowPopup(true);
+      
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+      setFormData({
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone: "",
+        message: "",
+        city: "",
+        company: "",
+        category: "",
 
-
-  const features = [
-    {
-      icon: '💼',
-      title: 'Complete Website Setup & Launch ',
-      description:
-        'From initial concept to a live website, we handle everything, including design, development, and deployment. ',
-    },
-    {
-
-      icon: '💡',
-      title: 'Custom Design Tailored to Your Brand ',
-      description:
-        'We don’t use cookie-cutter templates. Your website will reflect your brand’s personality, values, and voice; clean, modern, and conversion-focused.',
-    },
-    {
-      icon: '🖥️',
-      title: 'Mobile-Responsive & SEO-Friendly ',
-      description:
-        'We build sites that look great on all devices and are structured to rank well in search engines from day one. ',
-    },
-    {
-      icon: '⚛️',
-      title: 'Optimized for Growth ',
-      description:
-        'We integrate tools and systems that support marketing, sales, analytics, and future scalability, ensuring your website evolves with your busines',
-    },
-    {
-
-      icon: '📈',
-      title: 'Conversion-Driven Strategy & UX',
-      description:
-        'Every element of your site is designed with user experience and business goals in mind—guiding visitors toward action, increasing engagement, and maximizing conversions.',
-    },
-    {
-
-      icon: '🛠️',
-      title: 'Ongoing Maintenance & Support ',
-      description:
-        'After launch, we provide proactive updates, performance monitoring, and technical support to keep your site fast, secure, and effective',
-    },
-
-  ];
-
+      });
+    } catch (error) {
+      console.error("Failed to send message", error);
+    }
+  };
 
   return (
     <>
-
 
       <section className="shopify-top-banner-sec">
         <div className="container">
@@ -265,8 +201,6 @@ const Shopify = () => {
               <div className="contant-part">
                 <div>
                   <img style={styles.Shopify} src={Shopify_Logo} alt="Marketing" />
-
-                  {/* <h1 style={styles.heroHeading1}>Shopify</h1> */}
                   <h1>
                     From Idea to Online Store, We Make Shopify Simple
                   </h1>
@@ -282,15 +216,18 @@ const Shopify = () => {
               <div className="form-part">
                 <div className="contact-form-area">
                   <h4 className="text-center mb-4 text-black">Get In Touch</h4>
-                  <form>
+
+                  <form onSubmit={handleSubmit}>
                     <div className="row g-3">
                       <div className="col-lg-6">
                         <input
                           type="text"
                           name="first_name"
                           placeholder="First Name"
-                          required
+                          value={formData.first_name}
+                          onChange={handleChange}
                           className="form-control"
+                          required
                         />
                       </div>
                       <div className="col-lg-6">
@@ -298,8 +235,10 @@ const Shopify = () => {
                           type="text"
                           name="last_name"
                           placeholder="Last Name"
-                          required
+                          value={formData.last_name}
+                          onChange={handleChange}
                           className="form-control"
+                          required
                         />
                       </div>
                       <div className="col-lg-6">
@@ -307,8 +246,10 @@ const Shopify = () => {
                           type="email"
                           name="email"
                           placeholder="Email Address"
-                          required
+                          value={formData.email}
+                          onChange={handleChange}
                           className="form-control"
+                          required
                         />
                       </div>
                       <div className="col-lg-6">
@@ -316,8 +257,10 @@ const Shopify = () => {
                           type="tel"
                           name="phone"
                           placeholder="Phone Number"
-                          required
+                          value={formData.phone}
+                          onChange={handleChange}
                           className="form-control"
+                          required
                         />
                       </div>
                       <div className="col-lg-6">
@@ -325,8 +268,10 @@ const Shopify = () => {
                           type="text"
                           name="company"
                           placeholder="Company Name"
-                          required
+                          value={formData.company}
+                          onChange={handleChange}
                           className="form-control"
+                          required
                         />
                       </div>
                       <div className="col-lg-6">
@@ -334,26 +279,33 @@ const Shopify = () => {
                           type="text"
                           name="city"
                           placeholder="City"
-                          required
+                          value={formData.city}
+                          onChange={handleChange}
                           className="form-control"
+                          required
                         />
                       </div>
                       <div className="col-lg-12 text-center">
+
                         <select
-                          name="category"
-                          required
+                        id="category"
+                        type="text"
+                        name="category"
+                          value={formData.category}
+                          onChange={handleChange}
                           className="form-control w-100"
-                          defaultValue=""
                         >
-                          <option value="" disabled>
+                          <option value="" >
                             Select Category
                           </option>
-                          <option value="speed-optimize">Speed Optimize</option>
-                          <option value="redesign">Redesign</option>
-                          <option value="app-development">App Development</option>
+                          <option value="speed-optimize">Website Development</option>
+                          <option value="website-redesign">Website Redesign</option>
+                          <option value="shopify-development">Shopify App Development</option>
+                          <option value="speed-optimization">Speed Optimization</option>
+                          <option value="website-migratio">Website Migratio</option>
+                          <option value="website-maintenance">Website Maintenance & Support</option>
                         </select>
                       </div>
-
                       <div className="col-lg-12">
                         <textarea
                           name="message"
@@ -361,18 +313,18 @@ const Shopify = () => {
                           required
                           className="form-control"
                           rows={4}
+                          value={formData.message}
+                          onChange={handleChange}
                         ></textarea>
                       </div>
                       <div className="col-lg-12 text-center">
                         <button type="submit" className="lnk header-btn1">
-                          Submit{" "}
-                          <span>
-                            <i className="fa-solid fa-arrow-right"></i>
-                          </span>
+                          Submit <span><i className="fa-solid fa-arrow-right"></i></span>
                         </button>
                       </div>
                     </div>
                   </form>
+
                 </div>
               </div>
             </div>
@@ -380,8 +332,27 @@ const Shopify = () => {
         </div>
       </section>
 
-
-      {/* slider---- */}
+ {showPopup && (
+        <motion.div
+          className="modal-backdrop-custom"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className="modal-content-custom"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+          >
+            <div className="modal-icon">
+              <i className="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Thank You!</h2>
+            <p>Your message has been sent successfully. We'll be in touch soon.</p>
+          </motion.div>
+        </motion.div>
+      )}
 
       {/* Partners Slider */}
       <div className="slider-section-area sp5">
@@ -432,9 +403,8 @@ const Shopify = () => {
 
 
 
-      {/* slider---- */}
-
       {/* Section 2 */}
+
       <div className="works-inner-section-area services-page">
         <div className="container">
           <div className="row align-items-center">
@@ -491,9 +461,9 @@ const Shopify = () => {
 
 
       <section className="even-better-section cta-section-area">
-        <img alt="" class="cta-bg1 aniamtion-key-2" src="/src/assets/images/cta-bg1.png" />
-        <img alt="" class="cta-bg2 aniamtion-key-1" src="/src/assets/images/cta-bg2.png" />
-        <img alt="" class="cta-bg2 aniamtion-key-1" src="assets/img/bg/cta-bg2.png" />
+        <img alt="" class="cta-bg1 aniamtion-key-2" src={cta_bg1} />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6">
@@ -505,7 +475,7 @@ const Shopify = () => {
             </div>
             <div className="col-md-6">
               <div className="img-part">
-                <img alt="" src="/assets/images/online-shopping.png"></img>
+                <img alt="" class="img-fluid" src={online_shoppings} />
               </div>
             </div>
           </div>
@@ -513,7 +483,7 @@ const Shopify = () => {
             <div className="col-md-4">
               <div className="boxs-card">
                 <div class="icons mb-3">
-                  <img alt="" class="img-fluid" src="/assets/website-redesign-icon.png" />
+                  <img alt="" class="img-fluid" src={website_redesign_icon} />
                 </div>
                 <h3>Website Redesign & Enhancements</h3>
                 <p>We analyze your current design and user flow, then create a refreshed, more intuitive layout that keeps users engaged and encourages action.</p>
@@ -522,7 +492,7 @@ const Shopify = () => {
             <div className="col-md-4">
               <div className="boxs-card">
                 <div class="icons mb-3">
-                  <img alt="" class="img-fluid" src="/assets/user-experience-icon.png" />
+                  <img alt="" class="img-fluid" src={user_experience} />
                 </div>
                 <h3>Improved User Experience (UX)</h3>
                 <p>We enhance navigation, mobile responsiveness, and loading speed, giving your visitors a smoother and more satisfying experience</p>
@@ -531,7 +501,7 @@ const Shopify = () => {
             <div className="col-md-4">
               <div className="boxs-card">
                 <div class="icons mb-3">
-                  <img alt="" class="img-fluid" src="/assets/content-icon.png" />
+                  <img alt="" class="img-fluid" src={content_icon} />
                 </div>
                 <h3>Content & Visual Strategy</h3>
                 <p>From impactful visuals to persuasive messaging, we upgrade the way your brand communicates to build trust and drive conversions.</p>
@@ -543,85 +513,64 @@ const Shopify = () => {
 
 
 
-
-      {/* Final Section - Card Grid */}
-
-
       {/* new--------------- */}
 
-      {/* <section style={styless.section}>
-        <div>
-          <h2 style={styless.introTitle}>Here’s What We Do for You</h2>
-        </div>
-
-        <div style={styless.container}>
-          {features.map((feature, index) => (
-            <div key={index} style={styless.item}>
-              <div style={styless.icon}>{feature.icon}</div>
-              <h3 style={styless.title}>{feature.title}</h3>
-              <p style={styless.description}>{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </section> */}
 
       <section class="here-section">
-   <div class="container">
-      <div class="row">
-         <div class="col-lg-12 m-auto">
-            <div class="service2-header heading2 text-center">
-               <img alt="" class="star2 keyframe5" src="/src/assets/images/star2.png"/>
-               <img alt="" class="star3 keyframe5" src="/src/assets/images/star2.png"/>
-               <h2 class="text-anime-style-3">Here’s What We Do for You</h2>  
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 m-auto">
+              <div class="service2-header heading2 text-center">
+                <h2 class="text-anime-style-3">Here’s What We Do for You</h2>
+              </div>
             </div>
-         </div>
-      </div>
-      <div className="row">
-        <div className="col-md-4">
-          <div className="box-card">
-            <div className="icon">💼</div>
-            <h3>Complete Website Setup & Launch</h3>
-            <p>From initial concept to a live website, we handle everything, including design, development, and deployment.</p>
+          </div>
+          <div className="row">
+            <div className="col-md-4">
+              <div className="box-card">
+                <div className="icon">💼</div>
+                <h3>Complete Website Setup & Launch</h3>
+                <p>From initial concept to a live website, we handle everything, including design, development, and deployment.</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="box-card">
+                <div className="icon">💡</div>
+                <h3>Custom Design Tailored to Your Brand</h3>
+                <p>We don’t use cookie-cutter templates. Your website will reflect your brand’s personality, values, and voice; clean, modern, and conversion-focused..</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="box-card">
+                <div className="icon">🖥️</div>
+                <h3>Mobile-Responsive & SEO-Friendly</h3>
+                <p>We build sites that look great on all devices and are structured to rank well in search engines from day one.</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="box-card">
+                <div className="icon">⚛️</div>
+                <h3>Optimized for Growth</h3>
+                <p>We integrate tools and systems that support marketing, sales, analytics, and future scalability, ensuring your website evolves with your busines</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="box-card">
+                <div className="icon">📈</div>
+                <h3>Conversion-Driven Strategy & UX</h3>
+                <p>Every element of your site is designed with user experience and business goals in mind—guiding visitors toward action, increasing engagement, and maximizing conversions.</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="box-card">
+                <div className="icon">🛠️</div>
+                <h3>Ongoing Maintenance & Support</h3>
+                <p>After launch, we provide proactive updates, performance monitoring, and technical support to keep your site fast, secure, and effective</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-md-4">
-          <div className="box-card">
-            <div className="icon">💡</div>
-            <h3>Custom Design Tailored to Your Brand</h3>
-            <p>We don’t use cookie-cutter templates. Your website will reflect your brand’s personality, values, and voice; clean, modern, and conversion-focused..</p>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="box-card">
-            <div className="icon">🖥️</div>
-            <h3>Mobile-Responsive & SEO-Friendly</h3>
-            <p>We build sites that look great on all devices and are structured to rank well in search engines from day one.</p>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="box-card">
-            <div className="icon">⚛️</div>
-            <h3>Optimized for Growth</h3>
-            <p>We integrate tools and systems that support marketing, sales, analytics, and future scalability, ensuring your website evolves with your busines</p>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="box-card">
-            <div className="icon">📈</div>
-            <h3>Conversion-Driven Strategy & UX</h3>
-            <p>Every element of your site is designed with user experience and business goals in mind—guiding visitors toward action, increasing engagement, and maximizing conversions.</p>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="box-card">
-            <div className="icon">🛠️</div>
-            <h3>Ongoing Maintenance & Support</h3>
-            <p>After launch, we provide proactive updates, performance monitoring, and technical support to keep your site fast, secure, and effective</p>
-          </div>
-        </div>
-      </div>
-   </div>
-</section>
+      </section>
 
 
 
@@ -631,7 +580,7 @@ const Shopify = () => {
           <div class="row align-items-center">
             <div class="col-md-8">
               <h1 className="mb-4">Benefits of Choosing Anah Marketing</h1>
-              <h4 className="mb-5">Working with us is more than just launching a Shopify store – it’s about helping your brand succeed long-term:</h4>
+              <h4 className="mb-5">Working with us is more than just launching a Shopify store - it's about helping your brand succeed long-term:</h4>
 
               <div class="shopify-list">
                 <ul>
@@ -693,7 +642,7 @@ const Shopify = () => {
 
             </ul>
             <div className="tab-content accordion" id="myTabContent">
-              <div className="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <div className="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" >
                 <div id="collapseOne" className="accordion-collapse collapse show d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
                   <div className="accordion-body">
                     <div className="row text-align-center justify-content-center">
@@ -845,85 +794,23 @@ const Shopify = () => {
       </section>
 
 
-<div class="cta-section-area Amazing-section">
-   <img alt="" class="cta-bg1 aniamtion-key-2" src="/src/assets/images/cta-bg1.png"/>
-   <img alt="" class="cta-bg2 aniamtion-key-1" src="/src/assets/images/cta-bg2.png"/>
-   <img alt="" class="cta-bg2 aniamtion-key-1" src="assets/img/bg/cta-bg2.png"/>
-   <div class="container">
-      <div class="row">
-         <div class="col-lg-12 m-auto">
-            <div class="cta-header-area text-center sp4 heading2">
-               <h2 class="text-anime-style-3">Let’s Build Something Amazing Together</h2>
-               <p>Whether you need a brand-new website or a major upgrade to your existing one, Anah Marketing and Innovations is ready to help you stand out, convert more visitors, and grow with confidence.</p>
-               <p>Let’s talk about how we can elevate your digital presence today and into the future.</p>
-               <div class="btn-area text-center"><a href="#" class="header-btn1">Let's Talk <span><i class="fa-solid fa-arrow-right"></i></span></a></div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-
-
-      {/* slider----- */}
-
-      {/* <OurPortfolis />  */}
-      {/* slider----- */}
-
-
-
-      {/* new------------ */}
-      {/* 
-      <div className="works-inner-section-area sp1">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="works-header-area heading2">
-
-                <h2>Benefits of Choosing Anah Marketing</h2>
-                <div className="space32"></div>
-
-
-
-                <div className="content">
-                  <p>Custom-Tailored Solutions: We take time to understand your business and create strategies that fit your unique needs and goals.</p>
-                </div>
-
-
-                <div className="space20"></div>
-
-
-                <div className="content">
-                  <p>Proven Expertise: Our experience working with DTC brands helps us deliver results that work.</p>
-                </div>
-
-
-                <div className="space20"></div>
-
-
-                <div className="content">
-                  <p>Ongoing Support: From the initial setup to ongoing optimization, we’re here to help you grow and succeed at every stage</p>
-
-                </div>
+      <div class="cta-section-area Amazing-section">
+        <img alt="" class="cta-bg1 aniamtion-key-2" src={cta_bg1} />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 m-auto">
+              <div class="cta-header-area text-center sp4 heading2">
+                <h2 class="text-anime-style-3">Let’s Build Something Amazing Together</h2>
+                <p>Whether you need a brand-new website or a major upgrade to your existing one, Anah Marketing and Innovations is ready to help you stand out, convert more visitors, and grow with confidence.</p>
+                <p>Let’s talk about how we can elevate your digital presence today and into the future.</p>
+                <div class="btn-area text-center"><a href="#" class="header-btn1">Let's Talk <span><i class="fa-solid fa-arrow-right"></i></span></a></div>
               </div>
             </div>
-            <div className="col-lg-6">
-              <div className="about-all-images-area">
-
-                <div className="row">
-                  <div className="col-12">
-                    <img src={new1} alt="Why Choose Us" />
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-      </div> */}
-
-
-
+      </div>
 
 
 

@@ -17,7 +17,7 @@ import magiaLogo from '../assets/images/magia_logo.png';
 import womanCartLogo from '../assets/images/woman-cart-logo.png';
 import teakwoodLogo from '../assets/images/teakwood-logo-img.png';
 import juniperLogo from '../assets/images/juniper-logo.png';
-import elLogo from '../assets/images/el-logo.png';
+import elLogo from '../assets/images/el-logoo.png';
 import autumnlaneLogo from '../assets/images/autumnlane_logo.png';
 import spatikaclothingLogo from '../assets/images/spatikaclothing_logo.png';
 import dishapublicationLogo from '../assets/images/dishapublication_logo.png';
@@ -30,7 +30,7 @@ import holythreadLogo from '../assets/images/holythread_logo.png';
 import leheriyaLogo from '../assets/images/leheriya_logo.png';
 import fashiondwarLogo from '../assets/images/fashiondwar-logo.png';
 import lavanyaLogo from '../assets/images/lavanya-logo.png';
-import parenteyeLogo from '../assets/images/parenteye-logo.png';
+import parenteyeLogo from '../assets/images/parenteye-logoo.png';
 import jagoIndiaJagoLogo from '../assets/images/jago-india-jago-logo.png';
 import magia_logo from "../assets/images/magia_logo.png";
 import woman_cart_logo from "../assets/images/woman-cart-logo.png";
@@ -45,7 +45,7 @@ import holythread_logo from "../assets/images/holythread_logo.png";
 import leheriya_logo from "../assets/images/leheriya_logo.png";
 import fashiondwar_logo from "../assets/images/fashiondwar-logo.png";
 import lavanya_logo from "../assets/images/lavanya-logo.png";
-import Divi_logo from"../assets/images/divi-logo.png"
+import Divi_logo from"../assets/images/divi-logoo.png"
 
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";

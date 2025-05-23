@@ -17,10 +17,9 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', (req, res) => {
-  // console.log("56312ss")
-  const { first_name, last_name, email, phone, message, company,city } = req.body;
+  const { first_name, last_name, email, phone, message, company,city ,category} = req.body;
 
-//  console.log("56312ss",req.body)
+  // console.log("56312ss",req.body)
 
 
 // console.log("pes",req.body.email)
@@ -32,6 +31,7 @@ app.post('/send-email', (req, res) => {
     { label: 'Company', value: company },
     { label: 'Message', value: message },
     { label: 'city', value: city },
+    { label: 'category', value: category }
   ];
 
 
@@ -52,11 +52,10 @@ app.post('/send-email', (req, res) => {
   let senderEmail = req.body.email?.trim() || 'mailto:no-reply@example.com';
  
   
-  // console.log("ioplff",`"${senderEmail}"`)
   const mailOptions = {
     from: "harsh.iglobe@gmail.com",
-    to: "admin@anahmarketing.com",
-    cc: ["marketing@anahmarketing.com"],
+     to: "admin@anahmarketing.com",
+     cc: ["marketing@anahmarketing.com"],
     subject: "New Contact Form Submission",
     html: htmlBody,
   };
