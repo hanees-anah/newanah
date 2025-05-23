@@ -153,15 +153,15 @@ const Shopify = () => {
   };
 
   const [formData, setFormData] = useState({
-  first_name: '',
-  last_name: '',
-  email: '',
-  phone: '',
-  company: '',
-  city: '',
-  category: '',  // 👈 Yeh hona chahiye
-  message: ''
-});
+    first_name: '',
+    last_name: '',
+    email: '',
+    phone: '',
+    company: '',
+    city: '',
+    category: '',  // 👈 Yeh hona chahiye
+    message: ''
+  });
   const [showPopup, setShowPopup] = useState(false);
   // const handleChange = (e) => {
 
@@ -172,12 +172,12 @@ const Shopify = () => {
   // };
 
   const handleChange = (e) => {
-  const { name, value } = e.target;
-  setFormData((prevData) => ({
-    ...prevData,
-    [name]: value,
-  }));
-};
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
 
   const handleSubmit = async (e) => {
@@ -229,7 +229,7 @@ const Shopify = () => {
 
             <div className="col-md-6">
               <div className="form-part">
-                <div className="contact-form-area shadow-none" style={{padding:"25px"}}>
+                <div className="contact-form-area shadow-none" style={{ padding: "25px" }}>
                   <h4 className="text-center mb-4 text-black">Get In Touch</h4>
 
                   <form onSubmit={handleSubmit}>
@@ -311,24 +311,24 @@ const Shopify = () => {
                           required
                         />
                       </div>
-                    <div className="col-lg-12 text-center">
-  <select
-    id="category"
-    name="category"
-    value={formData.category}
-    onChange={handleChange}
-    className="form-control w-100 shadow-none border border-[#E6E6E6] py-2"
-    required
-  >
-    <option value="">Select Category</option>
-    <option value="speed-optimize">Website Development</option>
-    <option value="website-redesign">Website Redesign</option>
-    <option value="shopify-development">Shopify App Development</option>
-    <option value="speed-optimization">Speed Optimization</option>
-    <option value="website-migration">Website Migration</option> {/* Typo fix */}
-    <option value="website-maintenance">Website Maintenance & Support</option>
-  </select>
-</div>
+                      <div className="col-lg-12 text-center">
+                        <select
+                          id="category"
+                          name="category"
+                          value={formData.category}
+                          onChange={handleChange}
+                          className="form-control w-100 shadow-none border border-[#E6E6E6] py-2"
+                          required
+                        >
+                          <option value="">Select Category</option>
+                          <option value="speed-optimize">Website Development</option>
+                          <option value="website-redesign">Website Redesign</option>
+                          <option value="shopify-development">Shopify App Development</option>
+                          <option value="speed-optimization">Speed Optimization</option>
+                          <option value="website-migration">Website Migration</option> {/* Typo fix */}
+                          <option value="website-maintenance">Website Maintenance & Support</option>
+                        </select>
+                      </div>
                       <div className="col-lg-12">
                         <textarea
                           style={styles.shopifyForm}

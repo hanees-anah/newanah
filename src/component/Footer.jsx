@@ -39,6 +39,7 @@ function Footer() {
                   <li><a href="/portfolio">Portfolio</a></li>
                   <li><a href="/blog">Our Blog</a></li>
                   <li><a href="/contact-us">Contact Us</a></li>
+                  <li><a href="/shopify-development">Shopify</a></li>
                 </ul>
               </div>
             </div>
