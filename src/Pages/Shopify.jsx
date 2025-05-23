@@ -58,6 +58,8 @@ import content_icon from "../assets/images/content-icon.png"
 import online_shoppings from "../assets/images/online-shopping.png"
 import cta_bg1 from "../assets/images/cta-bg1.png"
 import cta_bg2 from "../assets/images/cta-bg2.png"
+import cavalry from "../assets/images/7cavalry-logo.png"
+import swtantra from "../assets/images/swtantra-logo.png"
 import axios from "axios";
 import { motion } from "framer-motion";
 // -------------------------------------
@@ -727,11 +729,11 @@ const Shopify = () => {
                           <img src={juniperLogo} alt="Juniper" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
+                      {/* <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={elLogo} alt="EL" />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={autumnlaneLogo} alt="Autumn Lane" />
@@ -805,6 +807,16 @@ const Shopify = () => {
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={Divi_logo} alt="Styleunion" />
+                        </div>
+                      </div>
+                      <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={swtantra} alt="Styleunion" />
+                        </div>
+                      </div>
+                      <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={cavalry} alt="Styleunion" />
                         </div>
                       </div>
                     </div>
