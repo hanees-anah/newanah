@@ -1,7 +1,7 @@
 
 import orginic from "../assets/images/organic-search-img.jpg"
 import  instagram from"../assets/images/anah-2025.jpeg"
-import keyword from "../assets/images/keyword-research-img.jpg"
+import keyword from "../assets/images/seo-blog.png"
 import seo from "../assets/images/seo-checklis-img.jpg"
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
@@ -109,7 +109,7 @@ function Blog() {
                             <div class="col-md-4">
                                 <div class="news-card align-items-center">
                                     <div class="news-media">
-                                        <a href="/instagram-readmore"><img alt="" src={instagram} class="full-img" /></a>
+                                        <a href="/blog/top-e-commerce-platforms-for-seo"><img alt="" src={instagram} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
                                         <div class="post-date">May 09, 2025</div>
@@ -122,13 +122,13 @@ function Blog() {
                             <div class="col-md-4">
                                 <div class="news-card align-items-center">
                                     <div class="news-media">
-                                        <a href="/keyword-read-more"><img alt="" src={keyword} class="full-img" /></a>
+                                        <a href="/blog/performance-marketing-trends"><img alt="" src={keyword} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
-                                        <div class="post-date">Dec 26, 2022</div>
-                                        <h4 class="dlab-title"><a href="/keyword-read-more">Keyword Research and its Related Factors...</a></h4>
-                                        <p class="m-b20">The process of finding and analyzing search teams that most people use to type in search engines is keyword research.</p>
-                                        <a href="/keyword-read-more" class="news-btn">Read More</a>
+                                        <div class="post-date">May 26, 2025</div>
+                                        <h4 class="dlab-title"><a href="/blog/performance-marketing-trends">Top E-commerce Platforms to Boost Your SEO in 2025</a></h4>
+                                        <p class="m-b20">In today’s digital world, having an online store is just the beginning. To truly succeed,</p>
+                                        <a href="/blog/performance-marketing-trends" class="news-btn">Read More</a>
                                     </div>
                                 </div>
                             </div>

@@ -47,7 +47,7 @@ function AppWrapper() {
     "/view-more", 
     "/read-more", 
     "/keyword-read-more", 
-    "/instagram-readmore", 
+    "/blog/top-e-commerce-platforms-for-seo", 
     "/blog/performance-marketing-trends",
      "/shopify-development",
   
@@ -75,7 +75,7 @@ function AppWrapper() {
         <Route path="/view-more" element={<View_more />} />
         <Route path="/read-more" element={<Read_more />} />
         <Route path="/keyword-read-more" element={<Keywoed_reserach_reacd_more />} />
-        <Route path="/instagram-readmore" element={<InstagramReadMore />} />
+        <Route path="/blog/top-e-commerce-platforms-for-seo" element={<InstagramReadMore />} />
         <Route path="/blog/performance-marketing-trends" element={<Organic_search />} />
         <Route path="/shopify-development" element={<Shopify/>} />
         <Route path="*" element={<NotFound />} />
