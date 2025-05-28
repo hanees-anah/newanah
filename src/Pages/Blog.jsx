@@ -135,13 +135,13 @@ function Blog() {
                             <div class="col-md-4">
                                 <div class="news-card align-items-center">
                                     <div class="news-media">
-                                        <a href="/read-more"><img alt="" src={seo_2025} class="full-img" /></a>
+                                        <a href="/blog/latest-seo-trends"><img alt="" src={seo_2025} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
                                         <div class="post-date">May 28, 2025</div>
-                                        <h4 class="dlab-title"><a href="/read-more">How SEO Has Evolved in 2025, and What to Do Now</a></h4>
+                                        <h4 class="dlab-title"><a href="/blog/latest-seo-trends">How SEO Has Evolved in 2025, and What to Do Now</a></h4>
                                         <p class="m-b20">The world of Search Engine Optimization (SEO) is always changing. As we move through 2025, </p>
-                                        <a href="/read-more" class="news-btn">Read More</a>
+                                        <a href="/blog/latest-seo-trends" class="news-btn">Read More</a>
                                     </div>
                                 </div>
                             </div>
