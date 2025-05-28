@@ -1,7 +1,7 @@
 import React from "react";
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
-import inner_header from "../assets/images/inner-header.png";
+import inner_header from "../assets/images/e-commerce-plateform.png";
 import { useEffect, useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
 import { Helmet } from "react-helmet";
@@ -44,20 +44,21 @@ function Organic_search() {
         </div>
       )}
       <div
-        className="about-header-area"
-        style={{
-          backgroundImage: `url(${inner_header})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
+        className="about-header-area blog-single-section"
+        // style={{
+        //   backgroundImage: `url(${inner_header})`,
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center"
+        // }}
       >
+      <img src={inner_header} alt="" />
 
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 m-auto">
+            <div className="col-lg-12 m-auto">
               <div className="about-inner-header heading9 text-center">
-                <h1>Performance Marketing in 2025: Top Channels to Watch and Leverage</h1>
+                {/* <h1>Performance Marketing in 2025: Top Channels to Watch and Leverage</h1> */}
                 <a href="/">Home</a>{" "}
                 <i className="fa-solid fa-angle-right"></i>
                 <span> Blog </span>

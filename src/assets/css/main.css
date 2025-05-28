@@ -31810,7 +31810,18 @@ section.here-section .box-card p {
 .cta-section-area .cta-header-area.text-center.sp4.heading2 p {
     margin-bottom: 10px;
 }
-
+.about-header-area.blog-single-section {
+    padding-top: 120px;
+    padding-bottom: 10px;
+}
+.about-header-area.blog-single-section img {
+    width: 100%;
+}
+.about-header-area.blog-single-section .about-inner-header {
+    padding-top: 20px;
+    text-align: left !important;
+        margin-bottom: -30px;
+}
 
 /* section.even-better-section.cta-section-area .icons.mb-3 {
     display: none;

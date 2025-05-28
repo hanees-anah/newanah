@@ -2,7 +2,7 @@ import React from 'react';
 
 import organic_img from "../assets/images/anah-2025.jpeg"
 import instagram__img from "../assets/images/seo-blog.png"
-import keyword__img from "../assets/images/keyword-research-img.jpg"
+import seo_2025 from "../assets/images/seo-img-2025.png"
 import seo__img from "../assets/images/seo-checklis-img.jpg"
 import bg1 from "../assets/images/pages-bg1.png"
 
@@ -74,21 +74,21 @@ function Brands_focous() {
                         <div className="col-md-6">
                             <div className="news-card row align-items-center">
                                 <div className="news-media col-md-6">
-                                    <a href="/keyword-read-more">
-                                        <img alt="" src={keyword__img} className="full-img" />
+                                    <a href="/blog/latest-seo-trends">
+                                        <img alt="" src={seo_2025} className="full-img" />
                                     </a>
                                 </div>
                                 <div className="content-info col-md-6">
-                                    <div className="post-date">Dec 26, 2022</div>
+                                    <div className="post-date">May 28, 2025</div>
                                     <h4 className="dlab-title">
-                                        <a href="/keyword-read-more">
-                                            Keyword Research and its Related Factors...
+                                        <a href="/blog/latest-seo-trends">
+                                        How SEO Has Evolved in 2025, and What to Do Now
                                         </a>
                                     </h4>
                                     <p className="m-b20">
-                                        The process of finding and analyzing search teams that most people use to type in search engines is keyword research.
+                                       The world of Search Engine Optimization (SEO) is always changing. As we move through 2025, some key changes have reshaped how SEO works and what matters most. 
                                     </p>
-                                    <a href="/keyword-read-more" className="news-btn">
+                                    <a href="/blog/latest-seo-trends" className="news-btn">
                                         Read More
                                     </a>
                                 </div>

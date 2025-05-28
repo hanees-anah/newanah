@@ -2,7 +2,7 @@
 import orginic from "../assets/images/organic-search-img.jpg"
 import  instagram from"../assets/images/anah-2025.jpeg"
 import keyword from "../assets/images/seo-blog.png"
-import seo from "../assets/images/seo-checklis-img.jpg"
+import seo_2025 from "../assets/images/seo-img-2025.png"
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
 import inner_header from "../assets/images/inner-header.png";
@@ -135,12 +135,12 @@ function Blog() {
                             <div class="col-md-4">
                                 <div class="news-card align-items-center">
                                     <div class="news-media">
-                                        <a href="/read-more"><img alt="" src={seo} class="full-img" /></a>
+                                        <a href="/read-more"><img alt="" src={seo_2025} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
-                                        <div class="post-date">Nov 21, 2022</div>
-                                        <h4 class="dlab-title"><a href="/read-more">The Only SEO Checklist that Gives your eComme...</a></h4>
-                                        <p class="m-b20">Search Engine Optimization (SEO) is a process used to optimize the main content of your website. With optimization,</p>
+                                        <div class="post-date">May 28, 2025</div>
+                                        <h4 class="dlab-title"><a href="/read-more">How SEO Has Evolved in 2025, and What to Do Now</a></h4>
+                                        <p class="m-b20">The world of Search Engine Optimization (SEO) is always changing. As we move through 2025, </p>
                                         <a href="/read-more" class="news-btn">Read More</a>
                                     </div>
                                 </div>

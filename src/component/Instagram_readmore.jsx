@@ -68,12 +68,12 @@ function InstagramReadMore() {
         </p>
         <p><strong>Key SEO Features:</strong></p>
         <ul>
-          <li>Fast website speed</li>
-          <li>Mobile friendly themes</li>
-          <li>Easy editing of meta tags, and alt text</li>
-          <li>SEO apps like “Smart SEO”</li>
-          <li>Custom URLs and auto sitemaps</li>
-        </ul><br/>
+          <li>• Fast website speed</li>
+          <li>• Mobile friendly themes</li>
+          <li>• Easy editing of meta tags, and alt text</li>
+          <li>• SEO apps like “Smart SEO”</li>
+          <li>• Custom URLs and auto sitemaps</li>
+        </ul>
         <p>
         If you're looking for a <strong>user-friendly e-commerce platform</strong> with built-in <strong>SEO tools</strong>, Shopify is a great place to start. It is best for Beginners and small to medium businesses wanting an easy-to-use, SEO-ready online store.
         </p>
@@ -84,11 +84,11 @@ function InstagramReadMore() {
         </p>
         <p><strong>Key SEO Features:</strong></p>
         <ul>
-          <li>Full access to on-page SEO</li>
-          <li>Integrates with Yoast SEO & All in One SEO</li>
-          <li>Supports rich snippets and schema</li>
-          <li>Blog-friendly for better SEO</li>
-        </ul><br/>
+          <li>• Full access to on-page SEO</li>
+          <li>• Integrates with Yoast SEO & All in One SEO</li>
+          <li>•Supports rich snippets and schema</li>
+          <li>• Blog-friendly for better SEO</li>
+        </ul>
         <p>
          It is best for users who want hands-on control of their SEO and want to build their store using <strong>WordPress</strong>.
         </p>
@@ -99,12 +99,12 @@ function InstagramReadMore() {
         </p>
         <p><strong>Key SEO Features:</strong></p>
         <ul>
-          <li>Fast load times</li>
-          <li>Mobile optimization</li>
-          <li>AMP support</li>
-          <li>Easy to manage sitemaps and robot.txt files</li>
-          <li>Built-in tools to edit URLs, metadata, and alt text</li>
-        </ul><br/>
+          <li>• Fast load times</li>
+          <li>• Mobile optimization</li>
+          <li>• AMP support</li>
+          <li>• Easy to manage sitemaps and robot.txt files</li>
+          <li>• Built-in tools to edit URLs, metadata, and alt text</li>
+        </ul>
         <p>
        BigCommerce is one of the top <strong>SEO-friendly e-commerce platforms</strong> for fast-growing brands that need a reliable solution without too much setup.
         </p>
@@ -115,26 +115,26 @@ function InstagramReadMore() {
         </p>
         <p><strong>Key SEO Features:</strong></p>
         <ul>
-          <li>SEO Wiz to guide beginners</li>
-          <li>Mobile-optimized templates</li>
-          <li>Add structured data setup</li>
-          <li>Easy integration with Google Search</li>
-        </ul><br/>
+          <li>• SEO Wiz to guide beginners</li>
+          <li>• Mobile-optimized templates</li>
+          <li>• Add structured data setup</li>
+          <li>• Easy integration with Google Search</li>
+        </ul>
         <p>
          It’s perfect for small businesses and entrepreneurs who want a fast, easy store setup with stable SEO support.
         </p>
 
         <h3><strong>5. Magento (Adobe Commerce) – Best for Large Businesses with Tech Support</strong></h3>
         <p>
-          Magento (by Adobe) is a powerful eCommerce platform made for large businesses. It offers full control over your store and SEO but requires technical skills or a developer team to manage it effectively.
+          <strong>Magento</strong> (by Adobe) is a powerful eCommerce platform made for large businesses. It offers full control over your store and SEO but requires technical skills or a developer team to manage it effectively.
         </p>
         <p><strong>Key SEO Features:</strong></p>
         <ul>
-          <li>Highly customizable SEO features</li>
-          <li>Can handle large product catalogues</li>
-          <li>Advanced URL structure and redirects options</li>
-          <li>Supports global SEO with multi-language and currency</li>
-        </ul><br/>
+          <li>• Highly customizable SEO features</li>
+          <li>• Can handle large product catalogues</li>
+          <li>• Advanced URL structure and redirects options</li>
+          <li>• Supports global SEO with multi-language and currency</li>
+        </ul>
         <p>
          It is ideal for large companies that want to scale and have the technical resources to manage a flexible, complex platform.
         </p>
@@ -144,12 +144,12 @@ function InstagramReadMore() {
           Not sure which one is right for you? Here’s a simple checklist to help you decide:
         </p>
         <ul>
-          <li>Can you easily edit <strong>meta titles and descriptions?</strong></li>
-          <li>Is the platform <strong>mobile-friendly</strong> and fast?</li>
-          <li>Does it support <strong>structured data and SEO plugins?</strong></li>
-          <li>Can you use <strong>long-tail keywords</strong> in product pages and blogs?</li>
-          <li>Does it help you connect with Google tools like Analytics and Search Console?</li>
-        </ul><br/>
+          <li>✔️ Can you easily edit <strong>meta titles and descriptions?</strong></li>
+          <li>✔️ Is the platform <strong>mobile-friendly</strong> and fast?</li>
+          <li>✔️ Does it support <strong>structured data and SEO plugins?</strong></li>
+          <li>✔️ Can you use <strong>long-tail keywords</strong> in product pages and blogs?</li>
+          <li>✔️ Does it help you connect with Google tools like Analytics and Search Console?</li>
+        </ul>
         <p>Remember, the <strong>best SEO e-commerce platform in 2025</strong> is the one that fits your business goals and helps customers find you easily online.</p>
 
         <h3><strong>Conclusion</strong></h3>
