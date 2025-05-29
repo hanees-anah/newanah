@@ -3,7 +3,7 @@ import React from 'react';
 import organic_img from "../assets/images/anah-2025.jpeg"
 import instagram__img from "../assets/images/seo-blog.png"
 import seo_2025 from "../assets/images/seo-img-2025.png"
-import seo__img from "../assets/images/seo-checklis-img.jpg"
+import seo__img from "../assets/images/social-media-trends.png"
 import bg1 from "../assets/images/pages-bg1.png"
 
 
@@ -29,21 +29,21 @@ function Brands_focous() {
                           <div className="col-md-6">
                             <div className="news-card row align-items-center">
                                 <div className="news-media col-md-6">
-                                    <a href="/read-more">
-                                        <img alt="" src={seo__img} className="full-img" />
+                                    <a href="/blog/social-media-marketing-trends-for-ecommerce">
+                                        <img alt="social-media-trends" src={seo__img} className="full-img" />
                                     </a>
                                 </div>
                                 <div className="content-info col-md-6">
-                                    <div className="post-date">Nov 21, 2022</div>
+                                    <div className="post-date">May 29, 2025</div>
                                     <h4 className="dlab-title">
-                                        <a href="/read-more">
-                                            The Only SEO Checklist that Gives your eComme...
+                                        <a href="/blog/social-media-marketing-trends-for-ecommerce">
+                                           Top Social Media Marketing Trends for E-Commerce in 2025
                                         </a>
                                     </h4>
                                     <p className="m-b20">
-                                        Search Engine Optimization (SEO) is a process used to optimize the main content of your website. With optimization,
+                                     The landscape of e-commerce is rapidly evolving, driven by innovative social media marketing strategies that go beyond traditional content sharing. 
                                     </p>
-                                    <a href="/read-more" className="news-btn">
+                                    <a href="/blog/social-media-marketing-trends-for-ecommerce" className="news-btn">
                                         Read More
                                     </a>
                                 </div>

@@ -1,5 +1,5 @@
 
-import orginic from "../assets/images/organic-search-img.jpg"
+import orginic from "../assets/images/social-media-trends.png"
 import  instagram from"../assets/images/anah-2025.jpeg"
 import keyword from "../assets/images/seo-blog.png"
 import seo_2025 from "../assets/images/seo-img-2025.png"
@@ -75,14 +75,14 @@ function Blog() {
                                         <div className="content-area heading2">
                                             <div className="tags-area">
                                                 <ul>
-                                                    <li><a href="#"><i className="fa-regular fa-user"></i> By Admin</a></li>
-                                                    <li><a href="#"><i className="fa-solid fa-calendar-days"></i> Feb 28, 2023</a></li>
+                                                    <li><a href="#"><i className="fa-regular fa-user"></i> By Priyank Badjatya</a></li>
+                                                    <li><a href="#"><i className="fa-solid fa-calendar-days"></i> May 29, 2025</a></li>
                                                 </ul>
                                             </div>
-                                            <h2>Organic Search vs Paid Search: What’s the Difference?</h2>
+                                            <h2>Top Social Media Marketing Trends for E-Commerce </h2>
                                             <div className="space8"></div>
                                             <div className="btn-area">
-                                                <a href="/view-more" className="header-btn1">
+                                                <a href="/blog/social-media-marketing-trends-for-ecommerce" className="header-btn1">
                                                     View More <span><i className="fa-solid fa-arrow-right"></i></span>
                                                 </a>
                                             </div>

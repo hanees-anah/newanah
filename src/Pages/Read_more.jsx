@@ -4,6 +4,7 @@ import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
 import  { useEffect,useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
+import inner_header from "../assets/images/social-media-marketing trends.png";
 
 function Read_more() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,25 +38,27 @@ function Read_more() {
         )}
       {/* Header Section */}
       <div
-        className="about-header-area"
-        style={{
-          backgroundImage: `url(${innerHeader})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        className="about-header-area blog-single-section"
+        // style={{
+        //   backgroundImage: `url(${innerHeader})`,
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        // }}
       >
-        <img src={star2} alt="star2" className="star2 keyframe5" />
+     <img src={inner_header} alt="social-media-marketing trends" />
+        
+        {/* <img src={star2} alt="star2" className="star2 keyframe5" /> */}
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 m-auto">
+            <div className="col-lg-12 m-auto">
               <div className="about-inner-header heading9 text-center">
-                <h1>The Only SEO Checklist that Gives your eCommerce an Insight</h1>
+                {/* <h1>The Only SEO Checklist that Gives your eCommerce an Insight</h1> */}
                 <a href="/">Home</a>
                 <i className="fa-solid fa-angle-right"></i>
                 <span> Blog </span>
                 <i className="fa-solid fa-angle-right"></i>
-                <span>The Only SEO Checklist that Gives your eCommerce an Insight</span>
+                <span>Top Social Media Marketing Trends for E-Commerce</span>
               </div>
             </div>
           </div>
@@ -63,64 +66,191 @@ function Read_more() {
       </div>
 
       {/* Blog Content Section */}
-      <div className="single-blog">
-        <div className="container">
-          <div className="blog-title">
-            <h2>The Only SEO Checklist that Gives your eCommerce an Insight</h2>
-          </div>
+  <div className="single-blog">
+  <div className="container">
+    <div className="blog-title">
+      <h2>Top Social Media Marketing Trends for E-Commerce in 2025</h2>
+    </div>
 
-          <div class="blog-content">
-      <div class="blog-inner-text">
-         <p>Search Engine Optimization (SEO) is a process used to optimize the main content of your website. With optimization, you can make your content visible and make your web page more appealing by bettering its positioning. We present you the SEO Checklist which ultimately enhances the organic traffic on your website.</p>
-         <h3><strong>How to use SEO Checklist</strong></h3>
-         <p>Here we have divided this checklist into sections that cover the parts:&nbsp;</p>
-         <ul>
-            <li>SEO Checklist</li>
-            <li>Checklist for Keyword Research</li>
-            <li>On-Page SEO Checklist</li>
-         </ul>
-         <h3><strong>SEO Checklist&nbsp;</strong></h3>
-         <p>Starting with the basics one should keep in mind to become a higher ranker in SEO is:</p>
-         <p><strong>Start the google analytics</strong></p>
-         <p>Google Analytics is a tool that provides you with the data of people visiting your site. This also includes the information of visitors like their engaging element on the web page, what they like, and where they have come from.</p>
-         <p><strong>Use The Google Search Console</strong></p>
-         <p>This is one of the most powerful SEO tools. With the search console, you’ll know the site’s performance in Google searches.&nbsp;</p>
-         <p>It has many valuable features:</p>
-         <ul>
-            <li>Search for keywords that bring you the most traffic.</li>
-            <li>Put forward your sitemap.</li>
-            <li>Fix website errors.</li>
-            <li>Be updated with your page scores.</li>
-         </ul>
-         <p><strong>Create and Submit a Sitemap</strong></p>
-         <p>The sitemap is a list of URLs that particulate your site's main content and ensure it is in the index. The sitemap is to help search engines decide which page should be dragged down and which one is its official page.&nbsp;</p>
-         <p>After creating your sitemap, make sure to submit it to the Google Search Console.</p>
-         <p><strong>Set up a Robots.txt File</strong></p>
-         <p>This tells the search engine to crawl the pages and tells what can or cannot be sought from the site. The general use of this is to save your site from being crawled and cannot be used to deindex your webpage.</p>
-         <h3><strong>Checklist for Keyword Research&nbsp;</strong></h3>
-         <p>The basic foundation of SEO is Keyword Research. Here this checklist will help you to find the keywords searchers looking for.</p>
-         <p><strong>Keywords from The Google Keyword Planner&nbsp;</strong></p>
-         <p>This tool is Google’s official keyword research tool. This one is designed for google ads and is very useful as all data comes from Google itself.</p>
-         <p><strong>Look for long-tail keywords with “Google Suggest”</strong></p>
-         <p>This one is the best way to find out long tail keywords. Let’s see how it works:</p>
-         <p>First of all, type the keyword in google, and then don’t press Enter or the search icon, just check for the keywords suggested by google. These words have come directly from google means people are searching for it. These will make great keywords for your content.</p>
-         <p><strong>Search in Online Communities&nbsp;</strong></p>
-         <p>There are various online communities like Quora and Reddit which happen to be good places to find the keywords. They suggest you with words people are searching for and make your work easy.</p>
-         <h3><strong>On-Page SEO Checklist</strong></h3>
-         <p>This tip is to optimize your content using tested on-page SEO techniques.</p>
-         <p><strong>Adding keywords in your URL</strong></p>
-         <p>The URL helps audiences to understand your page. Adding a keyword in the URL can improvise your CTR. As for now, my target audience is those looking for SEO Checklist. So I’ll make a URL for my targeted audiences by adding SEO-Checklist in the URL.</p>
-         <p><strong>Use Of Keyword In Title Track</strong></p>
-         <p>It’s the basic and important thing to add keywords to your title tags. But everyone should know where to put it. It would be very helpful to add a keyword at the start of your title.</p>
-         <p><strong>Use of keywords at the start of content</strong></p>
-         <p>Google emphasizes more on the first 100- 200 words of your page. Because of this use your keyword here. For example, in this blog, I have used “SEO Checklist” in the first 50 words.</p>
-         <h3><strong>Improvise your SEO Checklist with Anah Marketing & Innovations</strong></h3>
-         <p>This is the most competitive time to make and maintain a web page and to outstand your competitors you should work on the tips mentioned and improvise your SEO performance.</p>
-         <p>There are so many innovative ideas to design your website and create content but keeping up with SEO optimization is equally important to stay and win the race.</p>
+    <div className="blog-content">
+      <div className="blog-inner-text">
+        <p>
+          The landscape of e-commerce is rapidly evolving, driven by innovative <strong>social media marketing strategies</strong> that go beyond traditional content sharing. Features like AI-powered personalization, augmented reality (AR) shopping experiences, and integrated social storefronts are reshaping how brands connect with users online.
+        </p>
+        <p>
+          Understanding these <strong>top social media marketing trends</strong> is crucial for e-commerce businesses looking to enhance customer engagement, streamline the purchaser journey, and boost conversion rates in an increasingly competitive digital environment.
+        </p>
+
+        <h3>Social Commerce Is Changing How We Shop</h3>
+        <p>
+          Today, people don’t have to leave Instagram, X (Twitter), Snapchat, WhatsApp, or Facebook to buy what they like. These apps have shops built in, making it super easy to scroll, click, and buy in just a few taps.
+        </p>
+        <p><strong>What you should do:</strong></p>
+        <ul>
+          <li>• Set up your store on social platforms.</li>
+          <li>• Make sure your product pages have good pictures, prices, and reviews.</li>
+          <li>• Use a fast and simple checkout so people don’t give up midway.</li>
+        </ul>
+
+        <h3>How AI Makes Shopping Personal and Easy</h3>
+        <p>
+          Artificial Intelligence (AI) helps brands know what each shopper likes. It looks at what people click, watch, or search, and then shows them more of what they want.
+        </p>
+        <p><strong>AI also helps with:</strong></p>
+        <ul>
+          <li>• Showing the right ads to the right people.</li>
+          <li>• Chatbots that answer customer questions instantly.</li>
+          <li>• Making cool content like posts, captions, and even videos.</li>
+        </ul>
+        <p>
+          Use tools like Meta Ads Manager, AdEspresso by Hootsuite or Madgicx to target your audience better with AI-powered features.
+        </p>
+
+        <h3>Why Short Videos Still Rule Social Media</h3>
+        <p>
+          Short videos (15-30 seconds) are everywhere, from Instagram Reels to YouTube Shorts and Snapchat videos. These videos catch attention quickly and are fun to watch.
+        </p>
+        <p><strong>What to post:</strong></p>
+        <ul>
+          <li>• Behind-the-scenes clips.</li>
+          <li>• Product demos or quick tutorials.</li>
+          <li>• Funny or trending content using popular songs or challenges.</li>
+        </ul>
+        <p>You don’t need a fancy camera, just be real. Authentic videos work better than overly edited ones.</p>
+
+        <h3>Connect with Customers in Real Time</h3>
+        <p>
+          People like quick answers. If they have a question about a product, they expect help right away.
+        </p>
+        <p><strong>Here’s how to connect instantly:</strong></p>
+        <ul>
+          <li>• Use live chat tools in DMs (direct messages).</li>
+          <li>• Send quick replies through apps like Messenger and WhatsApp.</li>
+          <li>• Offer personal discounts through chat to keep customers happy.</li>
+        </ul>
+
+        <h3>Small Influencers Deliver Big Results</h3>
+        <p>
+          Big influencers still exist, but smaller ones, called micro or nano influencers, are getting more popular. They might have fewer followers, but their followers listen to them.
+        </p>
+        <p><strong>Why this matters:</strong></p>
+        <ul>
+          <li>• These influencers feel like real friends to their audience.</li>
+          <li>• People trust them more than big celebrities.</li>
+        </ul>
+        <p>Work with influencers who match your target customer. They bring better results.</p>
+
+        <h3>Communities Matter More Than Followers</h3>
+        <p>
+          In 2025, it’s not about how many people follow your account. It’s about how many care about your brand.
+        </p>
+        <p><strong>To build a strong community:</strong></p>
+        <ul>
+          <li>• Reply to comments and messages.</li>
+          <li>• Run polls, ask questions, or go live with your followers.</li>
+          <li>• Encourage customers to post photos or videos using your products (this is called <strong>user-generated content</strong> or UGC).</li>
+        </ul>
+
+        <h3>Sell More with Live Streaming</h3>
+        <p>
+          Live shopping is like a fun show where people can watch you talking about your products, and buy them right away.
+        </p>
+        <p><strong>Ideas for live content:</strong></p>
+        <ul>
+          <li>• Launch a new product.</li>
+          <li>• Show what happens behind the scenes.</li>
+          <li>• Have an influencer unbox and review your products live.</li>
+        </ul>
+        <p>Live = Trust. People feel like they’re looking at the real thing, which builds confidence.</p>
+
+        <h3>People Care About Values, Not Just Products</h3>
+        <p>
+          Shoppers today want to purchase from brands that care about nature, about people, and about doing good.
+        </p>
+        <p><strong>What you can share:</strong></p>
+        <ul>
+          <li>• How your brand is helping the environment.</li>
+          <li>• How does your business support local workers or charities?</li>
+          <li>• Stories that show your values and your mission.</li>
+        </ul>
+        <p><strong>Remember:</strong> Be honest. People can tell if you’re just pretending.</p>
+
+        <h3>Augmented Reality (AR) Is Changing the Game</h3>
+        <p>
+          Ever tried a pair of sunglasses or lipstick online using your camera? That’s AR, and it’s everywhere now.
+        </p>
+        <p><strong>AR helps customers:</strong></p>
+        <ul>
+          <li>• Try on clothes, makeup, or glasses virtually.</li>
+          <li>• See how furniture looks in their home.</li>
+          <li>• Preview products before buying.</li>
+        </ul>
+        <p>If your products can benefit from a <strong>“try before you buy”</strong> experience, invest in AR filters or tools.</p>
+
+        <h3>Voice and Visual Search Are Growing Fast</h3>
+        <p>
+          People are now searching with their voice or by using pictures. Instead of typing <strong>“red shoes,”</strong> they can say it out loud or upload a photo, and find what they want instantly.
+        </p>
+        <p><strong>How to get ready:</strong></p>
+        <ul>
+          <li>• Use clear, high-quality images of your products.</li>
+          <li>• Add helpful text that describes images.</li>
+          <li>• Use simple, everyday words in your product descriptions, like you’re talking to a friend.</li>
+        </ul>
+
+        <h3>Create a Seamless Shopping Experience</h3>
+        <p>
+          Your website, social media, and even your physical store (if you have one) should all work together. People want the same message, quality, and easy experience, wherever they shop.
+        </p>
+        <p><strong>What to do:</strong></p>
+        <ul>
+          <li>• Keep your branding the same on all platforms.</li>
+          <li>• Sync product info across all channels.</li>
+          <li>• Let customers start shopping on one platform and finish on another smoothly.</li>
+        </ul>
+
+        <h3>Let Your Customers Do the Talking</h3>
+        <p>
+          User-generated content (UGC) is when your happy customers post about your products. It could be a selfie using your product or a review video.
+        </p>
+        <p><strong>Why it works:</strong></p>
+        <ul>
+          <li>• It feels real and trustworthy.</li>
+          <li>• People trust other people more than ads.</li>
+        </ul>
+        <p><strong>Encourage UGC by:</strong></p>
+        <ul>
+          <li>• Running contests or giveaways.</li>
+          <li>• Reposting customer photos.</li>
+          <li>• Thanking customers who tag you.</li>
+        </ul>
+
+        <h3>Listen to What People Are Saying</h3>
+        <p>
+          Social listening means using tools to track what people say about your brand or your competitors online. This helps you improve, stay ahead of trends, and give your customers what they want.
+        </p>
+        <p><strong>Smart brands use this data to:</strong></p>
+        <ul>
+          <li>• Fix problems before they grow.</li>
+          <li>• Find ideas for new products.</li>
+          <li>• Understand customer feelings.</li>
+        </ul>
+
+        <h3>Final Thoughts</h3>
+        <p>
+          As social media continues to evolve, integrating technologies like AI analytics, augmented reality, and real-time engagement tools will be essential for e-commerce brands aiming to stand out.
+        </p>
+        <p>
+          Moving beyond passive content consumption to creating interactive, personalized shopping experiences is no longer optional; it’s a necessity. By adopting these <strong>top social media marketing trends</strong>, your brand can build stronger customer relationships and drive meaningful growth. Ready to take the next step?
+        </p>
+        <p>
+          Partner with <strong>Anah Marketing and Innovations</strong> to transform your <strong>social media strategy</strong> and unlock new opportunities in 2025.
+        </p>
       </div>
-   </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</div>
+
       <Consultation/>
       <Footer/>
     </>

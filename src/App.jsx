@@ -44,8 +44,8 @@ function AppWrapper() {
     "/contact-us", 
     "/terms-condition", 
     "/privacy-policy", 
-    "/view-more", 
-    "/read-more", 
+    "/blog/social-media-marketing-trends-for-ecommerce", 
+    "/blog/social-media-marketing-trends-for-ecommerce", 
     "/blog/latest-seo-trends", 
     "/blog/top-e-commerce-platforms-for-seo", 
     "/blog/performance-marketing-trends",
@@ -73,7 +73,7 @@ function AppWrapper() {
         <Route path="/terms-condition" element={<Terms_Conditions />} />
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
         <Route path="/view-more" element={<View_more />} />
-        <Route path="/read-more" element={<Read_more />} />
+        <Route path="/blog/social-media-marketing-trends-for-ecommerce" element={<Read_more />} />
         <Route path="/blog/latest-seo-trends" element={<Keywoed_reserach_reacd_more />} />
         <Route path="/blog/top-e-commerce-platforms-for-seo" element={<InstagramReadMore />} />
         <Route path="/blog/performance-marketing-trends" element={<Organic_search />} />

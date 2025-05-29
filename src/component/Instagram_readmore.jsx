@@ -109,6 +109,7 @@ function InstagramReadMore() {
           <li>• SEO apps like “Smart SEO”</li>
           <li>• Custom URLs and auto sitemaps</li>
         </ul>
+        <br/>
         <p>
           If you're looking for a <strong>user-friendly e-commerce platform</strong> with built-in <strong>SEO tools</strong>, Shopify is a great place to start. It is best for Beginners and small to medium businesses wanting an easy-to-use, SEO-ready online store.
         </p>
