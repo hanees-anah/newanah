@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import product1 from "../assets/images/product1.jpg";
 import product2 from "../assets/images/product2.jpg";
 import new1 from "../assets/images/new1.webp";
@@ -62,6 +62,7 @@ import cavalry from "../assets/images/7cavalry-logo.png"
 import swtantra from "../assets/images/swtantra-logo.png"
 import axios from "axios";
 import { motion } from "framer-motion";
+import preloader from "../assets/images/preloader-img.png";
 // -------------------------------------
 
 
@@ -80,6 +81,35 @@ const images = [
 ];
 
 const Shopify = () => {
+
+
+const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate load or wait for all images/resources to load
+    const handleLoad = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000); // Optional delay for smooth transition
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
+
+
+
+
+
+
+
+
   const styles = {
     container: {
       position: "relative",
@@ -210,6 +240,15 @@ const Shopify = () => {
 
   return (
     <>
+
+     {isLoading && (
+            <div className="preloader">
+              <div className="loading-container">
+                <div className="loading"></div>
+                <div id="loading-icon"><img src={preloader} alt="" /></div>
+              </div>
+            </div>
+          )}
 
       <section className="shopify-top-banner-sec">
         <div className="container">
@@ -486,63 +525,7 @@ const Shopify = () => {
         </div>
       </div>
 
-
-      <section className="even-better-section cta-section-area">
-        <img alt="" class="cta-bg1 aniamtion-key-2" src={cta_bg1} />
-        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
-        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <div className="content-part">
-                <h2 class="text-anime-style-2">Welcome to Anah Marketing &amp; Innovations</h2>
-                <p>If you have a website but it’s not delivering the results you expect, we’ll help you reimagine and restore it to become more engaging, impactful, and conversion-driven.</p>
-                <p>Here’s How We Help Improve and Elevate Your Site:</p>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="img-part">
-                <img alt="" class="img-fluid" src={online_shoppings} />
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-4">
-              <div className="boxs-card">
-                <div class="icons mb-3">
-                  <img alt="" class="img-fluid" src={website_redesign_icon} />
-                </div>
-                <h3>Website Redesign & Enhancements</h3>
-                <p>We analyze your current design and user flow, then create a refreshed, more intuitive layout that keeps users engaged and encourages action.</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="boxs-card">
-                <div class="icons mb-3">
-                  <img alt="" class="img-fluid" src={user_experience} />
-                </div>
-                <h3>Improved User Experience (UX)</h3>
-                <p>We enhance navigation, mobile responsiveness, and loading speed, giving your visitors a smoother and more satisfying experience</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="boxs-card">
-                <div class="icons mb-3">
-                  <img alt="" class="img-fluid" src={content_icon} />
-                </div>
-                <h3>Content & Visual Strategy</h3>
-                <p>From impactful visuals to persuasive messaging, we upgrade the way your brand communicates to build trust and drive conversions.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* new--------------- */}
-
-
+      
       <section class="here-section">
         <div class="container">
           <div class="row">
@@ -598,6 +581,64 @@ const Shopify = () => {
           </div>
         </div>
       </section>
+
+
+      <section className="even-better-section cta-section-area">
+        <img alt="" class="cta-bg1 aniamtion-key-2" src={cta_bg1} />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <div className="content-part">
+                <h2 class="text-anime-style-2">Already have a website?  &amp; Let’s Make Your Website Even Better</h2>
+                <p>If you have a website but it’s not delivering the results you expect, we’ll help you reimagine and restore it to become more engaging, impactful, and conversion-driven.</p>
+                <p>Here’s How We Help Improve and Elevate Your Site:</p>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="img-part">
+                <img alt="" class="img-fluid" src={online_shoppings} />
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4">
+              <div className="boxs-card">
+                <div class="icons mb-3">
+                  <img alt="" class="img-fluid" src={website_redesign_icon} />
+                </div>
+                <h3>Website Redesign & Enhancements</h3>
+                <p>We analyze your current design and user flow, then create a refreshed, more intuitive layout that keeps users engaged and encourages action.</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="boxs-card">
+                <div class="icons mb-3">
+                  <img alt="" class="img-fluid" src={user_experience} />
+                </div>
+                <h3>Improved User Experience (UX)</h3>
+                <p>We enhance navigation, mobile responsiveness, and loading speed, giving your visitors a smoother and more satisfying experience</p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="boxs-card">
+                <div class="icons mb-3">
+                  <img alt="" class="img-fluid" src={content_icon} />
+                </div>
+                <h3>Content & Visual Strategy</h3>
+                <p>From impactful visuals to persuasive messaging, we upgrade the way your brand communicates to build trust and drive conversions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* new--------------- */}
+
+
 
 
 

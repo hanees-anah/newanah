@@ -1,14 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import Consultation from './Consultation';
 import Footer from './Footer';
-import inner_header from "../assets/images/inner-header.png";
+import inner_header from "../assets/images/e-commerce-plateform.png";
 import { Helmet } from "react-helmet";
+import preloader from "../assets/images/preloader-img.png";
+
 
 
 
 function InstagramReadMore() {
+
+  const [isLoading, setIsLoading] = useState(true);
+  
+    useEffect(() => {
+      // Simulate load or wait for all images/resources to load
+      const handleLoad = () => {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000); // Optional delay for smooth transition
+      };
+  
+      if (document.readyState === "complete") {
+        handleLoad();
+      } else {
+        window.addEventListener("load", handleLoad);
+      }
+  
+      return () => window.removeEventListener("load", handleLoad);
+    }, []);
+  
+
+
   return (
     <>
+      {isLoading && (
+                <div className="preloader">
+                  <div className="loading-container">
+                    <div className="loading"></div>
+                    <div id="loading-icon"><img src={preloader} alt="" /></div>
+                  </div>
+                </div>
+              )}
+              
             <Helmet>
                 <title>Top E-commerce Platforms to Boost Your SEO</title>
                 <meta
@@ -17,20 +50,22 @@ function InstagramReadMore() {
                 />
             </Helmet>
       <div
-        className="about-header-area"
-        style={{
-          backgroundImage: `url(${inner_header})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
+        className="about-header-area blog-single-section"
+        // style={{
+        //   backgroundImage: `url(${inner_header})`,
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center"
+        // }}
       >
+           <img src={inner_header} alt="e-commerce-plateform" />
+
         <img src="assets/images/star2.png" alt="" className="star2 keyframe5" />
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 m-auto">
+            <div className="col-lg-12 m-auto">
               <div className="about-inner-header heading9 text-center">
-                <h1>Top E-commerce Platforms to Boost Your SEO in 2025</h1>
+                {/* <h1>Top E-commerce Platforms to Boost Your SEO in 2025</h1> */}
                 <a href="/">Home</a> <i className="fa-solid fa-angle-right"></i>
                 <span> Blog </span><i className="fa-solid fa-angle-right"></i>
                 <span>Top E-commerce Platforms to Boost Your SEO </span>
@@ -75,7 +110,7 @@ function InstagramReadMore() {
           <li>• Custom URLs and auto sitemaps</li>
         </ul>
         <p>
-        If you're looking for a <strong>user-friendly e-commerce platform</strong> with built-in <strong>SEO tools</strong>, Shopify is a great place to start. It is best for Beginners and small to medium businesses wanting an easy-to-use, SEO-ready online store.
+          If you're looking for a <strong>user-friendly e-commerce platform</strong> with built-in <strong>SEO tools</strong>, Shopify is a great place to start. It is best for Beginners and small to medium businesses wanting an easy-to-use, SEO-ready online store.
         </p>
 
         <h3><strong>2. WooCommerce – Full Control with WordPress SEO Power</strong></h3>

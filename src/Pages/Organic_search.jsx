@@ -1,7 +1,7 @@
 import React from "react";
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
-import inner_header from "../assets/images/e-commerce-plateform.png";
+import inner_header from "../assets/images/performance-marketing.png";
 import { useEffect, useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
 import { Helmet } from "react-helmet";
@@ -52,7 +52,7 @@ function Organic_search() {
         //   backgroundPosition: "center"
         // }}
       >
-      <img src={inner_header} alt="" />
+      <img src={inner_header} alt="performance-marketing" />
 
         <div className="container">
           <div className="row">
@@ -73,7 +73,7 @@ function Organic_search() {
       <div className="single-blog">
         <div className="container">
           <div className="blog-title">
-            <h2>Performance Marketing in 2025: Top Channels to Watch and Leverage </h2>
+            <h2>Performance Marketing in 2025: Top Channels to Watch and Leverage</h2>
           </div>
           <div className="blog-content">
             <div className="blog-inner-text">
@@ -156,11 +156,11 @@ function Organic_search() {
               <h2>How to Succeed with Performance Marketing in 2025</h2>
               <p>Success doesn’t come from using every platform. It comes from using the right ones, the right way. Here’s how: </p>
               <ul>
-                <li><strong>Start with clear goals:</strong> Do you need more app installs, sales, or leads? Set clear goals before you start.</li>
-                <li><strong>Focus on your audience:</strong> Understand what your audience needs, what they do, and where they spend their time online.</li>
-                <li><strong>Keep testing:</strong> Run A/B tests on your ads, visuals, landing pages, and emails. Small changes can make a big difference.</li>
-                <li><strong>Watch the data:</strong> Use reports to see what works and what doesn’t, and adjust accordingly.</li>
-                <li><strong>Stay consistent:</strong> Performance marketing is not a one-time thing. It’s an ongoing process that needs constant improvement.</li>
+                <li><strong>• Start with clear goals:</strong> Do you need more app installs, sales, or leads? Set clear goals before you start.</li>
+                <li><strong>• Focus on your audience:</strong> Understand what your audience needs, what they do, and where they spend their time online.</li>
+                <li><strong>• Keep testing:</strong> Run A/B tests on your ads, visuals, landing pages, and emails. Small changes can make a big difference.</li>
+                <li><strong>• Watch the data:</strong> Use reports to see what works and what doesn’t, and adjust accordingly.</li>
+                <li><strong>• Stay consistent:</strong> Performance marketing is not a one-time thing. It’s an ongoing process that needs constant improvement.</li>
               </ul>
 
               <h2>Final Thoughts</h2>

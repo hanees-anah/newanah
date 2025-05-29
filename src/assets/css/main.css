@@ -31823,6 +31823,11 @@ section.here-section .box-card p {
         margin-bottom: -30px;
 }
 
+.all-section-bg {
+    background-size: cover;
+}
+ 
+
 /* section.even-better-section.cta-section-area .icons.mb-3 {
     display: none;
 } */
@@ -32221,7 +32226,12 @@ position: absolute;
     position: fixed;
     background: #fff;
 }
-
+@media (max-width: 991px) {
+  .about-header-area.blog-single-section {
+    padding-top: 90px;
+}
+ 
+}
 
 @media (max-width: 767px) {
 .hero1-section-area {    

@@ -58,7 +58,7 @@ function Keywoed_reserach_reacd_more() {
                 //     backgroundPosition: "center"
                 // }}
             >
-                      <img src={smart_seo} alt="smart seo" />
+                      <img src={smart_seo} alt="smart seo"/>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 m-auto">
