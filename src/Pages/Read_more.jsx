@@ -5,6 +5,8 @@ import Footer from "../component/Footer";
 import  { useEffect,useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
 import inner_header from "../assets/images/social-media-marketing trends.png";
+import { Helmet } from "react-helmet";
+
 
 function Read_more() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +30,14 @@ function Read_more() {
 
   return (
     <>
+       <Helmet>
+                <title>Top Social Media Marketing Trends for E-Commerce</title>
+                <meta
+                    name="description"
+                    content="Discover the latest social media marketing trends shaping e-commerce in 2025. Boost brand visibility, engagement, and sales with these insights."
+                />
+            </Helmet>
+            
          {isLoading && (
             <div className="preloader">
                 <div className="loading-container">

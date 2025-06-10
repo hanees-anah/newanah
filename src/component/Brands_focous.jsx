@@ -5,20 +5,12 @@ import instagram__img from "../assets/images/seo-blog.png"
 import seo_2025 from "../assets/images/seo-img-2025.png"
 import seo__img from "../assets/images/social-media-trends.png"
 import bg1 from "../assets/images/pages-bg1.png"
-import { Helmet } from "react-helmet";
 
 
 
 function Brands_focous() {
     return (
           <>
-               <Helmet>
-                <title>Top Social Media Marketing Trends for E-Commerce</title>
-                <meta
-                    name="description"
-                    content="Discover the latest social media marketing trends shaping e-commerce in 2025. Boost brand visibility, engagement, and sales with these insights."
-                />
-            </Helmet>
 
         <div class="all-section-bg" style={{ backgroundImage: `url(${bg1})`, }}>
 
