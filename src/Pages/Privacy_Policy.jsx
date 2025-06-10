@@ -13,7 +13,7 @@ function Privacy_Policy(){
         const handleLoad = () => {
             setTimeout(() => {
                 setIsLoading(false);
-            }, 1000); // Optional delay for smooth transition
+            }, 500); // Optional delay for smooth transition
         };
 
         if (document.readyState === "complete") {

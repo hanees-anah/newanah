@@ -24,7 +24,7 @@ function About() {
         const handleLoad = () => {
             setTimeout(() => {
                 setIsLoading(false);
-            }, 800); // Optional: small delay to smooth the transition
+            }, 500); // Optional: small delay to smooth the transition
         };
 
         if (document.readyState === "complete") {

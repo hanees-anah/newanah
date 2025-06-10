@@ -16,7 +16,7 @@ function ContactUS() {
     const handleLoad = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 1000);
+      }, 500);
     };
 
     if (document.readyState === "complete") {
