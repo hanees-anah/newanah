@@ -112,7 +112,13 @@ function Blog() {
                                         <a href="/blog/latest-seo-trends"><img alt="" src={seo_2025} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
-                                        <div class="post-date">May 28, 2025</div>
+                                        {/* <div class="post-date">May 28, 2025</div>
+                                             <div class="post-date">By Priyank Badjatya</div> */}
+                                                <ul>
+                                                         <div className="post-date"> May 28, 2025</div>
+                                                      <div className="post-date"> By Priyank Badjatya</div>
+                                                </ul>
+                                          
                                         <h4 class="dlab-title"><a href="/blog/latest-seo-trends">How SEO Has Evolved in 2025, and What to Do Now</a></h4>
                                         <p class="m-b20">The world of Search Engine Optimization (SEO) is always changing. As we move through 2025, </p>
                                         <a href="/blog/latest-seo-trends" class="news-btn">Read More</a>
@@ -125,7 +131,11 @@ function Blog() {
                                         <a href="/blog/top-e-commerce-platforms-for-seo"><img alt="" src={keyword} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
-                                        <div class="post-date">May 26, 2025</div>
+                                        {/* <div class="post-date">May 26, 2025</div> */}
+                                         <ul>
+                                                         <div className="post-date"> May 26, 2025</div>
+                                                      <div className="post-date"> By Priyank Badjatya</div>
+                                                </ul>
                                         <h4 class="dlab-title"><a href="/blog/top-e-commerce-platforms-for-seo">Top E-commerce Platforms to Boost Your SEO in 2025</a></h4>
                                         <p class="m-b20">In today’s digital world, having an online store is just the beginning. To truly succeed,</p>
                                         <a href="/blog/top-e-commerce-platforms-for-seo" class="news-btn">Read More</a>
@@ -138,7 +148,11 @@ function Blog() {
                                         <a href="/blog/performance-marketing-trends"><img alt="" src={instagram} class="full-img" /></a>
                                     </div>
                                     <div class="content-info">
-                                        <div class="post-date">May 09, 2025</div>
+                                        {/* <div class="post-date">May 09, 2025</div> */}
+                                         <ul>
+                                                         <div className="post-date"> May 09, 2025</div>
+                                                      <div className="post-date"> By Priyank Badjatya</div>
+                                                </ul>
                                         <h4 class="dlab-title"><a href="/blog/performance-marketing-trends">Performance Marketing in 2025: Top Channels to Watch and Leverage</a></h4>
                                         <p class="m-b20">Have you ever spotted an ad while scrolling Instagram reels and thought, “This is exactly what I needed”?</p>
                                         <a href="/blog/performance-marketing-trends" class="news-btn">Read More</a>
