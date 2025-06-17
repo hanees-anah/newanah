@@ -28,30 +28,55 @@ import Shopify from "./Pages/Shopify";
 // Moved logic to a wrapper inside Router
 function AppWrapper() {
   const location = useLocation();
-  const hideHeaderFooter = [
-    "/", 
-    "/about-us", 
-    "/social-media-marketing-services", 
-    "/google-ads-services", 
-    "/email-marketing-services", 
-    "/whatsapp-marketing-services", 
-    "/seo-company", 
-    "/website-development-company", 
-    "/mobile-app-development-company", 
-    "/shopify-development-services", 
-    "/blog", 
-    "/portfolio", 
-    "/contact-us", 
-    "/terms-condition", 
-    "/privacy-policy", 
-    "/blog/social-media-marketing-trends-for-ecommerce", 
-    "/blog/social-media-marketing-trends-for-ecommerce", 
-    "/blog/latest-seo-trends", 
-    "/blog/top-e-commerce-platforms-for-seo", 
-    "/blog/performance-marketing-trends",
-     "/shopify-development",
+  // const hideHeaderFooter = [
+  //   "/", 
+  //   "/about-us", 
+  //   "/social-media-marketing-services", 
+  //   "/google-ads-services", 
+  //   "/email-marketing-services", 
+  //   "/whatsapp-marketing-services", 
+  //   "/seo-company", 
+  //   "/website-development-company", 
+  //   "/mobile-app-development-company", 
+  //   "/shopify-development-services", 
+  //   "/blog", 
+  //   "/portfolio", 
+  //   "/contact-us", 
+  //   "/terms-condition", 
+  //   "/privacy-policy", 
+  //   // "/blog/social-media-marketing-trends-for-ecommerce", 
+  //   // "/blog/social-media-marketing-trends-for-ecommerce", 
+  //   // "/blog/latest-seo-trends", 
+  //   // "/blog/top-e-commerce-platforms-for-seo", 
+  //   // "/blog/performance-marketing-trends",
+  //    "/shopify-development",
+  //    "/blog/:slug"
   
-  ].includes(location.pathname);
+  // ].includes(location.pathname);
+  const hideHeaderFooterPaths = [
+  "/", 
+  "/about-us", 
+  "/social-media-marketing-services", 
+  "/google-ads-services", 
+  "/email-marketing-services", 
+  "/whatsapp-marketing-services", 
+  "/seo-company", 
+  "/website-development-company", 
+  "/mobile-app-development-company", 
+  "/shopify-development-services", 
+  "/blog", 
+  "/portfolio", 
+  "/contact-us", 
+  "/terms-condition", 
+  "/privacy-policy", 
+  "/shopify-development",
+];
+
+const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname) || location.pathname.startsWith("/blog/");
+
+
+  // ].some(path => location.pathname.startsWith(path));
+
 
   return (
     <>
@@ -73,10 +98,11 @@ function AppWrapper() {
         <Route path="/terms-condition" element={<Terms_Conditions />} />
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
         <Route path="/view-more" element={<View_more />} />
-        <Route path="/blog/social-media-marketing-trends-for-ecommerce" element={<Read_more />} />
+        <Route path="/blog/:slug" element={<Keywoed_reserach_reacd_more />} />
+        {/* <Route path="/blog/social-media-marketing-trends-for-ecommerce" element={<Read_more />} />
         <Route path="/blog/latest-seo-trends" element={<Keywoed_reserach_reacd_more />} />
         <Route path="/blog/top-e-commerce-platforms-for-seo" element={<InstagramReadMore />} />
-        <Route path="/blog/performance-marketing-trends" element={<Organic_search />} />
+        <Route path="/blog/performance-marketing-trends" element={<Organic_search />} /> */}
         <Route path="/shopify-development" element={<Shopify/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
@@ -93,3 +119,5 @@ function App() {
 }
 
 export default App;
+
+
