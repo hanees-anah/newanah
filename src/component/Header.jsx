@@ -5,6 +5,7 @@ import preloader_img from "../assets/images/logo-img.png";
 function Header() {
     return (
         <>
+        
         <div className="homepage1-body">
             {/* Progress Bar */}
             <div className="paginacontainer">
