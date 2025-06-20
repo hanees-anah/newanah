@@ -45,10 +45,10 @@ function SearchEngineOptimisation() {
   return (
     <>
         <Helmet>
-                <title>Top SEO Company in India | Best SEO Agency for Organic Growth</title>
+                <title>Top Digital Marketing Services for E-commerce Growth</title>
                 <meta
                     name="description"
-                    content="Looking for the best SEO company in India? Anah Marketing offers expert SEO services to help your business rank higher and grow online."
+                    content="Discover top digital marketing services to boost your e-commerce store's traffic, sales, and growth. SEO, PPC, social media, email, CRO & more tips inside!"
                     />
             </Helmet>
 
