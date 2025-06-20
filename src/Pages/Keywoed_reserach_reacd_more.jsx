@@ -50,13 +50,12 @@ function Keywoed_reserach_reacd_more() {
         <title>{blogData.meta_title || blogData.title}</title>
         <meta name="description" content={blogData.meta_description?.substring(0, 160)} />
       </Helmet> */}
-      
 
-  {/* <Header/> */}
-  
-          <div
-        className="about-header-area blog-single-section">
-                      <img alt={blogData.title} src={`${blogData.image}`} className="full-img" />
+
+      {/* <Header/> */}
+
+      <div className="about-header-area blog-single-section">
+        <img alt={blogData.title} src={`${blogData.image}`} className="full-img" />
         <div className="container">
           <div className="row">
             <div className="col-lg-12 m-auto">
@@ -68,6 +67,10 @@ function Keywoed_reserach_reacd_more() {
               </div>
             </div>
           </div>
+          <ul style={{ marginTop: "33px" }}>
+            <li className="post-date">{blogData.post_date}</li>
+            <li className="post-date">{blogData.post_author}</li>
+          </ul>
         </div>
       </div>
 
