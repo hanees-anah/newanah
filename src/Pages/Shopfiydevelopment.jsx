@@ -45,11 +45,14 @@ function ShopifyDevelopment() {
     <>
 
       <Helmet>
-        <title>Shopify Development Services | Top Web Development Company</title>
+        <title>Top Shopify Web Development Company – Anah Marketing</title>
         <meta
           name="description"
-          content="Are you looking for Shopify Development Services? Anah Marketing delivers custom, high-converting stores that help your business grow online with expert web development."
+          content="Get expert Shopify development services from a leading Shopify web design & eCommerce development company—custom solutions to grow your store.
+"
         />
+                                          <link rel="canonical" href="https://anahmarketing.com/shopify-development-services"/>
+
       </Helmet>
 
       {isLoading && (
@@ -115,8 +118,11 @@ function ShopifyDevelopment() {
             </div>
             <div className="col-lg-5">
               <div className="about-content-area heading2">
-                <h2 className="text-anime-style-2">
+                {/* <h2 className="text-anime-style-2">
                   Transform Your Ecommerce Vision into Reality
+                </h2> */}
+                <h2 className="text-anime-style-2">
+                   Trusted Shopify Web Development Company for Scalable eCommerce Solutions
                 </h2>
                 <p>
                   Your online store isn't just a website—it's your brand's

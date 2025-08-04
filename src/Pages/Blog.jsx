@@ -4,6 +4,8 @@ import inner_header from "../assets/images/inner-header.png";
 import preloader from "../assets/images/preloader-img.png";
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
+import { Helmet } from "react-helmet";
+
 
 function Blog() {
     const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +42,17 @@ function Blog() {
 
     return (
         <>
+
+             <Helmet>
+                        <title>Digital Marketing Blog | Insights by Anah Marketing</title>
+                        <meta
+                            name="description"
+                            content="Read expert tips on SEO, social media, eCommerce, and more. Stay ahead with the latest digital marketing trends from Anah Marketing’s blog.
+"
+                        />
+                          <link rel="canonical" href="https://anahmarketing.com/blog"/>
+                    </Helmet>
+
             {isLoading && (
                 <div className="preloader">
                     <div className="loading-container">

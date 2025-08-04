@@ -48,8 +48,11 @@ function SearchEngineOptimisation() {
                 <title>Top Digital Marketing Services for E-commerce Growth</title>
                 <meta
                     name="description"
-                    content="Discover top digital marketing services to boost your e-commerce store's traffic, sales, and growth. SEO, PPC, social media, email, CRO & more tips inside!"
+                    content="Looking for the best SEO company in India? Anah Marketing offers expert SEO services to help your business rank higher and grow online.
+"
                     />
+                                      <link rel="canonical" href="https://anahmarketing.com/seo-company"/>
+
             </Helmet>
 
       {/* HERO AREA */}
@@ -114,8 +117,11 @@ function SearchEngineOptimisation() {
             </div>
             <div className="col-lg-5">
               <div className="about-content-area heading2">
-                <h2 className="text-anime-style-2">
+                {/* <h2 className="text-anime-style-2">
                   Comprehensive SEO & Digital Marketing Solutions
+                </h2> */}
+                <h2 className="text-anime-style-2">
+                 Best SEO Company in India Delivering Higher Rankings & ROI
                 </h2>
                 <p data-aos="fade-left" data-aos-duration="1000">
                 At Anah Marketing & Innovation, we go beyond basic SEO—we build comprehensive digital marketing strategies that drive measurable growth. With our expertise, we ensure your brand ranks higher, attract quality traffic and converts more efficiently. Our approach blends data-driven insights with innovative techniques to maximize online visibility and business impact. From advanced SEO strategies to performance-driven marketing, we create tailored solutions that align with your business objectives, helping you stay ahead in the digital landscape.

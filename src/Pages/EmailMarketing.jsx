@@ -51,6 +51,8 @@ function EmailMarketing() {
                     name="description"
                     content="Boost your ROI with our Email Marketing Services. Work with the No. 1 email marketing agency for tailored, high-converting email campaigns."
                     />
+                                      <link rel="canonical" href="https://anahmarketing.com/email-marketing-services"/>
+
             </Helmet>
 
         {isLoading && (
@@ -116,7 +118,8 @@ function EmailMarketing() {
                         </div>
                         <div className="col-lg-5">
                             <div className="about-content-area heading2">
-                                <h2 className="text-anime-style-2">Turn Clicks into Clients with Impactful Emails</h2>
+                                {/* <h2 className="text-anime-style-2">Turn Clicks into Clients with Impactful Emails</h2> */}
+                                <h2 className="text-anime-style-2">Best Email Marketing Services to Boost Engagement & Sales</h2>
                                 <p className="mb-4" data-aos="fade-left" data-aos-duration="1000">
                                     A well-crafted email isn’t just another message—it’s a powerful touchpoint that builds relationships and drives action.
                                     We create data-backed email marketing strategies that turn one-time visitors into loyal customers. From welcome sequences

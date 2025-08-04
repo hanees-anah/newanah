@@ -16,6 +16,8 @@ import Shopify_img from "../assets/images/Shopify-img.png";
 import { motion } from "framer-motion";
 import preloader from "../assets/images/preloader-img.png";
 import black_arrow from"../assets/images/arrow-icon-new.png"
+import { Helmet } from "react-helmet";
+
 
 function About() {
     const [isLoading, setIsLoading] = useState(true);
@@ -38,6 +40,18 @@ function About() {
 
     return (
         <>
+
+           <Helmet>
+                <title>About Anah Marketing | Your Digital Growth Partner</title>
+                <meta
+                    name="description"
+                    content="Discover Anah Marketing – a results-driven digital marketing agency empowering brands with SEO, social media, and performance-focused strategies.
+"
+                />
+                  <link rel="canonical" href="https://anahmarketing.com/about-us"/>
+            </Helmet>
+
+
             {/* Preloader */}
             {isLoading && (
                 <div className="preloader fade-out">

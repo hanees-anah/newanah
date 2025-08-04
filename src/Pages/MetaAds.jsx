@@ -45,6 +45,7 @@ function MetaAds() {
                     name="description"
                     content="Grow your online presence with Anah Marketing's Meta ads! Partner with a top social media agency for effective, results-driven campaigns and real growth."
                 />
+                  <link rel="canonical" href="https://anahmarketing.com/social-media-marketing-services"/>
             </Helmet>
             
              {isLoading && (
@@ -115,7 +116,8 @@ function MetaAds() {
                         {/* Content Section */}
                         <div className="col-lg-5">
                             <div className="about-content-area heading2">
-                                <h2 className="text-anime-style-2">Data-Driven Meta Ads Strategy</h2>
+                                {/* <h2 className="text-anime-style-2">Data-Driven Meta Ads Strategy</h2> */}
+                                <h2  className="text-anime-style-2">Expert Social Media Marketing Services to Grow Your Brand</h2>
                                 <p className="mb-4" data-aos="fade-left" data-aos-duration="1000">
                                     Meta Ads aren’t just about clicks—they’re about real business growth. 
                                     We craft data-driven ad strategies that cut through the noise and put 

@@ -41,11 +41,13 @@ function Google() {
     return (
         <>
            <Helmet>
-                <title>Google Ads Services | Best PPC Marketing Agency</title>
+                <title>Google Ads Services | Best PPC Marketing Agency in India</title>
                 <meta
                     name="description"
                     content="Unlock your business’s potential with Anah Marketing’s Google Ads Services! Work with the best PPC agency for high-impact, conversion-focused campaigns."
                 />
+                                  <link rel="canonical" href="https://anahmarketing.com/google-ads-services"/>
+
             </Helmet>
             {/* Header Section */}
 
@@ -114,7 +116,8 @@ function Google() {
                         {/* Content Section */}
                         <div className="col-lg-5">
                             <div className="about-content-area heading2">
-                                <h2 className="text-anime-style-2">High-Performance Google Ads Solutions</h2>
+                                {/* <h2 className="text-anime-style-2">High-Performance Google Ads Solutions</h2> */}
+                                <h2>Result-Driven Google Ads Services to Maximize Your ROI</h2>
                                 <p className="mb-4" data-aos="fade-left" data-aos-duration="1000">
                                     Maximize your brand’s reach with precision-targeted Google Ads. 
                                     We create data-driven campaigns that put your business in front of 

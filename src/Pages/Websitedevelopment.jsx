@@ -45,6 +45,8 @@ function Websitedevelopment() {
           name="description"
           content="Need a website that stands out? Let Anah Marketing, the best web design and development company in India, create a site that’s beautiful, easy to use, and converts!"
         />
+                          <link rel="canonical" href="https://anahmarketing.com/website-development-company"/>
+
       </Helmet>
 
       {isLoading && (
@@ -109,8 +111,11 @@ function Websitedevelopment() {
             </div>
             <div className="col-lg-5">
               <div className="about-content-area heading2">
-                <h2 className="text-anime-style-2">
+                {/* <h2 className="text-anime-style-2">
                   End-to-End Website Development Solution
+                </h2> */}
+                 <h2 className="text-anime-style-2">
+                 Professional Website Development Company for Custom Web Solutions
                 </h2>
                 <p class="mb-4" data-aos="fade-left" data-aos-duration="1000">
                   A website is more than just an online presence—it’s the foundation of your brand’s digital success. We design and develop high-performing websites that are not only visually stunning but also strategically built to drive conversions. With user-centric design, seamless functionality and optimized performance, we ensure your website engages visitors and turns them into loyal customers. Elevate your brand with a website that works as hard as you do

@@ -32,7 +32,8 @@ function Index() {
                         <div className="col-lg-6">
                             <div className="header-main-content heading1">
                                 <h5>India’s #1 Performance Marketing Agency for D2C Brands</h5>
-                                <h1 className="text-anime-style-2">Ignite Clicks, Shoot up Conversions, Thrive Fast!</h1>
+                                {/* <h1 className="text-anime-style-2">Ignite Clicks, Shoot up Conversions, Thrive Fast!</h1> */}
+                                <h1 className="text-anime-style-2">Best Digital Marketing Agency for SEO, PPC & Social Media Services</h1>
                                 <p data-aos="fade-left" data-aos-duration="1000">
                                     We are a results-driven performance marketing agency helping brands scale fast with data-backed strategies, precision-targeted paid media, and innovative brand storytelling.
                                     From SEO to social media and high-converting ad campaigns, we craft strategies that don’t just drive traffic—they drive growth, conversions, and long-term success.

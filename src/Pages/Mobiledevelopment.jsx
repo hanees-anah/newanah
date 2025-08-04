@@ -38,11 +38,13 @@ function MobileDevelopment() {
     return (
         <>
             <Helmet>
-                <title>Best Web Design & Development Company in India</title>
+                <title>Responsive Mobile Apps Development & Design Company in India</title>
                 <meta
                     name="description"
                     content="Build Android & iOS apps with Anah Marketing, a top app development company in India—custom app design & development for secure, scalable solutions."
                 />
+                                  <link rel="canonical" href="https://anahmarketing.com/mobile-app-development-company"/>
+
             </Helmet>
 
             {isLoading && (
@@ -104,7 +106,8 @@ function MobileDevelopment() {
                         </div>
                         <div className="col-lg-5">
                             <div className="about-content-area heading2">
-                                <h2 className="text-anime-style-2">Innovative Mobile App Development Solutions</h2>
+                                {/* <h2 className="text-anime-style-2">Innovative Mobile App Development Solutions</h2> */}
+                                <h2 className="text-anime-style-2">Leading Mobile Apps Development Company for Android & iOS Solutions</h2>
                                 <p className="mb-4">Embrace your business with innovative mobile applications. Our team specializes in designing and developing high-performance apps that enhance user engagement and drive business growth. From concept to launch, we ensure your app stands out in the competitive digital landscape.</p>
                                 <a href="/contact-us" className="header-btn1">
                                     Contact Now<span><i className="fa-solid fa-arrow-right"></i></span>

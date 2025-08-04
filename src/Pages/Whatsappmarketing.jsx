@@ -44,8 +44,10 @@ function WhatsappMarketing() {
                 <title>WhatsApp Marketing Services | Top WhatsApp Marketing Agency</title>
                 <meta
                     name="description"
-                    content="Skyrocket engagement with Anah Marketing’s WhatsApp services! Reach customers instantly with powerful, personalized campaigns that drive real results."
+                    content="Boost engagement with Anah Marketing’s WhatsApp services! Send personalized, instant campaigns that connect, convert, and deliver real results."
                     />
+                                      <link rel="canonical" href="https://anahmarketing.com/whatsapp-marketing-services"/>
+
             </Helmet>
 
              {isLoading && (
@@ -110,7 +112,8 @@ function WhatsappMarketing() {
                         </div>
                         <div className="col-lg-5">
                             <div className="about-content-area heading2">
-                                <h2 className="text-anime-style-3">Instant Engagement, Maximum Impact</h2>
+                                {/* <h2 className="text-anime-style-3">Instant Engagement, Maximum Impact</h2> */}
+                                <h2 className="text-anime-style-3">WhatsApp Marketing Services to Drive Instant Customer Engagement</h2>
                                 <p>In a world where attention spans are shrinking, WhatsApp marketing ensures your message gets delivered, seen, and acted upon—instantly. We craft high-converting WhatsApp campaigns that drive real-time engagement, spark conversations, and boost conversions like never before.</p>
                                 <div className="btn-area">
                                     <a href="/contact-us" className="header-btn1">

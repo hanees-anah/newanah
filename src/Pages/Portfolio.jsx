@@ -52,6 +52,8 @@ import Footer from "../component/Footer";
 import { useEffect, useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
 import ethnicity from "../assets/images/ethnicity-logo.png";
+import { Helmet } from "react-helmet";
+
 
 function Portfolio() {
   const [isLoading, setIsLoading] = useState(true);
@@ -75,6 +77,16 @@ function Portfolio() {
 
   return (
     <>
+
+        <Helmet>
+                    <title>Our Work | Digital Marketing Portfolio – Anah Marketing</title>
+                    <meta
+                        name="description"
+                        content="Explore Anah Marketing’s portfolio of SEO, web design, and eCommerce success stories. See how we drive real growth for brands across industries."
+                    />
+                      <link rel="canonical" href="https://anahmarketing.com/portfolio"/>
+                </Helmet>
+
       {isLoading && (
         <div className="preloader">
           <div className="loading-container">

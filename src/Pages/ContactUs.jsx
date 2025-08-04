@@ -7,6 +7,8 @@ import inner_header from "../assets/images/inner-header.png";
 import preloader from "../assets/images/preloader-img.png";
 import header from "../assets/images/inner-header.png";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
+
 
 function ContactUS() {
   const [isLoading, setIsLoading] = useState(true);
@@ -70,6 +72,16 @@ function ContactUS() {
 
   return (
     <>
+
+          <Helmet>
+                    <title>Contact Anah Marketing | Let's Grow Your Brand</title>
+                    <meta
+                        name="description"
+                        content="Have a project in mind? Get in touch with Anah Marketing for expert digital marketing, SEO, and web development solutions tailored to your goals."
+                    />
+                      <link rel="canonical" href="https://anahmarketing.com/contact-us"/>
+                </Helmet>
+
       {isLoading && (
         <div className="preloader">
           <div className="loading-container">
