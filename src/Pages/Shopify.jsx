@@ -206,12 +206,24 @@ const [isLoading, setIsLoading] = useState(true);
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    console.log("======>",e.target);
+   // console.log("======>",e.target);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
+
+
+    const handleChange11 = (e) => {
+    const { name, value } = e.target;
+
+    //console.log("======>",e.target);
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
 
 
   const handleSubmit = async (e) => {
@@ -274,7 +286,8 @@ const [isLoading, setIsLoading] = useState(true);
               <div className="form-part">
                 <div className="contact-form-area shadow-none" style={{ padding: "25px" }}>
                   <h4 className="text-center mb-4 text-black">Get In Touch</h4>
-
+                   
+                   
                   <form onSubmit={handleSubmit}>
                     <div className="row g-3">
                       <div className="col-lg-6">
@@ -350,16 +363,23 @@ const [isLoading, setIsLoading] = useState(true);
                           placeholder="City"
                           value={formData.city}
                           onChange={handleChange}
-                          className="form-control  "
+                          className="form-control"
                           required
                         />
                       </div>
+
+
+  
+
+
+
                       <div className="col-lg-12 text-center">
+
                         <select
                           id="category"
                           name="category"
                           value={formData.category}
-                          onChange={handleChange}
+                          onChange={handleChange11}
                           className="form-control w-100 shadow-none border border-[#E6E6E6] py-2"
                           required
                         >
@@ -372,6 +392,10 @@ const [isLoading, setIsLoading] = useState(true);
                           <option value="website-maintenance">Website Maintenance & Support</option>
                         </select>
                       </div>
+
+
+                      
+
                       <div className="col-lg-12">
                         <textarea
                           style={styles.shopifyForm}
