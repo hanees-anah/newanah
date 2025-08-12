@@ -44,31 +44,41 @@ function ContactUS() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault("formDataformData", formData);
-    console.log("formDataformData",formData)
-    try {
-      const response = await axios.post("https://anahmarketing.com/send-email", formData);
-      setShowPopup(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  // console.log("formDataformData", formData);
 
-      setFormData({
-        first_name: "",
-        last_name: "",
-        email: "",
-        phone: "",
-        message: "",
-        city: "",
-        company: "",
+  try {
+    const response = await axios.post(
+      "https://anahmarketing.com/send-email",
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    );
 
-      });
+    setShowPopup(true);
 
-      setTimeout(() => {
-        setShowPopup(false);
-      }, 3000);
-    } catch (error) {
-      console.error("Failed to send message", error);
-    }
-  };
+    setFormData({
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      message: "",
+      city: "",
+      company: "",
+    });
+
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
+  } catch (error) {
+    console.error("Failed to send message", error);
+  }
+};
+
 
   return (
     <>

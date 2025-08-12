@@ -212,31 +212,43 @@ const [isLoading, setIsLoading] = useState(true);
   };
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault("formDataformData", formData);
-    console.log("formDataformData", formData)
-    try {
-      const response = await axios.post("https://anahmarketing.com/send-email", formData);
-      setShowPopup(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  // console.log("formDataformData", formData);
 
-      setTimeout(() => {
-        setShowPopup(false);
-      }, 3000);
-      setFormData({
-        first_name: "",
-        last_name: "",
-        email: "",
-        phone: "",
-        message: "",
-        city: "",
-        company: "",
-        category: "",
+  try {
+    const response = await axios.post(
+      "https://anahmarketing.com/send-email",
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    );
 
-      });
-    } catch (error) {
-      console.error("Failed to send message", error);
-    }
-  };
+    setShowPopup(true);
+
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
+
+    setFormData({
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      message: "",
+      city: "",
+      company: "",
+      category: "",
+    });
+
+  } catch (error) {
+    console.error("Failed to send message", error);
+  }
+};
+
 
   return (
     <>

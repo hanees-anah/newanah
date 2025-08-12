@@ -21,24 +21,37 @@ const ContactSection = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post("https://anahmarketing.com/send-email", formData);
-      setShowModal(true); // Show popup on success
-      setFormData({
-        first_name: "",
-        last_name: "",
-        email: "",
-        phone: "",
-        company: "",
-        message: "",
-        city:""
-      });
-    } catch (error) {
-      alert("Failed to send message. Please try again.");
-    }
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  try {
+    await axios.post(
+      "https://anahmarketing.com/send-email",
+      formData,
+      {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    );
+
+    setShowModal(true); // Show popup on success
+    setFormData({
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      company: "",
+      message: "",
+      city: ""
+    });
+
+  } catch (error) {
+    alert("Failed to send message. Please try again.");
+    console.error("Submit error:", error);
+  }
+};
+
 
   const handleCloseModal = () => {
     setShowModal(false);
