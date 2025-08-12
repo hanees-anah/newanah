@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
 app.post('/send-email', (req, res) => {
   const { first_name, last_name, email, phone, message, company,city ,category} = req.body;
 
-  // console.log("56312ss",req.body)
+   console.log("56312ss",req.body)
 
 
 // console.log("pes",req.body.email)
