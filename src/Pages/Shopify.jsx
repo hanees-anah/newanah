@@ -750,7 +750,10 @@ const [isLoading, setIsLoading] = useState(true);
 
           <div class="row align-items-center">
             <div class="col-md-8">
-              <h1 className="mb-4">Benefits of Choosing Anah Marketing</h1>
+                  <div class="service2-header heading2">
+                <h2 class="text-anime-style-3">Benefits of Choosing Anah Marketing</h2>
+              </div>
+              {/* <h2 className="mb-4 service2-header heading2">Benefits of Choosing Anah Marketing</h2> */}
               <h4 className="mb-5">Working with us is more than just launching a Shopify store - it's about helping your brand succeed long-term:</h4>
 
               <div class="shopify-list">
