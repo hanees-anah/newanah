@@ -356,8 +356,8 @@ const [isLoading, setIsLoading] = useState(true);
                       </div>
                       <div className="col-lg-12 text-center">
                         <select
-                          id="category"
-                          name="category"
+                          id="category1"
+                          name="category1"
                           value={formData.category}
                           onChange={handleChange}
                           className="form-control w-100 shadow-none border border-[#E6E6E6] py-2"
