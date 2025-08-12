@@ -55,6 +55,8 @@ import swtantra from "../assets/images/swtantra-logo.png"
 import axios from "axios";
 import { motion } from "framer-motion";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
+
 // -------------------------------------
 
 
@@ -325,6 +327,16 @@ const [isLoading, setIsLoading] = useState(true);
   return (
     <>
 
+        <Helmet>
+                <title>Best Shopify Website Development & Management Company in India</title>
+                <meta
+                    name="description"
+                    content="Anah Marketing provides Shopify development & management services to build high-performing eCommerce stores with custom designs and seamless integrations."
+                    />
+                                      <link rel="canonical" href="https://anahmarketing.com/shopify-development"/>
+
+            </Helmet>
+
      {isLoading && (
             <div className="preloader">
               <div className="loading-container">
@@ -342,7 +354,7 @@ const [isLoading, setIsLoading] = useState(true);
                 <div>
                   <img style={styles.Shopify} src={Shopify_Logo} alt="Marketing" />
                   <h1>
-                    From Idea to Online Store, We Make Shopify Simple
+                   Shopify Development & Management Services
                   </h1>
                   <p>
                     Unlock the full potential of your D2C brand with a Shopify store designed to convert your audience into loyal customers, even when you sleep
