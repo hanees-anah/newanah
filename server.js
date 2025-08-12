@@ -54,8 +54,10 @@ app.post('/send-email', (req, res) => {
   
   const mailOptions = {
     from: "harsh.iglobe@gmail.com",
-     to: "admin@anahmarketing.com",
-     cc: ["marketing@anahmarketing.com"],
+     to: "demoigs24@gmail.com",
+     cc: ["ayushnama007@gmail.com"],
+    //  to: "admin@anahmarketing.com",
+    //  cc: ["marketing@anahmarketing.com"],
     subject: "New Contact Form Submission",
     html: htmlBody,
   };
