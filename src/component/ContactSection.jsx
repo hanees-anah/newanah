@@ -26,7 +26,7 @@ const ContactSection = () => {
   
   try {
     await axios.post(
-      "http://anahmarketing.com:5000/send-email",
+      "https://anahmarketing.com:5000/send-email",
       JSON.stringify(formData), // Convert to JSON string
       {
         headers: {
