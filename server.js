@@ -25,49 +25,50 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post('/send-email', (req, res) => {
-  const { first_name, last_name, email, phone, message, company, city, category } = req.body;
-// console.log("uuuuuuu", req.body);
+app.post('/send-email', async (req, res) => {
+  try {
+    const { first_name, last_name, email, phone, message, company, city, category } = req.body;
 
-  const fields = [
-    { label: 'Full Name', value: `${first_name || ''} ${last_name || ''}`.trim() },
-    { label: 'Email', value: email },
-    { label: 'Phone', value: phone },
-    { label: 'Company', value: company },
-    { label: 'Message', value: message },
-    { label: 'City', value: city },
-    { label: 'Category', value: category }
-  ];
+    const fields = [
+      { label: 'Full Name', value: `${first_name || ''} ${last_name || ''}`.trim() },
+      { label: 'Email', value: email },
+      { label: 'Phone', value: phone },
+      { label: 'Company', value: company },
+      { label: 'Message', value: message },
+      { label: 'City', value: city },
+      { label: 'Category', value: category }
+    ];
 
-  const formattedFields = fields
-    .filter(field => field.value)
-    .map(field => `<tr><td><strong>${field.label}:</strong></td><td>${field.value}</td></tr>`)
-    .join('');
+    const formattedFields = fields
+      .filter(field => field.value)
+      .map(field => `<tr><td><strong>${field.label}:</strong></td><td>${field.value}</td></tr>`)
+      .join('');
 
-  const htmlBody = `
-    <h2>New Contact Form Submission</h2>
-    <table style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">
-      ${formattedFields}
-    </table>
-  `;
+    const htmlBody = `
+      <h2>New Contact Form Submission</h2>
+      <table style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">
+        ${formattedFields}
+      </table>
+    `;
 
-  const mailOptions = {
-    from: "harsh.iglobe@gmail.com",
-    to: "marketing@anahmarketing.com",
-   // cc: ["marketing@anahmarketing.com"],
-    subject: "New Contact Form Submission",
-    html: htmlBody,
-  };
+    const mailOptions = {
+      from: "harsh.iglobe@gmail.com",
+      to: "demoigs24@gmail.com",
+      // to: "marketing@anahmarketing.com",
+      subject: "New Contact Form Submission",
+      html: htmlBody,
+    };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error('Error sending email:', error);
-      return res.status(500).send('Server Error');
-    }
+    const info = await transporter.sendMail(mailOptions);
+
     console.log('Email sent:', info.response);
     res.status(200).send('Email sent successfully');
-  });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).send('Server Error');
+  }
 });
+
 
 // Start HTTPS server on port 5000
 https.createServer(sslOptions, app).listen(5000, () => {
