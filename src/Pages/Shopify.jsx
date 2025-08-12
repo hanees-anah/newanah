@@ -218,8 +218,8 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await axios.post(
-      "https://anahmarketing.com/send-email",
-      formData,
+      "http://localhost:5000/send-email",
+      JSON.stringify(formData), // Convert to JSON string
       {
         headers: {
           "Content-Type": "application/json"
