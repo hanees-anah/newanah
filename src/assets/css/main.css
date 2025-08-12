@@ -32347,3 +32347,37 @@ body{
 .portfolio_bottom_part ul.nav-tabs {
   gap: 6px;
 }
+
+
+ul#category-list {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #4444441c;
+    z-index: 9;
+}
+.relative.w-full {
+    position: relative;
+}
+ul#category-list li {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 40px;
+    list-style: none;
+    min-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 29px;
+    text-align: left;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    padding: 2px 14px !important;
+    background-color: #f6f6f600;
+}
+ul#category-list li:hover, ul#category-list li.cursor-pointer.px-3.py-2.hover\:bg-blue-100.bg-blue-200.font-semibold {
+    background-color: #f6f6f6;
+}
+.relative.w-full button.form-control {
+    text-align: left;
+}

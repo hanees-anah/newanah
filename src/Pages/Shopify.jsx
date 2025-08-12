@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import product1 from "../assets/images/product1.jpg";
 import product2 from "../assets/images/product2.jpg";
 import new1 from "../assets/images/new1.webp";
@@ -16,14 +16,6 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "../App.css"
 import Footer from "../component/Footer";
-// import OurPortfolis from "../component/Ourportfolis";
-
-
-
-
-// ------------------------------------
-
-
 import styleunionLogo from '../assets/images/styleunion_logo.png';
 import chasehaulLogo from '../assets/images/chasehaul_logo.png';
 import gritproLogo from '../assets/images/gritpro_logo.png';
@@ -64,6 +56,95 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import preloader from "../assets/images/preloader-img.png";
 // -------------------------------------
+
+
+
+
+
+
+const categories = [
+  { value: "", label: "Select Category" },
+  { value: "Website Development", label: "Website Development" },
+  { value: "Website Redesign", label: "Website Redesign" },
+  { value: "Shopify App Development", label: "Shopify App Development" },
+  { value: "Speed Optimization", label: "Speed Optimization" },
+  { value: "Website Migration", label: "Website Migration" },
+  { value: "Website Maintenance & Support", label: "Website Maintenance & Support" },
+];
+
+function CustomDropdown({ formData, setFormData }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleSelect = (value) => {
+    setFormData(prev => ({ ...prev, category: value }));
+    setIsOpen(false);
+  };
+
+  return (
+    <div
+      ref={dropdownRef}
+      className="relative w-full"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") setIsOpen(false);
+      }}
+      aria-haspopup="listbox"
+      aria-expanded={isOpen}
+      role="combobox"
+      aria-controls="category-list"
+      aria-label="Select Category"
+    >
+      <button
+        type="button"
+        className="form-control w-full text-left py-2 border border-[#E6E6E6] shadow-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {categories.find(c => c.value === formData.category)?.label || "Select Category"}
+      </button>
+
+      {isOpen && (
+        <ul
+          id="category-list"
+          role="listbox"
+          className="absolute z-10 w-full mt-1 max-h-60 overflow-auto border border-[#E6E6E6] bg-white shadow-lg"
+        >
+          {categories.map(({ value, label }) => (
+            <li
+              key={value}
+              role="option"
+              aria-selected={formData.category === value}
+              className={`cursor-pointer px-3 py-2 hover:bg-blue-100 ${
+                formData.category === value ? "bg-blue-200 font-semibold" : ""
+              }`}
+              onClick={() => handleSelect(value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  handleSelect(value);
+                }
+              }}
+              tabIndex={0}
+            >
+              {label}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 
 
 
@@ -219,6 +300,7 @@ const [isLoading, setIsLoading] = useState(true);
     console.log("formDataformData", formData)
     try {
       const response = await axios.post("https://anahmarketing.com:5000/send-email", formData);
+
       setShowPopup(true);
 
       setTimeout(() => {
@@ -355,9 +437,16 @@ const [isLoading, setIsLoading] = useState(true);
                         />
                       </div>
                       <div className="col-lg-12 text-center">
-                        <select
-                          id="category1"
-                          name="category1"
+
+
+
+
+
+                          <CustomDropdown formData={formData} setFormData={setFormData} />
+
+                         {/* <select
+                          id="category"
+                          name="category"
                           value={formData.category}
                           onChange={handleChange}
                           className="form-control w-100 shadow-none border border-[#E6E6E6] py-2"
@@ -368,9 +457,9 @@ const [isLoading, setIsLoading] = useState(true);
                           <option value="website-redesign">Website Redesign</option>
                           <option value="shopify-development">Shopify App Development</option>
                           <option value="speed-optimization">Speed Optimization</option>
-                          <option value="website-migration">Website Migration</option> {/* Typo fix */}
+                          <option value="website-migration">Website Migration</option>
                           <option value="website-maintenance">Website Maintenance & Support</option>
-                        </select>
+                        </select>  */}
                       </div>
                       <div className="col-lg-12">
                         <textarea
