@@ -2,11 +2,20 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
+import https from 'https';
+import fs from 'fs';
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+// SSL Certificates from Let's Encrypt
+const sslOptions = {
+  key: fs.readFileSync('/etc/letsencrypt/live/anahmarketing.com/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/anahmarketing.com/fullchain.pem')
+};
+
+// Nodemailer Transporter (Brevo SMTP)
 const transporter = nodemailer.createTransport({
   host: 'smtp-relay.brevo.com',
   port: 587,
@@ -17,28 +26,20 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', (req, res) => {
-  const { first_name, last_name, email, phone, message, company,city ,category} = req.body;
+  const { first_name, last_name, email, phone, message, company, city, category } = req.body;
 
-   console.log("56312ss",req.body)
-
-
-// console.log("pes",req.body.email)
-  // Create an array of field data that is present
   const fields = [
     { label: 'Full Name', value: `${first_name || ''} ${last_name || ''}`.trim() },
     { label: 'Email', value: email },
     { label: 'Phone', value: phone },
     { label: 'Company', value: company },
     { label: 'Message', value: message },
-    { label: 'city', value: city },
-    { label: 'category', value: category }
+    { label: 'City', value: city },
+    { label: 'Category', value: category }
   ];
 
-
-   console.log("6532",fields)
-  // Generate email body only with non-empty fields
   const formattedFields = fields
-    .filter(field => field.value) // Only include fields with data
+    .filter(field => field.value)
     .map(field => `<tr><td><strong>${field.label}:</strong></td><td>${field.value}</td></tr>`)
     .join('');
 
@@ -49,19 +50,13 @@ app.post('/send-email', (req, res) => {
     </table>
   `;
 
-  let senderEmail = req.body.email?.trim() || 'mailto:no-reply@example.com';
- 
-  
   const mailOptions = {
     from: "harsh.iglobe@gmail.com",
-     to: "demoigs24@gmail.com",
-     cc: ["ayushnama007@gmail.com"],
-    //  to: "admin@anahmarketing.com",
-    //  cc: ["marketing@anahmarketing.com"],
+    to: "demoigs24@gmail.com",
+    cc: ["ayushnama007@gmail.com"],
     subject: "New Contact Form Submission",
     html: htmlBody,
   };
-  
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
@@ -73,6 +68,7 @@ app.post('/send-email', (req, res) => {
   });
 });
 
-app.listen(5000, () => {
-  console.log('Server started on portssss 5000');
+// Start HTTPS server on port 5000
+https.createServer(sslOptions, app).listen(5000, () => {
+  console.log('HTTPS Server running on port 5000');
 });
