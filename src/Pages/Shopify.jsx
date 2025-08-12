@@ -287,7 +287,7 @@ const [isLoading, setIsLoading] = useState(true);
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    console.log("======>",e.target);
+    // console.log("======>",e.target);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -297,7 +297,7 @@ const [isLoading, setIsLoading] = useState(true);
 
   const handleSubmit = async (e) => {
     e.preventDefault("formDataformData", formData);
-    console.log("formDataformData", formData)
+    // console.log("formDataformData", formData)
     try {
       const response = await axios.post("https://anahmarketing.com:5000/send-email", formData);
 
