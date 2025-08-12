@@ -212,43 +212,31 @@ const [isLoading, setIsLoading] = useState(true);
   };
 
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  // console.log("formDataformData", formData);
+  const handleSubmit = async (e) => {
+    e.preventDefault("formDataformData", formData);
+    console.log("formDataformData", formData)
+    try {
+      const response = await axios.post("http://localhost:5000/send-email", formData);
+      setShowPopup(true);
 
-  try {
-    const response = await axios.post(
-      "http://localhost:5000/send-email",
-      JSON.stringify(formData), // Convert to JSON string
-      {
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }
-    );
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+      setFormData({
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone: "",
+        message: "",
+        city: "",
+        company: "",
+        category: "",
 
-    setShowPopup(true);
-
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 3000);
-
-    setFormData({
-      first_name: "",
-      last_name: "",
-      email: "",
-      phone: "",
-      message: "",
-      city: "",
-      company: "",
-      category: "",
-    });
-
-  } catch (error) {
-    console.error("Failed to send message", error);
-  }
-};
-
+      });
+    } catch (error) {
+      console.error("Failed to send message", error);
+    }
+  };
 
   return (
     <>

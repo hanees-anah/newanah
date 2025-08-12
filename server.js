@@ -7,68 +7,72 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// ✅ Brevo SMTP setup
 const transporter = nodemailer.createTransport({
   host: 'smtp-relay.brevo.com',
   port: 587,
   auth: {
-    user: '8a0b7e001@smtp-brevo.com', // Brevo username
-    pass: 'RxKkYrq4zJcjNh5Q',        // Brevo password/API key
+    user: '8a0b7e001@smtp-brevo.com',
+    pass: 'RxKkYrq4zJcjNh5Q',
   },
 });
 
-app.post('/send-email', async (req, res) => {
-  try {
-    const { first_name, last_name, email, phone, message, company, city, category } = req.body;
+app.post('/send-email', (req, res) => {
+  const { first_name, last_name, email, phone, message, company,city ,category} = req.body;
 
-    // ✅ Ensure at least one required field exists
-    if (!email && !phone) {
-      return res.status(400).json({ error: 'Email or phone is required' });
+  // console.log("56312ss",req.body)
+
+
+// console.log("pes",req.body.email)
+  // Create an array of field data that is present
+  const fields = [
+    { label: 'Full Name', value: `${first_name || ''} ${last_name || ''}`.trim() },
+    { label: 'Email', value: email },
+    { label: 'Phone', value: phone },
+    { label: 'Company', value: company },
+    { label: 'Message', value: message },
+    { label: 'city', value: city },
+    { label: 'category', value: category }
+  ];
+
+
+   console.log("6532",fields)
+  // Generate email body only with non-empty fields
+  const formattedFields = fields
+    .filter(field => field.value) // Only include fields with data
+    .map(field => `<tr><td><strong>${field.label}:</strong></td><td>${field.value}</td></tr>`)
+    .join('');
+
+  const htmlBody = `
+    <h2>New Contact Form Submission</h2>
+    <table style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">
+      ${formattedFields}
+    </table>
+  `;
+
+  let senderEmail = req.body.email?.trim() || 'mailto:no-reply@example.com';
+ 
+  
+  const mailOptions = {
+    from: "harsh.iglobe@gmail.com",
+     to: "demoigs24@gmail.com",
+     cc: ["ayushnama007@gmail.com"],
+    //  to: "admin@anahmarketing.com",
+    //  cc: ["marketing@anahmarketing.com"],
+    subject: "New Contact Form Submission",
+    html: htmlBody,
+  };
+  
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email:', error);
+      return res.status(500).send('Server Error');
     }
-
-    // ✅ Only include non-empty fields in the email body
-    const fields = [
-      { label: 'Full Name', value: `${first_name || ''} ${last_name || ''}`.trim() },
-      { label: 'Email', value: email },
-      { label: 'Phone', value: phone },
-      { label: 'Company', value: company },
-      { label: 'City', value: city },
-      { label: 'Category', value: category },
-      { label: 'Message', value: message }
-    ];
-
-    const formattedFields = fields
-      .filter(field => field.value)
-      .map(field => `<tr><td><strong>${field.label}:</strong></td><td>${field.value}</td></tr>`)
-      .join('');
-
-    const htmlBody = `
-      <h2>New Contact Form Submission</h2>
-      <table style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">
-        ${formattedFields}
-      </table>
-    `;
-
-    // ✅ Use verified sender email from Brevo
-    const mailOptions = {
-      from: '"Anah Marketing" <8a0b7e001@smtp-brevo.com>', // Must be verified in Brevo
-      to: 'demoigs24@gmail.com', // Main recipient
-      cc: 'ayushnama007@gmail.com', // CC for testing
-      subject: 'New Contact Form Submission',
-      html: htmlBody,
-    };
-
-    // Send email
-    const info = await transporter.sendMail(mailOptions);
     console.log('Email sent:', info.response);
-    res.status(200).json({ message: 'Email sent successfully' });
-
-  } catch (error) {
-    console.error('Error sending email:', error);
-    res.status(500).json({ error: 'Failed to send email' });
-  }
+    res.status(200).send('Email sent successfully');
+  });
 });
 
 app.listen(5000, () => {
-  console.log('✅ Server started on port new 5000');
+  console.log('Server started on portssss 5000');
 });
