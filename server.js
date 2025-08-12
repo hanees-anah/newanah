@@ -27,6 +27,7 @@ const transporter = nodemailer.createTransport({
 
 app.post('/send-email', (req, res) => {
   const { first_name, last_name, email, phone, message, company, city, category } = req.body;
+console.log("uuuuuuu", req.body);
 
   const fields = [
     { label: 'Full Name', value: `${first_name || ''} ${last_name || ''}`.trim() },
