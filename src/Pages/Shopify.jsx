@@ -205,6 +205,8 @@ const [isLoading, setIsLoading] = useState(true);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    console.log("======>",e.target);
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
