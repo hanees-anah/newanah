@@ -4,6 +4,8 @@ import Consultation from "../component/Consultation"
 import Footer from "../component/Footer"
 import  { useEffect,useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
+
 
 function Privacy_Policy(){
     const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +29,17 @@ function Privacy_Policy(){
 
 return(
 <>
+
+   <Helmet>
+                <title>Privacy Policy | Anah Marketing – Your Data, Our Priority</title>
+                <meta
+                    name="description"
+                    content="Read Anah Marketing’s Privacy Policy to learn how we protect, store, and use your data. Your trust matters — transparency and security guaranteed."
+                />
+                                  <link rel="canonical" href="https://anahmarketing.com/privacy-policy"/>
+
+            </Helmet>
+
 {isLoading && (
             <div className="preloader">
                 <div className="loading-container">

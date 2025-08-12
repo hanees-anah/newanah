@@ -4,6 +4,8 @@ import Footer from "../component/Footer";
 import Consultation from "../component/Consultation";
 import  { useEffect ,useState} from "react";
 import preloader from "../assets/images/preloader-img.png";
+import { Helmet } from "react-helmet";
+
 
 function Terms_Conditions(){
     const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +29,16 @@ function Terms_Conditions(){
 
 return(
 <>
+   <Helmet>
+                <title>Terms & Conditions | Anah Marketing – User Agreement</title>
+                <meta
+                    name="description"
+                    content="Review Anah Marketing’s Terms & Conditions to understand our services, user rights, and policies. Clear, transparent, and designed to protect both parties."
+                />
+                                  <link rel="canonical" href="https://anahmarketing.com/terms-condition"/>
+
+            </Helmet>
+
 {isLoading && (
             <div className="preloader">
                 <div className="loading-container">
