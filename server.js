@@ -54,6 +54,7 @@ app.post('/send-email', async (req, res) => {
     const mailOptions = {
       from: "harsh.iglobe@gmail.com",
        to: "marketing@anahmarketing.com",
+       cc: "director@anahmarketing.com",
       subject: "New Contact Form Submission",
       html: htmlBody,
     };

@@ -32381,3 +32381,20 @@ ul#category-list li:hover, ul#category-list li.cursor-pointer.px-3.py-2.hover\:b
 .relative.w-full button.form-control {
     text-align: left;
 }
+
+.even-better-section.cta-section-area.our-apps img.img-fluid {
+    max-width: 180px;
+    height: 120px;
+    object-fit: contain;
+}
+section.even-better-section.cta-section-area.our-apps .boxs-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0px;
+}
+.even-better-section.cta-section-area.our-apps .boxs-card {
+    text-align: center;
+}
+section.even-better-section.cta-section-area.our-apps .boxs-card p {
+    text-align: justify;
+}

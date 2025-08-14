@@ -45,6 +45,8 @@ import Divi_logo from "../assets/images/divi-logoo.png"
 import ethnicity from "../assets/images/ethnicity-logo.png";
 import black_arrow from "../assets/images/arrow-icon-new.png"
 import website_redesign_icon from "../assets/images/website-redesign-icon.png";
+import app1 from "../assets/images/igs-design.webp"
+import app2 from "../assets/images/aim-design.webp"
 import user_experience from "../assets/images/user-experience-icon.png"
 import content_icon from "../assets/images/content-icon.png"
 import online_shoppings from "../assets/images/online-shopping.png"
@@ -628,6 +630,44 @@ const [isLoading, setIsLoading] = useState(true);
         </div>
       </div>
 
+
+        <section className="even-better-section cta-section-area our-apps">
+        <img alt="" class="cta-bg1 aniamtion-key-2" src={cta_bg1} />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
+        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="text-center">
+              <div className="content-part">
+                <h2 class="text-anime-style-2">Custom-Built Shopify Apps for Your Needs</h2>
+                 <p class="text-white px-10">Along with our ready-to-use solutions, we also develop tailor-made Shopify apps to match your specific business requirements, helping you streamline operations, enhance customer experience, and grow your sales.</p>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+         
+            <div className="col-md-6">
+              <div className="boxs-card">
+                <div class="icons mb-3">
+                  <img alt="" class="img-fluid" src={app1} />
+                  <h3>IGS DesignX</h3>
+                </div>
+                <p>IGS DesignX allows you to sell personalized products like T-shirts, mugs, posters, phone cases, and more without managing stock or production costs. Simply upload your designs, select items from the app’s catalog, and publish them to your Shopify store. Orders are fulfilled by our printing partner and shipped directly to your customers, all under your brand name.</p>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="boxs-card">
+                <div class="icons mb-3">
+                  <img alt="" class="img-fluid" src={app2} />
+                  <h3>Advance Intelligence Inventory Management (AIIM)</h3>
+                </div>
+                <p>AIIM makes inventory management effortless. Search, filter, and sort product variants by stock levels. Update sales channels for products or collections individually or in bulk. Automatically arrange products based on stock availability and send back-in-stock notifications to customers. With AIIM, you’ll always have complete control over your store’s inventory.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       
       <section class="here-section">
         <div class="container">
@@ -736,6 +776,9 @@ const [isLoading, setIsLoading] = useState(true);
           </div>
         </div>
       </section>
+
+
+    
 
 
 

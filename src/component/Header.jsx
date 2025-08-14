@@ -42,7 +42,7 @@ function Header() {
                                                     <li><a href="/seo-company">Search Engine Optimisation </a></li>
                                                     <li><a href="/website-development-company">Website Development</a></li>
                                                     <li><a href="/mobile-app-development-company">Mobile App Development</a></li>
-                                                    <li><a href="/shopify-development-services">Shopify Development</a></li>
+                                                    <li><a href="/shopify-development-services">Shopify Development & Maintenance</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="/blog">Blogs</a></li>

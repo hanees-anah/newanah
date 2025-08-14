@@ -78,11 +78,11 @@ function ShopifyDevelopment() {
           <div className="row">
             <div className="col-lg-8 m-auto">
               <div className="about-inner-header heading9 text-center">
-                <h1>Shopify Development</h1>
+                <h1>Shopify Development & Maintenance</h1>
                 <a href="/">Home</a> <i className="fa-solid fa-angle-right"></i>
                 <span> Services </span>
                 <i className="fa-solid fa-angle-right"></i>
-                <span>Shopify Development</span>
+                <span>Shopify Development & Maintenance</span>
               </div>
             </div>
           </div>
