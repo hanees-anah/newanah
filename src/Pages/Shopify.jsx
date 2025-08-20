@@ -76,7 +76,7 @@ const categories = [
   { value: "Website Maintenance & Support", label: "Website Maintenance & Support" },
 ];
 
-function CustomDropdown({ formData, setFormData }) {
+function CustomDropdown({ formData, setFormData, required }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -109,6 +109,7 @@ function CustomDropdown({ formData, setFormData }) {
       aria-controls="category-list"
       aria-label="Select Category"
     >
+
       <button
         type="button"
         className="form-control w-full text-left py-2 border border-[#E6E6E6] shadow-none"
@@ -128,9 +129,8 @@ function CustomDropdown({ formData, setFormData }) {
               key={value}
               role="option"
               aria-selected={formData.category === value}
-              className={`cursor-pointer px-3 py-2 hover:bg-blue-100 ${
-                formData.category === value ? "bg-blue-200 font-semibold" : ""
-              }`}
+              className={`cursor-pointer px-3 py-2 hover:bg-blue-100 ${formData.category === value ? "bg-blue-200 font-semibold" : ""
+                }`}
               onClick={() => handleSelect(value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
@@ -168,7 +168,7 @@ const images = [
 const Shopify = () => {
 
 
-const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulate load or wait for all images/resources to load
@@ -186,12 +186,6 @@ const [isLoading, setIsLoading] = useState(true);
 
     return () => window.removeEventListener("load", handleLoad);
   }, []);
-
-
-
-
-
-
 
 
 
@@ -302,8 +296,17 @@ const [isLoading, setIsLoading] = useState(true);
   const handleSubmit = async (e) => {
     e.preventDefault("formDataformData", formData);
     // console.log("formDataformData", formData)
+
+    // 👇 Custom validation for category
+    if (!formData.category) {
+      alert("Please select a category"); // ya custom error message UI pe show kar do
+      return;
+    }
     try {
-      const response = await axios.post("https://anahmarketing.com:5000/send-email", formData);
+
+       const response = await axios.post("https://anahmarketing.com:5000/send-email", formData);
+       
+      // const response = await axios.post("http://localhost:5000/send-email", formData);
 
       setShowPopup(true);
 
@@ -329,24 +332,24 @@ const [isLoading, setIsLoading] = useState(true);
   return (
     <>
 
-        <Helmet>
-                <title>Best Shopify Website Development & Management Company in India</title>
-                <meta
-                    name="description"
-                    content="Anah Marketing provides Shopify development & management services to build high-performing eCommerce stores with custom designs and seamless integrations."
-                    />
-                                      <link rel="canonical" href="https://anahmarketing.com/shopify-development"/>
+      <Helmet>
+        <title>Best Shopify Website Development & Management Company in India</title>
+        <meta
+          name="description"
+          content="Anah Marketing provides Shopify development & management services to build high-performing eCommerce stores with custom designs and seamless integrations."
+        />
+        <link rel="canonical" href="https://anahmarketing.com/shopify-development" />
 
-            </Helmet>
+      </Helmet>
 
-     {isLoading && (
-            <div className="preloader">
-              <div className="loading-container">
-                <div className="loading"></div>
-                <div id="loading-icon"><img src={preloader} alt="" /></div>
-              </div>
-            </div>
-          )}
+      {isLoading && (
+        <div className="preloader">
+          <div className="loading-container">
+            <div className="loading"></div>
+            <div id="loading-icon"><img src={preloader} alt="" /></div>
+          </div>
+        </div>
+      )}
 
       <section className="shopify-top-banner-sec">
         <div className="container">
@@ -356,7 +359,7 @@ const [isLoading, setIsLoading] = useState(true);
                 <div>
                   <img style={styles.Shopify} src={Shopify_Logo} alt="Marketing" />
                   <h1>
-                   Shopify Development & Management Services
+                    Shopify Development & Management Services
                   </h1>
                   <p>
                     Unlock the full potential of your D2C brand with a Shopify store designed to convert your audience into loyal customers, even when you sleep
@@ -456,9 +459,9 @@ const [isLoading, setIsLoading] = useState(true);
 
 
 
-                          <CustomDropdown formData={formData} setFormData={setFormData} />
+                        <CustomDropdown formData={formData} setFormData={setFormData} />
 
-                         {/* <select
+                        {/* <select
                           id="category"
                           name="category"
                           value={formData.category}
@@ -631,7 +634,7 @@ const [isLoading, setIsLoading] = useState(true);
       </div>
 
 
-        <section className="even-better-section cta-section-area our-apps">
+      <section className="even-better-section cta-section-area our-apps">
         <img alt="" class="cta-bg1 aniamtion-key-2" src={cta_bg1} />
         <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
         <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
@@ -640,12 +643,12 @@ const [isLoading, setIsLoading] = useState(true);
             <div className="text-center">
               <div className="content-part">
                 <h2 class="text-anime-style-2">Custom-Built Shopify Apps for Your Needs</h2>
-                 <p class="text-white px-10">Along with our ready-to-use solutions, we also develop tailor-made Shopify apps to match your specific business requirements, helping you streamline operations, enhance customer experience, and grow your sales.</p>
+                <p class="text-white px-10">Along with our ready-to-use solutions, we also develop tailor-made Shopify apps to match your specific business requirements, helping you streamline operations, enhance customer experience, and grow your sales.</p>
               </div>
             </div>
           </div>
           <div className="row">
-         
+
             <div className="col-md-6">
               <div className="boxs-card">
                 <div class="icons mb-3">
@@ -668,7 +671,7 @@ const [isLoading, setIsLoading] = useState(true);
         </div>
       </section>
 
-      
+
       <section class="here-section">
         <div class="container">
           <div class="row">
@@ -778,7 +781,7 @@ const [isLoading, setIsLoading] = useState(true);
       </section>
 
 
-    
+
 
 
 
@@ -793,7 +796,7 @@ const [isLoading, setIsLoading] = useState(true);
 
           <div class="row align-items-center">
             <div class="col-md-8">
-                  <div class="service2-header heading2">
+              <div class="service2-header heading2">
                 <h2 class="text-anime-style-3">Benefits of Choosing Anah Marketing</h2>
               </div>
               {/* <h2 className="mb-4 service2-header heading2">Benefits of Choosing Anah Marketing</h2> */}
