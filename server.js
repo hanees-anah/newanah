@@ -27,6 +27,15 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// for loacl test 
+
+//  host: 'smtp.gmail.com',
+//   port: 587,
+//   auth: {
+//     user: 'iglobe592@gmail.com',
+//     pass: 'oyblflcfwghnlsgg',
+//   },
+
 app.post('/send-email', async (req, res) => {
   try {
     const { first_name, last_name, email, phone, message, company, city, category } = req.body;

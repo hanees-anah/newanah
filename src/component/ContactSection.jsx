@@ -16,6 +16,7 @@ const ContactSection = () => {
   });
 
   const [showModal, setShowModal] = useState(false); // For success popup
+    const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,6 +24,7 @@ const ContactSection = () => {
 
  const handleSubmit = async (e) => {
   e.preventDefault();
+    setLoading(true);
   
   try {
     await axios.post(
@@ -53,6 +55,9 @@ const ContactSection = () => {
     alert("Failed to send message. Please try again.");
     console.error("Submit error:", error);
   }
+    finally {
+  setLoading(false);  
+}
 };
 
 
@@ -235,8 +240,13 @@ const ContactSection = () => {
                     </div>
                     <div className="col-lg-12">
                       <div className="input-area text-center" >
-                        <button type="submit" className="lnk header-btn1">
-                          Submit{" "}
+                        <button
+                          type="submit"
+                          className="lnk header-btn1"
+                          disabled={loading}
+
+                        >
+                          {loading ? "Submitting..." : "Submit"}{" "}
                           <span>
                             <i className="fa-solid fa-arrow-right"></i>
                           </span>

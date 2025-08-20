@@ -169,6 +169,8 @@ const Shopify = () => {
 
 
   const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
     // Simulate load or wait for all images/resources to load
@@ -293,41 +295,48 @@ const Shopify = () => {
   };
 
 
-  const handleSubmit = async (e) => {
-    e.preventDefault("formDataformData", formData);
-    // console.log("formDataformData", formData)
+const handleSubmit = async (e) => {
+  e.preventDefault("formDataformData", formData);
+  // console.log("formDataformData", formData)
 
-    // 👇 Custom validation for category
-    if (!formData.category) {
-      alert("Please select a category"); // ya custom error message UI pe show kar do
-      return;
-    }
-    try {
+  // 👇 Custom validation for category
+  if (!formData.category) {
+    alert("Please select a category"); 
+    return;
+  }
 
-       const response = await axios.post("https://anahmarketing.com:5000/send-email", formData);
-       
-      // const response = await axios.post("http://localhost:5000/send-email", formData);
+  setLoading(true); 
 
-      setShowPopup(true);
+  try {
 
-      setTimeout(() => {
-        setShowPopup(false);
-      }, 3000);
-      setFormData({
-        first_name: "",
-        last_name: "",
-        email: "",
-        phone: "",
-        message: "",
-        city: "",
-        company: "",
-        category: "",
+     const response = await axios.post("https://anahmarketing.com:5000/send-email", formData);
 
-      });
-    } catch (error) {
-      console.error("Failed to send message", error);
-    }
-  };
+    // const response = await axios.post("http://localhost:5000/send-email", formData);
+
+    setShowPopup(true);
+
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
+    setFormData({
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      message: "",
+      city: "",
+      company: "",
+      category: "",
+
+    });
+  } catch (error) {
+    console.error("Failed to send message", error);
+  }
+  finally {
+    setLoading(false); 
+  }
+};
+
 
   return (
     <>
@@ -455,28 +464,9 @@ const Shopify = () => {
                       </div>
                       <div className="col-lg-12 text-center">
 
-
-
-
-
                         <CustomDropdown formData={formData} setFormData={setFormData} />
 
-                        {/* <select
-                          id="category"
-                          name="category"
-                          value={formData.category}
-                          onChange={handleChange}
-                          className="form-control w-100 shadow-none border border-[#E6E6E6] py-2"
-                          required
-                        >
-                          <option value="">Select Category</option>
-                          <option value="speed-optimize">Website Development</option>
-                          <option value="website-redesign">Website Redesign</option>
-                          <option value="shopify-development">Shopify App Development</option>
-                          <option value="speed-optimization">Speed Optimization</option>
-                          <option value="website-migration">Website Migration</option>
-                          <option value="website-maintenance">Website Maintenance & Support</option>
-                        </select>  */}
+              
                       </div>
                       <div className="col-lg-12">
                         <textarea
@@ -492,8 +482,17 @@ const Shopify = () => {
                         ></textarea>
                       </div>
                       <div className="col-lg-12 text-center">
-                        <button type="submit" className="lnk header-btn1">
-                          Submit <span><i className="fa-solid fa-arrow-right"></i></span>
+                     
+                        <button
+                          type="submit"
+                          className="lnk header-btn1"
+                          disabled={loading} // submit hote time disable
+
+                        >
+                          {loading ? "Submitting..." : "Submit"}{" "}
+                          <span>
+                            <i className="fa-solid fa-arrow-right"></i>
+                          </span>
                         </button>
                       </div>
                     </div>

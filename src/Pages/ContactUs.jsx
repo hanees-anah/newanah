@@ -13,6 +13,7 @@ import { Helmet } from "react-helmet";
 function ContactUS() {
   const [isLoading, setIsLoading] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
+    const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -46,6 +47,7 @@ function ContactUS() {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
+  setLoading(true);
   // console.log("formDataformData", formData);
 
   try {
@@ -81,6 +83,9 @@ const handleSubmit = async (e) => {
   } catch (error) {
     console.error("Failed to send message", error);
   }
+  finally {
+  setLoading(false);  // <-- yaha pe lagana hai
+}
 };
 
 
@@ -282,13 +287,21 @@ const handleSubmit = async (e) => {
                       </div>
                     </div>
 
-                    <div className="col-lg-12">
-                      <div className="input-area">
-                        <button type="submit" className="lnk header-btn1">
-                          Submit <span><i className="fa-solid fa-arrow-right"></i></span>
-                        </button>
-                      </div>
-                    </div>
+                     <div className="col-lg-12">
+        <div className="input-area">
+          <button
+            type="submit"
+            className="lnk header-btn1"
+            disabled={loading} // submit hote time disable
+            
+          >
+            {loading ? "Submitting..." : "Submit"}{" "}
+            <span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </span>
+          </button>
+        </div>
+      </div>
                   </div>
                 </form>
               </div>
