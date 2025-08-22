@@ -23,6 +23,7 @@ import InstagramReadMore from "./component/Instagram_readmore";
 import Organic_search from "./Pages/Organic_search";
 import NotFound from "./Pages/Not_found";
 import Shopify from "./Pages/Shopify";
+import { Navigate } from "react-router-dom";
 
 
 // Moved logic to a wrapper inside Router
@@ -51,28 +52,28 @@ function AppWrapper() {
   //   // "/blog/performance-marketing-trends",
   //    "/shopify-development",
   //    "/blog/:slug"
-  
+
   // ].includes(location.pathname);
   const hideHeaderFooterPaths = [
-  "/", 
-  "/about-us", 
-  "/social-media-marketing-services", 
-  "/google-ads-services", 
-  "/email-marketing-services", 
-  "/whatsapp-marketing-services", 
-  "/seo-company", 
-  "/website-development-company", 
-  "/mobile-app-development-company", 
-  "/shopify-development-services", 
-  "/blog", 
-  "/portfolio", 
-  "/contact-us", 
-  "/terms-condition", 
-  "/privacy-policy", 
-  "/shopify-development",
-];
+    "/",
+    "/about-us",
+    "/social-media-marketing-services",
+    "/google-ads-services",
+    "/email-marketing-services",
+    "/whatsapp-marketing-services",
+    "/seo-company",
+    "/website-development-company",
+    "/mobile-app-development-company",
+    "/shopify-development-services",
+    "/blog",
+    "/portfolio",
+    "/contact-us",
+    "/terms-condition",
+    "/privacy-policy",
+    "/shopify-development",
+  ];
 
-const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname) || location.pathname.startsWith("/blog/");
+  const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname) || location.pathname.startsWith("/blog/");
 
 
   // ].some(path => location.pathname.startsWith(path));
@@ -99,11 +100,21 @@ const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname) || lo
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
         <Route path="/view-more" element={<View_more />} />
         <Route path="/blog/:slug" element={<Keywoed_reserach_reacd_more />} />
-        {/* <Route path="/blog/social-media-marketing-trends-for-ecommerce" element={<Read_more />} />
-        <Route path="/blog/latest-seo-trends" element={<Keywoed_reserach_reacd_more />} />
-        <Route path="/blog/top-e-commerce-platforms-for-seo" element={<InstagramReadMore />} />
-        <Route path="/blog/performance-marketing-trends" element={<Organic_search />} /> */}
-        <Route path="/shopify-development" element={<Shopify/>} />
+        <Route path="/shopify-development" element={<Shopify />} />
+
+        {/* ✅ Redirects */}
+        <Route path="/keyword-read-more" element={<Navigate to="/" replace />} />
+        <Route path="/read-more" element={<Navigate to="/" replace />} />
+        <Route path="/instagram-readmore" element={<Navigate to="/" replace />} />
+        <Route path="/Privacy_Policy" element={<Navigate to="/privacy-policy" replace />} />
+        <Route path="/view_more" element={<Navigate to="/" replace />} />
+        <Route path="/Read_more" element={<Navigate to="/" replace />} />
+        <Route path="/keyword_read_more" element={<Navigate to="/" replace />} />
+        <Route path="/blog/marketing@anahmarketing.com" element={<Navigate to="/blog" replace />} />
+        <Route path="/blog/info@example.com" element={<Navigate to="/blog" replace />} />
+        <Route path="/instagram_readmore" element={<Navigate to="/" replace />} />
+        <Route path="/marketing@anahmarketing.com" element={<Navigate to="/" replace />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

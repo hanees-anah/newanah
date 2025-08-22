@@ -5,8 +5,7 @@ import { Helmet } from "react-helmet";
 import preloader from "../assets/images/preloader-img.png";
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
-// import Header from "../component/Header";
-
+import NotFound from "./Not_found";
 
 function Keywoed_reserach_reacd_more() {
   const { slug } = useParams();
@@ -23,12 +22,14 @@ function Keywoed_reserach_reacd_more() {
         setIsLoading(false);
       } catch (error) {
         console.error("Error fetching blog:", error);
+        setIsLoading(false);
       }
     };
 
     fetchData();
   }, [slug]);
 
+  // ⏳ Loading state
   if (isLoading) {
     return (
       <div className="preloader">
@@ -40,8 +41,9 @@ function Keywoed_reserach_reacd_more() {
     );
   }
 
+  // ❌ Blog not found → Show 404 page
   if (!blogData) {
-    return <p>Blog not found</p>;
+    return <NotFound />;
   }
 
   return (
@@ -50,9 +52,6 @@ function Keywoed_reserach_reacd_more() {
         <title>{blogData.meta_title || blogData.title}</title>
         <meta name="description" content={blogData.meta_description?.substring(0, 160)} />
       </Helmet> */}
-
-
-      {/* <Header/> */}
 
       <div className="about-header-area blog-single-section">
         <img alt={blogData.title} src={`${blogData.image}`} className="full-img" />
