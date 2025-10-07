@@ -45,7 +45,9 @@ import holythread_logo from "../assets/images/holythread_logo.png";
 import leheriya_logo from "../assets/images/leheriya_logo.png";
 import fashiondwar_logo from "../assets/images/fashiondwar-logo.png";
 import lavanya_logo from "../assets/images/lavanya-logo.png";
-import Divi_logo from"../assets/images/divi-logoo.png"
+import Divi_logo from "../assets/images/divi-logoo.png";
+import swtantra_logo from "../assets/images/swtantra-logo.png"
+import rioz_logo from "../assets/images/rioz-logo.png"
 
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
@@ -78,14 +80,14 @@ function Portfolio() {
   return (
     <>
 
-        <Helmet>
-                    <title>Our Work | Digital Marketing Portfolio – Anah Marketing</title>
-                    <meta
-                        name="description"
-                        content="Explore Anah Marketing’s portfolio of SEO, web design, and eCommerce success stories. See how we drive real growth for brands across industries."
-                    />
-                      <link rel="canonical" href="https://anahmarketing.com/portfolio"/>
-                </Helmet>
+      <Helmet>
+        <title>Our Work | Digital Marketing Portfolio – Anah Marketing</title>
+        <meta
+          name="description"
+          content="Explore Anah Marketing’s portfolio of SEO, web design, and eCommerce success stories. See how we drive real growth for brands across industries."
+        />
+        <link rel="canonical" href="https://anahmarketing.com/portfolio" />
+      </Helmet>
 
       {isLoading && (
         <div className="preloader">
@@ -145,18 +147,49 @@ function Portfolio() {
                     <div className="row text-align-center justify-content-center">
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
-                          <img src={styleunionLogo} alt="Style Union" />
+                          <img src={swtantra_logo} alt="Styleunion" />
                         </div>
                       </div>
                       <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={rioz_logo} alt="Styleunion" />
+                        </div>
+                      </div>
+                          <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={teakwoodLogo} alt="Teakwood" />
+                        </div>
+                      </div>
+                      <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={baidLogo} alt="Baid" />
+                        </div>
+                      </div>
+                        <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={womanCartLogo} alt="Woman Cart" />
+                        </div>
+                      </div>
+                         <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={chasehaulLogo} alt="Chase Haul" />
                         </div>
                       </div>
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
+                          <img src={styleunionLogo} alt="Style Union" />
+                        </div>
+                      </div>
+                   
+                      <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
                           <img src={ethnicity} alt="Bysonnutrition" />
 
+                        </div>
+                      </div>
+                        <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={fabpersonaLogo} alt="Fab Persona" />
                         </div>
                       </div>
                       <div className="col-md-3 col-sm-4">
@@ -184,16 +217,7 @@ function Portfolio() {
                           <img src={magiaLogo} alt="Magia" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={womanCartLogo} alt="Woman Cart" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={teakwoodLogo} alt="Teakwood" />
-                        </div>
-                      </div>
+                  
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={juniperLogo} alt="Juniper" />
@@ -219,16 +243,8 @@ function Portfolio() {
                           <img src={dishapublicationLogo} alt="Disha Publication" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={fabpersonaLogo} alt="Fab Persona" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={baidLogo} alt="Baid" />
-                        </div>
-                      </div>
+                    
+                      
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={siddhayuLogo} alt="Siddhayu" />
@@ -287,16 +303,49 @@ function Portfolio() {
                 <div id="collapseTwo" className="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
                   <div className="accordion-body">
                     <div className="row text-align-center justify-content-center">
+                       <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={swtantra_logo} alt="Styleunion" />
+                        </div>
+                      </div>
+                      <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={rioz_logo} alt="Styleunion" />
+                        </div>
+                      </div>
+                          <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={teakwoodLogo} alt="Teakwood" />
+                        </div>
+                      </div>
+                    
+                        <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={womanCartLogo} alt="Woman Cart" />
+                        </div>
+                      </div>
+                         <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={chasehaulLogo} alt="Chase Haul" />
+                        </div>
+                      </div>
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={styleunion_logo} alt="Styleunion" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
+                          <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
-                          <img src={chasehaul_logo} alt="Chasehaul" />
+                          <img src={fabpersona_logo} alt="Chasehaul" />
                         </div>
                       </div>
+                        <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={ethnicity} alt="Bysonnutrition" />
+
+                        </div>
+                      </div>
+                    
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={gritpro_logo} alt="Gritpro" />
@@ -312,16 +361,8 @@ function Portfolio() {
                           <img src={magia_logo} alt="Chasehaul" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={woman_cart_logo} alt="Gritpro" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={teakwood_logo} alt="Guniaa" />
-                        </div>
-                      </div>
+                   
+                    
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={autumnlane_logo} alt="Chasehaul" />
@@ -337,11 +378,7 @@ function Portfolio() {
                           <img src={dishapublication_logo} alt="Guniaa" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={fabpersona_logo} alt="Chasehaul" />
-                        </div>
-                      </div>
+                  
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={zari_logo} alt="Gritpro" />
@@ -364,12 +401,7 @@ function Portfolio() {
 
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={ethnicity} alt="Bysonnutrition" />
-
-                        </div>
-                      </div>
+                    
                       <div class="col-md-3 col-sm-4">
                         <div class="logo_src">
                           {/* <img src="assets/images/holythread_logo.png"> */}
@@ -388,7 +420,7 @@ function Portfolio() {
                           <img src={fashiondwar_logo} alt="Bysonnutrition" />
                         </div>
                       </div>
-                          {/* <div className="col-md-3 col-sm-4">
+                      {/* <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={elLogo} alt="EL" />
                         </div>
@@ -408,9 +440,50 @@ function Portfolio() {
                 <div id="collapseTwo" className="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
                   <div className="accordion-body">
                     <div className="row text-align-center justify-content-center">
+                       <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={swtantra_logo} alt="Styleunion" />
+                        </div>
+                      </div>
+                      <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={rioz_logo} alt="Styleunion" />
+                        </div>
+                      </div>
+                          <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={teakwoodLogo} alt="Teakwood" />
+                        </div>
+                      </div>
+                      <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={baidLogo} alt="Baid" />
+                        </div>
+                      </div>
+                        <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={womanCartLogo} alt="Woman Cart" />
+                        </div>
+                      </div>
+                         <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={chasehaulLogo} alt="Chase Haul" />
+                        </div>
+                      </div>
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={styleunion_logo} alt="Styleunion" />
+                        </div>
+                      </div>
+                        <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={fabpersona_logo} alt="Chasehaul" />
+                        </div>
+                      </div>
+                         <div className="col-md-3 col-sm-4">
+                        <div className="logo_src">
+                          <img src={ethnicity} alt="Bysonnutrition" />
+
                         </div>
                       </div>
                       <div className="col-md-3 col-sm-4">
@@ -418,11 +491,7 @@ function Portfolio() {
                           <img src={Divi_logo} alt="Styleunion" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={chasehaul_logo} alt="Chasehaul" />
-                        </div>
-                      </div>
+                   
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={gritpro_logo} alt="Gritpro" />
@@ -438,16 +507,8 @@ function Portfolio() {
                           <img src={magia_logo} alt="Chasehaul" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={woman_cart_logo} alt="Gritpro" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={teakwood_logo} alt="Guniaa" />
-                        </div>
-                      </div>
+                   
+                 
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={autumnlane_logo} alt="Chasehaul" />
@@ -463,11 +524,7 @@ function Portfolio() {
                           <img src={dishapublication_logo} alt="Guniaa" />
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={fabpersona_logo} alt="Chasehaul" />
-                        </div>
-                      </div>
+                    
                       <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={zari_logo} alt="Gritpro" />
@@ -490,12 +547,7 @@ function Portfolio() {
 
                         </div>
                       </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={ethnicity} alt="Bysonnutrition" />
-
-                        </div>
-                      </div>
+                   
                       <div class="col-md-3 col-sm-4">
                         <div class="logo_src">
                           {/* <img src="assets/images/holythread_logo.png"> */}
@@ -514,7 +566,7 @@ function Portfolio() {
                           <img src={fashiondwar_logo} alt="Bysonnutrition" />
                         </div>
                       </div>
-                          <div className="col-md-3 col-sm-4">
+                      <div className="col-md-3 col-sm-4">
                         <div className="logo_src">
                           <img src={elLogo} alt="EL" />
                         </div>

@@ -29,27 +29,31 @@ import holythread_logo from "../assets/images/holythread_logo.png";
 import leheriya_logo from "../assets/images/leheriya_logo.png";
 import bg1 from "../assets/images/pages-bg1.png";
 import ethnicity from "../assets/images/ethnicity-logo.png";
+import swtantra_logo from "../assets/images/swtantra-logo.png"
+import rioz_logo from "../assets/images/rioz-logo.png"
 
 // Image Array
 const portfolioImages = [
   styleunion_logo,
+  swtantra_logo,
+  rioz_logo,
+  teakwood_logo,
+  baid_logo,
+  woman_cart_logo,
+  siddhayu_logo,
   chasehaul_logo,
+  zari_logo,
+  fabpersona_logo,
+  autumnlane_logo,
   gritpro_logo,
   guniaa_logo,
   hallstattlife_logo,
   bysonnutrition_logo,
   magia_logo,
-  woman_cart_logo,
-  teakwood_logo,
   juniper_logo,
   el_logo,
-  autumnlane_logo,
   spatikaclothing_logo,
   dishapublication_logo,
-  fabpersona_logo,
-  baid_logo,
-  siddhayu_logo,
-  zari_logo,
   ruchira_logo,
   holythread_logo,
   leheriya_logo,
