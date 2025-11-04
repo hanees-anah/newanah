@@ -636,7 +636,7 @@ const handleSubmit = async (e) => {
       <section className="even-better-section cta-section-area our-apps">
         <img alt="" class="cta-bg1 aniamtion-key-2" src={cta_bg1} />
         <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
-        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
+        {/* <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} /> */}
         <div className="container">
           <div className="row align-items-center">
             <div className="text-center">

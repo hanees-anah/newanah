@@ -715,7 +715,17 @@ Location:
   color: var(--ztc-text-text-2);
   margin-bottom: 16px;
 }
+.revenue-section .revenue-content h2.main-heading.animating-text-container {
+    min-height: 120px;
+}
+
+
+
 @media (max-width: 767px) {
+  .revenue-section .revenue-content h2.main-heading.animating-text-container {
+    min-height: 70px;
+    font-size: 36px;
+}
   .heading2 h2 {
     font-size: var(--ztc-font-size-font-s32);
     line-height: var(--ztc-font-size-font-s40);
@@ -6454,14 +6464,41 @@ section.portfolio-sec .content-part a.view-study-btn {
   background-size: cover;
   padding: 160px 0 0;
 }
+
+main.hero.hero-top {
+    background-size: cover;
+}
+
 .hero1-section-area .elements1 {
   position: absolute;
   z-index: -1;
 }
 @media (max-width: 767px) {
-  .hero1-section-area .header-main-content {
-    margin-bottom: 30px;
-  }
+.hero1-section-area .header-main-content {
+  margin-bottom: 30px;
+}
+main.hero.hero-top {
+    padding: 100px 0px 20px !important;
+}
+main.hero.hero-top .hero-image-container {
+    margin: 0px;
+}
+main.hero.hero-top .container {
+    gap: 0px;
+}
+main.hero.hero-top section.shopify-top-banner-sec .contant-part img
+ {
+    max-width: 170px;
+}
+section.shopify-top-banner-sec.shopify-top-banner-sec-se {
+    padding-top: 0px !important;
+}
+section.deliver-section .deliver-container {
+    gap: 30px;
+}
+.revenue-section {
+    padding: 50px 15px 30px !important;
+}
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .hero1-section-area .header-main-content {
@@ -12189,7 +12226,7 @@ section.portfolio-section-page.portfolio-sec .tab-pane {
 }
 @media (max-width: 767px) {
   .footer1-section-area .copyright-area {
-    display: inline-block;
+    display: block;
     text-align: center;
   }
 }
@@ -32397,4 +32434,947 @@ section.even-better-section.cta-section-area.our-apps .boxs-card h3 {
 }
 section.even-better-section.cta-section-area.our-apps .boxs-card p {
     text-align: justify;
+}
+
+
+
+
+
+
+
+/* Meta--add */
+
+
+
+/* ======================= GLOBAL STYLES & VARIABLES ======================= */
+/* :root {
+    --primary-green: #0a3d34;
+    --accent-teal: #00d084;
+    --light-text: #ffffff;
+    --dark-text: #333333;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --font-family: 'Poppins', sans-serif;
+} */
+.hero-top{
+padding: 150px 0px 60px !important;
+}
+.shopify-top-banner-sec-bg{
+background: #11608a !important;
+}
+.contant-part-color{
+  color: #ffffff;
+}
+/* 
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  } */
+
+  /* body {
+      font-family: var(--font-family);
+      background-color: var(--primary-green);
+      color: var(--light-text);
+      overflow-x: hidden;
+      position: relative;
+  } */
+
+  /* .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+  } */
+
+  a {
+      text-decoration: none;
+      color: inherit;
+  }
+
+  /* ======================= BACKGROUND SHAPE ======================= */
+  .background-shape {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 80% 40%, hsla(160, 60%, 25%, 0.8) 0%, transparent 50%);
+      z-index: -1;
+  }
+
+
+  /* ======================= HEADER ======================= */
+  .header {
+      padding: 1.5rem 0;
+  }
+
+  /* .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  } */
+
+  .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+  }
+
+  .main-nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+  }
+
+  .main-nav a {
+      font-weight: 500;
+      transition: color 0.3s ease;
+  }
+
+  .main-nav a:hover {
+      color: var(--accent-teal);
+  }
+
+  .main-nav i {
+      font-size: 0.7em;
+      margin-left: 0.3rem;
+      opacity: 0.7;
+  }
+
+  .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+  }
+
+  .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+      background-color: var(--accent-teal);
+      color: var(--dark-text);
+  }
+
+  .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0, 208, 132, 0.3);
+  }
+
+  .menu-button {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+  }
+
+  .menu-button span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: var(--light-text);
+  }
+
+
+  /* ======================= HERO SECTION ======================= */
+  .hero {
+      padding: 3rem 0;
+  }
+
+  .hero .container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+  }
+
+  .hero-content {
+      flex: 1;
+      max-width: 450px;
+  }
+
+  .hero-content h1 {
+      font-size: 2rem;
+      line-height: 1;
+      font-weight: 700;
+      margin-bottom: 2rem;
+  }
+
+  .hero-image-container {
+      flex: 1.2;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .laptop-image {
+      max-width: 100%;
+      height: auto;
+      z-index: 5;
+  }
+
+  /* ======================= PARTNER CARDS ======================= */
+  .partner-card {
+      position: absolute;
+      background: var(--card-bg);
+      backdrop-filter: blur(5px);
+      color: var(--dark-text);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+  }
+
+  .partner-card img {
+      height: 25px;
+      margin-bottom: 0.5rem;
+  }
+  .partner-card p {
+      font-size: 0.9rem;
+      text-align: center;
+  }
+
+  .amazon-card {
+      top: 20%;
+      left: -5%;
+  }
+  .amazon-card img { height: 35px; }
+
+  .meta-card {
+      top: 45%;
+      left: -10%;
+  }
+  .meta-card img { height: 30px; }
+
+  .google-card {
+      bottom: 25%;
+      right: -5%;
+  }
+  .google-card img { height: 30px; }
+
+
+  /* ======================= FLOATING CHAT BUTTON ======================= */
+  .floating-chat-button {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background-color: var(--accent-teal);
+      color: var(--primary-green);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0, 208, 132, 0.4);
+      z-index: 100;
+      transition: transform 0.3s ease;
+  }
+
+  .floating-chat-button:hover {
+      transform: scale(1.1);
+  }
+
+  /* ======================= RESPONSIVE DESIGN ======================= */
+  @media (max-width: 1024px) {
+      .main-nav { display: none; } /* On a real site, this would be handled by JavaScript for a mobile menu */
+      .hero .container {
+          flex-direction: column;
+          text-align: center;
+      }
+      .hero-content { max-width: 600px; }
+      .hero-content h1 { font-size: 2.5rem; }
+      .hero-image-container { margin-top: 3rem; }
+      .partner-card {
+          padding: 0.75rem 1rem;
+      }
+      .amazon-card { top: 10%; left: 0; }
+      .meta-card { top: 40%; left: -5%; }
+      .google-card { bottom: 20%; right: 0; }
+  }
+
+  @media (max-width: 768px) {
+      .header .container {
+          padding: 0 1rem;
+      }
+      .logo span { display: none; } /* Hide text logo on small screens */
+      .hero { padding-top: 1rem; }
+      .hero-content h1 { font-size: 2rem; }
+      .hero-image-container {
+          width: 100%;
+          transform: scale(0.9); /* Scale down the image area slightly */
+      }
+      .partner-card {
+          position: relative; /* Un-float the cards on mobile */
+          display: inline-flex;
+          flex-direction: row;
+          gap: 1rem;
+          margin: 0.5rem;
+          width: auto;
+          left: auto !important;
+          top: auto !important;
+          right: auto !important;
+          bottom: auto !important;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      .hero-image-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .laptop-image {
+          order: -1; /* Show laptop first */
+          margin-bottom: 1rem;
+      }
+  }
+
+
+  /* ======================= GLOBAL STYLES & VARIABLES ======================= */
+  :root {
+      --bg-color: #0a3d34;
+      --primary-text: #ffffff;
+      --accent-color: #00d084;
+      --font-family: 'Poppins', sans-serif; /* Assumes Poppins is imported elsewhere, or falls back to sans-serif */
+  }
+
+  .roadmap-section {
+      background-color: var(--bg-color);
+      color: var(--primary-text);
+      padding: 80px 20px;
+      font-family: var(--font-family);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .roadmap-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+  }
+
+  .roadmap-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 80px;
+      color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* ======================= DESKTOP TIMELINE LAYOUT ======================= */
+  .roadmap-timeline {
+      position: relative;
+      width: 100%;
+      height: 400px; /* Fixed height to position items against */
+  }
+
+  .roadmap-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+  }
+
+  .roadmap-step {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Individual positioning for each step */
+  .step-1 { top: 335px; left: 4%; }
+  .step-2 { top: 135px; left: 25%; }
+  .step-3 { top: 335px; left: 37%; }
+  .step-4 { top: 135px; left: 50%; }
+  .step-5 { top: 335px; left: 75%; }
+  .step-6 { top: 135px; left: 96%; }
+
+  /* The glowing circle */
+  .roadmap-point {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: var(--bg-color);
+      border: 3px solid var(--accent-color);
+      position: relative;
+      box-shadow: 0 0 20px var(--accent-color);
+  }
+
+  /* Inner white dot */
+  .roadmap-point::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+  }
+
+  .roadmap-content {
+      max-width: 220px;
+      text-align: left;
+  }
+
+  .roadmap-content h3 {
+      color: var(--accent-color);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+  }
+
+  .roadmap-content p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Position text blocks above or below the point */
+  .step-1 .roadmap-content,
+  .step-3 .roadmap-content,
+  .step-5 .roadmap-content {
+      margin-top: 25px; /* Text below the point */
+  }
+
+  .step-2 .roadmap-content,
+  .step-4 .roadmap-content,
+  .step-6 .roadmap-content {
+      margin-bottom: 25px; /* Text above the point */
+      transform: translateY(-100%);
+      position: absolute;
+      bottom: 0px;
+  }
+  .step-4 .roadmap-content {
+      text-align: right;
+  }
+  .step-6 .roadmap-content {
+      text-align: right;
+  }
+
+
+  /* ======================= RESPONSIVE - MOBILE LAYOUT ======================= */
+  @media (max-width: 1024px) {
+      .roadmap-timeline {
+          height: auto; /* Allow height to be dynamic */
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          padding-left: 30px; /* Space for the vertical line */
+      }
+
+      /* Hide the SVG on mobile */
+      .roadmap-svg {
+          display: none;
+      }
+
+      /* Create a vertical line using a pseudo-element */
+      .roadmap-timeline::before {
+          content: '';
+          position: absolute;
+          top: 20px;
+          left: 11px; /* Center it with the 24px point */
+          bottom: 20px;
+          width: 2px;
+          background-image: linear-gradient(
+              to bottom, 
+              var(--accent-color) 0%, 
+              var(--accent-color) 50%, 
+              transparent 50%
+          );
+          background-size: 100% 16px; /* Creates the dotted effect */
+          z-index: 1;
+      }
+
+      .roadmap-step {
+          position: static; /* Remove absolute positioning */
+          margin-bottom: 40px;
+          display: flex;
+          flex-direction: row; /* Align items horizontally */
+          align-items: flex-start;
+          text-align: left;
+      }
+
+      .roadmap-point {
+          flex-shrink: 0; /* Prevent the point from shrinking */
+          margin-right: 20px;
+          position: relative; /* Ensure z-index works */
+          z-index: 2;
+      }
+
+      .roadmap-content {
+          margin: 0;
+          transform: none;
+          position: static;
+          max-width: none;
+      }
+
+      /* Remove specific desktop text positioning */
+      .step-2 .roadmap-content,
+      .step-4 .roadmap-content,
+      .step-6 .roadmap-content {
+          margin-bottom: 0;
+          transform: none;
+          position: static;
+          text-align: left;
+      }
+  }
+
+
+
+  /* ======================= GLOBAL STYLES & VARIABLES ======================= */
+
+  .deliver-section img.elements5.keyframe5 {
+    filter: brightness(9);
+    position: absolute;
+    z-index: 1;
+    right: -40px;
+    top: -10px;
+}
+.deliver-section .about-auhtor-images {
+    position: relative;
+}
+
+:root {
+  --bg-dark: #282828;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --accent-green: #00D084;
+  --card-bg: #ffffff;
+  --card-text: #333333;
+  --font-family: 'Poppins', sans-serif; /* Or any other sans-serif font */
+}
+
+.deliver-section {
+  background-color: #11608a;
+  padding: 50px 0px;
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deliver-section .container {
+    max-width: 1200px !important;
+}
+.deliver-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ======================= LEFT COLUMN: CONTENT ======================= */
+.deliver-content {
+  color: var(--text-primary);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.deliver-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.deliver-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.check-icon {
+  flex-shrink: 0; /* Prevents the icon from shrinking */
+}
+
+.item-text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.item-text p {
+  /* color: var(--text-secondary); */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ======================= RIGHT COLUMN: TESTIMONIAL CARD ======================= */
+.testimonial-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.testimonial-image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-image {
+  width: 100%;
+  display: block;
+}
+
+.testimonial-quote {
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: -50px; /* Overlap effect */
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.quote-text {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.quote-author-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.company-logo {
+  height: 35px;
+}
+
+.divider-line {
+  width: 1px;
+  height: 30px;
+  background-color: #e0e0e0;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-details strong {
+  font-weight: 600;
+}
+
+.author-details span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+section.shopify-top-banner-sec.shopify-top-banner-sec-se {
+    padding: 60px 0px;
+}
+section.shopify-top-banner-sec.shopify-top-banner-sec-se h1, section.shopify-top-banner-sec.shopify-top-banner-sec-se p {
+    color: #222;
+}
+
+
+/* ======================= RESPONSIVE DESIGN ======================= */
+@media (max-width: 992px) {
+  .deliver-container {
+    grid-template-columns: 1fr; /* Stack columns */
+    gap: 80px;
+  }
+  
+  .section-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .item-text h3 {
+    font-size: 1.25rem;
+  }
+  .testimonial-quote {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+  }
+}
+
+
+
+/* --------------- about --------------------- */
+
+
+Main section container
+.about-section {
+  background-color: #f8f9fa; 
+  padding: 80px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+.about-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 60px; 
+}
+
+/* --- Left Side: Image --- */
+.about-image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.circle-image {
+  position: absolute;
+  width: 130%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.circle-image.active {
+  opacity: 1;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 41, 83, 0.1);
+  border-radius: 50%;
+}
+
+.traffic-badge {
+  position: absolute;
+  bottom: -5px;
+  left: 82%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 190px;
+  background-color: #368f3c;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 5px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.traffic-badge .percentage {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.traffic-badge .description {
+  font-size: 14px;
+  font-weight: 500;
+  max-width: 100px;
+  line-height: 1.3;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+
+  .traffic-badge {
+    width: 140px;
+    height: 140px;
+    bottom: -40px;
+  }
+
+  .traffic-badge .percentage {
+    font-size: 36px;
+  }
+}
+
+
+
+/* ------------------- image responsive ---------------------  */
+
+
+.responsive-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mobile par desktop image hide & mobile image show */
+@media (max-width: 768px) {
+  .desktop-image {
+    display: none;
+  }
+}
+
+/* Desktop par mobile image hide */
+@media (min-width: 769px) {
+  .mobile-image {
+    display: none;
+  }
+}
+
+
+
+
+   /* REVENUE PROMISE SECTION STYLES (UPDATED) */
+
+.revenue-section {
+  background-color: #ffffff;
+  padding: 100px 20px;
+  font-family: Arial, sans-serif;
+}
+.revenue-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.revenue-content {
+  flex-basis: 45%; /* Thoda space badhaya */
+}
+.promise-tag {
+  background-color: #0052cc;
+  color: white;
+  padding: 5px 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* --- H1 TAG KI STYLING YAHAN HAI --- */
+.revenue-content h1 {
+  font-size: 20px; /* Font size set kiya */
+  font-weight: normal; /* Isko bold nahi rakha */
+  color: #555; /* Text color */
+  line-height: 1.6; /* Lines ke beech ka space */
+  margin-bottom: 25px; /* Neeche margin */
+}
+
+/* --- ANIMATING TEXT KI STYLING YAHAN HAI --- */
+
+/* Parent container for animating text */
+.main-heading.animating-text-container {
+  font-size: 50px; /* Font size */
+  font-weight: bold;
+  line-height: 1.2;
+  position: relative; /* Zaroori hai taaki span iske andar aayen */
+}
+
+/* Saare span elements jo animate honge */
+.highlight-text {
+  color: #f39c12; /* Orange color */
+  position: absolute; /* Ek ke upar ek stack karne ke liye */
+  top: 0;
+  left: 0;
+  opacity: 0; /* Shuru mein sab chhupe rahenge */
+  
+  /* Animation properties */
+  animation-name: textCycleAnimation;
+  animation-duration: 12s; /* Total cycle 12 second ka */
+  animation-iteration-count: infinite; /* Hamesha chalta rahega */
+}
+
+/* Keyframes for the animation */
+@keyframes textCycleAnimation {
+  0%   { opacity: 0; transform: translateY(20px); } /* Start: neeche se aayega */
+  4%   { opacity: 1; transform: translateY(0); }   /* 4% time mein fade in hoga */
+  21%  { opacity: 1; transform: translateY(0); }   /* 21% time tak ruka rahega */
+  25%  { opacity: 0; transform: translateY(-20px);} /* 25% time tak fade out hoga */
+  100% { opacity: 0; }
+}
+
+/* Har ek span ke liye alag-alag delay */
+.highlight-text:nth-child(1) { animation-delay: 0s; }
+.highlight-text:nth-child(2) { animation-delay: 3s; } /* 3 second baad start hoga */
+.highlight-text:nth-child(3) { animation-delay: 6s; } /* 6 second baad start hoga */
+.highlight-text:nth-child(4) { animation-delay: 9s; } /* 9 second baad start hoga */
+
+
+/* --- Right Side: Stats Grid (Pehle jaisa hi hai) --- */
+.stats-grid {
+  flex-basis: 50%; /* Thoda space adjust kiya */
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.stats-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* width: 50%; */
+}
+.stats-column.second-column {
+  margin-top: 50px;
+}
+.stat-card {
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.stat-card.green { background-color: #27ae60; }
+.stat-card.orange { background-color: #f39c12; }
+.stat-card.blue { background-color: #0052cc; }
+.stat-card.red { background-color: #c0392b; }
+.stat-value { font-size: 58px; font-weight: bold;}
+.stat-description { font-size: 18px; }
+
+.revenue-section .revenue-content {
+    position: relative;
 }

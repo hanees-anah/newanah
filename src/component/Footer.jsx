@@ -40,6 +40,7 @@ function Footer() {
                   <li><a href="/blog">Our Blog</a></li>
                   <li><a href="/contact-us">Contact Us</a></li>
                   <li><a href="/shopify-development">Shopify</a></li>
+                   <li><a href="/meta-ads">Meta Ads</a></li>
                 </ul>
               </div>
             </div>

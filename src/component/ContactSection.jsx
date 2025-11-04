@@ -12,7 +12,8 @@ const ContactSection = () => {
     phone: "",
     company: "",
     message: "",
-    city:""
+    city:"",
+    formType: "contact",  
   });
 
   const [showModal, setShowModal] = useState(false); // For success popup
@@ -48,7 +49,8 @@ const ContactSection = () => {
       phone: "",
       company: "",
       message: "",
-      city: ""
+      city: "",
+      formType: "contact",  
     });
 
   } catch (error) {
@@ -238,6 +240,26 @@ const ContactSection = () => {
                         ></textarea>
                       </div>
                     </div>
+                                                           <div className="col-lg-6">
+  {/* Hidden input field with value "Meta" */}
+  <input
+    type="hidden"
+    name="contact_value"
+    value="contact"
+  />
+  
+  {/* Other visible fields */}
+  {/* <input
+    style={styles.shopifyForm}
+    type="text"
+    name="last_name"
+    placeholder="Last Name"
+    value={formData.last_name}
+    onChange={handleChange}
+    className="form-control"
+    required
+  /> */}
+</div>
                     <div className="col-lg-12">
                       <div className="input-area text-center" >
                         <button

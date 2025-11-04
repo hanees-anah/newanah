@@ -3,6 +3,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
 import https from 'https';
+// import http from 'http';
 import fs from 'fs';
 
 // import http from 'http';
@@ -37,8 +38,9 @@ const transporter = nodemailer.createTransport({
 //   },
 
 app.post('/send-email', async (req, res) => {
+  //  console.log("896523",req.body)
   try {
-    const { first_name, last_name, email, phone, message, company, city, category } = req.body;
+    const { first_name, last_name, email, phone, message, company, city, category, Monthly_Marketing_Spend, Website_URL, Brand_name,formType} = req.body;
 
     const fields = [
       { label: 'Full Name', value: `${first_name || ''} ${last_name || ''}`.trim() },
@@ -47,7 +49,10 @@ app.post('/send-email', async (req, res) => {
       { label: 'Company', value: company },
       { label: 'Message', value: message },
       { label: 'City', value: city },
-      { label: 'Category', value: category }
+      { label: 'Category', value: category },
+      { label: 'Monthly Marketing Spend', value: Monthly_Marketing_Spend },
+      { label: 'Website Url', value: Website_URL },
+      { label: 'Brand Name', value: Brand_name },
     ];
 
     const formattedFields = fields
@@ -76,7 +81,10 @@ app.post('/send-email', async (req, res) => {
     const info = await transporter.sendMail(mailOptions);
 
 
-const leadName = `${first_name} ${last_name}`;
+         const leadName = `${first_name} ${last_name}`;
+
+    if (formType !== "meta" && formType !== "contact" ) {
+      const leadName = `${first_name} ${last_name}`;
 
       const htmlBody1 = `
   <div style="font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.6;">
@@ -137,8 +145,9 @@ const leadName = `${first_name} ${last_name}`;
     };
 
     const info1 = await transporter.sendMail(mailOptions1);
+    
 
-
+    }
 
 
     // console.log('Email sent:', info.response);

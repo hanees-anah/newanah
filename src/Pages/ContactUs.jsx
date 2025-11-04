@@ -38,7 +38,8 @@ function ContactUS() {
     phone: "",
     message: "",
     city: "",
-    companyname: ""
+    companyname: "",
+     formType: "contact",  
   });
 
   const handleChange = (e) => {
@@ -48,7 +49,7 @@ function ContactUS() {
 const handleSubmit = async (e) => {
   e.preventDefault();
   setLoading(true);
-  // console.log("formDataformData", formData);
+   console.log("formDataformData", formData);
 
   try {
     const response = await axios.post(
@@ -75,6 +76,7 @@ const handleSubmit = async (e) => {
       message: "",
       city: "",
       company: "",
+       formType: "contact",  
     });
 
     setTimeout(() => {
@@ -286,7 +288,26 @@ const handleSubmit = async (e) => {
                         ></textarea>
                       </div>
                     </div>
-
+                                         <div className="col-lg-6">
+  {/* Hidden input field with value "Meta" */}
+  <input
+    type="hidden"
+    name="contact_value"
+    value="contact"
+  />
+  
+  {/* Other visible fields */}
+  {/* <input
+    style={styles.shopifyForm}
+    type="text"
+    name="last_name"
+    placeholder="Last Name"
+    value={formData.last_name}
+    onChange={handleChange}
+    className="form-control"
+    required
+  /> */}
+</div>
                      <div className="col-lg-12">
         <div className="input-area">
           <button
