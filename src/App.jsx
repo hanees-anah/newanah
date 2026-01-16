@@ -78,7 +78,7 @@ function AppWrapper() {
     "/shopify-development",
     "/meta-ads",
     "/parenteye",
-    "/web-devv"
+    "/web-dev"
   ];
 
   const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname) || location.pathname.startsWith("/blog/");
@@ -111,7 +111,7 @@ function AppWrapper() {
         <Route path="/shopify-development" element={<Shopify />} />
         <Route path="/meta-ads" element={<Meta/>}/>
         <Route path="/parenteye" element={<ParentEye/>}/>
-         <Route path="/web-devv" element={<Web_dev/>}/>
+         <Route path="/web-dev" element={<Web_dev/>}/>
 
         {/* ✅ Redirects */}
         <Route path="/keyword-read-more" element={<Navigate to="/" replace />} />
