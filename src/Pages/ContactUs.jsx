@@ -13,13 +13,13 @@ import { Helmet } from "react-helmet";
 function ContactUS() {
   const [isLoading, setIsLoading] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
-    const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const handleLoad = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500);
+      }, 300);
     };
 
     if (document.readyState === "complete") {
@@ -39,69 +39,69 @@ function ContactUS() {
     message: "",
     city: "",
     companyname: "",
-     formType: "contact",  
+    formType: "contact",
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
-   console.log("formDataformData", formData);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    console.log("formDataformData", formData);
 
-  try {
-    const response = await axios.post(
-      "https://anahmarketing.com:5000/send-email",
+    try {
+      const response = await axios.post(
+        "https://anahmarketing.com:5000/send-email",
 
-          //  "http://localhost:5000/send-email",
+        //  "http://localhost:5000/send-email",
 
-      
-       JSON.stringify(formData), // Convert to JSON string
-      {
-        headers: {
-          "Content-Type": "application/json"
+
+        JSON.stringify(formData), // Convert to JSON string
+        {
+          headers: {
+            "Content-Type": "application/json"
+          }
         }
-      }
-    );
+      );
 
-    setShowPopup(true);
+      setShowPopup(true);
 
-    setFormData({
-      first_name: "",
-      last_name: "",
-      email: "",
-      phone: "",
-      message: "",
-      city: "",
-      company: "",
-       formType: "contact",  
-    });
+      setFormData({
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone: "",
+        message: "",
+        city: "",
+        company: "",
+        formType: "contact",
+      });
 
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 3000);
-  } catch (error) {
-    console.error("Failed to send message", error);
-  }
-  finally {
-  setLoading(false);  // <-- yaha pe lagana hai
-}
-};
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+    } catch (error) {
+      console.error("Failed to send message", error);
+    }
+    finally {
+      setLoading(false);  // <-- yaha pe lagana hai
+    }
+  };
 
 
   return (
     <>
 
-          <Helmet>
-                    <title>Contact Anah Marketing | Let's Grow Your Brand</title>
-                    <meta
-                        name="description"
-                        content="Have a project in mind? Get in touch with Anah Marketing for expert digital marketing, SEO, and web development solutions tailored to your goals."
-                    />
-                      <link rel="canonical" href="https://anahmarketing.com/contact-us"/>
-                </Helmet>
+      <Helmet>
+        <title>Contact Anah Marketing | Let's Grow Your Brand</title>
+        <meta
+          name="description"
+          content="Have a project in mind? Get in touch with Anah Marketing for expert digital marketing, SEO, and web development solutions tailored to your goals."
+        />
+        <link rel="canonical" href="https://anahmarketing.com/contact-us" />
+      </Helmet>
 
       {isLoading && (
         <div className="preloader">
@@ -288,16 +288,16 @@ const handleSubmit = async (e) => {
                         ></textarea>
                       </div>
                     </div>
-                                         <div className="col-lg-6">
-  {/* Hidden input field with value "Meta" */}
-  <input
-    type="hidden"
-    name="contact_value"
-    value="contact"
-  />
-  
-  {/* Other visible fields */}
-  {/* <input
+                    <div className="col-lg-6">
+                      {/* Hidden input field with value "Meta" */}
+                      <input
+                        type="hidden"
+                        name="contact_value"
+                        value="contact"
+                      />
+
+                      {/* Other visible fields */}
+                      {/* <input
     style={styles.shopifyForm}
     type="text"
     name="last_name"
@@ -307,22 +307,22 @@ const handleSubmit = async (e) => {
     className="form-control"
     required
   /> */}
-</div>
-                     <div className="col-lg-12">
-        <div className="input-area">
-          <button
-            type="submit"
-            className="lnk header-btn1"
-            disabled={loading} // submit hote time disable
-            
-          >
-            {loading ? "Submitting..." : "Submit"}{" "}
-            <span>
-              <i className="fa-solid fa-arrow-right"></i>
-            </span>
-          </button>
-        </div>
-      </div>
+                    </div>
+                    <div className="col-lg-12">
+                      <div className="input-area">
+                        <button
+                          type="submit"
+                          className="lnk header-btn1"
+                          disabled={loading} // submit hote time disable
+
+                        >
+                          {loading ? "Submitting..." : "Submit"}{" "}
+                          <span>
+                            <i className="fa-solid fa-arrow-right"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>

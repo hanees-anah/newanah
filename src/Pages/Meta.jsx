@@ -26,6 +26,7 @@ import holythread_logo from "../assets/images/holythread_logo.png";
 import rioz_logo from "../assets/images/rioz-logo.png"
 import ruchiraLogo from '../assets/images/ruchira.png';
 import chasehaulLogo from '../assets/images/chasehaul_logo.png';
+import preloader from "../assets/images/preloader-img.png";
 
 
 
@@ -113,6 +114,27 @@ const Meta = () => {
   });
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
+        const [isLoading, setIsLoading] = useState(true);
+  
+      
+        useEffect(() => {
+          // Simulate load or wait for all images/resources to load
+          const handleLoad = () => {
+            setTimeout(() => {
+              setIsLoading(false);
+            }, 300); // Optional delay for smooth transition
+          };
+      
+          if (document.readyState === "complete") {
+            handleLoad();
+          } else {
+            window.addEventListener("load", handleLoad);
+          }
+      
+          return () => window.removeEventListener("load", handleLoad);
+        }, []);
+
+  
   const Monthly_Marketing_Spends = [
     { value: "", label: "Monthly Marketing Spend" },
     { value: "1-3 Lakh", label: "₹1 Lakh - ₹3 Lakh" },
@@ -367,21 +389,22 @@ const handleSubmit = async (e) => {
 
   return (
     <>
+
+       {isLoading && (
+            <div className="preloader">
+              <div className="loading-container">
+                <div className="loading"></div>
+                <div id="loading-icon"><img src={preloader} alt="" /></div>
+              </div>
+            </div>
+          )}
+
       <div className="background-shape"></div>
 
 
       <main className="hero hero-top" style={{ backgroundImage: `url(${bg1})` }}>
         <section className="shopify-top-banner-sec" style={{ padding: 0 }}>
           <div className="container">
-            {/* <div className="hero-content">
-            <h1>Where Strategy Meets Performance — Scale Smarter with Meta Ads</h1>
-            <div className="btn-area">
-              <a href="/contact-us" className="header-btn1">
-                Book Your Free Ad Audit <span><i className="fa-solid fa-arrow-right"></i></span>
-              </a>
-            </div>
-          </div> */}
-
             <div className="col-md-5">
               <div className=" contant-part">
                 <div>

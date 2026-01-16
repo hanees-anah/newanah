@@ -177,7 +177,7 @@ const Shopify = () => {
     const handleLoad = () => {
       setTimeout(() => {
         setIsLoading(false);
-      }, 500); // Optional delay for smooth transition
+      }, 300); // Optional delay for smooth transition
     };
 
     if (document.readyState === "complete") {
