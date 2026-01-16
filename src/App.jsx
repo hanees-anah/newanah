@@ -26,7 +26,9 @@ import Shopify from "./Pages/Shopify";
 import { Navigate } from "react-router-dom";
 import Meta from "./Pages/Meta";
 import ParentEye from "./Pages/ParentEye";
-import Web_development from "./Pages/web_development";
+import Web_dev from "./Pages/Web_dev";
+
+
 
 
 // Moved logic to a wrapper inside Router
@@ -109,7 +111,7 @@ function AppWrapper() {
         <Route path="/shopify-development" element={<Shopify />} />
         <Route path="/meta-ads" element={<Meta/>}/>
         <Route path="/parenteye" element={<ParentEye/>}/>
-         <Route path="/web-dev" element={<Web_development/>}/>
+         <Route path="/web-dev" element={<Web_dev/>}/>
 
         {/* ✅ Redirects */}
         <Route path="/keyword-read-more" element={<Navigate to="/" replace />} />

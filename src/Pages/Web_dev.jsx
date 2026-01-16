@@ -145,7 +145,7 @@ function CustomDropdown({ formData, setFormData, required }) {
 }
 
 
-const Web_development = () => {
+const Web_dev = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [loading, setLoading] = useState(false);
 
@@ -1033,4 +1033,4 @@ const Web_development = () => {
     );
 };
 
-export default Web_development;
+export default Web_dev;
