@@ -92,7 +92,7 @@ function Footer() {
             <div className="col-lg-12">
               <div className="copyright-area">
                 <div className="pera">
-                  <p>ⓒ Copyright 2024 Anah Marketing & Innovations. All rights reserved.</p>
+                  <p>ⓒ Copyright 2026 Anah Marketing & Innovations. All rights reserved.</p>
                 </div>
                 <ul>
                   <li><a href="/terms-condition">Terms & Conditions</a></li>
