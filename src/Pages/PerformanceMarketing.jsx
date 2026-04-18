@@ -435,7 +435,7 @@ const PerformanceMarketingNew5 = () => {
                         <Check size={28} strokeWidth={3} className="text-white" />
                       </div>
                       <h4 className="text-xl font-black text-slate-900 mb-2">Request Received!</h4>
-                      <p className="text-slate-500 text-sm">Our team will reach you within 12 hours.</p>
+                      <p className="text-slate-500 text-sm">Our team will connect with you via WhatsApp to schedule first kick off call with you.</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -670,10 +670,10 @@ const PerformanceMarketingNew5 = () => {
 
               <div>
                 <div className="text-3xl font-black text-slate-900 mb-1">
-                  2.84<span className="text-[#1e5f74]">×</span>
+                  3.5<span className="text-[#1e5f74]">×</span>
                 </div>
                 <p className="text-slate-500 text-xs">
-                  Average ROAS across all managed accounts in Q1 2025
+                  Avg ROAS maintain is above 3.5
                 </p>
               </div>
             </motion.div>
@@ -693,7 +693,7 @@ const PerformanceMarketingNew5 = () => {
 
               <div>
                 <div className="text-3xl font-black text-slate-900 mb-1">
-                  –42<span className="text-[#1e5f74]">%</span>
+                  –30<span className="text-[#1e5f74]">%</span>
                 </div>
                 <p className="text-slate-500 text-xs">
                   CPA reduction through creative & bid optimisation
