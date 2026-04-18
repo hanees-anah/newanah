@@ -27,6 +27,7 @@ import { Navigate } from "react-router-dom";
 import Meta from "./Pages/Meta";
 import ParentEye from "./Pages/ParentEye";
 import Web_dev from "./Pages/Web_dev";
+import PerformanceMarketing from "./Pages/PerformanceMarketing";
 
 
 
@@ -78,7 +79,8 @@ function AppWrapper() {
     "/shopify-development",
     "/meta-ads",
     "/parenteye",
-    "/web-development"
+    "/web-development",
+    "/performance-marketing"
   ];
 
   const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname) || location.pathname.startsWith("/blog/");
@@ -112,6 +114,8 @@ function AppWrapper() {
         <Route path="/meta-ads" element={<Meta/>}/>
         <Route path="/parenteye" element={<ParentEye/>}/>
          <Route path="/web-development" element={<Web_dev/>}/>
+         <Route path="/performance-marketing" element={<PerformanceMarketing />} />
+         
 
         {/* ✅ Redirects */}
         <Route path="/keyword-read-more" element={<Navigate to="/" replace />} />
