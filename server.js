@@ -2,8 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
-import https from 'https';
-// import http from 'http';
+ import https from 'https';
+//import http from 'http';
 import fs from 'fs';
 
 // import http from 'http';
@@ -38,9 +38,11 @@ const transporter = nodemailer.createTransport({
 //   },
 
 app.post('/send-email', async (req, res) => {
-  //  console.log("896523",req.body)
+    //console.log("896523",req.body)
   try {
-    const { first_name, last_name, email, phone, message, company, city, category, Monthly_Marketing_Spend, Website_URL, Brand_name,formType} = req.body;
+    const { first_name, last_name, email, phone, message, company, city, category, Monthly_Marketing_Spend, Website_URL, Brand_name,formType,spend} = req.body;
+    //console.log("Received form data:", req.body);
+    const finalSpend = Monthly_Marketing_Spend || spend;
 
     const fields = [
       { label: 'Full Name', value: `${first_name || ''} ${last_name || ''}`.trim() },
@@ -50,7 +52,7 @@ app.post('/send-email', async (req, res) => {
       { label: 'Message', value: message },
       { label: 'City', value: city },
       { label: 'Category', value: category },
-      { label: 'Monthly Marketing Spend', value: Monthly_Marketing_Spend },
+   { label: 'Monthly Marketing Spend', value: finalSpend },
       { label: 'Website Url', value: Website_URL },
       { label: 'Brand Name', value: Brand_name },
     ];
@@ -60,12 +62,22 @@ app.post('/send-email', async (req, res) => {
       .map(field => `<tr><td><strong>${field.label}:</strong></td><td>${field.value}</td></tr>`)
       .join('');
 
-    const htmlBody = `
-      <h2>New Contact Form Submission</h2>
-      <table style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">
-        ${formattedFields}
-      </table>
-    `;
+      const subject = spend && spend.trim()
+  ? "Performance Marketing Lead"
+  : "New Contact Form Submission";
+
+const htmlBody = `
+  <h2>${subject}</h2>
+  <table style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">
+    ${formattedFields}
+  </table>
+`;
+    // const htmlBody = `
+    //   <h2>New Contact Form Submission</h2>
+    //   <table style="border-collapse: collapse; font-family: Arial, sans-serif; font-size: 14px;">
+    //     ${formattedFields}
+    //   </table>
+    // `;
 
     const mailOptions = {
       from: "marketing@anahmarketing.com",

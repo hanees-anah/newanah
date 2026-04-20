@@ -129,101 +129,169 @@ const fadeUp = {
 const stagger = { show: { transition: { staggerChildren: 0.1 } } };
 
 // ── Grid SVG background ───────────────────────────────────────────────
-const GridBg = () => (
-  <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <pattern id="smallGrid" width="24" height="24" patternUnits="userSpaceOnUse">
-        <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#6366f1" strokeWidth="0.4" />
-      </pattern>
-      <pattern id="grid" width="96" height="96" patternUnits="userSpaceOnUse">
-        <rect width="96" height="96" fill="url(#smallGrid)" />
-        <path d="M 96 0 L 0 0 0 96" fill="none" stroke="#6366f1" strokeWidth="0.9" />
-      </pattern>
-    </defs>
-    <rect width="100%" height="100%" fill="url(#grid)" opacity="0.35" />
-  </svg>
-);
+// const GridBg = () => (
+//   <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+//     <defs>
+//       <pattern id="smallGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+//         <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#6366f1" strokeWidth="0.4" />
+//       </pattern>
+//       <pattern id="grid" width="96" height="96" patternUnits="userSpaceOnUse">
+//         <rect width="96" height="96" fill="url(#smallGrid)" />
+//         <path d="M 96 0 L 0 0 0 96" fill="none" stroke="#6366f1" strokeWidth="0.9" />
+//       </pattern>
+//     </defs>
+//     <rect width="100%" height="100%" fill="url(#grid)" opacity="0.35" />
+//   </svg>
+// );
 
 const PerformanceMarketingNew5 = () => {
-  const initialState = {
-    first_name: '',
-    email: '',
-    phone: '',
-    website: '',
-    spend: '',
-    message: '',
-    companyname: 'Anah Perf Marketing – Grid V5',
-    formType: 'performance_marketing',
+const selectRef = useRef(null);
+  const [spend, setSpend] = useState("");
+  const spendRef = useRef(""); // ← add this
+  const [formData, setFormData] = useState({
+  first_name: "",
+  last_name: "",
+  email: "",
+  phone: "",
+  website: "",
+  // spend:  "",
+  message: "",
+  city: "",
+  companyname: "Anah Perf Marketing – Grid V5",
+  formType: "performance_marketing",
+});
+
+const [loading, setLoading] = useState(false);
+const [status, setStatus] = useState(null);
+const [showPopup, setShowPopup] = useState(false);
+const [isLoading, setIsLoading] = useState(true);
+
+// ✅ Loader logic (same as first)
+useEffect(() => {
+  const handleLoad = () => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 300);
   };
 
-  const [formData, setFormData] = useState(initialState);
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState(null);
+  if (document.readyState === "complete") {
+    handleLoad();
+  } else {
+    window.addEventListener("load", handleLoad);
+  }
 
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    console.log('----------->', value);
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  return () => window.removeEventListener("load", handleLoad);
+}, []);
 
 
-  const onChange1 = (e) => {
 
-    const { name, value } = e.target;
-    console.log('----------->', value);
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+const onChange = (e) => {
+  const { name, value } = e.target;
 
-  // Full name handler (controlled properly)
-  const onName = (e) => {
-    const value = e.target.value;
+  console.log("CHANGE FIRED:", name, value);
 
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
+const onSubmit = async (e) => {
+  e.preventDefault();
 
-    setFormData((prev) => ({
-      ...prev,
-      first_name: value || '',
-    }));
+  const spendValue = selectRef.current?.value;
+  console.log("SPEND:", spendValue);
 
-    console.log('----------->', formData);
-  };
+  if (!spendValue) {
+    alert("Please select Monthly Spend");
+    return;
+  }
 
-  const fullName = `${formData.first_name} ${formData.last_name}`.trim();
+  setLoading(true);
+  try {
+    const payload = {
+      ...formData,
+      spend: spendValue,
+      company: formData.website || formData.companyname || "N/A",
+    };
+    console.log("Final Payload:", payload);
+    // ... rest of your code stays same
 
-  const onSubmit = async (e) => {
+   const response = await axios.post(
+  "http://localhost:5000/send-email",
+  payload,
+  {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+);
 
-    e.preventDefault();
-    setLoading(true);
-    setStatus(null);
+    console.log("Response:", response.data);
 
-    try {
-      await axios.post("https://anahmarketing.com:5000/send-email", {
-        ...formData,
-        // city: "N/A",
-        company: formData.website || formData.companyname || "N/A",
-      });
+    // ✅ Show success popup
+    setShowPopup(true);
 
-      setStatus("success");
-      setFormData(initialState);
+    // ✅ Reset form (keep companyname default)
+    setFormData({
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      website: "",
+      // spend: "",
+      message: "",
+      city: "",
+      companyname: "Anah Perf Marketing – Grid V5",
+      formType: "performance_marketing",
+    });
+setSpend("");
+spendRef.current = "";
+// after setFormData reset
+if (selectRef.current) selectRef.current.value = "";
+    // ✅ Hide popup after 3 sec
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
 
-      setTimeout(() => setStatus(null), 6000);
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
-      setTimeout(() => setStatus(null), 5000);
-    } finally {
-      setLoading(false);
-    }
-  };
+  } catch (error) {
+    console.error("Failed to send message", error);
+
+    // ✅ Show error to user
+    alert(
+      error?.response?.data?.message ||
+      "Something went wrong. Please try again."
+    );
+  } finally {
+    setLoading(false);
+  }
+};
 
   const inputCls = "w-full bg-white/70 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 placeholder-slate-400 text-sm outline-none focus:border-[#1e5f74] focus:ring-4 focus:ring-[#1e5f74]/8 transition-all";
   const rv = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } } };
+  
+// useEffect(() => {
+//   !(function (f, b, e, v, n, t, s) {
+//     if (f.fbq) return;
+//     n = f.fbq = function () {
+//       n.callMethod
+//         ? n.callMethod.apply(n, arguments)
+//         : n.queue.push(arguments);
+//     };
+//     if (!f._fbq) f._fbq = n;
+//     n.push = n;
+//     n.loaded = true;
+//     n.version = "2.0";
+//     n.queue = [];
+//     t = b.createElement(e);
+//     t.async = true;
+//     t.src = v;
+//     s = b.getElementsByTagName(e)[0];
+//     s.parentNode.insertBefore(t, s);
+//   })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
 
+//   window.fbq("init", "30940453368887150");
+//   window.fbq("track", "PageView");
+// }, []);
   return (
     <div className="bg-white text-slate-900 font-sans overflow-hidden">
       <Helmet>
@@ -235,7 +303,9 @@ const PerformanceMarketingNew5 = () => {
       <section className="relative min-h-screen flex items-center overflow-hidden"
         style={{ background: 'linear-gradient(135deg, #f5f0ff 0%, #fce4f3 40%, #e0f2fe 100%)' }}>
         {/* Grid background */}
-        <GridBg />
+   <div className="pointer-events-none">
+  {/* <GridBg /> */}
+</div>
         {/* Soft radial vignette so centre stays light */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(255,255,255,0.85)_0%,transparent_100%)]" />
 
@@ -248,8 +318,9 @@ const PerformanceMarketingNew5 = () => {
                 <div className="w-8 h-0.5 bg-[#FF5A1F]" />
                 <span className="text-[#FF5A1F] text-[10px] font-black uppercase tracking-[0.35em]">India's #1 D2C Performance Agency</span>
               </motion.div> */}
-
-
+{/* <h1 className="text-red-500 text-5xl font-bold">
+  Tailwind Working
+</h1> */}
               <motion.h1 variants={rv} className="text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] tracking-tighter mb-8">
                 We Make<br />
                 Your Brand<br />
@@ -336,96 +407,96 @@ const PerformanceMarketingNew5 = () => {
                   <h3 className="text-2xl font-black text-black text-center mb-2">Let's Build Your Strategy</h3>
                 </div>
 
-                <form onSubmit={onSubmit} className="space-y-4">
+              <form onSubmit={onSubmit} className="space-y-4">
 
-                  {/* FULL NAME (CONTROLLED NOW) */}
-                  <input
-                    type="text"
-                    value={formData.first_name}
-                    onChange={onName}
-                    placeholder="Full Name"
-                    required
-                    className={inputCls}
-                  />
+  {/* FULL NAME */}
+  <input
+    type="text"
+    name="first_name"   
+    value={formData.first_name}
+    onChange={onChange} 
+    placeholder="Full Name"
+    required
+    className={inputCls}
+  />
 
-                  <div className="grid grid-cols-2 gap-3">
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={onChange}
-                      placeholder="Work Email"
-                      required
-                      className={inputCls}
-                    />
+  <div className="grid grid-cols-2 gap-3">
+    <input
+      type="email"
+      name="email"
+      value={formData.email}
+      onChange={onChange}
+      placeholder="Work Email"
+      required
+      className={inputCls}
+    />
 
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={onChange}
-                      placeholder="Phone +91"
-                      required
-                      className={inputCls}
-                    />
-                  </div>
+ <input
+  type="tel"
+  name="phone"
+  value={formData.phone}
+  onChange={onChange}
+  placeholder="Phone +91"
+  required
+  inputMode="numeric"
+  pattern="[0-9]{10}"
+  maxLength={10}
+  className={inputCls}
+/>
+  </div>
 
-                  <div className="grid grid-cols-2 gap-3">
-                    <input
-                      type="text"
-                      name="website"
-                      value={formData.website}
-                      onChange={onChange}
-                      placeholder="Website / Brand Name*"
-                      required
-                      className={inputCls}
-                    />
+  <div className="grid grid-cols-2 gap-3">
+    <input
+      type="text"
+      name="website" // ✅ keep SAME (no change)
+      value={formData.website}
+      onChange={onChange}
+      placeholder="Website / Brand Name*"
+      required
+      className={inputCls}
+    />
+<div className="relative">
+<select
+  ref={selectRef}
+  name="spend"
+  defaultValue=""
+  className="w-full bg-white/70 border border-slate-200 rounded-xl py-3 px-4 text-slate-700 text-sm outline-none focus:border-[#1e5f74] transition-all appearance-none pr-10 cursor-pointer"
+>
+  <option value="" >Monthly Spend*</option>
+  <option value="under1L">Under ₹1L</option>
+  <option value="1to3L">₹1L – ₹3L</option>
+  <option value="3to8L">₹3L – ₹8L</option>
+  <option value="8to15L">₹8L – ₹15L</option>
+  <option value="15to25L">₹15L – ₹25L</option>
+  <option value="25to40L">₹25L – ₹40L</option>
+  <option value="40plus">₹40L+</option>
+</select>
+  <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
+    <ChevronDown size={16} className="text-slate-400" />
+  </div>
+</div>
+  </div>
 
-                    <div className="relative">
-                      <select
-                        name="spend"
-                        value={formData.spend}
-                        onChange={onChange1}
-                        required
-                        className="w-full bg-white/70 border border-slate-200 rounded-xl py-3 px-4 text-slate-700 text-sm outline-none focus:border-[#1e5f74] focus:ring-4 focus:ring-[#1e5f74]/8 transition-all appearance-none"
-                      >
-                        <option value="">Monthly Spend*</option>
-                        <option value="under1L">Under ₹1L</option>
-                        <option value="1to3L">₹1L – ₹3L</option>
-                        <option value="3to8L">₹3L – ₹8L</option>
-                        <option value="8to15L">₹8L – ₹15L</option>
-                        <option value="15to25L">₹15L – ₹25L</option>
-                        <option value="25to40L">₹25L – ₹40L</option>
-                        <option value="40plus">₹40L+</option>
-                      </select>
+  <textarea
+    name="message"
+    value={formData.message}
+    onChange={onChange}
+    placeholder="Tell us about your goals…"
+    rows={3}
+  className={`${inputCls} resize-none`}
+  />
 
-                      {/* <ChevronDown
-                        size={14}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"
-                      /> */}
-                    </div>
-                  </div>
-
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={onChange}
-                    placeholder="Tell us about your goals…"
-                    rows={3}
-                    className={`${inputCls} resize-none`}
-                  />
-
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full py-4 rounded-full bg-[#1e5f74] text-white font-black text-sm uppercase tracking-widest shadow-[0_12px_30px_rgba(30,95,116,0.3)] hover:shadow-[0_18px_40px_rgba(30,95,116,0.45)] hover:-translate-y-0.5 active:scale-[.98] transition-all disabled:opacity-60 flex items-center justify-center gap-3"
-                  >
-                    {loading ? 'Sending…' : 'Get Free Strategy Call'}
-                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
-                      <ArrowRight size={13} />
-                    </div>
-                  </button>
-                </form>
+  <button
+    type="submit"
+    disabled={loading}
+    className="w-full py-4 rounded-full bg-[#1e5f74] text-white font-black text-sm uppercase tracking-widest shadow-[0_12px_30px_rgba(30,95,116,0.3)] hover:shadow-[0_18px_40px_rgba(30,95,116,0.45)] hover:-translate-y-0.5 active:scale-[.98] transition-all disabled:opacity-60 flex items-center justify-center gap-3"
+  >
+    {loading ? 'Submitting...' : 'Get Free Strategy Call'}
+    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+      <ArrowRight size={13} />
+    </div>
+  </button>
+</form>
 
                 <AnimatePresence>
                   {status === 'success' && (
@@ -591,6 +662,7 @@ const PerformanceMarketingNew5 = () => {
                     key={i}
                     className="flex-1 rounded-t-lg bg-[#1e5f74]/20 hover:bg-[#1e5f74] transition-all"
                     style={{ height: `${h}%` }}
+
                   />
                 ))}
               </div>
