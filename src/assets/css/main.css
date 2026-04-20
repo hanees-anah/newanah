@@ -31757,6 +31757,7 @@ section.shopify-top-banner-sec .contant-part img
  {
     width: 100%;
     max-width: 330px;
+    margin: auto;
 }
 section.shopify-top-banner-sec .contant-part h1 {
     margin: 30px 0px;
