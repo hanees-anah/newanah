@@ -142,7 +142,7 @@ function Portfolio() {
             </ul>
             <div className="tab-content accordion" id="myTabContent">
               <div className="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                <div id="collapseOne" className="accordion-collapse collapse show d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
+                <div id="collapseOne" className="accordion-collapse show d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
                   <div className="accordion-body">
                     <div className="row text-align-center justify-content-center">
                       <div className="col-md-3 col-sm-4">
@@ -300,7 +300,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="tab-pane fade accordion-item" id="profile-marketing-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                <div id="collapseTwo" className="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
+                <div id="collapseTwo" className="accordion-collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
                   <div className="accordion-body">
                     <div className="row text-align-center justify-content-center">
                        <div className="col-md-3 col-sm-4">
@@ -437,7 +437,7 @@ function Portfolio() {
                 </div>
               </div>
               <div className="tab-pane fade accordion-item" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                <div id="collapseTwo" className="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
+                <div id="collapseTwo" className="accordion-collapse  d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
                   <div className="accordion-body">
                     <div className="row text-align-center justify-content-center">
                        <div className="col-md-3 col-sm-4">
@@ -584,7 +584,7 @@ function Portfolio() {
               </div>
               <div class="tab-pane fade accordion-item" id="contact-tab-pane" role="tabpanel"
                 aria-labelledby="contact-tab" tabindex="0">
-                <div id="collapseThree" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree"
+                <div id="collapseThree" class="accordion-collapse  d-lg-block" aria-labelledby="headingThree"
                   data-bs-parent="#myTabContent">
                   <div class="accordion-body">
                     <div class="row text-align-center">
