@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import {
   ArrowRight, Target, Search, TrendingUp, Globe, BarChart2,
   Layers, Rocket, Clock, Briefcase, Check, MessageCircle, Zap,
-  ChevronDown, Activity, PieChart, MousePointer2, Star,
+  ChevronDown, Activity, PieChart, MousePointer2, Star,Phone,
   CheckCircle2, BarChart3, Users
 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
@@ -15,7 +16,8 @@ import rioz_logo from "../assets/images/rioz-logo.png"
 import teakwoodLogo from '../assets/images/teakwood-logo-img.png';
 import ruchira from "../assets/images/ruchira.png";
 import baidLogo from '../assets/images/baid_logo.png';
-
+import preloader_img from "../assets/images/logo-img.png";
+// import { motion } from 'framer-motion';
 // import {  Layers } from 'lucide-react';
 
 const fadeIn = {
@@ -183,7 +185,7 @@ useEffect(() => {
   return () => window.removeEventListener("load", handleLoad);
 }, []);
 
-
+const navigate = useNavigate();
 
 const onChange = (e) => {
   const { name, value } = e.target;
@@ -216,15 +218,15 @@ const onSubmit = async (e) => {
     console.log("Final Payload:", payload);
     // ... rest of your code stays same
 
-   const response = await axios.post(
-  "http://localhost:5000/send-email",
-  payload,
-  {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }
-);
+    const response = await axios.post(
+      "https://anahmarketing.com:5000/send-email",
+      payload, // ✅ no need JSON.stringify
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     console.log("Response:", response.data);
 
@@ -251,6 +253,7 @@ if (selectRef.current) selectRef.current.value = "";
     // ✅ Hide popup after 3 sec
     setTimeout(() => {
       setShowPopup(false);
+      navigate("/thank-you");
     }, 3000);
 
   } catch (error) {
@@ -268,39 +271,18 @@ if (selectRef.current) selectRef.current.value = "";
 
   const inputCls = "w-full bg-white/70 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 placeholder-slate-400 text-sm outline-none focus:border-[#1e5f74] focus:ring-4 focus:ring-[#1e5f74]/8 transition-all";
   const rv = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } } };
-  
-// useEffect(() => {
-//   !(function (f, b, e, v, n, t, s) {
-//     if (f.fbq) return;
-//     n = f.fbq = function () {
-//       n.callMethod
-//         ? n.callMethod.apply(n, arguments)
-//         : n.queue.push(arguments);
-//     };
-//     if (!f._fbq) f._fbq = n;
-//     n.push = n;
-//     n.loaded = true;
-//     n.version = "2.0";
-//     n.queue = [];
-//     t = b.createElement(e);
-//     t.async = true;
-//     t.src = v;
-//     s = b.getElementsByTagName(e)[0];
-//     s.parentNode.insertBefore(t, s);
-//   })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
 
-//   window.fbq("init", "30940453368887150");
-//   window.fbq("track", "PageView");
-// }, []);
   return (
-    <div className="bg-white text-slate-900 font-sans overflow-hidden">
+
+    <div className="bg-white text-slate-900 font-sans overflow-hidden performance-marketing-page">
+          <img className="absolute top-[15px] left-[30px] z-10" src={preloader_img} style={{ maxWidth: "180px" }} alt="Logo" />
       <Helmet>
         <title>Performance Marketing Agency | Anah Marketing</title>
         <meta name="description" content="India's #1 D2C performance marketing agency — Meta Ads, Google Ads & SEO for sustainable ROI growth." />
       </Helmet>
 
       {/* ══ HERO ══════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden"
+      <section className="relative min-h-screen flex items-center overflow-hidden top-new-section"
         style={{ background: 'linear-gradient(135deg, #f5f0ff 0%, #fce4f3 40%, #e0f2fe 100%)' }}>
         {/* Grid background */}
    <div className="pointer-events-none">
@@ -309,19 +291,21 @@ if (selectRef.current) selectRef.current.value = "";
         {/* Soft radial vignette so centre stays light */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(255,255,255,0.85)_0%,transparent_100%)]" />
 
-        <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 py-32 lg:py-40">
+
+
+        <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 pt-32 pb-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left */}
             <motion.div initial="hidden" animate="show" variants={stagger}>
               {/* Badge row */}
-              {/* <motion.div variants={rv} className="flex items-center gap-3 mb-10">
+              { <motion.div variants={rv} className="flex items-center gap-3 mb-10">
                 <div className="w-8 h-0.5 bg-[#FF5A1F]" />
-                <span className="text-[#FF5A1F] text-[10px] font-black uppercase tracking-[0.35em]">India's #1 D2C Performance Agency</span>
-              </motion.div> */}
+                <span className="text-[#FF5A1F] text-[14px] font-black uppercase tracking-[0.25em]">India's #1 D2C Performance Agency</span>
+              </motion.div> }
 {/* <h1 className="text-red-500 text-5xl font-bold">
   Tailwind Working
 </h1> */}
-              <motion.h1 variants={rv} className="text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] tracking-tighter mb-8">
+              <motion.h1 variants={rv} className="text-6xl lg:text-7xl xl:text-7xl font-black leading-[0.95] tracking-tighter mb-8">
                 We Make<br />
                 Your Brand<br />
                 <span className="relative inline-block">
@@ -378,7 +362,7 @@ if (selectRef.current) selectRef.current.value = "";
                     </div>
 
                     {/* Text */}
-                    <span className="text-[11.5px] sm:text-xs font-semibold text-slate-700 leading-snug">
+                    <span className="text-[14px] font-semibold text-slate-700 leading-snug">
                       {text}
                     </span>
 
@@ -401,10 +385,10 @@ if (selectRef.current) selectRef.current.value = "";
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 ">
-                    {/* <div className="w-5 h-0.5 bg-[#FF5A1F]" /> */}
-                    {/* <span className="text-[#FF5A1F] text-[10px] font-black uppercase tracking-[0.3em]">Free Growth Audit</span> */}
+                    {/* {<div className="w-5 h-0.5 bg-[#FF5A1F]" /> }
+                    { <span className="text-[#FF5A1F] text-[10px] font-black uppercase tracking-[0.3em]">Free Growth Audit</span> } */}
                   </div>
-                  <h3 className="text-2xl font-black text-black text-center mb-2">Let's Build Your Strategy</h3>
+                  <h3 className="text-4xl font-black text-black text-center mb-2">Let's Build Your Strategy</h3>
                 </div>
 
               <form onSubmit={onSubmit} className="space-y-4">
@@ -483,7 +467,7 @@ if (selectRef.current) selectRef.current.value = "";
     onChange={onChange}
     placeholder="Tell us about your goals…"
     rows={3}
-  className={`${inputCls} resize-none`}
+ className={`${inputCls} resize-none`}
   />
 
   <button
@@ -568,16 +552,16 @@ if (selectRef.current) selectRef.current.value = "";
 
       {/* ══ STATS ══════════════════════════════════════════════════════════ */}
       {/* SERVICES SECTION (WHITE) */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white our-capability">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-violet-700 font-black text-xs uppercase tracking-[0.3em] mb-4 block text-[#ff5a1f]">
-              Our Capabilities
-            </span>
+            <div class="flex items-center gap-3 justify-center mb-6"><div class="w-8 h-0.5 bg-[#ff5a1f]"></div>
+            <span class="text-[#ff5a1f] text-[14px] font-black uppercase tracking-[0.2em]"> Our Capabilities</span>
+            <div class="w-8 h-0.5 bg-[#ff5a1f]"></div></div>
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6">
               Expert Services
             </h2>
-            <p className="text-[#3d4c5e] font-medium max-w-2xl mx-auto">
+            <p className="text-slate-600 text-lg leading-relaxed mb-10 max-w-lg mx-auto">
               We provide full-funnel performance marketing solutions built for modern e-commerce scalability and predictable revenue.
             </p>
           </div>
@@ -587,7 +571,7 @@ if (selectRef.current) selectRef.current.value = "";
               <motion.div
                 key={i}
                 {...fadeIn}
-                className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#1e5f74]/20 transition-all group flex flex-col"
+                className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-[#1e5f74]/20 transition-all group flex flex-col"
               >
                 <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-violet-700 mb-8 group-hover:bg-[#1e5f74] group-hover:text-white transition-all shadow-inner">
                   {React.cloneElement(service.icon, { size: 24 })}
@@ -597,7 +581,7 @@ if (selectRef.current) selectRef.current.value = "";
                   {service.title}
                 </h4>
 
-                <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-slate-600 text-[16px] leading-relaxed mb-0 max-w-lg">
                   {service.desc}
                 </p>
 
@@ -611,7 +595,7 @@ if (selectRef.current) selectRef.current.value = "";
       </section>
 
       {/* ══ SERVICES ════════════════════════════════════════════════════════ */}
-      <section className="py-24 bg-[#f7f8fc]">
+      <section className="py-24 bg-[#f7f8fc] performance-lab">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Header */}
@@ -622,16 +606,18 @@ if (selectRef.current) selectRef.current.value = "";
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-[#ff5a1f] font-black  uppercase tracking-[0.4em] mb-3 text-sm">
-              Performance Lab
-            </p>
+
+            <div class="flex items-center gap-3 justify-center mb-6"><div class="w-8 h-0.5 bg-[#ff5a1f]"></div>
+            <span class="text-[#ff5a1f] text-[14px] font-black uppercase tracking-[0.2em]"> Performance Lab</span>
+            <div class="w-8 h-0.5 bg-[#ff5a1f]"></div></div>
+
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900">
               What Drives Your Growth
             </h2>
           </motion.div>
 
           {/* Grid */}
-          <div className="grid lg:grid-cols-12 lg:grid-rows-2 gap-5 auto-rows-[220px]">
+          <div className="grid lg:grid-cols-12 lg:grid-rows-2 gap-4 auto-rows-[220px]">
 
             {/* BIG LEFT CARD */}
             <motion.div
@@ -650,7 +636,7 @@ if (selectRef.current) selectRef.current.value = "";
                   ROI-First Campaign Architecture
                 </h3>
 
-                <p className="text-slate-500 text-sm leading-relaxed">
+                <p className="text-slate-600 text-[16px] leading-relaxed">
                   Every decision is anchored in net-profit attribution, not vanity metrics. We engineer campaigns to compound, not just convert.
                 </p>
               </div>
@@ -661,13 +647,12 @@ if (selectRef.current) selectRef.current.value = "";
                   <div
                     key={i}
                     className="flex-1 rounded-t-lg bg-[#1e5f74]/20 hover:bg-[#1e5f74] transition-all"
-                    style={{ height: `${h}%` }}
-
+               style={{ height: `${h}%` }}
                   />
                 ))}
               </div>
 
-              <div className="flex items-center gap-2 text-[#1e5f74] text-xs font-black mt-4">
+              <div className="flex items-center gap-2 text-[#1e5f74] text-[16px] mt-4">
                 <TrendingUp size={14} />
                 Revenue growth trajectory
               </div>
@@ -690,7 +675,7 @@ if (selectRef.current) selectRef.current.value = "";
                 <h4 className="text-xl font-black text-slate-900 mb-1">
                   Full-Funnel Strategy
                 </h4>
-                <p className="text-slate-500 text-xs">
+                <p className="text-slate-600 text-[16px] leading-relaxed">
                   From cold awareness to loyal repeat customer — we own every stage.
                 </p>
               </div>
@@ -744,7 +729,7 @@ if (selectRef.current) selectRef.current.value = "";
                 <div className="text-3xl font-black text-slate-900 mb-1">
                   3.5<span className="text-[#1e5f74]">×</span>
                 </div>
-                <p className="text-slate-500 text-xs">
+                <p className="text-slate-600 text-[16px] leading-relaxed">
                   Avg ROAS maintain is above 3.5
                 </p>
               </div>
@@ -767,7 +752,7 @@ if (selectRef.current) selectRef.current.value = "";
                 <div className="text-3xl font-black text-slate-900 mb-1">
                   –30<span className="text-[#1e5f74]">%</span>
                 </div>
-                <p className="text-slate-500 text-xs">
+                <p className="text-slate-600 text-[16px] leading-relaxed">
                   CPA reduction through creative & bid optimisation
                 </p>
               </div>
@@ -777,7 +762,7 @@ if (selectRef.current) selectRef.current.value = "";
         </div>
       </section>
 
-      <section className="py-24 ">
+      <section className="py-24 how-we-work-landing"> "
         <div className="max-w-7xl mx-auto px-6">
 
           <motion.div
@@ -787,9 +772,9 @@ if (selectRef.current) selectRef.current.value = "";
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <p className="text-[#ff5a1f] font-black text-xs uppercase tracking-[0.4em] mb-3">
-              How We Work
-            </p>
+            <div class="flex items-center gap-3 justify-center mb-6"><div class="w-8 h-0.5 bg-[#ff5a1f]"></div>
+            <span class="text-[#ff5a1f] text-[14px] font-black uppercase tracking-[0.2em]">How We Work</span>
+            <div class="w-8 h-0.5 bg-[#ff5a1f]"></div></div>
 
             <h2 className="text-4xl lg:text-5xl font-black text-slate-900">
               Our Growth Protocol
@@ -830,7 +815,7 @@ if (selectRef.current) selectRef.current.value = "";
                   {title}
                 </h4>
 
-                <p className="text-slate-500 text-xs leading-relaxed px-4">
+                <p className="text-slate-600 text-[16px] leading-relaxed leading-relaxed px-4">
                   {desc}
                 </p>
 
@@ -846,7 +831,7 @@ if (selectRef.current) selectRef.current.value = "";
 
 
       {/* ══ FINAL CTA (LIGHT THEME) ═════════════════════════════════════════════ */}
-      <section className="py-32 bg-slate-50 relative overflow-hidden">
+      <section className="py-32 bg-slate-50 relative overflow-hidden build-together-landing">
 
         {/* soft background glow */}
         <div className="absolute inset-0 pointer-events-none">
@@ -864,7 +849,7 @@ if (selectRef.current) selectRef.current.value = "";
           {/* Label */}
           <div className="flex items-center gap-3 justify-center mb-6">
             <div className="w-8 h-0.5 bg-[#ff5a1f]" />
-            <span className="text-[#ff5a1f] text-[10px] font-black uppercase tracking-[0.4em]">
+            <span className="text-[#ff5a1f] text-[14px] font-black uppercase tracking-[0.2em]">
               Let's Build Together
             </span>
             <div className="w-8 h-0.5 bg-[#ff5a1f]" />
@@ -904,9 +889,38 @@ if (selectRef.current) selectRef.current.value = "";
       <a href="https://wa.me/916376011249" target="_blank" rel="noreferrer"
         className="fixed bottom-8 right-8 z-[60] w-14 h-14 bg-[#25D366] text-white rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.45)] hover:scale-110 transition-transform flex items-center justify-center">
         <MessageCircle size={26} />
-      </a> */}
-
-      <Footer />
+      </a> */}   <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="text-center"
+                >
+                    <p className="text-slate-500 text-[15px] pt-4 mb-3">
+                        Can't wait? Talk to us directly.
+                    </p>
+                    <div className="flex flex-wrap items-center justify-center gap-5">
+                        <a
+                            href="tel:+919207419301"
+                            className="inline-flex items-center text-[15px] gap-2 text-sm font-bold text-[#1e5f74] hover:underline transition"
+                        >
+                            <Phone size={14} /> +91 9207419301
+                        </a>
+                        <span className="text-slate-200">|</span>
+                        <a
+                            href="mailto:marketing@anahmarketing.com"
+                            className="text-sm font-bold text-[15px] text-[#1e5f74] hover:underline transition"
+                        >
+                            marketing@anahmarketing.com
+                        </a>
+                    </div>
+                </motion.div>
+  <div className="relative z-10 bg-white/50 backdrop-blur pt-6 pb-6">
+                <p className="text-center text-[15px] text-slate-500">
+                    © {new Date().getFullYear()} Anah Marketing & Innovations. All rights reserved.
+                </p>
+            </div>
+      {/* <Footer /> */}
     </div>
   );
 };

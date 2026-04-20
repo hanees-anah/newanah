@@ -28,6 +28,7 @@ import Meta from "./Pages/Meta";
 import ParentEye from "./Pages/ParentEye";
 import Web_dev from "./Pages/Web_dev";
 import PerformanceMarketing from "./Pages/PerformanceMarketing";
+import ThankYou from "./Pages/ThankYou";
 
 
 
@@ -80,7 +81,7 @@ function AppWrapper() {
     "/meta-ads",
     "/parenteye",
     "/web-development",
-    "/performance-marketing"
+    // "/performance-marketing"
   ];
 
   const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname) || location.pathname.startsWith("/blog/");
@@ -115,6 +116,7 @@ function AppWrapper() {
         <Route path="/parenteye" element={<ParentEye/>}/>
          <Route path="/web-development" element={<Web_dev/>}/>
          <Route path="/performance-marketing" element={<PerformanceMarketing />} />
+         <Route path="/thank-you" element={<ThankYou/>} /> 
          
 
         {/* ✅ Redirects */}

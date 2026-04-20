@@ -33218,6 +33218,18 @@ Main section container
   line-height: 1.3;
 }
 
+.performance-marketing-page p, .performance-marketing-page span, .performance-marketing-page h4, .performance-marketing-page a {
+    font-family: Figtree, sans-serif;
+}
+.top-new-section h3.text-black.text-center.mb-2 {
+    font-family: Figtree, sans-serif;
+    margin-bottom: 20px !important;
+    font-weight: 600;
+}
+
+.top-new-section input {
+    box-shadow: none !important;
+}
 /* Responsive */
 @media (max-width: 480px) {
 
@@ -33378,3 +33390,6 @@ Main section container
 .revenue-section .revenue-content {
     position: relative;
 }
+
+
+
