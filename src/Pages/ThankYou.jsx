@@ -104,6 +104,18 @@ const PerformanceMarketingThankYou = () => {
 
     // Simple confetti burst on mount
     useEffect(() => {
+       const leadFired = sessionStorage.getItem('lead_fired');
+
+    if (window.fbq && !leadFired) {
+        window.fbq('track', 'Lead', {
+            value: 1,
+            currency: 'INR'
+        });
+
+        sessionStorage.setItem('lead_fired', 'true');
+    
+    
+    }
         const colors = ['#1e5f74', '#f97316', '#8b5cf6', '#0ea5e9', '#10b981'];
         const container = confettiRef.current;
         if (!container) return;
@@ -203,13 +215,13 @@ const PerformanceMarketingThankYou = () => {
                         <span style={{ WebkitTextStroke: '2px #f97316', color: 'transparent' }}>Request.</span>
                     </motion.h1>
 
-                    <motion.p variants={fadeUp}
+                   <motion.p
+                        variants={fadeUp}
                         className="text-slate-600 text-lg leading-relaxed max-w-xl mx-auto mb-10"
-                    >
+                        >
                         Your strategy call request has been received. Our performance marketing
-                        experts will reach out to you <strong className="text-[#1e5f74]">within 12 hours</strong> to unlock your brand's growth potential.
-                    </motion.p>
-
+                        experts will be in touch shortly to discuss your brand’s growth opportunities.
+                        </motion.p>
                     {/* CTA buttons */}
                     <motion.div variants={fadeUp} className="flex flex-wrap gap-4 justify-center">
                         <a

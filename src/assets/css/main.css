@@ -6486,7 +6486,7 @@ main.hero.hero-top .hero-image-container {
 main.hero.hero-top .container {
     gap: 0px;
 }
-main.hero.hero-top section.shopify-top-banner-sec .contant-part img
+main.hero.hero-top 
  {
     max-width: 170px;
 }
@@ -31753,7 +31753,7 @@ section.shopify-top-banner-sec .contant-part {
     text-align: center;
         padding: 20px 0px;
 }
-section.shopify-top-banner-sec .contant-part img
+
  {
     width: 100%;
     max-width: 330px;
@@ -31879,7 +31879,7 @@ section.here-section .box-card p {
 section.shopify-top-banner-sec {
     padding: 110px 0px 60px;
 }
-section.shopify-top-banner-sec .contant-part img
+
  {
     max-width: 210px;
 }

@@ -156,9 +156,10 @@ const selectRef = useRef(null);
   email: "",
   phone: "",
   website: "",
+  City: "",
   // spend:  "",
   message: "",
-  city: "",
+//   city: "",
   companyname: "Anah Perf Marketing – Grid V5",
   formType: "performance_marketing",
 });
@@ -199,7 +200,7 @@ const onChange = (e) => {
 };
 const onSubmit = async (e) => {
   e.preventDefault();
-
+console.log("FORM DATA:", formData);
   const spendValue = selectRef.current?.value;
   console.log("SPEND:", spendValue);
 
@@ -240,9 +241,10 @@ const onSubmit = async (e) => {
       email: "",
       phone: "",
       website: "",
+
       // spend: "",
       message: "",
-      city: "",
+       city: "",
       companyname: "Anah Perf Marketing – Grid V5",
       formType: "performance_marketing",
     });
@@ -415,8 +417,8 @@ if (selectRef.current) selectRef.current.value = "";
       className={inputCls}
     />
 
- <input
-  type="tel"
+ {/* <input
+  type="number"
   name="phone"
   value={formData.phone}
   onChange={onChange}
@@ -424,6 +426,29 @@ if (selectRef.current) selectRef.current.value = "";
   required
   inputMode="numeric"
   pattern="[0-9]{10}"
+  maxLength={10}
+  className={inputCls}
+/> */}
+<input
+  type="tel"
+  name="phone"
+  value={formData.phone}
+  onChange={(e) => {
+    const value = e.target.value.replace(/\D/g, "");
+    setFormData({ ...formData, phone: value });
+  }}
+  onKeyDown={(e) => {
+    if (
+      ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(e.key)
+    ) return;
+
+    if (!/^[0-9]$/.test(e.key)) {
+      e.preventDefault();
+    }
+  }}
+  placeholder="Phone +91"
+  required
+  inputMode="numeric"
   maxLength={10}
   className={inputCls}
 />
@@ -439,6 +464,7 @@ if (selectRef.current) selectRef.current.value = "";
       required
       className={inputCls}
     />
+    
 <div className="relative">
 <select
   ref={selectRef}
@@ -455,20 +481,29 @@ if (selectRef.current) selectRef.current.value = "";
   <option value="25to40L">₹25L – ₹40L</option>
   <option value="40plus">₹40L+</option>
 </select>
+
   <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center">
     <ChevronDown size={16} className="text-slate-400" />
   </div>
 </div>
   </div>
-
-  <textarea
+ <input
+      type="text"
+      name="city" // ✅ keep SAME (no change)
+      value={formData.city}
+      onChange={onChange}
+      placeholder="City"
+      required
+      className={inputCls}
+    />
+  {/* <textarea
     name="message"
     value={formData.message}
     onChange={onChange}
     placeholder="Tell us about your goals…"
     rows={3}
  className={`${inputCls} resize-none`}
-  />
+  /> */}
 
   <button
     type="submit"
