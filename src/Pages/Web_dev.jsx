@@ -15,6 +15,7 @@ import metaAds1 from "../assets/images/meta-ads-1.png";
 import metaAds2 from "../assets/images/meta-ads-2.png";
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
+import Header from "../component/Header";
 import About_Partner from "../component/About_partner";
 import { motion } from "framer-motion";
 import cta_bg1 from "../assets/images/cta-bg1.png"
@@ -318,7 +319,8 @@ const Web_dev = () => {
 
     return (
         <>
-            <Helmet>
+            
+       <Helmet>
                 <title>Best Shopify Website Development & Management Company in India</title>
                 <meta
                     name="description"
@@ -998,32 +1000,12 @@ const Web_dev = () => {
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </section>
 
-
-            <div class="cta-section-area Amazing-section">
-                <img alt="" class="cta-bg1 aniamtion-key-2" src={cta_bg1} />
-                <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
-                <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 m-auto">
-                            <div class="cta-header-area text-center sp4 heading2">
-                                <h2 class="text-anime-style-3">Let’s Build Something Amazing Together</h2>
-                                <p>Whether you need a brand-new website or a major upgrade to your existing one, Anah Marketing and Innovations is ready to help you stand out, convert more visitors, and grow with confidence.</p>
-                                <p>Let’s talk about how we can elevate your digital presence today and into the future.</p>
-                                <div class="btn-area text-center"><a href="#" class="header-btn1">Let's Talk <span><i class="fa-solid fa-arrow-right"></i></span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <Consultation />
 
 
             <Footer />

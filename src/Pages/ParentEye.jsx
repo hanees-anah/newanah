@@ -15,6 +15,8 @@ import preloader from "../assets/images/preloader-img.png";
 
 
 import Footer from '../component/Footer';
+import Header from '../component/Header';
+import About_Partner from '../component/About_partner';
 
 const styles = {
     container: {
@@ -198,6 +200,8 @@ const ParentEye = () => {
                 </div>
             )}
 
+             
+
             <main className="hero hero-top" style={{ backgroundImage: `url(${bg1})` }}>
                 <section className="shopify-top-banner-sec" style={{ padding: 0 }}>
                     <div className="container">
@@ -235,51 +239,7 @@ const ParentEye = () => {
                 </section>
             </main>
 
-            {/* <div className="slider-section-area sp5" style={{ background: '#ffffff' }}>
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                            <div className="sldier-head heading2">
-                                <h2 className="text-anime-style-2">Our Trusted <br /> Partners</h2>
-                            </div>
-                        </div>
-                        <div className="col-lg-9 col-md-12">
-                            <Swiper
-                                modules={[Autoplay]}
-                                breakpoints={{
-                                    320: { slidesPerView: 2 },
-                                    576: { slidesPerView: 3 },
-                                    768: { slidesPerView: 4 },
-                                    992: { slidesPerView: 5 },
-                                }}
-                                spaceBetween={30}
-                                loop={true}
-                                freeMode={true}
-                                autoplay={{
-                                    delay: 0,
-                                    disableOnInteraction: false,
-                                    pauseOnMouseEnter: true,
-                                }}
-                                speed={4000}
-                            >
-                                {images.map((img, index) => (
-                                    <SwiperSlide key={index}>
-                                        <img
-                                            src={img}
-                                            alt={`Partner-${index}`}
-                                            className="img-fluid mx-auto d-block"
-                                            style={{
-                                                height: "60px",
-                                                objectFit: "contain",
-                                            }}
-                                        />
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+            <About_Partner />
 
             <section style={{ background: '#ffffff', paddingTop: '10px' }} class="here-section new-here">
                 <div class="container">

@@ -1,110 +1,170 @@
-import '../assets/css/main.css';
-import pages_bg1 from "../assets/images/pages-bg1.png";
+import React from "react";
+import logo from "../assets/images/logo-img.png";
 
-function Footer() {
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact Us", href: "/contact-us" },
+  { label: "Shopify", href: "/shopify-development" },
+  { label: "Meta Ads", href: "/meta-ads" },
+];
+
+const serviceLinks = [
+  { label: "Meta Ads", href: "/social-media-marketing-services" },
+  { label: "Google Ads", href: "/google-ads-services" },
+  { label: "Email Marketing", href: "/email-marketing-services" },
+  { label: "WhatsApp Marketing", href: "/whatsapp-marketing-services" },
+  { label: "SEO Services", href: "/seo-company" },
+  { label: "Website Development", href: "/website-development-company" },
+  { label: "Mobile App Dev", href: "/mobile-app-development-company" },
+];
+
+export default function Footer() {
+
   return (
     <>
-      <div 
-        className="footer1-section-area" 
-        style={{
-          backgroundImage: `url(${pages_bg1})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 col-md-6">
-              <div className="footer-logo-area">
-                <h3>Anah Marketing and Innovations</h3>
-                <p>
-                  At Anah Marketing, we craft data-driven marketing strategies to elevate your brand. 
-                  From digital marketing to creative branding, we ensure measurable success and maximum impact for your business.
-                </p>
-                <ul>
-                  <li><a href="https://www.facebook.com/people/Anah-marketing/61575241095643/"><i className="fa-brands fa-facebook-f"></i></a></li>
-                  {/* <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li> */}
-                  <li><a href="https://www.instagram.com/ami_performance/"><i className="fa-brands fa-instagram"></i></a></li>
-                  {/* <li><a href="#"><i className="fa-brands fa-linkedin-in"></i></a></li> */}
-                </ul>
-              </div>
-            </div>
+      <style>{`
+        .awwwards-footer {
+          background: #030014;
+          position: relative;
+          overflow: hidden;
+          padding-top: 6rem;
+        }
+        .awwwards-footer::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--grad-primary);
+        }
+        .footer-grid {
+          max-width: 1400px; margin: 0 auto; padding: 0 2rem 4rem;
+          display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 4rem; position: relative; z-index: 1;
+        }
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 3rem; } }
 
-            <div className="col-lg-2 col-md-6">
-              <div className="footer-logo-area1">
-                <h3>About Link</h3>
-                <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/about-us">About Us</a></li>
-                  <li><a href="/portfolio">Portfolio</a></li>
-                  <li><a href="/blog">Our Blog</a></li>
-                  <li><a href="/contact-us">Contact Us</a></li>
-                  <li><a href="/shopify-development">Shopify</a></li>
-                   <li><a href="/meta-ads">Meta Ads</a></li>
-                </ul>
-              </div>
-            </div>
+        .footer-brand img { height: 45px; margin-bottom: 2rem; filter: none; }
+        .footer-brand p { color: #fff; line-height: 1.8; margin-bottom: 2rem; max-width: 320px; font-size: 1.05rem; }
+        .social-row { display: flex; gap: 1rem; }
+        .social-row a { 
+            width: 45px; height: 45px; border-radius: var(--radius-full); background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center; 
+            color: #fff; font-size: 1.2rem; transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); display: inline-flex; justify-content: center; align-items: center;
+        }
+        .social-row a:hover { background: var(--clr-primary); color: #fff; border-color: var(--clr-primary); transform: translateY(-5px) scale(1.05); }
 
-            <div className="col-lg-3 col-md-6">
-              <div className="footer-logo-area2">
-                <h3>Get in touch</h3>
-                <ul>
-                  <li>
-                    <a href="mailto:marketing@anahmarketing.com">
-                      <i className="fa-regular fa-envelope"></i> 
-                      <span>marketing@anahmarketing.com</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa-solid fa-location-dot"></i> 
-                      Plot No. 3-4, Krishna Enclave, 2nd Floor, Patrakar Colony Road, 
-                      Near The Narayan School, Mansarovar, Jaipur, Rajasthan – 302020, India
-                    </a>
-                  </li>
-                  <li>
-                    <a href="tel:+916376011249">
-                      <i className="fa-solid fa-phone"></i> 
-                      <span>+91-6376011249</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        .footer-col h4 { color: #ffffff; font-size: 1rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2rem; }
+        .footer-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+        .footer-col ul li a { color: #fff; text-decoration: none; font-size: 0.95rem; transition: 0.3s; font-weight: 500; }
+        .footer-col ul li a:hover { color: #ffffff; padding-left: 6px; }
 
-            <div className="col-lg-4 col-md-6">
-              <div className="footer-logo-area3">
-                <h3>Subscribe Our Newsletter</h3>
-                <form action="#">
-                  <input type="email" placeholder="Enter your email" required />
-                  <button className="header-btn1">
-                    Subscribe <span><i className="fa-solid fa-arrow-right"></i></span>
-                  </button>
-                </form>
-              </div>
+        .contact-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+        .contact-item i { width: 40px; height: 40px; border-radius: var(--radius-full); background: rgba(255, 255, 255, 0.04); color: #818cf8; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+        .contact-item div { color: #94a3b8; line-height: 1.6; font-size: 0.95rem;}
+        .contact-item strong { color: #ffffff; display: block; margin-bottom: 0.2rem; font-weight: 700; }
+
+        /* Minimalist Bottom Bar */
+        .footer-bottom {
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+          padding: 2rem 0;
+          margin-top: 4rem;
+          background: #010007;
+        }
+        .footer-bottom-inner {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+        }
+        .footer-copy {
+          color: #fff;
+          font-size: 0.875rem;
+          font-weight: 400;
+        }
+        .footer-legal {
+          display: flex;
+          gap: 2rem;
+        }
+        .footer-legal a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 0.875rem;
+          font-weight: 500;
+          transition: color 0.2s ease;
+        }
+        .footer-legal a:hover {
+          color: #ffffff;
+        }
+        @media (max-width: 640px) {
+          .footer-bottom-inner {
+            flex-direction: column;
+            text-align: center;
+          }
+          .footer-legal {
+            justify-content: center;
+            gap: 1.5rem;
+          }
+        }
+      `}</style>
+
+      <footer className="awwwards-footer">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <img src={logo} alt="ANAH Marketing" />
+            <p>We architect digital ecosystems that turn brands into market leaders. Your true growth partner.</p>
+            <div className="social-row">
+              <a href="#"><i className="fa-brands fa-facebook-f" /></a>
+              <a href="#"><i className="fa-brands fa-instagram" /></a>
+              <a href="#"><i className="fa-brands fa-linkedin-in" /></a>
             </div>
           </div>
 
-          <div className="space80 d-lg-block d-none"></div>
-          <div className="space40 d-lg-none d-block"></div>
+          <div className="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              {quickLinks.map(l => <li key={l.label}><a href={l.href}>{l.label}</a></li>)}
+            </ul>
+          </div>
 
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="copyright-area">
-                <div className="pera">
-                  <p>ⓒ Copyright 2026 Anah Marketing & Innovations. All rights reserved.</p>
-                </div>
-                <ul>
-                  <li><a href="/terms-condition">Terms & Conditions</a></li>
-                  <li><a href="/privacy-policy" className="m-0">Privacy Policy</a></li>
-                </ul>
-              </div>
+          <div className="footer-col">
+            <h4>Services</h4>
+            <ul>
+              {serviceLinks.map(l => <li key={l.label}><a href={l.href}>{l.label}</a></li>)}
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Contact Intelligences</h4>
+            <div className="contact-item">
+              <i className="fa-solid fa-map-location-dot" />
+              <div><strong>Headquarters</strong>E1/B1 Extension, Mohan Cooperative Industrial Estate, Mathura Rd, Delhi 110044</div>
+            </div>
+            <div className="contact-item">
+              <i className="fa-solid fa-envelope" />
+              <div><strong>Email Us</strong>info@anahmarketing.com<br />marketing@anahmarketing.com</div>
+            </div>
+            <div className="contact-item">
+              <i className="fa-solid fa-phone" />
+              <div><strong>Let's Talk</strong>+91-8810620925</div>
             </div>
           </div>
         </div>
-      </div>
+
+        <div className="footer-bottom">
+          <div className="footer-bottom-inner">
+            <span className="footer-copy">
+              © {new Date().getFullYear()} ANAH Marketing. All rights reserved.
+            </span>
+            <div className="footer-legal">
+              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/terms-condition">Terms & Conditions</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
-
-export default Footer;

@@ -20660,21 +20660,24 @@ section.portfolio-section-page.portfolio-sec .tab-pane {
   padding: 16px;
 }
 .works-inner-section-area .works-header-area .works-content-box:hover {
-  background: var(--ztc-text-text-4);
+  /* background: var(--ztc-text-text-4); */
   transition: all 0.4s;
-  border: 1px solid var(--ztc-text-text-4);
+  /* border: 1px solid var(--ztc-text-text-4); */
   transform: translateY(-5px);
+  background: rgba(92, 79, 229, 0.1); 
+  border-color: rgba(92, 79, 229, 0.3);
+  color:#000000
 }
 .works-inner-section-area .works-header-area .works-content-box:hover .icons {
-  background: var(--ztc-text-text-1);
+  /* background: var(--ztc-text-text-1); */
   transition: all 0.4s;
 }
 .works-inner-section-area .works-header-area .works-content-box:hover .content a {
-  color: var(--ztc-text-text-1);
+  /* color: var(--ztc-text-text-1); */
   transition: all 0.4s;
 }
 .works-inner-section-area .works-header-area .works-content-box:hover .content p {
-  color: var(--ztc-text-text-1);
+  /* color: var(--ztc-text-text-1); */
   transition: all 0.4s;
   opacity: 80%;
 }
@@ -32250,7 +32253,7 @@ section.shopify-section .heading2 {
     font-weight: 500;
 }
 .works-inner-section-area .works-header-area .works-content-box:hover .content span {
-    color: #fff;
+    /* color: #fff; */
 }
 .contact1-section-area .contact-auhtor-box .icons i {
     color: #fff;

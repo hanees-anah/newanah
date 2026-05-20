@@ -16,6 +16,9 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "../App.css"
 import Footer from "../component/Footer";
+import Header from "../component/Header";
+import About_Partner from "../component/About_partner";
+import Consultation from "../component/Consultation";
 import styleunionLogo from '../assets/images/styleunion_logo.png';
 import chasehaulLogo from '../assets/images/chasehaul_logo.png';
 import gritproLogo from '../assets/images/gritpro_logo.png';
@@ -360,6 +363,8 @@ const handleSubmit = async (e) => {
         </div>
       )}
 
+       
+
       <section className="shopify-top-banner-sec">
         <div className="container">
           <div className="row align-items-center">
@@ -528,51 +533,8 @@ const handleSubmit = async (e) => {
       )}
 
       {/* Partners Slider */}
-      <div className="slider-section-area sp5">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
-              <div className="sldier-head heading2">
-                <h2 className="text-anime-style-2">Our Trusted <br /> Partners</h2>
-              </div>
-            </div>
-            <div className="col-lg-9 col-md-12">
-              <Swiper
-                modules={[Autoplay]}
-                breakpoints={{
-                  320: { slidesPerView: 2 },
-                  576: { slidesPerView: 3 },
-                  768: { slidesPerView: 4 },
-                  992: { slidesPerView: 5 },
-                }}
-                spaceBetween={30}
-                loop={true}
-                freeMode={true}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
-                  pauseOnMouseEnter: true,
-                }}
-                speed={4000}
-              >
-                {images.map((img, index) => (
-                  <SwiperSlide key={index}>
-                    <img
-                      src={img}
-                      alt={`Partner-${index}`}
-                      className="img-fluid mx-auto d-block"
-                      style={{
-                        height: "60px",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
-        </div>
-      </div>
+      <About_Partner />
+
 
 
 
@@ -1023,23 +985,7 @@ const handleSubmit = async (e) => {
       </section>
 
 
-      <div class="cta-section-area Amazing-section">
-        <img alt="" class="cta-bg1 aniamtion-key-2" src={cta_bg1} />
-        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
-        <img alt="" class="cta-bg2 aniamtion-key-1" src={cta_bg2} />
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 m-auto">
-              <div class="cta-header-area text-center sp4 heading2">
-                <h2 class="text-anime-style-3">Let’s Build Something Amazing Together</h2>
-                <p>Whether you need a brand-new website or a major upgrade to your existing one, Anah Marketing and Innovations is ready to help you stand out, convert more visitors, and grow with confidence.</p>
-                <p>Let’s talk about how we can elevate your digital presence today and into the future.</p>
-                <div class="btn-area text-center"><a href="#" class="header-btn1">Let's Talk <span><i class="fa-solid fa-arrow-right"></i></span></a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Consultation />
 
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Consultation from "../component/Consultation";
 import Footer from "../component/Footer";
+import Header from "../component/Header";
 import inner_header from "../assets/images/performance-marketing.png";
 import { useEffect, useState } from "react";
 import preloader from "../assets/images/preloader-img.png";
@@ -27,6 +28,7 @@ function Organic_search() {
 
   return (
     <>
+       
        <Helmet>
                 <title>Performance Marketing in 2025: Top Channels to Leverag</title>
                 <meta

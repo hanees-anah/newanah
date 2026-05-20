@@ -18,6 +18,9 @@ import star from "../assets/images/elements6.png"
 import axios from "axios";
 import { Autoplay } from "swiper/modules";
 import Footer from '../component/Footer';
+import Header from "../component/Header";
+import About_Partner from '../component/About_partner';
+import Consultation from '../component/Consultation';
 import { motion } from "framer-motion";
 import swtantra_logo from "../assets/images/swtantra-logo.png"
 import fabpersona_logo from "../assets/images/fabpersona_logo.png";
@@ -399,6 +402,8 @@ const handleSubmit = async (e) => {
             </div>
           )}
 
+       
+
       <div className="background-shape"></div>
 
 
@@ -440,24 +445,52 @@ const handleSubmit = async (e) => {
       </main>
 
 
-      <div className="slider-section-area sp5" style={{ background: '#ffffff' }}>
-        <div className="container">
+      <div className="slider-section-area sp5" style={{
+        background: '#090815',
+        padding: '60px 0',
+        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        {/* Glowing Ambient Mesh Backdrop */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '500px',
+          height: '150px',
+          background: 'radial-gradient(circle, rgba(92, 79, 229, 0.15) 0%, transparent 70%)',
+          zIndex: 0,
+          pointerEvents: 'none',
+          filter: 'blur(40px)'
+        }} />
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="row align-items-center">
             <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
               <div className="sldier-head heading2">
-                <h2 className="text-anime-style-2">Our Brands <br /> Name</h2>
+                <h2 className="text-anime-style-2 text-white" style={{
+                  fontSize: '1.75rem',
+                  fontWeight: '800',
+                  letterSpacing: '-0.02em',
+                  lineHeight: '1.2',
+                  margin: 0
+                }}>
+                  Our Brands <br /> Name
+                </h2>
               </div>
             </div>
             <div className="col-lg-9 col-md-12">
               <Swiper
                 modules={[Autoplay]}
                 breakpoints={{
-                  320: { slidesPerView: 2 },
-                  576: { slidesPerView: 3 },
-                  768: { slidesPerView: 4 },
-                  992: { slidesPerView: 5 },
+                  320: { slidesPerView: 2, spaceBetween: 20 },
+                  576: { slidesPerView: 3, spaceBetween: 30 },
+                  768: { slidesPerView: 4, spaceBetween: 40 },
+                  992: { slidesPerView: 5, spaceBetween: 40 },
                 }}
-                spaceBetween={30}
                 loop={true}
                 freeMode={true}
                 autoplay={{
@@ -469,15 +502,48 @@ const handleSubmit = async (e) => {
               >
                 {imagess.map((img, index) => (
                   <SwiperSlide key={index}>
-                    <img
-                      src={img}
-                      alt={`Partner-${index}`}
-                      className="img-fluid mx-auto d-block"
-                      style={{
-                        height: "100px",
-                        objectFit: "contain",
-                      }}
-                    />
+                    <div style={{
+                      background: 'rgba(255, 255, 255, 0.03)',
+                      border: '1px solid rgba(255, 255, 255, 0.06)',
+                      borderRadius: '16px',
+                      padding: '16px',
+                      height: '90px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      transition: 'all 0.4s cubic-bezier(0.25, 1, 0.5, 1)',
+                      backdropFilter: 'blur(10px)',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'scale(1.08)';
+                      e.currentTarget.style.borderColor = 'rgba(92, 79, 229, 0.4)';
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.07)';
+                      e.currentTarget.style.boxShadow = '0 10px 25px rgba(92, 79, 229, 0.15)';
+                      const image = e.currentTarget.querySelector('img');
+                      if (image) image.style.filter = 'brightness(1) invert(0) opacity(1)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.06)';
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+                      e.currentTarget.style.boxShadow = 'none';
+                      const image = e.currentTarget.querySelector('img');
+                      if (image) image.style.filter = 'brightness(0) invert(1) opacity(0.85)';
+                    }}
+                    >
+                      <img
+                        src={img}
+                        alt={`Partner-${index}`}
+                        className="img-fluid mx-auto d-block"
+                        style={{
+                          maxHeight: '45px',
+                          maxWidth: '100%',
+                          objectFit: 'contain',
+                          filter: 'brightness(0) invert(1) opacity(0.85)',
+                          transition: 'filter 0.3s ease',
+                        }}
+                      />
+                    </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -871,51 +937,9 @@ const handleSubmit = async (e) => {
         />
       </section>
 
-      <div className="slider-section-area sp5" style={{ background: '#ffffff' }}>
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-3 col-md-12 mb-4 mb-lg-0">
-              <div className="sldier-head heading2">
-                <h2 className="text-anime-style-2">Our Trusted <br /> Partners</h2>
-              </div>
-            </div>
-            <div className="col-lg-9 col-md-12">
-              <Swiper
-                modules={[Autoplay]}
-                breakpoints={{
-                  320: { slidesPerView: 2 },
-                  576: { slidesPerView: 3 },
-                  768: { slidesPerView: 4 },
-                  992: { slidesPerView: 5 },
-                }}
-                spaceBetween={30}
-                loop={true}
-                freeMode={true}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
-                  pauseOnMouseEnter: true,
-                }}
-                speed={4000}
-              >
-                {images.map((img, index) => (
-                  <SwiperSlide key={index}>
-                    <img
-                      src={img}
-                      alt={`Partner-${index}`}
-                      className="img-fluid mx-auto d-block"
-                      style={{
-                        height: "60px",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
-        </div>
-      </div>
+      <About_Partner />
+      <Consultation />
+
 
 
       {showPopup && (

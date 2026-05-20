@@ -10,6 +10,7 @@ import {
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import Footer from "../component/Footer";
+import Header from "../component/Header";
 import swtantra_logo from "../assets/images/swtantra-logo.png"
 import chasehaulLogo from '../assets/images/chasehaul_logo.png';
 import rioz_logo from "../assets/images/rioz-logo.png"
@@ -277,7 +278,7 @@ if (selectRef.current) selectRef.current.value = "";
   return (
 
     <div className="bg-white text-slate-900 font-sans overflow-hidden performance-marketing-page">
-          <img className="absolute top-[15px] left-[30px] z-10" src={preloader_img} style={{ maxWidth: "180px" }} alt="Logo" />
+       
       <Helmet>
         <title>Performance Marketing Agency | Anah Marketing</title>
         <meta name="description" content="India's #1 D2C performance marketing agency — Meta Ads, Google Ads & SEO for sustainable ROI growth." />
@@ -950,12 +951,7 @@ if (selectRef.current) selectRef.current.value = "";
                         </a>
                     </div>
                 </motion.div>
-  <div className="relative z-10 bg-white/50 backdrop-blur pt-6 pb-6">
-                <p className="text-center text-[15px] text-slate-500">
-                    © {new Date().getFullYear()} Anah Marketing & Innovations. All rights reserved.
-                </p>
-            </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

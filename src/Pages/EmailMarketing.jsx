@@ -1,232 +1,269 @@
-import React from "react";
-import innerHeader from "../assets/images/inner-header.png";
-import star1 from "../assets/images/star1.png";
-import star2 from "../assets/images/star2.png";
-import elements6 from "../assets/images/elements6.png";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
+import { Helmet } from "react-helmet";
+import Header from "../component/Header";
+import Footer from "../component/Footer";
+import Consultation from "../component/Consultation";
+import About_Partner from "../component/About_partner";
+
 import emailMarketing1 from "../assets/images/email-marketing1.png";
-import emailMarketing2 from "../assets/images/email-marketing2.png";
 import emailMarketing3 from "../assets/images/email-marketing3.png";
 import emailMarketing4 from "../assets/images/email-marketing4.png";
-import shopifyLogo from "../assets/images/Shopify_Logo.png";
-import pragmaLogo from "../assets/images/pragma_logo.png";
-import razorpayImg from "../assets/images/razorpay-img.png";
-import whatmoreImg from "../assets/images/Whatmore-img.png";
-import engatiImg from "../assets/images/engati-img.png";
-import Consultation from "../component/Consultation";
-import Footer from "../component/Footer";
-import About_Partner from "../component/About_partner";
-import { motion } from "framer-motion";
-import  { useEffect,useState } from "react";
-import preloader from "../assets/images/preloader-img.png";
-import { Helmet } from "react-helmet";
 
+const MagneticTilt = ({ children, className }) => {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const mouseXSpring = useSpring(x, { stiffness: 400, damping: 40 });
+  const mouseYSpring = useSpring(y, { stiffness: 400, damping: 40 });
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["4deg", "-4deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-4deg", "4deg"]);
 
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    x.set((e.clientX - rect.left) / rect.width - 0.5);
+    y.set((e.clientY - rect.top) / rect.height - 0.5);
+  };
+  const handleMouseLeave = () => { x.set(0); y.set(0); };
 
-function EmailMarketing() {
+  return (
+    <motion.div className={className} style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+      onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}
+      initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
+      <div style={{ transform: "translateZ(30px)", height: "100%" }}>{children}</div>
+    </motion.div>
+  );
+};
 
-      const [isLoading, setIsLoading] = useState(true);
-      
-          useEffect(() => {
-              // Simulate load or wait for all images/resources to load
-              const handleLoad = () => {
-                  setTimeout(() => {
-                      setIsLoading(false);
-                  }, 500); // Optional delay for smooth transition
-              };
-      
-              if (document.readyState === "complete") {
-                  handleLoad();
-              } else {
-                  window.addEventListener("load", handleLoad);
-              }
-      
-              return () => window.removeEventListener("load", handleLoad);
-          }, []);
+export default function EmailMarketing() {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start start", "end end"] });
+  const yHeroText = useTransform(scrollYProgress, [0, 0.3], ["0%", "80%"]);
+  const opacityHeroText = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
-    return (
-        <>
-           <Helmet>
-                <title>Email Marketing Services | No. 1 Email Marketing Agency</title>
-                <meta
-                    name="description"
-                    content="Boost your ROI with our Email Marketing Services. Work with the No. 1 email marketing agency for tailored, high-converting email campaigns."
-                    />
-                                      <link rel="canonical" href="https://anahmarketing.com/email-marketing-services"/>
+  return (
+    <div ref={containerRef} style={{ background: "var(--clr-bg)", overflow: "hidden" }}>
+      <Helmet>
+        <title>Email Marketing Services | No. 1 Email Marketing Agency</title>
+        <meta name="description" content="Boost your ROI with our Email Marketing Services. Work with the No. 1 email marketing agency for tailored, high-converting email campaigns." />
+        <link rel="canonical" href="https://anahmarketing.com/email-marketing-services" />
+      </Helmet>
 
-            </Helmet>
+       
 
-        {isLoading && (
-            <div className="preloader">
-                <div className="loading-container">
-                    <div className="loading"></div>
-                    <div id="loading-icon"><img src={preloader} alt="" /></div>
-                </div>
-            </div>
-        )}
+      <style>{`
+                /* ── Service V3 Light Theme ──────────────────────── */
+                .svc-v2-hero {
+                    min-height: 70vh; display: flex; align-items: center; justify-content: center;
+                    position: relative; border-bottom: 1px solid rgba(0,0,0,0.05); background: var(--clr-bg);
+                }
+                .svc-v2-hero::before {
+                    content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.08), transparent 70%);
+                }
+                .hero-content {
+                    text-align: center; position: relative; z-index: 1; max-width: 900px; padding-top: 4rem;
+                }
+                .hero-content h1 {
+                    font-size: clamp(3.5rem, 7vw, 6rem); font-weight: 900; color: var(--clr-text-main); margin-bottom: 1rem;
+                    letter-spacing: -0.04em; line-height: 1.1; display: flex; flex-direction: column; align-items: center;
+                }
+                .hero-content h1 span { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-            {/* Header Section */}
-            <div
-                className="about-header-area"
-                style={{
-                    backgroundImage: `url(${innerHeader})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center"
-                }}
-            >
-                <img src={star2} alt="Star Decoration" className="star2 keyframe5" />
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8 m-auto">
-                            <div className="about-inner-header heading9 text-center">
-                                <h1>Email Marketing</h1>
-                                <a href="/">Home</a>
-                                <i className="fa-solid fa-angle-right"></i>
-                                <span> Services </span>
-                                <i className="fa-solid fa-angle-right"></i>
-                                <span>Email Marketing</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                .svc-v2-intro { padding: 8rem 0; perspective: 1500px; }
+                .intro-grid {
+                    max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;
+                }
+                @media (max-width: 1024px) { .intro-grid { grid-template-columns: 1fr; } }
 
-            {/* Email Marketing Content */}
-            <div className="about1-section-area pt-4 mt-4 sp6">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-4">
-                            <div className="about-images">
-                            <motion.figure
-                                    initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
-                                    animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
-                                    transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
-                                    className="image-anime"
-                                >
-                                
-                                    <img
-                                        src={emailMarketing1}
-                                        alt=""
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                    />
-                                </motion.figure>
-                                <img src={star1} alt="Star Decoration" className="star1 keyframe5" />
-                            </div>
-                        </div>
-                        <div className="col-lg-5">
-                            <div className="about-content-area heading2">
-                                {/* <h2 className="text-anime-style-2">Turn Clicks into Clients with Impactful Emails</h2> */}
-                                <h2 className="text-anime-style-2">Best Email Marketing Services to Boost Engagement & Sales</h2>
-                                <p className="mb-4" data-aos="fade-left" data-aos-duration="1000">
-                                    A well-crafted email isn’t just another message—it’s a powerful touchpoint that builds relationships and drives action.
-                                    We create data-backed email marketing strategies that turn one-time visitors into loyal customers. From welcome sequences
-                                    to re-engagement campaigns, every email is designed to capture attention and maximize conversions.
-                                </p>
-                                <div className="btn-area" data-aos="fade-left" data-aos-duration="1200">
-                                    <a href="/contact-us" className="header-btn1">
-                                        Contact Now<span><i className="fa-solid fa-arrow-right"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="about-auhtor-images">
-                                <img src={elements6} alt="Design Element" className="elements5 keyframe5" />
-                                <motion.figure
-                                    initial={{ clipPath: "inset(0% 100% 0% 0%)" }} // Image fully hidden (right side se)
-                                    animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // Dheere dheere left to right reveal
-                                    transition={{ duration: 2, ease: "easeInOut" }} // Slow transition
-                                    className="image-anime"
-                                >
-                                
-                                    <img
-                                        src={emailMarketing2}
-                                        alt=""
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                    />
-                                      </motion.figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                .intro-bento {
+                    background: #ffffff;  border-radius: 30px; padding: 3rem; display: flex; flex-direction: column; gap: 1.5rem; transition: 0.4s;
+               
+                }
+                .intro-bento:hover { border-color: rgba(99, 102, 241, 0.3); }
+                .intro-bento h2 { font-size: 2.5rem; font-weight: 900; color: var(--clr-text-main); line-height: 1.1; letter-spacing: -0.02em; }
+                .intro-bento p { font-size: 1.1rem; color: var(--clr-text-secondary); line-height: 1.8; margin: 0; }
 
-            <About_Partner />
+                .intro-image-stack { position: relative; }
+                .img-primary { border-radius: 24px; overflow: hidden; }
+                .img-primary img { width: 100%; height: auto; display: block; filter: none; }
 
+                .svc-v2-details { padding: 6rem 0 10rem; }
+                .details-grid {
+                    max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem;
+                }
+                @media (max-width: 900px) { .details-grid { grid-template-columns: 1fr; } }
+                
+                .feature-bento {
+                    background: #ffffff; border: 1px solid rgba(0,0,0,0.05); border-radius: 30px; padding: 3rem; display: flex; flex-direction: column; gap: 1.5rem; transition: 0.4s; position: relative; overflow: hidden;
+                    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+                }
+                .feature-bento:hover { border-color: rgba(99, 102, 241, 0.3); transform: translateY(-5px); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.1); }
+                .feature-bento::before {
+                    content: ''; position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(99, 102, 241, 0.1); filter: blur(40px); border-radius: 50%; z-index: 0;
+                }
+                .feature-icon-wrap { position: relative; z-index: 1; border-radius: 20px; overflow: hidden; height: 250px; margin-bottom: 1rem; border: 1px solid rgba(0,0,0,0.03); }
+                .feature-icon-wrap img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; background: rgba(99, 102, 241, 0.05); }
+                .feature-bento:hover .feature-icon-wrap img { transform: scale(1.05); }
 
-            {/* Work Strategy Section */}
-            <div className="works-inner-section-area services-page">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-4">
-                            <div className="about-all-images-area">
-                                <img src={star2} alt="Star Decoration" className="elements12 keyframe5" />
-                                <img src={star1} alt="Star Decoration" className="elements13 keyframe5" />
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="img1 ">
-                                            <div class="space100"></div>
-                                            <img src={emailMarketing3} alt="Targeting Strategy" />
-                                            <div class="space100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="col-lg-8">
-                            <div className="works-header-area heading2 specing2">
-                                <h2>Precision Targeting with Smart Automation</h2>
-                                <p>
-                                    Sending generic emails is a thing of the past. We use advanced segmentation and automation
-                                    to deliver personalized messages based on client behavior, preferences, and engagement history.
-                                    Whether it’s abandoned cart recovery, lead nurturing, or exclusive offers, your audience receives
-                                    the right message at the perfect time.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row align-items-center order-2">
-                        <div className="col-lg-8">
-                            <div className="works-header-area heading2">
-                                <h2>Test, Optimize, and Lead</h2>
-                                <p>
-                                    Effective email marketing goes beyond high open rates—it’s about real, measurable results.
-                                    We continuously refine subject lines, content, and call-to-actions using various testing
-                                    and performance analytics, ensuring more engagement, higher conversions, and a stronger return on investment for your business.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="about-all-images-area">
-                                <img src={star2} alt="Star Decoration" className="elements12 keyframe5" />
-                                <img src={star1} alt="Star Decoration" className="elements13 keyframe5" />
-                                <div class="row">
-                      <div class="col-lg-12">
-                        <div class="img1 ">
-                            <div class="space100"></div>
-                            <img src={emailMarketing4} alt="Optimization Strategy" />
-                            <div class="space100"></div>
-                        </div>
-                      </div>
-                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <Consultation />
-            <Footer />
-        </>
-    );
+                .feature-bento h3 { position: relative; z-index: 1; font-size: 2rem; font-weight: 800; color: var(--clr-text-main); margin: 0; }
+                .feature-bento p { position: relative; z-index: 1; font-size: 1.05rem; color: var(--clr-text-secondary); line-height: 1.7; margin: 0; }
+            @media (max-width: 1024px) {
+  .intro-grid {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
 }
 
-export default EmailMarketing;
+@media (max-width: 768px) {
+  .svc-v2-intro {
+    padding: 4rem 0;
+  }
+
+  .intro-grid {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  /* IMAGE FIX */
+  .intro-image-stack {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-primary {
+    width: 80%;
+    max-width: 280px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .img-primary img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* TEXT PANEL */
+  .intro-bento {
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  .intro-bento h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.2;
+  }
+
+  .intro-bento p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .intro-bento a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .img-primary {
+    width: 70%;
+    max-width: 240px;
+  }
+
+  .intro-bento {
+    padding: 1.2rem;
+  }
+
+  .intro-bento h2 {
+    font-size: 1.4rem !important;
+  }
+}
+  @media (max-width: 768px) {
+  .intro-image-stack {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-primary {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 0 auto; /* IMPORTANT backup centering */
+  }
+
+  .img-primary img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+            `}</style>
+
+      <section className="svc-v2-hero">
+        <motion.div className="hero-content" style={{ y: yHeroText, opacity: opacityHeroText }}>
+          <div className="ds-section-tag" style={{ margin: "0 auto 1.5rem" }}>Service</div>
+          <h1>Email <span>Marketing</span></h1>
+          <p style={{ color: "var(--clr-text-secondary)", fontSize: "1.1rem", lineHeight: "1.7", maxWidth: "600px", margin: "1.5rem auto 0" }}>
+            Boost your ROI. We engineer automated sequences and high-converting campaigns that dominate inboxes instantly.
+          </p>
+        </motion.div>
+      </section>
+
+      <section className="svc-v2-intro">
+        <div className="intro-grid">
+          <MagneticTilt className="intro-image-stack">
+            <div className="img-primary">
+              <img src={emailMarketing1} alt="Email Marketing Protocol" />
+            </div>
+          </MagneticTilt>
+
+          <MagneticTilt className="intro-bento">
+            <div className="ds-section-tag" style={{ alignSelf: "flex-start" }}>Retention Engine</div>
+            <h2>Convert. Automate. Scale.</h2>
+            <p>
+              A well-crafted email isn't just another message—it's a high-leverage touchpoint. We deploy data-backed CRM architectures that systematically convert casual traffic into deeply loyal buyers.
+            </p>
+            <p>
+              From aggressive cart recovery sweeps to ultra-personalized welcome flows, every automated touchpoint is formulated to seize attention and extract maximum lifetime value.
+            </p>
+            <a href="/contact-us" className="ds-btn-primary" style={{ alignSelf: "flex-start", marginTop: "1rem" }}>
+              Explore Automations <i className="fa-solid fa-arrow-right" />
+            </a>
+          </MagneticTilt>
+        </div>
+      </section>
+
+      <About_Partner />
+
+      <section className="svc-v2-details">
+        <div className="details-grid">
+          <MagneticTilt className="feature-bento">
+            <div className="ds-section-tag" style={{ alignSelf: "flex-start" }}>Phase 1</div>
+            <div className="feature-icon-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img src={emailMarketing3} alt="Smart Automation" style={{ objectFit: 'contain' }} />
+            </div>
+            <h3>Precision Logic & Tracking</h3>
+            <p>Generic blasting is dead. We integrate deep event tracking to trigger highly contextual messages. By leveraging behavioral triggers—abandoned carts, specific page views, demographic spikes—your leads receive the exact psychological push they need.</p>
+          </MagneticTilt>
+
+          <MagneticTilt className="feature-bento">
+            <div className="ds-section-tag" style={{ alignSelf: "flex-start" }}>Phase 2</div>
+            <div className="feature-icon-wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img src={emailMarketing4} alt="Email Optimization" style={{ objectFit: 'contain' }} />
+            </div>
+            <h3>Iterative A/B Dominance</h3>
+            <p>Open rates mean nothing without action. We relentlessly A/B test subject lines, preview text, CTA placement, and design hierarchy. Rigorous analytics separate the winners from the losers, scaling up what generates the highest raw revenue.</p>
+          </MagneticTilt>
+        </div>
+      </section>
+
+      <Consultation />
+      <Footer />
+    </div>
+  );
+}

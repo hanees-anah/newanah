@@ -1,4 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
+import Consultation from "../component/Consultation";
+import Footer from "../component/Footer";
+import Header from "../component/Header";
+import preloader from "../assets/images/preloader-img.png";
+
+// IMPORTS
 import inner_header from "../assets/images/inner-header.png";
 import star2 from "../assets/images/star2.png";
 import styleunion_logo from "../assets/images/styleunion_logo.png";
@@ -7,84 +15,86 @@ import gritpro_logo from "../assets/images/gritpro_logo.png";
 import guniaa_logo from "../assets/images/guniaa-logo.png";
 import hallstattlife_logo from "../assets/images/hallstattlife-logo.png";
 import bysonnutrition_logo from "../assets/images/bysonnutrition-logo.png";
-import styleunionLogo from '../assets/images/styleunion_logo.png';
-import chasehaulLogo from '../assets/images/chasehaul_logo.png';
-import gritproLogo from '../assets/images/gritpro_logo.png';
-import guniaaLogo from '../assets/images/guniaa-logo.png';
-import hallstattlifeLogo from '../assets/images/hallstattlife-logo.png';
-import bysonnutritionLogo from '../assets/images/bysonnutrition-logo.png';
-import magiaLogo from '../assets/images/magia_logo.png';
+import magia_logo from '../assets/images/magia_logo.png';
 import womanCartLogo from '../assets/images/woman-cart-logo.png';
 import teakwoodLogo from '../assets/images/teakwood-logo-img.png';
 import juniperLogo from '../assets/images/juniper-logo.png';
 import elLogo from '../assets/images/el-logoo.png';
-import autumnlaneLogo from '../assets/images/autumnlane_logo.png';
-import spatikaclothingLogo from '../assets/images/spatikaclothing_logo.png';
-import dishapublicationLogo from '../assets/images/dishapublication_logo.png';
-import fabpersonaLogo from '../assets/images/fabpersona_logo.png';
+import autumnlane_logo from '../assets/images/autumnlane_logo.png';
+import spatikaclothing_logo from '../assets/images/spatikaclothing_logo.png';
+import dishapublication_logo from '../assets/images/dishapublication_logo.png';
+import fabpersona_logo from '../assets/images/fabpersona_logo.png';
 import baidLogo from '../assets/images/baid_logo.png';
 import siddhayuLogo from '../assets/images/siddhayu_logo.png';
-import zariLogo from '../assets/images/zari_logo.png';
-import ruchiraLogo from '../assets/images/ruchira.png';
-import holythreadLogo from '../assets/images/holythread_logo.png';
-import leheriyaLogo from '../assets/images/leheriya_logo.png';
-import fashiondwarLogo from '../assets/images/fashiondwar-logo.png';
-import lavanyaLogo from '../assets/images/lavanya-logo.png';
+import zari_logo from '../assets/images/zari_logo.png';
+import ruchira from '../assets/images/ruchira.png';
+import holythread_logo from '../assets/images/holythread_logo.png';
+import leheriya_logo from '../assets/images/leheriya_logo.png';
+import fashiondwar_logo from '../assets/images/fashiondwar-logo.png';
+import lavanya_logo from '../assets/images/lavanya-logo.png';
 import parenteyeLogo from '../assets/images/parenteye-logoo.png';
 import jagoIndiaJagoLogo from '../assets/images/jago-india-jago-logo.png';
-import magia_logo from "../assets/images/magia_logo.png";
-import woman_cart_logo from "../assets/images/woman-cart-logo.png";
-import teakwood_logo from "../assets/images/teakwood-logo-img.png";
-import autumnlane_logo from "../assets/images/autumnlane_logo.png";
-import spatikaclothing_logo from "../assets/images/spatikaclothing_logo.png";
-import dishapublication_logo from "../assets/images/dishapublication_logo.png";
-import fabpersona_logo from "../assets/images/fabpersona_logo.png";
-import zari_logo from "../assets/images/zari_logo.png";
-import ruchira from "../assets/images/ruchira.png";
-import holythread_logo from "../assets/images/holythread_logo.png";
-import leheriya_logo from "../assets/images/leheriya_logo.png";
-import fashiondwar_logo from "../assets/images/fashiondwar-logo.png";
-import lavanya_logo from "../assets/images/lavanya-logo.png";
 import Divi_logo from "../assets/images/divi-logoo.png";
 import swtantra_logo from "../assets/images/swtantra-logo.png"
 import rioz_logo from "../assets/images/rioz-logo.png"
-
-import Consultation from "../component/Consultation";
-import Footer from "../component/Footer";
-import { useEffect, useState } from "react";
-import preloader from "../assets/images/preloader-img.png";
 import ethnicity from "../assets/images/ethnicity-logo.png";
-import { Helmet } from "react-helmet";
 
+const ALL_LOGOS = [
+  { img: swtantra_logo, name: "Swtantra", tags: ["digital", "development"] },
+  { img: rioz_logo, name: "Rioz", tags: ["digital", "development"] },
+  { img: teakwoodLogo, name: "Teakwood", tags: ["digital", "development"] },
+  { img: baidLogo, name: "Baid", tags: ["development"] },
+  { img: womanCartLogo, name: "Woman Cart", tags: ["digital", "mobile"] },
+  { img: chasehaul_logo, name: "Chase Haul", tags: ["digital", "development"] },
+  { img: styleunion_logo, name: "Style Union", tags: ["digital", "development"] },
+  { img: ethnicity, name: "Ethnicity", tags: ["digital", "development"] },
+  { img: fabpersona_logo, name: "Fab Persona", tags: ["digital", "development"] },
+  { img: gritpro_logo, name: "Grit Pro", tags: ["digital", "development"] },
+  { img: guniaa_logo, name: "Guniaa", tags: ["digital", "development"] },
+  { img: hallstattlife_logo, name: "Hallstatt Life", tags: ["digital", "development"] },
+  { img: bysonnutrition_logo, name: "Byson Nutrition", tags: ["digital", "development"] },
+  { img: magia_logo, name: "Magia", tags: ["digital", "development"] },
+  { img: juniperLogo, name: "Juniper", tags: [] },
+  { img: elLogo, name: "EL", tags: ["development"] },
+  { img: autumnlane_logo, name: "Autumn Lane", tags: ["digital", "development"] },
+  { img: spatikaclothing_logo, name: "Spatika Clothing", tags: ["digital", "development"] },
+  { img: dishapublication_logo, name: "Disha Publication", tags: ["digital", "development"] },
+  { img: siddhayuLogo, name: "Siddhayu", tags: [] },
+  { img: zari_logo, name: "Zari", tags: ["digital", "development"] },
+  { img: ruchira, name: "Ruchira", tags: ["digital", "development"] },
+  { img: holythread_logo, name: "Holy Thread", tags: ["digital", "development"] },
+  { img: leheriya_logo, name: "Leheriya", tags: ["digital", "development"] },
+  { img: fashiondwar_logo, name: "Fashion Dwar", tags: ["digital", "development"] },
+  { img: lavanya_logo, name: "Lavanya", tags: ["digital", "development"] },
+  { img: parenteyeLogo, name: "Parent Eye", tags: ["mobile"] },
+  { img: jagoIndiaJagoLogo, name: "Jago India Jago", tags: ["mobile"] },
+  { img: Divi_logo, name: "Divi", tags: ["digital", "development"] }
+];
 
 function Portfolio() {
   const [isLoading, setIsLoading] = useState(true);
+  const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    // Simulate load or wait for all images/resources to load
-    const handleLoad = () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 300); // Optional delay for smooth transition
-    };
-
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-    }
-
+    const handleLoad = () => setTimeout(() => setIsLoading(false), 300);
+    if (document.readyState === "complete") handleLoad();
+    else window.addEventListener("load", handleLoad);
     return () => window.removeEventListener("load", handleLoad);
   }, []);
 
+  const filteredLogos = ALL_LOGOS.filter((l) => {
+    if (filter === "all") return true;
+    return l.tags.includes(filter);
+  });
+
   return (
     <>
-
-      <Helmet>
+      
+       <Helmet>
         <title>Our Work | Digital Marketing Portfolio – Anah Marketing</title>
         <meta
           name="description"
-          content="Explore Anah Marketing’s portfolio of SEO, web design, and eCommerce success stories. See how we drive real growth for brands across industries."
+          content="Explore Anah Marketing's portfolio of SEO, web design, and eCommerce success stories. See how we drive real growth for brands across industries."
         />
         <link rel="canonical" href="https://anahmarketing.com/portfolio" />
       </Helmet>
@@ -97,520 +107,100 @@ function Portfolio() {
           </div>
         </div>
       )}
-      <div className="about-header-area" style={{ backgroundImage: `url(${inner_header})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
-        <img src={star2} alt="Star" className="star2 keyframe5" />
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8 m-auto">
-              <div className="about-inner-header heading9 text-center">
-                <h1>Portfolio</h1>
-                <a href="/">Home</a> <i className="fa-solid fa-angle-right"></i> <span>Portfolio</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <section className="portfolio-section-page portfolio-sec">
-        <div className="container">
-          <div className="service2-header heading2 text-center">
-            <h2 className="text-anime-style-3">See Our Latest Projects</h2>
-            <p data-aos="fade-up" data-aos-duration="1000">Our portfolio reflects a journey of creativity and innovation. Every project is a testament to scaling brands through cutting-edge marketing solutions.</p>
-          </div>
-          <div className="portfolio_bottom_part">
-            <ul className="nav nav-tabs  d-lg-flex" id="myTab" role="tablist">
-              <li className="nav-item" role="presentation">
-                <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                  All
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link" id="profile-marketing" data-bs-toggle="tab" data-bs-target="#profile-marketing-pane" type="button" role="tab" aria-controls="profile-marketing-pane" aria-selected="false">
-                  Digital Marketing
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-                  Development
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
-                  Mobile App
-                </button>
-              </li>
-            </ul>
-            <div className="tab-content accordion" id="myTabContent">
-              <div className="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                <div id="collapseOne" className="accordion-collapse show d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
-                  <div className="accordion-body">
-                    <div className="row text-align-center justify-content-center">
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={swtantra_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={rioz_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                          <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={teakwoodLogo} alt="Teakwood" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={baidLogo} alt="Baid" />
-                        </div>
-                      </div>
-                        <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={womanCartLogo} alt="Woman Cart" />
-                        </div>
-                      </div>
-                         <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={chasehaulLogo} alt="Chase Haul" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={styleunionLogo} alt="Style Union" />
-                        </div>
-                      </div>
-                   
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={ethnicity} alt="Bysonnutrition" />
+      <style>{`
+        /* ── Portfolio Hero ─────────────────────────── */
+        .port-hero {
+          background: var(--clr-navy); padding: 6rem 1.5rem 4rem; text-align: center;
+          border-bottom: 1px solid rgba(0,0,0,0.06); position: relative; overflow: hidden;
+        }
+        .port-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: var(--clr-text-main); margin-bottom: 1rem; }
+        .port-title span { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* ── Portfolio Grid ─────────────────────────── */
+        .port-body { background: linear-gradient(180deg, var(--clr-bg) 0%, var(--clr-navy) 100%); padding: 5rem 0; min-height: 50vh; }
+        .port-filter-tabs {
+          display: flex; justify-content: center; gap: 1rem; margin-bottom: 3.5rem; flex-wrap: wrap; padding: 0 1.5rem;
+        }
+        .port-filter-btn {
+          background: rgba(255, 255, 255, 0.5); color: var(--clr-text-secondary); border: 1px solid rgba(255, 255, 255, 0.8);
+          padding: 0.6rem 1.5rem; border-radius: var(--radius-full); font-weight: 600; cursor: pointer; transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+          font-family: inherit; font-size: 0.9rem;
+          box-shadow: var(--shadow-sm); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        }
+        .port-filter-btn:hover, .port-filter-btn.active {
+          background: var(--clr-primary); color: #ffffff; border-color: var(--clr-primary);
+          box-shadow: var(--shadow-md); transform: translateY(-2px);
+        }
 
-                        </div>
-                      </div>
-                        <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={fabpersonaLogo} alt="Fab Persona" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={gritproLogo} alt="Grit Pro" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={guniaaLogo} alt="Guniaa" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={hallstattlifeLogo} alt="Hallstatt Life" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={bysonnutritionLogo} alt="Byson Nutrition" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={magiaLogo} alt="Magia" />
-                        </div>
-                      </div>
-                  
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={juniperLogo} alt="Juniper" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={elLogo} alt="EL" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={autumnlaneLogo} alt="Autumn Lane" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={spatikaclothingLogo} alt="Spatika Clothing" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={dishapublicationLogo} alt="Disha Publication" />
-                        </div>
-                      </div>
-                    
-                      
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={siddhayuLogo} alt="Siddhayu" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={zariLogo} alt="Zari" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={ruchiraLogo} alt="Ruchira" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={holythreadLogo} alt="Holy Thread" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={leheriyaLogo} alt="Leheriya" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={fashiondwarLogo} alt="Fashion Dwar" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={lavanyaLogo} alt="Lavanya" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={parenteyeLogo} alt="Parent Eye" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={jagoIndiaJagoLogo} alt="Jago India Jago" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={Divi_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade accordion-item" id="profile-marketing-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                <div id="collapseTwo" className="accordion-collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
-                  <div className="accordion-body">
-                    <div className="row text-align-center justify-content-center">
-                       <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={swtantra_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={rioz_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                          <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={teakwoodLogo} alt="Teakwood" />
-                        </div>
-                      </div>
-                    
-                        <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={womanCartLogo} alt="Woman Cart" />
-                        </div>
-                      </div>
-                         <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={chasehaulLogo} alt="Chase Haul" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={styleunion_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                          <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={fabpersona_logo} alt="Chasehaul" />
-                        </div>
-                      </div>
-                        <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={ethnicity} alt="Bysonnutrition" />
+        .port-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 1.5rem; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;
+        }
+        .port-card {
+          background: #ffffff; border: 1px solid rgba(0,0,0,0.05);
+          border-radius: var(--radius-lg); padding: 2rem;
+          display: flex; align-items: center; justify-content: center;
+          height: 140px; transition: all 0.3s ease; position: relative; overflow: hidden;
+          box-shadow: var(--shadow-sm);
+        }
+        .port-card::before {
+          content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+          background: radial-gradient(circle at center, rgba(14, 165, 233, 0.05) 0%, transparent 60%);
+          opacity: 0; transition: opacity 0.3s ease;
+        }
+        .port-card:hover { transform: translateY(-3px); border-color: rgba(14, 165, 233, 0.3); box-shadow: var(--shadow-md); }
+        .port-card:hover::before { opacity: 1; }
+        .port-card img { max-width: 100%; max-height: 100%; object-fit: contain; filter: grayscale(1) opacity(0.6); transition: all 0.3s ease; position: relative; z-index: 1; }
+        .port-card:hover img { filter: grayscale(0) opacity(1); transform: scale(1.05); }
 
-                        </div>
-                      </div>
-                    
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={gritpro_logo} alt="Gritpro" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={guniaa_logo} alt="Guniaa" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={magia_logo} alt="Chasehaul" />
-                        </div>
-                      </div>
-                   
-                    
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={autumnlane_logo} alt="Chasehaul" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={spatikaclothing_logo} alt="Gritpro" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={dishapublication_logo} alt="Guniaa" />
-                        </div>
-                      </div>
-                  
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={zari_logo} alt="Gritpro" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={ruchira} alt="Guniaa" />
-                        </div>
-                      </div>
-                      {/* Repeat for all other logos */}
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={hallstattlife_logo} alt="Hallstattlife" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={bysonnutrition_logo} alt="Bysonnutrition" />
+        /* Emulate empty state */
+        .port-empty { text-align: center; color: var(--clr-text-muted); grid-column: 1 / -1; padding: 3rem 0; font-size: 1.1rem; }
+      `}</style>
 
-                        </div>
-                      </div>
-                    
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          {/* <img src="assets/images/holythread_logo.png"> */}
-                          <img src={holythread_logo} alt="Bysonnutrition" />
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          {/* <img src="assets/images/leheriya_logo.png"> */}
-                          <img src={leheriya_logo} alt="Bysonnutrition" />
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          {/* <img src="assets/images/fashiondwar-logo.png"> */}
-                          <img src={fashiondwar_logo} alt="Bysonnutrition" />
-                        </div>
-                      </div>
-                      {/* <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={elLogo} alt="EL" />
-                        </div>
-                      </div> */}
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          {/* <img src="assets/images/lavanya-logo.png"> */}
-                          <img src={lavanya_logo} alt="Bysonnutrition" />
-                        </div>
-                      </div>
-                      {/* Add remaining logos similarly */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="tab-pane fade accordion-item" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                <div id="collapseTwo" className="accordion-collapse  d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
-                  <div className="accordion-body">
-                    <div className="row text-align-center justify-content-center">
-                       <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={swtantra_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={rioz_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                          <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={teakwoodLogo} alt="Teakwood" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={baidLogo} alt="Baid" />
-                        </div>
-                      </div>
-                        <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={womanCartLogo} alt="Woman Cart" />
-                        </div>
-                      </div>
-                         <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={chasehaulLogo} alt="Chase Haul" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={styleunion_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                        <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={fabpersona_logo} alt="Chasehaul" />
-                        </div>
-                      </div>
-                         <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={ethnicity} alt="Bysonnutrition" />
-
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={Divi_logo} alt="Styleunion" />
-                        </div>
-                      </div>
-                   
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={gritpro_logo} alt="Gritpro" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={guniaa_logo} alt="Guniaa" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={magia_logo} alt="Chasehaul" />
-                        </div>
-                      </div>
-                   
-                 
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={autumnlane_logo} alt="Chasehaul" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={spatikaclothing_logo} alt="Gritpro" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={dishapublication_logo} alt="Guniaa" />
-                        </div>
-                      </div>
-                    
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={zari_logo} alt="Gritpro" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={ruchira} alt="Guniaa" />
-                        </div>
-                      </div>
-                      {/* Repeat for all other logos */}
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={hallstattlife_logo} alt="Hallstattlife" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={bysonnutrition_logo} alt="Bysonnutrition" />
-
-                        </div>
-                      </div>
-                   
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          {/* <img src="assets/images/holythread_logo.png"> */}
-                          <img src={holythread_logo} alt="Bysonnutrition" />
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          {/* <img src="assets/images/leheriya_logo.png"> */}
-                          <img src={leheriya_logo} alt="Bysonnutrition" />
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          {/* <img src="assets/images/fashiondwar-logo.png"> */}
-                          <img src={fashiondwar_logo} alt="Bysonnutrition" />
-                        </div>
-                      </div>
-                      <div className="col-md-3 col-sm-4">
-                        <div className="logo_src">
-                          <img src={elLogo} alt="EL" />
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          {/* <img src="assets/images/lavanya-logo.png"> */}
-                          <img src={lavanya_logo} alt="Bysonnutrition" />
-                        </div>
-                      </div>
-                      {/* Add remaining logos similarly */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade accordion-item" id="contact-tab-pane" role="tabpanel"
-                aria-labelledby="contact-tab" tabindex="0">
-                <div id="collapseThree" class="accordion-collapse  d-lg-block" aria-labelledby="headingThree"
-                  data-bs-parent="#myTabContent">
-                  <div class="accordion-body">
-                    <div class="row text-align-center">
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          <img src={womanCartLogo} />
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          <img src={parenteyeLogo} />
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-4">
-                        <div class="logo_src">
-                          <img src={jagoIndiaJagoLogo} />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Hero */}
+      <section className="port-hero">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <div className="ds-section-tag" style={{ margin: "0 auto 1rem" }}>Our Work</div>
+          <h1 className="port-title">Latest <span>Projects</span></h1>
+          <p style={{ color: "var(--clr-text-secondary)", maxWidth: "600px", margin: "0 auto" }}>
+            Our portfolio reflects a journey of creativity and innovation. Every project is a testament to scaling brands through cutting-edge marketing solutions.
+          </p>
+        </motion.div>
       </section>
+
+      {/* Body */}
+      <section className="port-body">
+        {/* Filters */}
+        <div className="port-filter-tabs">
+          <button className={`port-filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>All Projects</button>
+          <button className={`port-filter-btn ${filter === 'digital' ? 'active' : ''}`} onClick={() => setFilter('digital')}>Digital Marketing</button>
+          <button className={`port-filter-btn ${filter === 'development' ? 'active' : ''}`} onClick={() => setFilter('development')}>Development</button>
+          <button className={`port-filter-btn ${filter === 'mobile' ? 'active' : ''}`} onClick={() => setFilter('mobile')}>Mobile App</button>
+        </div>
+
+        {/* Grid */}
+        <motion.div className="port-grid" layout>
+          {filteredLogos.map((logo, index) => (
+            <motion.div
+              layout
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              key={logo.name + index}
+              className="port-card"
+            >
+              <img src={logo.img} alt={logo.name} title={logo.name} />
+            </motion.div>
+          ))}
+          {filteredLogos.length === 0 && (
+            <div className="port-empty">No projects found for this category.</div>
+          )}
+        </motion.div>
+      </section>
+
       <Consultation />
       <Footer />
     </>

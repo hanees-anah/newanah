@@ -149,6 +149,7 @@ const PerformanceMarketingThankYou = () => {
             className="min-h-screen font-sans overflow-hidden relative"
             style={{ background: 'linear-gradient(135deg, #f0f9ff 0%, #faf5ff 40%, #fff7ed 100%)' }}
         >
+             
             {/* Background layers */}
             <GridBg />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_30%,rgba(255,255,255,0.9)_0%,transparent_100%)]" />
