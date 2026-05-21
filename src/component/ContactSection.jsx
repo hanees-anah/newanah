@@ -49,7 +49,7 @@ const ContactSection = () => {
       <style>{`
         /* ── Contact Section ──────────────────── */
         .contact-section {
-          background: #030014;
+          background:var(--clr-navy);
           padding: 6rem 0;
           position: relative;
           overflow: hidden;
@@ -85,7 +85,7 @@ const ContactSection = () => {
         .contact-heading h2 {
           font-size: clamp(1.7rem, 3vw, 2.5rem);
           font-weight: 800;
-          color: #ffffff;
+          color: #000;
           line-height: 1.2;
           margin: 0.75rem 0 1rem;
         }
@@ -97,7 +97,7 @@ const ContactSection = () => {
           background-clip: text;
         }
         .contact-heading p {
-          color: #fff;
+          color: #000;
           font-size: 0.92rem;
           line-height: 1.7;
           max-width: 560px;
@@ -129,11 +129,11 @@ const ContactSection = () => {
         .contact-info-panel h3 {
           font-size: 1.15rem;
           font-weight: 700;
-          color: #ffffff;
+          color: #000;
           margin: 0 0 0.5rem;
         }
         .contact-info-panel > p {
-          color: #ffffff;
+          color: #000;
           font-size: 0.875rem;
           line-height: 1.65;
           margin: 0 0 1rem;
@@ -144,7 +144,7 @@ const ContactSection = () => {
           gap: 0.85rem;
           padding: 1rem;
           background: rgba(255, 255, 255, 0.02);
-          border: 1px solid #fff;
+          border: 1px solid #6d7c90;
           border-radius: var(--radius-md);
           transition: all 0.25s ease;
         }
@@ -172,7 +172,7 @@ const ContactSection = () => {
         .contact-box-text a,
         .contact-box-text p {
           font-size: 0.875rem;
-          color: #e2e8f0;
+          color: #6d7c90;
           text-decoration: none;
           margin: 0;
           line-height: 1.5;
@@ -191,7 +191,7 @@ const ContactSection = () => {
         .contact-form-title {
           font-size: 1.15rem;
           font-weight: 700;
-          color: #ffffff;
+          color: #000;
           margin: 0 0 1.75rem;
           text-align: center;
         }
@@ -215,10 +215,10 @@ const ContactSection = () => {
         .contact-input-wrap textarea {
           width: 100%;
           background: rgba(255, 255, 255, 0.02);
-          border: 1px solid #fff;
+          border: 1px solid #6d7c90;
           border-radius: var(--radius-md);
           padding: 0.85rem 1rem;
-          color: #ffffff;
+          color: #000;
           font-size: 0.875rem;
           font-family: var(--font-primary);
           outline: none;
@@ -228,7 +228,7 @@ const ContactSection = () => {
         .contact-input-wrap textarea { min-height: 120px; }
         .contact-input-wrap input::placeholder,
         .contact-input-wrap textarea::placeholder {
-          color: #fff;
+          color: #6d7c90;
         }
         .contact-input-wrap input:focus,
         .contact-input-wrap textarea:focus {
