@@ -167,6 +167,7 @@ function AppWrapper() {
   const hideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname) || location.pathname.startsWith("/blog/");
 
   // Wrap component with PageTransition globally
+  // Test comment
   const w = (Component) => <PageTransition><Component /></PageTransition>;
 
   return (
