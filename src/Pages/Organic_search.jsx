@@ -82,7 +82,7 @@ function Organic_search() {
               <p className="mb-2">
                 Have you ever spotted an ad while scrolling Instagram reels and thought, “This is exactly what I needed”? That is not a coincidence, that's smart marketing! In 2025, performance marketing is evolving faster than ever and helping businesses to connect with the right people at just the right moment.</p>
               <p>Online marketing is changing very quickly, which means businesses need to make a smarter strategy to show their products and services. From attractive short videos on social media to pop-up ads when you are searching for something are helping businesses to get maximum customers. But to stay updated, it’s important to know which platforms are working best right now. </p>
-              <p className="mb-2">At <strong>Anah Marketing and Innovations</strong>, we know that using the right ideas and tools can turn small tests into big successes. In this blog, we’ll explore the top <strong>performance marketing channels</strong> in 2025 and how you can make your marketing efforts count. </p>
+              <p className="mb-2">At <strong>Anax Marketing and Innovations</strong>, we know that using the right ideas and tools can turn small tests into big successes. In this blog, we’ll explore the top <strong>performance marketing channels</strong> in 2025 and how you can make your marketing efforts count. </p>
 
               <h2>Why Performance Marketing Matters More in 2025</h2>
               <p>
@@ -170,7 +170,7 @@ function Organic_search() {
                 Performance marketing in 2025 is faster, smarter, and more effective if you know how to use it. By using the right platforms and strategies, businesses can target the right audience, measure success, and grow results.
               </p>
               <p>
-                At <strong>Anah Marketing and Innovations</strong>, we specialize in helping brands grow using smart and data-driven marketing strategies. Whether you're using <strong>Google Ads</strong>, Instagram marketing, or <strong>email marketing</strong> campaigns, we're here to lead the way.
+                At <strong>Anax Marketing and Innovations</strong>, we specialize in helping brands grow using smart and data-driven marketing strategies. Whether you're using <strong>Google Ads</strong>, Instagram marketing, or <strong>email marketing</strong> campaigns, we're here to lead the way.
               </p>
               <p>
                 This year, make your marketing count. Follow the data and perform with purpose!

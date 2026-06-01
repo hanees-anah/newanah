@@ -209,10 +209,10 @@ function AppWrapper() {
           <Route path="/view_more" element={<Navigate to="/" replace />} />
           <Route path="/Read_more" element={<Navigate to="/" replace />} />
           <Route path="/keyword_read_more" element={<Navigate to="/" replace />} />
-          <Route path="/blog/marketing@anahmarketing.com" element={<Navigate to="/blog" replace />} />
+          <Route path="/blog/marketing@anaxmarketing.com" element={<Navigate to="/blog" replace />} />
           <Route path="/blog/info@example.com" element={<Navigate to="/blog" replace />} />
           <Route path="/instagram_readmore" element={<Navigate to="/" replace />} />
-          <Route path="/marketing@anahmarketing.com" element={<Navigate to="/" replace />} />
+          <Route path="/marketing@anaxmarketing.com" element={<Navigate to="/" replace />} />
 
           <Route path="*" element={w(NotFound)} />
         </Routes>

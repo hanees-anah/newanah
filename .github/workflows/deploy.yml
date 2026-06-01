@@ -12,6 +12,6 @@ jobs:
     steps:
       - name: Git Pull and Build
         run: |
-          cd /var/www/html/pritam/anah
+          cd /var/www/html/pritam/Anax
           whoami
           node -v

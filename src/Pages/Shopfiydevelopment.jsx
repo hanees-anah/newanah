@@ -26,7 +26,7 @@ function ShopifyDevelopment() {
     <>
       
        <Helmet>
-        <title>Top Shopify Web Development Company – Anah Marketing</title>
+        <title>Top Shopify Web Development Company – Anax Marketing</title>
         <meta
           name="description"
           content="Get expert Shopify development services from a leading Shopify web design & eCommerce development company—custom solutions to grow your store."
@@ -256,7 +256,7 @@ function ShopifyDevelopment() {
             <div className="ds-section-tag">Scalable eCommerce</div>
             <h2>Trusted Shopify Web Development Company</h2>
             <p>
-              Your online store isn't just a website—it's your brand's powerhouse. At Anah Marketing, we craft stunning, high-performing Shopify stores that don’t just look good but sell like crazy!
+              Your online store isn't just a website—it's your brand's powerhouse. At Anax Marketing, we craft stunning, high-performing Shopify stores that don’t just look good but sell like crazy!
             </p>
             <p>
               From sleek designs to seamless shopping experiences, we help brands launch, scale, and thrive in the eCommerce space. Whether you're starting fresh or revamping your store, we've got you covered.

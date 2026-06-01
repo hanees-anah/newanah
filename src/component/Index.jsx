@@ -31,7 +31,7 @@ export default function Index() {
     <div onMouseMove={handleMouseMove}>
       <Helmet>
         <title>Best Digital Marketing Agency | SEO, PPC &amp; Social Media</title>
-        <meta name="description" content="Anah Marketing offers ROI-focused SEO, PPC, Meta Ads &amp; Web Design services." />
+        <meta name="description" content="Anax Marketing offers ROI-focused SEO, PPC, Meta Ads &amp; Web Design services." />
         <link rel="canonical" href="https://anahmarketing.com/" />
       </Helmet>
 

@@ -167,7 +167,7 @@ const PerformanceMarketingThankYou = () => {
                 <a href="/" className="opacity-90 hover:opacity-100 transition-opacity">
                     <img
                         src="/logo.png"
-                        alt="Anah Marketing"
+                        alt="Anax Marketing"
                         className="h-14 object-contain"
                         onError={e => { e.target.style.display = 'none'; }}
                     />
@@ -324,7 +324,7 @@ const PerformanceMarketingThankYou = () => {
                             href="mailto:marketing@anahmarketing.com"
                             className="text-sm font-bold text-[#1e5f74] hover:underline transition"
                         >
-                            marketing@anahmarketing.com
+                            marketing@anaxmarketing.com
                         </a>
                     </div>
                 </motion.div>
@@ -333,7 +333,7 @@ const PerformanceMarketingThankYou = () => {
             {/* ── Footer bar ── */}
             <div className="relative z-10 border-t border-slate-100 bg-white/50 backdrop-blur py-5 mt-8">
                 <p className="text-center text-[11px] text-slate-400">
-                    © {new Date().getFullYear()} Anah Marketing & Innovations. All rights reserved.
+                    © {new Date().getFullYear()} Anax Marketing & Innovations. All rights reserved.
                 </p>
             </div>
 

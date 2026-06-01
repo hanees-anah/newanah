@@ -338,7 +338,7 @@ const ContactSection = () => {
         <div className="contact-inner">
           {/* Heading */}
           <div className="contact-heading">
-            <div className="ds-section-tag" style={{ margin: "0 auto 0.75rem" }}>Get In Touch</div>
+            <div className="ds-section-tag" style={{ margin: "0 auto 0.75rem" }}>Get In Touch2 </div>
             <h2>Have a project in mind?<br /><em>Let's talk with us now</em></h2>
             <p>
               From expert marketing and creative design to innovative development, we turn your vision into
@@ -378,7 +378,7 @@ const ContactSection = () => {
                 <div className="contact-box-icon"><i className="fa-regular fa-envelope" /></div>
                 <div className="contact-box-text">
                   <h4>Email Address</h4>
-                  <a href="mailto:marketing@anahmarketing.com">marketing@anahmarketing.com</a>
+                  <a href="mailto:marketing@anahmarketing.com">marketing@anaxmarketing.com</a>
                 </div>
               </div>
             </motion.div>

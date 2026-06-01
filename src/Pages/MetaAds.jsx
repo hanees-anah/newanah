@@ -45,7 +45,7 @@ export default function MetaAds() {
     <div ref={containerRef} style={{ background: "var(--clr-bg)", overflow: "hidden" }}>
       <Helmet>
         <title>Meta Ads Services | Best Social Media Marketing Agency</title>
-        <meta name="description" content="Grow your online presence with Anah Marketing's Meta ads! Partner with a top social media agency for effective, results-driven campaigns." />
+        <meta name="description" content="Grow your online presence with Anax Marketing's Meta ads! Partner with a top social media agency for effective, results-driven campaigns." />
         <link rel="canonical" href="https://anahmarketing.com/social-media-marketing-services" />
       </Helmet>
 

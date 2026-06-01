@@ -42,8 +42,8 @@ export default function Footer() {
         @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 3rem; } }
 
-        .footer-brand img { height: 45px; margin-bottom: 2rem; filter: none; }
-        .footer-brand p { color: #6d7c90; line-height: 1.8; margin-bottom: 2rem; max-width: 320px; font-size: 1.05rem; }
+        .footer-brand img { height: 155px;  filter: none; }
+        .footer-brand p { color: #6d7c90; line-height: 1.8; margin-bottom: 1.5rem; max-width: 320px; font-size: 1.05rem; }
         .social-row { display: flex; gap: 1rem; }
         .social-row a { 
             width: 45px; height: 45px; border-radius: var(--radius-full); background: rgba(255, 255, 255, 0.03); 
@@ -113,7 +113,7 @@ export default function Footer() {
       <footer className="awwwards-footer">
         <div className="footer-grid">
           <div className="footer-brand">
-            <img src={logo} alt="ANAH Marketing" />
+            <img src={logo} alt="Anax Marketing" />
             <p>We architect digital ecosystems that turn brands into market leaders. Your true growth partner.</p>
             <div className="social-row">
               <a href="#"><i className="fa-brands fa-facebook-f" /></a>
@@ -144,7 +144,7 @@ export default function Footer() {
             </div>
             <div className="contact-item">
               <i className="fa-solid fa-envelope" />
-              <div><strong>Email Us</strong>info@anahmarketing.com<br />marketing@anahmarketing.com</div>
+              <div><strong>Email Us</strong>info@anaxmarketing.com<br />marketing@anaxmarketing.com</div>
             </div>
             <div className="contact-item">
               <i className="fa-solid fa-phone" />
@@ -156,7 +156,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-inner">
             <span className="footer-copy">
-              © {new Date().getFullYear()} ANAH Marketing. All rights reserved.
+              © {new Date().getFullYear()} Anax Marketing. All rights reserved.
             </span>
             <div className="footer-legal">
               <a href="/privacy-policy">Privacy Policy</a>

@@ -68,8 +68,8 @@ export default function ContactUS() {
   return (
     <div ref={containerRef} style={{ background: "var(--clr-bg)" }}>
       <Helmet>
-        <title>Contact Anah Marketing | Let's Grow Your Brand</title>
-        <meta name="description" content="Get in touch with Anah Marketing for expert digital marketing, SEO, and web development solutions tailored to your goals." />
+        <title>Contact Anax Marketing | Let's Grow Your Brand</title>
+        <meta name="description" content="Get in touch with Anax Marketing for expert digital marketing, SEO, and web development solutions tailored to your goals." />
         <link rel="canonical" href="https://anahmarketing.com/contact-us" />
       </Helmet>
 
@@ -232,7 +232,7 @@ export default function ContactUS() {
 
       <section className="awwwards-contact-hero">
         <motion.div className="hero-content" style={{ y: yHeroText, opacity: opacityHeroText }}>
-          <h1>Connect With <span>ANAH</span></h1>
+          <h1>Connect With <span>Anax</span></h1>
           <div className="ds-section-tag">Let's Ignite Your Growth</div>
         </motion.div>
       </section>
@@ -256,7 +256,7 @@ export default function ContactUS() {
               <i className="fa-solid fa-envelope" />
               <div>
                 <h4>Electronic Mail</h4>
-                <div>info@anahmarketing.com<br />marketing@anahmarketing.com</div>
+                <div>info@anaxmarketing.com<br />marketing@anaxmarketing.com</div>
               </div>
             </div>
 

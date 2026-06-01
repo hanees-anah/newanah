@@ -44,7 +44,7 @@ export default function GoogleAds() {
     <div ref={containerRef} style={{ background: "var(--clr-bg)", overflow: "hidden" }}>
       <Helmet>
         <title>Google Ads Services | Best PPC Marketing Agency in India</title>
-        <meta name="description" content="Unlock your business's potential with Anah Marketing's Google Ads Services! Work with the best PPC agency for high-impact, conversion-focused campaigns." />
+        <meta name="description" content="Unlock your business's potential with Anax Marketing's Google Ads Services! Work with the best PPC agency for high-impact, conversion-focused campaigns." />
         <link rel="canonical" href="https://anahmarketing.com/google-ads-services" />
       </Helmet>
 

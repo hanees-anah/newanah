@@ -14,7 +14,7 @@ const fallbackBlogs = [
     title: "The 2026 Meta Ads Scaling Protocol: Achieving Profitable 8x ROAS",
     main_image: fallbackImg1,
     post_date: "May 18, 2026",
-    post_author: "Anah Growth Team",
+    post_author: "Anax Growth Team",
     meta_description: "Learn the exact creative sandboxing methods and media buying protocols we use to scale eCommerce brands profitably to large-scale spend."
   },
   {
@@ -22,7 +22,7 @@ const fallbackBlogs = [
     title: "Shopify Speed & UX Checklist: Elevating Your Checkout Conversions",
     main_image: fallbackImg2,
     post_date: "May 12, 2026",
-    post_author: "Anah Dev Team",
+    post_author: "Anax Dev Team",
     meta_description: "Discover the critical UX tweaks, express payment setups, and speed optimizations that help double conversion rates on custom Shopify storefronts."
   },
   {
@@ -30,7 +30,7 @@ const fallbackBlogs = [
     title: "Google Ads Performance Max: Smart Architecture for Maximum Profit",
     main_image: fallbackImg3,
     post_date: "May 08, 2026",
-    post_author: "Anah Search Team",
+    post_author: "Anax Search Team",
     meta_description: "Unlocking Google Ads success. How to structure asset groups, audience signals, and negative keyword lists to target ready-to-buy consumers."
   },
   {
@@ -38,7 +38,7 @@ const fallbackBlogs = [
     title: "Lifecycle Marketing Playbook: Recovering 35%+ Abandoned Carts",
     main_image: fallbackImg4,
     post_date: "May 02, 2026",
-    post_author: "Anah Automation Team",
+    post_author: "Anax Automation Team",
     meta_description: "Unlock passive revenue streams by layering personalized WhatsApp outreach alongside high-converting email lifecycle recovery sequences."
   }
 ];

@@ -91,10 +91,10 @@ function Portfolio() {
     <>
       
        <Helmet>
-        <title>Our Work | Digital Marketing Portfolio – Anah Marketing</title>
+        <title>Our Work | Digital Marketing Portfolio – Anax Marketing</title>
         <meta
           name="description"
-          content="Explore Anah Marketing's portfolio of SEO, web design, and eCommerce success stories. See how we drive real growth for brands across industries."
+          content="Explore Anax Marketing's portfolio of SEO, web design, and eCommerce success stories. See how we drive real growth for brands across industries."
         />
         <link rel="canonical" href="https://anahmarketing.com/portfolio" />
       </Helmet>

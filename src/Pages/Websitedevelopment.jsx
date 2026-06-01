@@ -44,7 +44,7 @@ export default function Websitedevelopment() {
     <div ref={containerRef} style={{ background: "var(--clr-bg)", overflow: "hidden" }}>
       <Helmet>
         <title>Best Web Design & Development Company in India</title>
-        <meta name="description" content="Need a website that stands out? Let Anah Marketing, the best web design and development company, create a site that converts." />
+        <meta name="description" content="Need a website that stands out? Let Anax Marketing, the best web design and development company, create a site that converts." />
         <link rel="canonical" href="https://anahmarketing.com/website-development-company" />
       </Helmet>
 

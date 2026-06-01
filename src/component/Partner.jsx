@@ -160,7 +160,7 @@ export default function Partner() {
         <div className="about-grid">
           <motion.div className="img-left" style={{ y: img1Y }}>
             <MagneticTilt className="img-container">
-              <img src={about1} alt="About ANAH" />
+              <img src={about1} alt="About Anax" />
               {/* <div style={{ position: "absolute", bottom: -20, right: -20, width: 80, height: 80, background: "var(--grad-primary)", borderRadius: "20px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "2rem", color: "#fff", boxShadow: "0 10px 30px rgba(178, 152, 220, 0.3)" }}>
                 <i className="fa-solid fa-rocket" />
               </div> */}
@@ -171,7 +171,7 @@ export default function Partner() {
             <div className="ds-section-tag" style={{ margin: "0 auto 1.5rem" }}>Who We Are</div>
             <h2>We Don't Just Play The Game. <br /><span>We Change It.</span></h2>
             <p>
-              ANAH Marketing was forged on the belief that transparency, data, and relentless optimization are the only metrics that matter. No fluff. Just absolute performance.
+              Anax Marketing was forged on the belief that transparency, data, and relentless optimization are the only metrics that matter. No fluff. Just absolute performance.
             </p>
             <p>
               With over ₹10Cr+ in ad spend managed, we engineer high-velocity growth systems for exclusive brands demanding extreme results.

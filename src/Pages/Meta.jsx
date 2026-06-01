@@ -10,7 +10,7 @@ import bg1 from "../assets/images/pages-bg1.png"
 import bg6 from "../assets/images/graph.png"
 import bgMobile from "../assets/images/mobile-graph.png"
 import meta_laptop from "../assets/images/meta-laptop.png"
-import about_anah from "../assets/images/about-anah.png"
+import about_anah from "../assets/images/about-Anah.png"
 import metaAdsImg2 from "../assets/images/meta-ads-img-2.png";
 import meta_platform from "../assets/images/Meta-Platform.png"
 import add_img from "../assets/images/meta-ads-img-2.png"
@@ -806,7 +806,7 @@ const handleSubmit = async (e) => {
                       Turning Every Ad Rupee into Measurable Impact
                     </p> */}
                 {/* <p className="section-intro">
-                      At Anah Marketing, we focus on results that matter — revenue, ROAS, and brand growth.
+                      At Anax Marketing, we focus on results that matter — revenue, ROAS, and brand growth.
                     </p> */}
                 <div className="deliver-list">
                   <div className="deliver-item">
@@ -882,7 +882,7 @@ const handleSubmit = async (e) => {
                 <span className="promise-tag">OUR PROMISE</span>
                 {/* Naya H1 tag */}
                 <h1>
-                  At Anah Marketing & Innovations, we don’t just run ads — we build performance ecosystems.
+                  At Anax Marketing & Innovations, we don’t just run ads — we build performance ecosystems.
                 </h1>
                 {/* Is H2 ke andar ab animating text aayega */}
                 <h2 className="main-heading animating-text-container">

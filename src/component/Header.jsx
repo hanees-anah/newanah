@@ -76,7 +76,7 @@ export default function Header() {
     <>
       <style>{`
         /* ── Navbar (Floating Pill) ──────────────────────────────── */
-            .anah-nav {
+            .Anax-nav {
           position: fixed;
           top: 1.5rem; left: 50%;
           transform: translateX(-50%);
@@ -91,15 +91,15 @@ export default function Header() {
           border-radius: var(--radius-full);
           box-shadow: var(--shadow-sm);
         }
-        .anah-nav.scrolled {
+        .Anax-nav.scrolled {
           background: rgba(9, 8, 21, 0.88);
           box-shadow: var(--shadow-md);
           border-color: rgba(255, 255, 255, 0.12);
           top: 1rem;
         }
-        .anah-nav-inner {
+        .Anax-nav-inner {
           margin: 0 auto;
-          padding: 0 1.5rem;
+          padding: 0 1rem;
           height: 64px;
           display: flex;
           align-items: center;
@@ -108,24 +108,24 @@ export default function Header() {
         }
 
         /* ── Logo ───────────────────────────────────── */
-        .anah-logo img {
-          max-height: 44px;
+        .Anax-logo img {
+          max-height: 115px;
           width: auto;
           display: block;
           filter: none; /* Premium clean white logo rendering */
         }
 
         /* ── Desktop Nav Links ──────────────────────── */
-        .anah-nav-links {
+        .Anax-nav-links {
           display: flex;
           align-items: center;
           gap: 0.5rem;
           list-style: none;
           margin: 0; padding: 0;
         }
-        .anah-nav-links > li { position: relative; }
-        .anah-nav-links > li > a,
-        .anah-nav-links > li > button {
+        .Anax-nav-links > li { position: relative; }
+        .Anax-nav-links > li > a,
+        .Anax-nav-links > li > button {
           display: flex;
           align-items: center;
           gap: 0.35rem;
@@ -141,25 +141,25 @@ export default function Header() {
           cursor: pointer;
           transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .anah-nav-links > li > a:hover,
-        .anah-nav-links > li > button:hover {
+        .Anax-nav-links > li > a:hover,
+        .Anax-nav-links > li > button:hover {
           color: #ffffff;
           background: var(--grad-primary);
         }
-        .anah-nav-links > li > a.active,
-        .anah-nav-links > li > button.active {
+        .Anax-nav-links > li > a.active,
+        .Anax-nav-links > li > button.active {
           color: #ffffff;
           background: var(--grad-primary);
           font-weight: 600;
         }
-        .anah-chevron {
+        .Anax-chevron {
           font-size: 0.7rem;
           transition: transform 0.25s;
         }
-        .anah-chevron.open { transform: rotate(180deg); }
+        .Anax-chevron.open { transform: rotate(180deg); }
 
         /* ── Dropdown ───────────────────────────────── */
-        .anah-dropdown {
+        .Anax-dropdown {
           position: absolute;
           top: calc(100% + 8px);
           left: 50%;
@@ -174,7 +174,7 @@ export default function Header() {
           box-shadow: 0 16px 48px rgba(0,0,0,0.4);
           z-index: 10;
         }
-        .anah-dropdown a {
+        .Anax-dropdown a {
           display: flex;
           align-items: center;
           gap: 0.6rem;
@@ -186,7 +186,7 @@ export default function Header() {
           text-decoration: none;
           transition: background 0.2s, color 0.2s;
         }
-        .anah-dropdown a::before {
+        .Anax-dropdown a::before {
           content:'';
           width:6px; height:6px;
           border-radius:50%;
@@ -195,14 +195,14 @@ export default function Header() {
           opacity:0;
           transition: opacity 0.2s;
         }
-        .anah-dropdown a:hover {
+        .Anax-dropdown a:hover {
           background: rgba(92, 79, 229, 0.15);
           color: #ffffff;
         }
-        .anah-dropdown a:hover::before { opacity:1; }
+        .Anax-dropdown a:hover::before { opacity:1; }
 
         /* ── CTA Button ─────────────────────────────── */
-        .anah-nav-cta {
+        .Anax-nav-cta {
           display: inline-flex;
           align-items: center;
           gap: 0.5rem;
@@ -219,16 +219,16 @@ export default function Header() {
           white-space: nowrap;
           flex-shrink: 0;
         }
-        .anah-nav-cta:hover {
+        .Anax-nav-cta:hover {
           transform: translateY(-2px) scale(1.02);
           box-shadow: var(--shadow-primary-lg);
           color: #fff !important;
         }
-        .anah-nav-cta svg { transition: transform 0.25s; }
-        .anah-nav-cta:hover svg { transform: translateX(3px); }
+        .Anax-nav-cta svg { transition: transform 0.25s; }
+        .Anax-nav-cta:hover svg { transform: translateX(3px); }
 
         /* ── Hamburger ──────────────────────────────── */
-        .anah-hamburger {
+        .Anax-hamburger {
           display: none;
           background: rgba(255, 255, 255, 0.04);
           border: 1px solid rgba(255, 255, 255, 0.08);
@@ -242,17 +242,17 @@ export default function Header() {
           font-size: 1.1rem;
           transition: background 0.2s;
         }
-        .anah-hamburger:hover { background: rgba(255, 255, 255, 0.08); }
+        .Anax-hamburger:hover { background: rgba(255, 255, 255, 0.08); }
 
         /* ── Mobile Drawer ──────────────────────────── */
-        .anah-drawer-overlay {
+        .Anax-drawer-overlay {
           position: fixed;
           inset: 0;
           background: rgba(0, 0, 0, 0.6);
           backdrop-filter: blur(4px);
           z-index: 10000;
         }
-        .anah-drawer {
+        .Anax-drawer {
           position: fixed;
           top: 0; right: 0;
           width: min(340px, 90vw);
@@ -265,14 +265,14 @@ export default function Header() {
           overflow-y: auto;
           box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
         }
-        .anah-drawer-header {
+        .Anax-drawer-header {
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 1.25rem 1.5rem;
           border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .anah-drawer-close {
+        .Anax-drawer-close {
           width: 36px; height: 36px;
           display: flex; align-items: center; justify-content: center;
           background: rgba(255, 255, 255, 0.04);
@@ -280,15 +280,15 @@ export default function Header() {
           color: #000; cursor: pointer; font-size: 1rem;
           transition: background 0.2s;
         }
-        .anah-drawer-close:hover { background: rgba(255, 255, 255, 0.08); }
-        .anah-drawer-nav {
+        .Anax-drawer-close:hover { background: rgba(255, 255, 255, 0.08); }
+        .Anax-drawer-nav {
           flex: 1;
           padding: 1rem 0.75rem;
           display: flex;
           flex-direction: column;
           gap: 0.25rem;
         }
-        .anah-drawer-link {
+        .Anax-drawer-link {
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -306,12 +306,12 @@ export default function Header() {
           width: 100%;
           text-align: left;
         }
-        .anah-drawer-link:hover,
-        .anah-drawer-link.active {
+        .Anax-drawer-link:hover,
+        .Anax-drawer-link.active {
           background: var(--grad-primary);
           color: #ffffff;
         }
-        .anah-drawer-services {
+        .Anax-drawer-services {
           padding: 0.25rem 0 0.25rem 1.25rem;
           display: flex;
           flex-direction: column;
@@ -319,7 +319,7 @@ export default function Header() {
           border-left: 2px solid rgba(92, 79, 229, 0.4);
           margin-left: 1rem;
         }
-        .anah-drawer-services a {
+        .Anax-drawer-services a {
           display: block;
           padding: 0.6rem 0.75rem;
           color: #94a3b8;
@@ -330,18 +330,18 @@ export default function Header() {
           border-radius: 8px;
           transition: background 0.2s, color 0.2s;
         }
-        .anah-drawer-services a:hover {
+        .Anax-drawer-services a:hover {
           color: #ffffff;
           background: rgba(92, 79, 229, 0.1);
         }
-        .anah-drawer-footer {
+        .Anax-drawer-footer {
           padding: 1.25rem 1.5rem;
           border-top: 1px solid rgba(255, 255, 255, 0.08);
           display: flex;
           flex-direction: column;
           gap: 0.75rem;
         }
-        .anah-drawer-contact {
+        .Anax-drawer-contact {
           display: flex;
           align-items: center;
           gap: 0.6rem;
@@ -351,8 +351,8 @@ export default function Header() {
           text-decoration: none;
           transition: color 0.2s;
         }
-        .anah-drawer-contact:hover { color: #ffffff; }
-        .anah-drawer-contact-icon {
+        .Anax-drawer-contact:hover { color: #ffffff; }
+        .Anax-drawer-contact-icon {
           width: 32px; height: 32px;
           border-radius: 8px;
           background: rgba(255, 255, 255, 0.04);
@@ -363,10 +363,10 @@ export default function Header() {
         }
 
         /* ── Social Row ─────────────────────────────── */  
-        .anah-drawer-social {
+        .Anax-drawer-social {
           display: flex; gap: 0.5rem; margin-top: 0.25rem;
         }
-        .anah-drawer-social a {
+        .Anax-drawer-social a {
           width: 36px; height: 36px;
           border-radius: 8px;
           background: rgba(255, 255, 255, 0.03);
@@ -377,7 +377,7 @@ export default function Header() {
           border: 1px solid rgba(255, 255, 255, 0.08);
           transition: background 0.2s, color 0.2s, border-color 0.2s;
         }
-        .anah-drawer-social a:hover {
+        .Anax-drawer-social a:hover {
           background: rgba(92, 79, 229, 0.15);
           color: #ffffff;
           border-color: rgba(92, 79, 229, 0.4);
@@ -385,28 +385,28 @@ export default function Header() {
 
         /* ── Responsive breakpoint ──────────────────── */
         @media (max-width: 991px) {
-          .anah-nav-links,
-          .anah-nav-cta { display: none !important; }
-          .anah-hamburger { display: flex; }
+          .Anax-nav-links,
+          .Anax-nav-cta { display: none !important; }
+          .Anax-hamburger { display: flex; }
         }
       `}</style>
 
       {/* ── Fixed Navbar ─────────────────────────── */}
       <motion.nav
-        className={`anah-nav ${scrolled ? "scrolled" : ""}`}
+        className={`Anax-nav ${scrolled ? "scrolled" : ""}`}
         style={{ backgroundColor: "#fff", borderBottomColor: navBorder, backdropFilter: navFilter, boxShadow: navShadow, position: "fixed" }}
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="anah-nav-inner">
+        <div className="Anax-nav-inner">
 
           {/* Logo */}
-          <a href="/" className="anah-logo" aria-label="ANAH Marketing – Home">
-            <img src={logo} alt="ANAH Marketing" />
+          <a href="/" className="Anax-logo" aria-label="Anax Marketing – Home">
+            <img src={logo} alt="Anax Marketing" />
           </a>
 
           {/* Desktop Links */}
-          <ul className="anah-nav-links">
+          <ul className="Anax-nav-links">
             {navLinks.slice(0, 2).map((l) => (
               <li key={l.href}>
                 <a href={l.href} className={isActive(l.href) ? "active" : ""}>{l.label}</a>
@@ -421,12 +421,12 @@ export default function Header() {
                 aria-expanded={servicesOpen}
               >
                 Services
-                <i className={`fa-solid fa-chevron-down anah-chevron${servicesOpen ? " open" : ""}`} />
+                <i className={`fa-solid fa-chevron-down Anax-chevron${servicesOpen ? " open" : ""}`} />
               </button>
               <AnimatePresence>
                 {servicesOpen && (
                   <motion.div
-                    className="anah-dropdown"
+                    className="Anax-dropdown"
                     initial={{ opacity: 0, y: -8, scale: 0.97 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -8, scale: 0.97 }}
@@ -448,7 +448,7 @@ export default function Header() {
           </ul>
 
           {/* CTA */}
-          <a href="/contact-us" className="anah-nav-cta">
+          <a href="/contact-us" className="Anax-nav-cta">
             Let's Talk
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -456,7 +456,7 @@ export default function Header() {
           </a>
 
           {/* Hamburger */}
-          <button className="anah-hamburger" onClick={() => setDrawerOpen(true)} aria-label="Open menu">
+          <button className="Anax-hamburger" onClick={() => setDrawerOpen(true)} aria-label="Open menu">
             <i className="fa-solid fa-bars" />
           </button>
         </div>
@@ -467,50 +467,50 @@ export default function Header() {
         {drawerOpen && (
           <>
             <motion.div
-              className="anah-drawer-overlay"
+              className="Anax-drawer-overlay"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setDrawerOpen(false)}
             />
             <motion.div
-              className="anah-drawer"
+              className="Anax-drawer"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 280, damping: 30 }}
             >
               {/* Header */}
-              <div className="anah-drawer-header">
-                <a href="/" className="anah-logo">
-                  <img src={logo} alt="ANAH Marketing" />
+              <div className="Anax-drawer-header">
+                <a href="/" className="Anax-logo">
+                  <img src={logo} alt="Anax Marketing" />
                 </a>
-                <button className="anah-drawer-close" onClick={() => setDrawerOpen(false)} aria-label="Close menu">
+                <button className="Anax-drawer-close" onClick={() => setDrawerOpen(false)} aria-label="Close menu">
                   <i className="fa-solid fa-xmark" />
                 </button>
               </div>
 
               {/* Nav */}
-              <nav className="anah-drawer-nav">
-                <a href="/" className={`anah-drawer-link${location.pathname === "/" ? " active" : ""}`}>
+              <nav className="Anax-drawer-nav">
+                <a href="/" className={`Anax-drawer-link${location.pathname === "/" ? " active" : ""}`}>
                   Home
                 </a>
-                <a href="/about-us" className={`anah-drawer-link${isActive("/about-us") ? " active" : ""}`}>
+                <a href="/about-us" className={`Anax-drawer-link${isActive("/about-us") ? " active" : ""}`}>
                   About Us
                 </a>
 
                 {/* Services accordion */}
                 <button
-                  className={`anah-drawer-link${services.some(s => isActive(s.href)) ? " active" : ""}`}
+                  className={`Anax-drawer-link${services.some(s => isActive(s.href)) ? " active" : ""}`}
                   onClick={() => setMServicesOpen(o => !o)}
                 >
                   Services
-                  <i className={`fa-solid fa-chevron-down anah-chevron${mServicesOpen ? " open" : ""}`} />
+                  <i className={`fa-solid fa-chevron-down Anax-chevron${mServicesOpen ? " open" : ""}`} />
                 </button>
                 <AnimatePresence>
                   {mServicesOpen && (
                     <motion.div
-                      className="anah-drawer-services"
+                      className="Anax-drawer-services"
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -524,9 +524,9 @@ export default function Header() {
                   )}
                 </AnimatePresence>
 
-                <a href="/blog" className={`anah-drawer-link${isActive("/blog") ? " active" : ""}`}>Blogs</a>
-                <a href="/portfolio" className={`anah-drawer-link${isActive("/portfolio") ? " active" : ""}`}>Portfolio</a>
-                <a href="/contact-us" className={`anah-drawer-link${isActive("/contact-us") ? " active" : ""}`}>Contact Us</a>
+                <a href="/blog" className={`Anax-drawer-link${isActive("/blog") ? " active" : ""}`}>Blogs</a>
+                <a href="/portfolio" className={`Anax-drawer-link${isActive("/portfolio") ? " active" : ""}`}>Portfolio</a>
+                <a href="/contact-us" className={`Anax-drawer-link${isActive("/contact-us") ? " active" : ""}`}>Contact Us</a>
 
                 <div style={{ marginTop: "auto", paddingTop: "1rem" }}>
                   <a href="/contact-us" className="ds-btn-primary" style={{ width: "100%", justifyContent: "center" }}>
@@ -537,17 +537,17 @@ export default function Header() {
               </nav>
 
               {/* Footer info */}
-              <div className="anah-drawer-footer">
-                <a href="tel:+916376011249" className="anah-drawer-contact">
-                  <span className="anah-drawer-contact-icon"><i className="fa-solid fa-phone" /></span>
+              <div className="Anax-drawer-footer">
+                <a href="tel:+916376011249" className="Anax-drawer-contact">
+                  <span className="Anax-drawer-contact-icon"><i className="fa-solid fa-phone" /></span>
                   +91-6376011249
                 </a>
-                <a href="mailto:marketing@anahmarketing.com" className="anah-drawer-contact">
-                  <span className="anah-drawer-contact-icon"><i className="fa-regular fa-envelope" /></span>
-                  marketing@anahmarketing.com
+                <a href="mailto:marketing@anahmarketing.com" className="Anax-drawer-contact">
+                  <span className="Anax-drawer-contact-icon"><i className="fa-regular fa-envelope" /></span>
+                  marketing@anaxmarketing.com
                 </a>
-                <div className="anah-drawer-social">
-                  <a href="https://www.facebook.com/people/Anah-marketing/61575241095643/" target="_blank" rel="noreferrer" aria-label="Facebook">
+                <div className="Anax-drawer-social">
+                  <a href="https://www.facebook.com/people/Anax-marketing/61575241095643/" target="_blank" rel="noreferrer" aria-label="Facebook">
                     <i className="fa-brands fa-facebook-f" />
                   </a>
                   <a href="https://www.instagram.com/ami_performance/" target="_blank" rel="noreferrer" aria-label="Instagram">

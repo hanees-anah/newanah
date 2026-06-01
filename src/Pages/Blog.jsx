@@ -19,8 +19,8 @@ const fallbackBlogs = [
     main_image: fallbackImg1,
     image: fallbackImg1,
     post_date: "May 18, 2026",
-    post_author: "Anah Growth Team",
-    meta_title: "How to Scale Meta Ads to 8x ROAS | Anah Marketing",
+    post_author: "Anax Growth Team",
+    meta_title: "How to Scale Meta Ads to 8x ROAS | Anax Marketing",
     meta_description: "Learn the exact creative sandboxing methods and media buying protocols we use to scale eCommerce brands profitably to large-scale spend.",
     content: "Profitable scaling is no longer about secret audience hacks. In 2026, it is entirely about creative iteration and structural bidding. By isolating new concepts in a Sandbox environment using Dynamic Creative Options (DCO), we can test angles, hooks, and call-to-actions without disrupting stable, winning campaigns. Once a winner is identified, scale using cost caps for maximum efficiency."
   },
@@ -30,8 +30,8 @@ const fallbackBlogs = [
     main_image: fallbackImg2,
     image: fallbackImg2,
     post_date: "May 12, 2026",
-    post_author: "Anah Dev Team",
-    meta_title: "Shopify Conversion Rate Optimization Checklist | Anah",
+    post_author: "Anax Dev Team",
+    meta_title: "Shopify Conversion Rate Optimization Checklist | Anax",
     meta_description: "Discover the critical UX tweaks, express payment setups, and speed optimizations that help double conversion rates on custom Shopify storefronts.",
     content: "Most eCommerce sites suffer from high drop-off rates at checkout due to friction, slow load times, and missing trust signals. By applying a premium SaaS design philosophy, we can eliminate friction and guide users seamlessly to purchase. Focus on sub-2 second page loads, express checkout shortcuts (UPI, Razorpay), and strong checkout trust triggers."
   },
@@ -41,8 +41,8 @@ const fallbackBlogs = [
     main_image: fallbackImg3,
     image: fallbackImg3,
     post_date: "May 08, 2026",
-    post_author: "Anah Search Team",
-    meta_title: "Google Performance Max Strategy Guide | Anah Marketing",
+    post_author: "Anax Search Team",
+    meta_title: "Google Performance Max Strategy Guide | Anax Marketing",
     meta_description: "Unlocking Google Ads success. How to structure asset groups, audience signals, and negative keyword lists to target ready-to-buy consumers.",
     content: "Google's Performance Max campaigns are incredibly powerful, but without the right guardrails, they can waste thousands on irrelevant search terms and display networks. Structure asset groups strictly by product margins and search intent, inject precise first-party audience signals, and aggressively exclude low-intent search themes."
   },
@@ -52,7 +52,7 @@ const fallbackBlogs = [
     main_image: fallbackImg4,
     image: fallbackImg4,
     post_date: "May 02, 2026",
-    post_author: "Anah Automation Team",
+    post_author: "Anax Automation Team",
     meta_title: "WhatsApp & Email Marketing Automation Playbook",
     meta_description: "Unlock passive revenue streams by layering personalized WhatsApp outreach alongside high-converting email lifecycle recovery sequences.",
     content: "Relying solely on email for cart abandonment recovery is a missed opportunity. Layer WhatsApp marketing automations within 15 minutes of abandonment. Follow up with value-driven HTML emails showcasing social proof and detailed product sizing at the 24-hour mark to capture and address logical hesitation."
@@ -112,8 +112,8 @@ export default function Blog() {
   return (
     <div ref={containerRef} style={{ background: "var(--clr-bg)" }}>
       <Helmet>
-        <title>Digital Marketing Blog | Insights by Anah Marketing</title>
-        <meta name="description" content="Stay ahead with the latest digital marketing trends from Anah Marketing's blog." />
+        <title>Digital Marketing Blog | Insights by Anax Marketing</title>
+        <meta name="description" content="Stay ahead with the latest digital marketing trends from Anax Marketing's blog." />
         <link rel="canonical" href="https://anahmarketing.com/blog" />
       </Helmet>
 

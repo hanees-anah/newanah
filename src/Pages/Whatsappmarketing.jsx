@@ -29,7 +29,7 @@ function WhatsappMarketing() {
         <title>WhatsApp Marketing Services | Top WhatsApp Marketing Agency</title>
         <meta
           name="description"
-          content="Boost engagement with Anah Marketing's WhatsApp services! Send personalized, instant campaigns that connect, convert, and deliver real results."
+          content="Boost engagement with Anax Marketing's WhatsApp services! Send personalized, instant campaigns that connect, convert, and deliver real results."
         />
         <link rel="canonical" href="https://anahmarketing.com/whatsapp-marketing-services" />
       </Helmet>

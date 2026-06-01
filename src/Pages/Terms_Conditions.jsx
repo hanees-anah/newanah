@@ -40,10 +40,10 @@ function Terms_Conditions() {
   }
 `}</style>
             <Helmet>
-                <title>Terms & Conditions | Anah Marketing – User Agreement</title>
+                <title>Terms & Conditions | Anax Marketing – User Agreement</title>
                 <meta
                     name="description"
-                    content="Review Anah Marketing’s Terms & Conditions to understand our services, user rights, and policies. Clear, transparent, and designed to protect both parties."
+                    content="Review Anax Marketing’s Terms & Conditions to understand our services, user rights, and policies. Clear, transparent, and designed to protect both parties."
                 />
                 <link rel="canonical" href="https://anahmarketing.com/terms-condition" />
 
@@ -85,9 +85,9 @@ function Terms_Conditions() {
                 <div class="container">
                     <h2>Terms & Conditions</h2>
                     <h3><span class="text-animation bg-gardiant">Acceptance of Terms &amp; Conditions</span></h3>
-                    <p>Kindly use all the terms and conditions carefully prior to using this site. By using this site, you give your consent to these terms and conditions. You cannot use the website for any objective that tends to be prohibited or illegal by the terms and conditions. If you do not agree to the terms and conditions, immediately stop accessing this site. Anah Marketing & Innovations reserve the right to alter, modify, or update these terms and conditions from time to time as it deems appropriate and all the updates shall be automatically binding on you</p>
+                    <p>Kindly use all the terms and conditions carefully prior to using this site. By using this site, you give your consent to these terms and conditions. You cannot use the website for any objective that tends to be prohibited or illegal by the terms and conditions. If you do not agree to the terms and conditions, immediately stop accessing this site. Anax Marketing & Innovations reserve the right to alter, modify, or update these terms and conditions from time to time as it deems appropriate and all the updates shall be automatically binding on you</p>
                     <h4>License to Use Website</h4>
-                    <p>Unless stated otherwise, Anah Marketing & Innovations and/or its licensors own the intellective property rights and content on the website. Subject to the license provided below, all the rights for this website are reserved.</p>
+                    <p>Unless stated otherwise, Anax Marketing & Innovations and/or its licensors own the intellective property rights and content on the website. Subject to the license provided below, all the rights for this website are reserved.</p>
                     <p>
                         You may download or view website pages only for caching purpose, and all the print pages or other documents from the website for your personal use, that is subject to the restrictions set provided below and elsewhere in these terms and conditions.</p>
                     <h4>You Must Not:</h4>
@@ -101,13 +101,13 @@ function Terms_Conditions() {
                     </ul>
                     <p>Moreover, where the content is made available for redistribution ensure to limit it to your organization.
                         Permitted Use</p>
-                    <p>You give consent that you are only authorized to view or visit pages of the site for your personal requirement and that you shall not publish, duplicate, modify, elsewhere distribute the content of this website for any purpose than as mentioned herein. Any content posted by Anah Marketing & Innovations on this website is the property of Anah Marketing & Innovations and is protected by Indian International Copyright Orders. You agree that you will not obscure, remove or alter any legal notices displayed on the site. You agree that you will not use this site (i) in any way or purpose that exploits the terms and conditions or any right of any person, including but not limited to rights of privacy, intellective property rights, or rights of personality; (ii) in connection with or to promote any services, materials, or products; or (iii) to post any content that dishonor or diminishes any entity or person.</p>
-                    <p>By default, we never use or share your project or any information related to your project with any other parties. All the information provided to Anah Marketing & Innovations is confidential and if your project or website is online over internet then that data will be publicly accessible and we are not responsible for it if get copied</p>
+                    <p>You give consent that you are only authorized to view or visit pages of the site for your personal requirement and that you shall not publish, duplicate, modify, elsewhere distribute the content of this website for any purpose than as mentioned herein. Any content posted by Anax Marketing & Innovations on this website is the property of Anax Marketing & Innovations and is protected by Indian International Copyright Orders. You agree that you will not obscure, remove or alter any legal notices displayed on the site. You agree that you will not use this site (i) in any way or purpose that exploits the terms and conditions or any right of any person, including but not limited to rights of privacy, intellective property rights, or rights of personality; (ii) in connection with or to promote any services, materials, or products; or (iii) to post any content that dishonor or diminishes any entity or person.</p>
+                    <p>By default, we never use or share your project or any information related to your project with any other parties. All the information provided to Anax Marketing & Innovations is confidential and if your project or website is online over internet then that data will be publicly accessible and we are not responsible for it if get copied</p>
                     <h4>Privacy Policy</h4>
-                    <p>We Anah Marketing & Innovations are committed to respect and protect your privacy. We will always ensure appropriate and reasonable measures to prevent any unauthorized access or disclosure of your personal information. By accessing our services or site, you acknowledge and permit that our privacy policies apply to every service provided by us and the website too. But ensure to exclude services and sites that you see on ads from this Privacy Policy</p>
+                    <p>We Anax Marketing & Innovations are committed to respect and protect your privacy. We will always ensure appropriate and reasonable measures to prevent any unauthorized access or disclosure of your personal information. By accessing our services or site, you acknowledge and permit that our privacy policies apply to every service provided by us and the website too. But ensure to exclude services and sites that you see on ads from this Privacy Policy</p>
                     <h4>Your Personal Information</h4>
                     <p>Personal Data or Personal Information means any information about a person that helps in identifying that individual. It does not include any data where the identity has been eliminated.</p>
-                    <h4>Anah Marketing & Innovations may collect and use the given personal information:</h4>
+                    <h4>Anax Marketing & Innovations may collect and use the given personal information:</h4>
                     <ul class="serviceopint">
                         <li>Information on your use of the website</li>
                         <li>Your information that you provided at the time of registration with or submitting documents or information to our site</li>
@@ -130,21 +130,21 @@ function Terms_Conditions() {
                         <li> Where we bind to comply with regulatory or legal obligations and in connection with any legal prospective or proceedings in order to establish defend or exercise legal rights.</li>
                         <li> Share your marketing communications</li>
                     </ul>
-                    <p>We never use your information linked to your project with the third party clients. All the information accessed by Anah Marketing & Innovations is confidential. However, if your project is available online then that data will be accessible publicly and we do not take any responsibility for it if somehow it gets copied.</p>
+                    <p>We never use your information linked to your project with the third party clients. All the information accessed by Anax Marketing & Innovations is confidential. However, if your project is available online then that data will be accessible publicly and we do not take any responsibility for it if somehow it gets copied.</p>
                     <h5>Payment Terms</h5>
                     <ul class="serviceopint">
-                        <li>All quotation offered by Anah Marketing & Innovations require a 50% deposit on acceptance</li>
+                        <li>All quotation offered by Anax Marketing & Innovations require a 50% deposit on acceptance</li>
                         <li>Any increase in cost from payment clearing or transaction charges are the responsibility of the client and thus will be charged for that</li>
-                        <li>Anah Marketing & Innovations will only start work on the quotation application after deposited funds have cleared</li>
+                        <li>Anax Marketing & Innovations will only start work on the quotation application after deposited funds have cleared</li>
                         <li> No customer will be entitled to services when there is a delay in payment for more than 10 days from the final date of the project/ date of installation/completion of the module</li>
-                        <li>The Annual Maintenance Contract or AMC percentage shall be finalized by Anah Marketing & Innovations, which entirely depends on the work and effort required. AMC Percentage may vary every year</li>
-                        <li>Unless specified in quotation offered by Anah Marketing & Innovations, you shall not integrate and source code license</li>
-                        <li>Every source code and intellective properties that are associated with the source code developed by Anah Marketing & Innovations will remain the property of Anah Marketing & Innovations, except where a few particular source code are licensed to the client and they have got the issuance from Anah Marketing & Innovations stating the same</li>
-                        <li>Any alteration, manipulation, or reverse development of any code created by At Anah Marketing & Innovations for the quoted project may be a violation of copyright or trademark laws. If the violation is confirmed, penalties would be charges under the associated acts</li>
+                        <li>The Annual Maintenance Contract or AMC percentage shall be finalized by Anax Marketing & Innovations, which entirely depends on the work and effort required. AMC Percentage may vary every year</li>
+                        <li>Unless specified in quotation offered by Anax Marketing & Innovations, you shall not integrate and source code license</li>
+                        <li>Every source code and intellective properties that are associated with the source code developed by Anax Marketing & Innovations will remain the property of Anax Marketing & Innovations, except where a few particular source code are licensed to the client and they have got the issuance from Anax Marketing & Innovations stating the same</li>
+                        <li>Any alteration, manipulation, or reverse development of any code created by At Anax Marketing & Innovations for the quoted project may be a violation of copyright or trademark laws. If the violation is confirmed, penalties would be charges under the associated acts</li>
                         <li>Any payment required for the third party code license needed to complete the quoted project is solely the responsibility of the client.</li>
                     </ul>
                     <h4>Cancellation</h4>
-                    <p>If the client wishes to cancel the ongoing project, At Anah Marketing & Innovations will invoice the client for any tasks fulfilled to date as a percentage of complete work involved
+                    <p>If the client wishes to cancel the ongoing project, At Anax Marketing & Innovations will invoice the client for any tasks fulfilled to date as a percentage of complete work involved
                         The minimum cancellation fee will be 30% of the signed quotation.</p>
                     <h4>Refund Policy</h4>
                     <p>A refund is only made in extreme circumstances. To be eligible for any refund there is a certain criterion that needs to be met. Prior to providing a refund, the validity of the case is checked. You will only get refund in the following cases:</p>
@@ -161,13 +161,13 @@ function Terms_Conditions() {
                     </ul>
                     <h4>Product Delivery</h4>
                     <ul class="serviceopint">
-                        <li> The time frame offered by At Anah Marketing & Innovations to the clients is estimated. The intrinsic nature of website design, development, or digital marketing does not offer At Anah Marketing & Innovations the extravagance of defining an accurate timeline</li>
-                        <li> At Anah Marketing & Innovations will strive to complete all work within the given timeframe as discussed with the clients. However, Anah Marketing & Innovations will not be liable for any monies, penalties or hardship if the product cannot be delivered within the offered estimated timeline</li>
-                        <li> Anah Marketing & Innovations will not release the entire product unless all the payments have been met under the obligation of the work agreement</li>
-                        <li>If Anah Marketing & Innovations is working as a third-party service provider to any company, then we shall not be responsible to meet the obligations for release of the quote application to their client..</li>
+                        <li> The time frame offered by At Anax Marketing & Innovations to the clients is estimated. The intrinsic nature of website design, development, or digital marketing does not offer At Anax Marketing & Innovations the extravagance of defining an accurate timeline</li>
+                        <li> At Anax Marketing & Innovations will strive to complete all work within the given timeframe as discussed with the clients. However, Anax Marketing & Innovations will not be liable for any monies, penalties or hardship if the product cannot be delivered within the offered estimated timeline</li>
+                        <li> Anax Marketing & Innovations will not release the entire product unless all the payments have been met under the obligation of the work agreement</li>
+                        <li>If Anax Marketing & Innovations is working as a third-party service provider to any company, then we shall not be responsible to meet the obligations for release of the quote application to their client..</li>
                     </ul>
                     <h4>Changes to Site Including Terms &amp; Conditions</h4>
-                    <p>This site along with the terms and conditions may be revised, amended, updated, changed, or modified by Anah Marketing & Innovations with or without any prior notice to the clients or customers. It is highly recommended to review all the terms and conditions on a regular basis. Continued access to the site after changes of Terms and Conditions would be considered as your acceptance for every update or change that has taken place in Anah Marketing & Innovations site entailing its terms and conditions </p>
+                    <p>This site along with the terms and conditions may be revised, amended, updated, changed, or modified by Anax Marketing & Innovations with or without any prior notice to the clients or customers. It is highly recommended to review all the terms and conditions on a regular basis. Continued access to the site after changes of Terms and Conditions would be considered as your acceptance for every update or change that has taken place in Anax Marketing & Innovations site entailing its terms and conditions </p>
 
                 </div>
             </div>

@@ -161,7 +161,7 @@ const selectRef = useRef(null);
   // spend:  "",
   message: "",
 //   city: "",
-  companyname: "Anah Perf Marketing – Grid V5",
+  companyname: "Anax Perf Marketing – Grid V5",
   formType: "performance_marketing",
 });
 
@@ -246,7 +246,7 @@ console.log("FORM DATA:", formData);
       // spend: "",
       message: "",
        city: "",
-      companyname: "Anah Perf Marketing – Grid V5",
+      companyname: "Anax Perf Marketing – Grid V5",
       formType: "performance_marketing",
     });
 setSpend("");
@@ -280,7 +280,7 @@ if (selectRef.current) selectRef.current.value = "";
     <div className="bg-white text-slate-900 font-sans overflow-hidden performance-marketing-page">
        
       <Helmet>
-        <title>Performance Marketing Agency | Anah Marketing</title>
+        <title>Performance Marketing Agency | Anax Marketing</title>
         <meta name="description" content="India's #1 D2C performance marketing agency — Meta Ads, Google Ads & SEO for sustainable ROI growth." />
       </Helmet>
 
@@ -903,7 +903,7 @@ if (selectRef.current) selectRef.current.value = "";
 
           {/* Description */}
           <p className="text-slate-500 mb-12 text-lg leading-relaxed max-w-xl mx-auto">
-            Join 50+ D2C brands that chose Anah Marketing for data-driven performance that compounds.
+            Join 50+ D2C brands that chose Anax Marketing for data-driven performance that compounds.
           </p>
 
           {/* CTA Button */}
@@ -947,7 +947,7 @@ if (selectRef.current) selectRef.current.value = "";
                             href="mailto:marketing@anahmarketing.com"
                             className="text-sm font-bold text-[15px] text-[#1e5f74] hover:underline transition"
                         >
-                            marketing@anahmarketing.com
+                            marketing@anaxmarketing.com
                         </a>
                     </div>
                 </motion.div>

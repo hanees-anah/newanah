@@ -254,7 +254,7 @@ function Read_more() {
           Moving beyond passive content consumption to creating interactive, personalized shopping experiences is no longer optional; it’s a necessity. By adopting these <strong>top social media marketing trends</strong>, your brand can build stronger customer relationships and drive meaningful growth. Ready to take the next step?
         </p>
         <p>
-          Partner with <strong>Anah Marketing and Innovations</strong> to transform your <strong>social media strategy</strong> and unlock new opportunities in 2025.
+          Partner with <strong>Anax Marketing and Innovations</strong> to transform your <strong>social media strategy</strong> and unlock new opportunities in 2025.
         </p>
       </div>
     </div>

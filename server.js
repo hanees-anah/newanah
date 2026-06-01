@@ -102,7 +102,7 @@ const htmlBody = `
   <div style="font-family: Arial, sans-serif; font-size: 14px; color: #333; line-height: 1.6;">
    <h2 style="color:#2c3e50;">Hi ${leadName},</h2>
     <p>
-      Thank you for reaching out to <strong>Anah Marketing & Innovations</strong>! 🙌<br/>
+      Thank you for reaching out to <strong>Anax Marketing & Innovations</strong>! 🙌<br/>
       We’re excited to connect with you. As one of the leading <strong>Shopify development & maintenance companies</strong> with over a decade of experience, we’ve successfully delivered <strong>100+ Shopify stores</strong> across diverse industries.
     </p>
     
@@ -142,7 +142,7 @@ const htmlBody = `
     <p style="margin-top:20px;">
       Best Regards,<br/>
       <strong>Harshad Anil More</strong><br/>
-      Anah Marketing & Innovations<br/>
+      Anax Marketing & Innovations<br/>
       📞 <a href="tel:9207419301">9207419301</a>
     </p>
   </div>

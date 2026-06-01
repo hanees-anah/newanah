@@ -348,7 +348,7 @@ const handleSubmit = async (e) => {
         <title>Best Shopify Website Development & Management Company in India</title>
         <meta
           name="description"
-          content="Anah Marketing provides Shopify development & management services to build high-performing eCommerce stores with custom designs and seamless integrations."
+          content="Anax Marketing provides Shopify development & management services to build high-performing eCommerce stores with custom designs and seamless integrations."
         />
         <link rel="canonical" href="https://anahmarketing.com/shopify-development" />
 
@@ -558,7 +558,7 @@ const handleSubmit = async (e) => {
               <div className="works-header-area heading2 specing2">
                 <h2>Our Expertise in Shopify Development</h2>
                 <p>
-                  At Anah Marketing, we know what it takes to build a Shopify store that doesn’t just look good, it performs.
+                  At Anax Marketing, we know what it takes to build a Shopify store that doesn’t just look good, it performs.
                   From setting up your store the right way to customizing themes that reflect your brand, we make sure everything works smoothly from the front end to the backend.
                   Whether it’s improving speed, making your site mobile-friendly, or adding the right apps to boost sales,
                   our team is focused on helping your D2C brand grow and succeed online.
@@ -573,7 +573,7 @@ const handleSubmit = async (e) => {
                 <h2>Don’t Have a Website Yet? We’ll Build It Right from the Beginning</h2>
                 <p>
                   Starting from scratch can feel overwhelming, but that’s where we come in.
-                  At Anah Marketing, we guide you through the entire process of creating a powerful,
+                  At Anax Marketing, we guide you through the entire process of creating a powerful,
                   high-performing website that aligns with your brand and business goals.
 
                 </p>
@@ -758,9 +758,9 @@ const handleSubmit = async (e) => {
           <div class="row align-items-center">
             <div class="col-md-8">
               <div class="service2-header heading2">
-                <h2 class="text-anime-style-3">Benefits of Choosing Anah Marketing</h2>
+                <h2 class="text-anime-style-3">Benefits of Choosing Anax Marketing</h2>
               </div>
-              {/* <h2 className="mb-4 service2-header heading2">Benefits of Choosing Anah Marketing</h2> */}
+              {/* <h2 className="mb-4 service2-header heading2">Benefits of Choosing Anax Marketing</h2> */}
               <h4 className="mb-5">Working with us is more than just launching a Shopify store - it's about helping your brand succeed long-term:</h4>
 
               <div class="shopify-list">

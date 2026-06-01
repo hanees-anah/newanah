@@ -46,7 +46,7 @@ function InstagramReadMore() {
                 <title>Top E-commerce Platforms to Boost Your SEO</title>
                 <meta
                     name="description"
-                    content="Discover top SEO-friendly e-commerce platforms for 2025. Boost your store’s visibility, traffic, and sales with expert picks from Anah Marketing."
+                    content="Discover top SEO-friendly e-commerce platforms for 2025. Boost your store’s visibility, traffic, and sales with expert picks from Anax Marketing."
                 />
             </Helmet>
       <div
@@ -88,7 +88,7 @@ function InstagramReadMore() {
           In today’s digital world, having an online store is just the beginning. To truly succeed, your store needs to rank high on search engines and attract visitors who will buy from you. That’s why choosing an <strong>SEO-friendly e-commerce platform</strong> is so important.
         </p>
         <p>
-          At <strong>Anah Marketing and Innovations</strong>, we help businesses create smart, scalable online stores that not only look great but also perform well in search results.
+          At <strong>Anax Marketing and Innovations</strong>, we help businesses create smart, scalable online stores that not only look great but also perform well in search results.
         </p>
         <p>
           In 2025, success in e-commerce depends on having a strong online presence. Picking the right SEO-friendly platform can boost your brand’s visibility, increase traffic, and lead to more sales.
@@ -193,10 +193,10 @@ function InstagramReadMore() {
           In the competitive world of e-commerce, your platform is the foundation of your digital presence. Choosing an <strong>SEO-friendly e-commerce platform</strong> in 2025 is not just about looks, it’s about functionality, speed, mobile experience, and how well it communicates with Google.
         </p>
         <p>
-          At <strong>Anah Marketing and Innovations</strong>, we specialize in building e-commerce stores that don’t just sell but scale with search. From Shopify to Magento, our team ensures your platform is not only optimized for conversions but also built with the <strong>latest SEO strategies</strong> in mind.
+          At <strong>Anax Marketing and Innovations</strong>, we specialize in building e-commerce stores that don’t just sell but scale with search. From Shopify to Magento, our team ensures your platform is not only optimized for conversions but also built with the <strong>latest SEO strategies</strong> in mind.
         </p>
         <p>
-          Need help selecting the right platform for your business? Let <strong>Anah Marketing and Innovations</strong> guide you with tailored solutions designed for the <strong>future of SEO</strong>.
+          Need help selecting the right platform for your business? Let <strong>Anax Marketing and Innovations</strong> guide you with tailored solutions designed for the <strong>future of SEO</strong>.
         </p>
       </div>
     </div>

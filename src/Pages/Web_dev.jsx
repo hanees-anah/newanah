@@ -324,7 +324,7 @@ const Web_dev = () => {
                 <title>Best Shopify Website Development & Management Company in India</title>
                 <meta
                     name="description"
-                    content="Anah Marketing provides Shopify development & management services to build high-performing eCommerce stores with custom designs and seamless integrations."
+                    content="Anax Marketing provides Shopify development & management services to build high-performing eCommerce stores with custom designs and seamless integrations."
                 />
                 <link rel="canonical" href="https://anahmarketing.com/shopify-development" />
 
@@ -781,9 +781,9 @@ const Web_dev = () => {
                     <div class="row align-items-center">
                         <div class="col-md-8">
                             <div class="service2-header heading2">
-                                <h2 class="text-anime-style-3">Benefits of Choosing Anah Marketing</h2>
+                                <h2 class="text-anime-style-3">Benefits of Choosing Anax Marketing</h2>
                             </div>
-                            {/* <h2 className="mb-4 service2-header heading2">Benefits of Choosing Anah Marketing</h2> */}
+                            {/* <h2 className="mb-4 service2-header heading2">Benefits of Choosing Anax Marketing</h2> */}
                             <h4 className="mb-5">Working with us is more than just launching a Shopify store - it's about helping your brand succeed long-term:</h4>
 
                             <div class="shopify-list">

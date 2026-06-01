@@ -304,7 +304,7 @@ const ParentEye = () => {
                         <div className="col-lg-6">
                             <div className="heading2 contact-header">
                                 <h5>Contact Us</h5>
-                                <h2>Get in Touch with Anah Marketing – We Value Your Connection!</h2>
+                                <h2>Get in Touch with Anax Marketing – We Value Your Connection!</h2>
                                 <p>
                                   Stay informed, engaged, and empowered with ParentEye—a smart school management ERP platform that strengthens collaboration between schools, teachers, parents, and students. Together, we build a smarter, more connected education future.
                                 </p>
@@ -511,7 +511,7 @@ const ParentEye = () => {
                             <div class="service2-header heading2">
                                 <h2 class="text-anime-style-3">Why Choose ParentEye ERP Software?</h2>
                             </div>
-                            {/* <h2 className="mb-4 service2-header heading2">Benefits of Choosing Anah Marketing</h2> */}
+                            {/* <h2 className="mb-4 service2-header heading2">Benefits of Choosing Anax Marketing</h2> */}
                             <h4 className="mb-5">ParentEye makes school management efficient and effortless. Here’s why it’s the trusted ERP and CRM for schools across India.</h4>
 
                             <div class="shopify-list">

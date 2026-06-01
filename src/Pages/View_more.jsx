@@ -108,7 +108,7 @@ function View_more() {
                 <br />
   
                 However, a better and more relevant option for your website is organic search marketing, if your website is relatable and better then its organic search ranking will also be. The best-converting keywords will bring you to the front page and the top three on the search page definitely get around half of the clicks.
-                At <a href="/">Anah Marketing & Innovations</a>,
+                At <a href="/">Anax Marketing & Innovations</a>,
                 our SEO team works hard to take your business to the top ranking and gets you more conversions. Our team puts all efforts to keep you up-rank once the ranking is attained. Visit us to take your business to new heights.
               </p>
             </div>

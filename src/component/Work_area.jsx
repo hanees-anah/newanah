@@ -14,7 +14,7 @@ function WorkArea() {
                         <div className="works-header-area heading2">
                             <h5>Why Choose Us</h5>
                             <h2>Winning Strategies. Proven Results. Why Not You?</h2>
-                            <p>At Anah Marketing & Innovations, we understand that choosing the right marketing partner is crucial for your business success. Here’s what sets us apart:</p>
+                            <p>At Anax Marketing & Innovations, we understand that choosing the right marketing partner is crucial for your business success. Here’s what sets us apart:</p>
                             <div className="space32"></div>
 
                             <div className="works-content-box">

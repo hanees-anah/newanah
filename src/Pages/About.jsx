@@ -60,8 +60,8 @@ export default function About() {
   return (
     <div ref={containerRef} style={{ background: "var(--clr-bg)" }}>
       <Helmet>
-        <title>About Anah Marketing | Your Digital Growth Partner</title>
-        <meta name="description" content="Discover Anah Marketing – a results-driven digital marketing agency." />
+        <title>About Anax Marketing | Your Digital Growth Partner</title>
+        <meta name="description" content="Discover Anax Marketing – a results-driven digital marketing agency." />
         <link rel="canonical" href="https://anahmarketing.com/about-us" />
       </Helmet>
 
@@ -140,7 +140,7 @@ export default function About() {
         <div className="intro-grid">
           <div className="text-content">
             <h2>We build ecosystems, <br />not just campaigns.</h2>
-            <p>At ANAH Marketing, we are driven by one singular objective: exponential scaling. We reject vanity metrics and superficial growth hacks in favor of robust, data-backed architectures that stand the test of time.</p>
+            <p>At Anax Marketing, we are driven by one singular objective: exponential scaling. We reject vanity metrics and superficial growth hacks in favor of robust, data-backed architectures that stand the test of time.</p>
             <p>Since our inception, we have partnered with over 50 visionary brands, deploying over ₹5Cr+ in strategic ad spends while maintaining an industry-leading 98% retention rate.</p>
           </div>
           <div className="photo-stack">

@@ -21,8 +21,8 @@ const fallbackBlogs = [
     main_image: fallbackImg1,
     image: fallbackImg1,
     post_date: "May 18, 2026",
-    post_author: "Anah Growth Team",
-    meta_title: "How to Scale Meta Ads to 8x ROAS | Anah Marketing",
+    post_author: "Anax Growth Team",
+    meta_title: "How to Scale Meta Ads to 8x ROAS | Anax Marketing",
     meta_description: "Learn the exact creative sandboxing methods and media buying protocols we use to scale eCommerce brands profitably to large-scale spend.",
     description: `
       <h2>The Paradigm Shift in Meta Media Buying</h2>
@@ -50,8 +50,8 @@ const fallbackBlogs = [
     main_image: fallbackImg2,
     image: fallbackImg2,
     post_date: "May 12, 2026",
-    post_author: "Anah Dev Team",
-    meta_title: "Shopify Conversion Rate Optimization Checklist | Anah",
+    post_author: "Anax Dev Team",
+    meta_title: "Shopify Conversion Rate Optimization Checklist | Anax",
     meta_description: "Discover the critical UX tweaks, express payment setups, and speed optimizations that help double conversion rates on custom Shopify storefronts.",
     description: `
       <h2>Why Your Shopify Store is Leaking Revenue</h2>
@@ -78,8 +78,8 @@ const fallbackBlogs = [
     main_image: fallbackImg3,
     image: fallbackImg3,
     post_date: "May 08, 2026",
-    post_author: "Anah Search Team",
-    meta_title: "Google Performance Max Strategy Guide | Anah Marketing",
+    post_author: "Anax Search Team",
+    meta_title: "Google Performance Max Strategy Guide | Anax Marketing",
     meta_description: "Unlocking Google Ads success. How to structure asset groups, audience signals, and negative keyword lists to target ready-to-buy consumers.",
     description: `
       <h2>The Power and Pitfalls of Performance Max</h2>
@@ -101,7 +101,7 @@ const fallbackBlogs = [
     main_image: fallbackImg4,
     image: fallbackImg4,
     post_date: "May 02, 2026",
-    post_author: "Anah Automation Team",
+    post_author: "Anax Automation Team",
     meta_title: "WhatsApp & Email Marketing Automation Playbook",
     meta_description: "Unlock passive revenue streams by layering personalized WhatsApp outreach alongside high-converting email lifecycle recovery sequences.",
     description: `
@@ -173,7 +173,7 @@ export default function Keywoed_reserach_reacd_more() {
         <div className="loading-container">
           <div className="loading"></div>
           <div id="loading-icon">
-            <img src={preloader} alt="Anah Preloader" />
+            <img src={preloader} alt="Anax Preloader" />
           </div>
         </div>
       </div>
@@ -184,7 +184,7 @@ export default function Keywoed_reserach_reacd_more() {
     return (
       <div style={{ minHeight: "100vh", background: "#030014", color: "#fff", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "2rem" }}>
         <Helmet>
-          <title>Article Not Found | Anah Marketing</title>
+          <title>Article Not Found | Anax Marketing</title>
         </Helmet>
          
         <div style={{ textAlign: "center", maxWidth: "500px", zIndex: 2, marginTop: "6rem" }}>
@@ -202,7 +202,7 @@ export default function Keywoed_reserach_reacd_more() {
   return (
     <>
       <Helmet>
-        <title>{blogData.meta_title || `${blogData.title} | Anah Marketing`}</title>
+        <title>{blogData.meta_title || `${blogData.title} | Anax Marketing`}</title>
         <meta name="description" content={blogData.meta_description || blogData.title} />
       </Helmet>
 

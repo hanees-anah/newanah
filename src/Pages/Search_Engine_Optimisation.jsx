@@ -44,7 +44,7 @@ export default function SearchEngineOptimisation() {
     <div ref={containerRef} style={{ background: "var(--clr-bg)", overflow: "hidden" }}>
       <Helmet>
         <title>Top Digital Marketing Services for E-commerce Growth</title>
-        <meta name="description" content="Looking for the best SEO company in India? Anah Marketing offers expert SEO services to help your business rank higher and grow online." />
+        <meta name="description" content="Looking for the best SEO company in India? Anax Marketing offers expert SEO services to help your business rank higher and grow online." />
         <link rel="canonical" href="https://anahmarketing.com/seo-company" />
       </Helmet>
 
@@ -202,7 +202,7 @@ export default function SearchEngineOptimisation() {
             <div className="ds-section-tag" style={{ alignSelf: "flex-start" }}>Rank Higher</div>
             <h2>Algorithmic Supremacy.</h2>
             <p>
-              At Anah Marketing, we go beyond basic SEO—we engineer comprehensive digital marketing strategies that commandeer search rankings. We build robust technical foundations that search engines favor.
+              At Anax Marketing, we go beyond basic SEO—we engineer comprehensive digital marketing strategies that commandeer search rankings. We build robust technical foundations that search engines favor.
             </p>
             <p>
               Our approach blends raw data analytics with innovative techniques to maximize online visibility. From advanced positioning to deep technical audits, we intercept traffic at the ultimate point of intent.

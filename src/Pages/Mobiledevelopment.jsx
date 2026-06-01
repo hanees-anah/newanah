@@ -29,7 +29,7 @@ function MobileDevelopment() {
         <title>Responsive Mobile Apps Development & Design Company in India</title>
         <meta
           name="description"
-          content="Build Android & iOS apps with Anah Marketing, a top app development company in India—custom app design & development for secure, scalable solutions."
+          content="Build Android & iOS apps with Anax Marketing, a top app development company in India—custom app design & development for secure, scalable solutions."
         />
         <link rel="canonical" href="https://anahmarketing.com/mobile-app-development-company" />
       </Helmet>
@@ -234,7 +234,7 @@ function MobileDevelopment() {
             <div className="ds-section-tag" style={{ margin: "0 auto 0.75rem" }}>Services</div>
             <h1 className="svc-title">Mobile App <span>Development</span></h1>
             <p style={{ color: "var(--clr-text-secondary)", fontSize: "1rem", lineHeight: "1.7", maxWidth: "600px", margin: "0 auto" }}>
-              Build robust, engaging Android & iOS apps with Anah Marketing, India's leading scalable app solutions provider.
+              Build robust, engaging Android & iOS apps with Anax Marketing, India's leading scalable app solutions provider.
             </p>
             <div className="svc-breadcrumb">
               <a href="/">Home</a> <i className="fa-solid fa-chevron-right" style={{ fontSize: "0.6rem" }} />
